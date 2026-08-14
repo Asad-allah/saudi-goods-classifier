@@ -53,6 +53,9 @@ class RootCategoryClassifier:
     def model_version(self) -> str:
         return self._semantic.model_version
 
+    def set_semantic_retriever(self, retriever: BaseSemanticRetriever) -> None:
+        self._semantic = retriever
+
     def classify(self, *, request_id: str, text: str) -> ClassificationResult:
         started = time.perf_counter()
         if self._quality_gate is not None:

@@ -297,9 +297,9 @@ def configure_remote_semantic(
     """Dynamically connect Render to Google Colab GPU Semantic AI Engine."""
     remote_url = str(payload.get("url", "")).strip()
     if remote_url:
-        classifier._semantic = RemoteSemanticRetriever(remote_url)
+        classifier.set_semantic_retriever(RemoteSemanticRetriever(remote_url))
     else:
-        classifier._semantic = BaseSemanticRetriever()
+        classifier.set_semantic_retriever(BaseSemanticRetriever())
     return {
         "status": "ok",
         "remote_url": remote_url,
