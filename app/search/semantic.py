@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 from collections import defaultdict
 from dataclasses import dataclass
 from hashlib import sha256
@@ -42,9 +43,9 @@ class BaseSemanticRetriever:
 
 
 class RemoteSemanticRetriever(BaseSemanticRetriever):
-    """Delegates dense FAISS / E5 semantic vector search to a remote Colab GPU microservice."""
+    """Delegates dense FAISS semantic vector search to a remote Colab GPU microservice."""
 
-    def __init__(self, remote_url: str, model_version: str = "e5-small@colab-gpu") -> None:
+    def __init__(self, remote_url: str, model_version: str = "ai-gpu@colab") -> None:
         self.remote_url = remote_url.rstrip("/") if remote_url else ""
         self.model_version = model_version
 
@@ -54,15 +55,14 @@ class RemoteSemanticRetriever(BaseSemanticRetriever):
     def search(self, query: str, *, top_k: int = 20) -> list[CandidateHit]:
         if not self.remote_url:
             return []
-        import json
         import urllib.request
         try:
             url = f"{self.remote_url}/semantic/search"
+            payload = json.dumps({"query": query, "top_k": top_k}).encode("utf-8")
             req = urllib.request.Request(
                 url,
-                data=json.dumps({"query": query, "top_k": top_k}).encode("utf-8"),
-                headers={"Content-Type": "application/json"},
-                method="POST",
+                data=payload,
+                headers={"Content-Type": "application/json", "User-Agent": "SaudiGoodsClassifier-Render/1.0"},
             )
             with urllib.request.urlopen(req, timeout=3.5) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
@@ -71,11 +71,11 @@ class RemoteSemanticRetriever(BaseSemanticRetriever):
                     hits.append(
                         CandidateHit(
                             root_good_type_id=int(item["root_good_type_id"]),
-                            source_good_type_id=int(item["source_good_type_id"]),
+                            source_good_type_id=int(item.get("source_good_type_id", item["root_good_type_id"])),
                             rank=int(item["rank"]),
                             score=float(item["score"]),
                             method="SEMANTIC",
-                            matched_term=str(item["matched_term"]),
+                            matched_term=str(item.get("matched_term", "")),
                             is_cross_root_ambiguous=bool(item.get("is_cross_root_ambiguous", False)),
                             is_cross_good_type_ambiguous=bool(item.get("is_cross_good_type_ambiguous", False)),
                         )
@@ -83,6 +83,99 @@ class RemoteSemanticRetriever(BaseSemanticRetriever):
                 return hits
         except Exception as exc:
             logger.warning("Remote semantic call to Colab failed (%s); continuing with exact/fuzzy", exc)
+            return []
+
+
+class GeminiSemanticRetriever(BaseSemanticRetriever):
+    """Semantic retriever powered by Google Gemini Embeddings API (text-embedding-004)."""
+
+    def __init__(self, catalog: Catalog, api_key: str = "", cache_root: Path | None = None) -> None:
+        key = api_key or os.environ.get("GEMINI_API_KEY", "")
+        if not key:
+            raise SemanticUnavailable("GEMINI_API_KEY is not set")
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=key)
+            self.genai = genai
+        except ImportError as exc:
+            raise SemanticUnavailable("google-generativeai package is not installed") from exc
+
+        self.model_version = "google-gemini@text-embedding-004"
+        self._faiss_index = None
+
+        sem_dir = cache_root
+        if sem_dir is None:
+            candidate_sem_dir = Path(__file__).resolve().parent.parent.parent / "storage" / "semantic"
+            if candidate_sem_dir.exists():
+                sem_dir = candidate_sem_dir
+            else:
+                sem_dir = Path("storage") / "semantic"
+        faiss_path = sem_dir / "catalog_faiss.index"
+        faiss_meta_path = sem_dir / "catalog_faiss_metadata.json"
+
+        if faiss_path.exists() and faiss_meta_path.exists():
+            import faiss
+            self._faiss_index = faiss.read_index(str(faiss_path))
+            with open(faiss_meta_path, "r", encoding="utf-8") as f:
+                raw_metadata = json.load(f)
+            self._documents = tuple(
+                SemanticDocument(
+                    root_good_type_id=int(item["root_good_type_id"]),
+                    source_good_type_id=int(item["source_good_type_id"]),
+                    source_type=str(item["source_type"]),
+                    matched_term=str(item["matched_term"]),
+                    is_cross_root_ambiguous=bool(item.get("is_cross_root_ambiguous", False)),
+                    is_cross_good_type_ambiguous=bool(item.get("is_cross_good_type_ambiguous", False)),
+                    text=str(item["text"]),
+                )
+                for item in raw_metadata
+            )
+            logger.info("Loaded Gemini FAISS index with %d documents", len(self._documents))
+        else:
+            raise SemanticUnavailable(f"FAISS index not found at {faiss_path}")
+
+    def is_available(self) -> bool:
+        return self._faiss_index is not None
+
+    def search(self, query: str, *, top_k: int = 20) -> list[CandidateHit]:
+        if not self._documents or self._faiss_index is None:
+            return []
+        try:
+            result = self.genai.embed_content(
+                model="models/text-embedding-004",
+                content=query,
+                task_type="RETRIEVAL_QUERY",
+            )
+            vec = np.array([result["embedding"]], dtype=np.float32)
+            norm = np.linalg.norm(vec, axis=1, keepdims=True)
+            norm[norm == 0] = 1.0
+            query_embedding = vec / norm
+
+            raw_scores, raw_indices = self._faiss_index.search(
+                query_embedding,
+                min(top_k, len(self._documents)),
+            )
+            top_indices = [int(i) for i in raw_indices[0] if i >= 0]
+            scores_list = [float(s) for s, i in zip(raw_scores[0], raw_indices[0]) if i >= 0]
+
+            hits: list[CandidateHit] = []
+            for rank, (index, score) in enumerate(zip(top_indices, scores_list), start=1):
+                document = self._documents[index]
+                hits.append(
+                    CandidateHit(
+                        root_good_type_id=document.root_good_type_id,
+                        source_good_type_id=document.source_good_type_id,
+                        rank=rank,
+                        score=score,
+                        method="SEMANTIC",
+                        matched_term=document.matched_term,
+                        is_cross_root_ambiguous=document.is_cross_root_ambiguous,
+                        is_cross_good_type_ambiguous=document.is_cross_good_type_ambiguous,
+                    )
+                )
+            return hits
+        except Exception as exc:
+            logger.warning("Gemini embedding search failed: %s", exc)
             return []
 
 
@@ -99,11 +192,9 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
             torch.set_num_threads(1)
             torch.set_grad_enabled(False)
             from sentence_transformers import SentenceTransformer
-        except ImportError as exc:  # pragma: no cover - depends on optional install
+        except ImportError as exc:
             raise SemanticUnavailable("sentence-transformers is not installed") from exc
 
-        self.model_version = _model_version_label(model_name)
-        self._faiss_index = None
         sem_dir = cache_root
         if sem_dir is None:
             candidate_sem_dir = Path(__file__).resolve().parent.parent.parent / "storage" / "semantic"
@@ -134,8 +225,15 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
                     for item in raw_metadata
                 )
                 self._embeddings = None
-                self._model = SentenceTransformer(model_name)
-                logger.info("Loaded native FAISS index with %d documents", len(self._documents))
+
+                # Detect model name from metadata if available
+                detected_model = model_name
+                if raw_metadata and "embedding_model" in raw_metadata[0]:
+                    detected_model = raw_metadata[0]["embedding_model"]
+                
+                self.model_version = _model_version_label(detected_model)
+                self._model = SentenceTransformer(detected_model)
+                logger.info("Loaded native FAISS index with %d documents using %s", len(self._documents), detected_model)
                 return
             except Exception as exc:
                 logger.warning("Could not load native FAISS index (%s); trying fallback", exc)
@@ -145,8 +243,8 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
         if index_artifact_path.exists():
             try:
                 data = np.load(index_artifact_path, allow_pickle=True)
-                raw_meta_obj = data["metadata"]
-                raw_json = str(raw_meta_obj[0]) if len(raw_meta_obj.shape) > 0 else str(raw_meta_obj)
+                raw_meta_obj = data["metadata_json"] if "metadata_json" in data else data["metadata"]
+                raw_json = str(raw_meta_obj[0]) if hasattr(raw_meta_obj, "shape") and len(raw_meta_obj.shape) > 0 else str(raw_meta_obj)
                 raw_metadata = json.loads(raw_json)
                 self._documents = tuple(
                     SemanticDocument(
@@ -161,6 +259,7 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
                     for item in raw_metadata
                 )
                 self._embeddings = np.asarray(data["embeddings"], dtype=np.float32)
+                self.model_version = _model_version_label(model_name)
                 self._model = SentenceTransformer(model_name)
                 logger.info("Loaded precompiled vector index artifact with %d documents", len(self._documents))
                 return
@@ -168,16 +267,10 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
                 logger.warning("Could not load precompiled vector index (%s); falling back to dynamic index", exc)
 
         self._documents = build_semantic_documents(catalog)
+        self.model_version = _model_version_label(model_name)
         self._model = SentenceTransformer(model_name)
-        cache_path = _embedding_cache_path(
-            catalog,
-            model_name,
-            sem_dir,
-        )
-        cached_embeddings = _load_embedding_cache(
-            cache_path,
-            expected_rows=len(self._documents),
-        )
+        cache_path = _embedding_cache_path(catalog, model_name, sem_dir)
+        cached_embeddings = _load_embedding_cache(cache_path, expected_rows=len(self._documents))
         if cached_embeddings is not None:
             self._embeddings = cached_embeddings
         else:
@@ -194,7 +287,7 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
         query_embedding = self._encode_query(query)
         query_embedding = _normalize(query_embedding.reshape(1, -1))[0]
 
-        if self._faiss_index is not None:
+        if hasattr(self, "_faiss_index") and self._faiss_index is not None:
             raw_scores, raw_indices = self._faiss_index.search(
                 np.asarray([query_embedding], dtype=np.float32),
                 min(top_k, len(self._documents)),
@@ -218,9 +311,7 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
                     method="SEMANTIC",
                     matched_term=document.matched_term,
                     is_cross_root_ambiguous=document.is_cross_root_ambiguous,
-                    is_cross_good_type_ambiguous=(
-                        document.is_cross_good_type_ambiguous
-                    ),
+                    is_cross_good_type_ambiguous=document.is_cross_good_type_ambiguous,
                 )
             )
         return hits
@@ -232,9 +323,7 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
             for doc in documents
         ]
         if hasattr(self._model, "encode_document"):
-            return np.asarray(
-                self._model.encode_document(prefixed, convert_to_numpy=True)
-            )
+            return np.asarray(self._model.encode_document(prefixed, convert_to_numpy=True))
         return np.asarray(self._model.encode(prefixed, convert_to_numpy=True))
 
     def _encode_query(self, query: str) -> np.ndarray:
@@ -252,106 +341,65 @@ def _normalize(matrix: np.ndarray) -> np.ndarray:
 
 
 def build_semantic_documents(catalog: Catalog) -> tuple[SemanticDocument, ...]:
-    """Create semantic-search documents strictly from the imported catalog."""
     documents: list[SemanticDocument] = []
     terms_by_good_type: dict[int, list[SearchTerm]] = defaultdict(list)
 
     for term in catalog.selectable_terms:
         root = catalog.root(term.root_good_type_id)
-        good_type = catalog.good_type(term.source_good_type_id)
+        leaf = catalog.good_type(term.source_good_type_id)
+        doc_text = f"تصنيف بضائع {leaf.name_ar} تابعة للمجموعة الرئيسية {root.name_ar}. منتج: {term.raw_term}."
         documents.append(
             SemanticDocument(
                 root_good_type_id=term.root_good_type_id,
                 source_good_type_id=term.source_good_type_id,
-                source_type=term.source_type,
+                source_type="SELECTABLE_TERM",
                 matched_term=term.raw_term,
                 is_cross_root_ambiguous=term.is_cross_root_ambiguous,
                 is_cross_good_type_ambiguous=term.is_cross_good_type_ambiguous,
-                text=(
-                    f"{term.raw_term}. "
-                    f"Goods type: {good_type.name_ar}. "
-                    f"Main goods group: {root.name_ar}."
-                ),
+                text=doc_text,
             )
         )
         terms_by_good_type[term.source_good_type_id].append(term)
 
-    for good_type_id, terms in terms_by_good_type.items():
-        good_type = catalog.good_type(good_type_id)
-        root = catalog.root(catalog.root_id_for(good_type_id))
-        documents.append(
-            SemanticDocument(
-                root_good_type_id=root.id,
-                source_good_type_id=good_type_id,
-                source_type="GOOD_TYPE_LABEL",
-                matched_term=good_type.name_ar,
-                is_cross_root_ambiguous=False,
-                is_cross_good_type_ambiguous=False,
-                text=(
-                    f"{good_type.name_ar}. Main goods group: {root.name_ar}."
-                ),
-            )
-        )
-        examples = _term_examples(terms)
-        if examples:
-            documents.append(
-                SemanticDocument(
-                    root_good_type_id=root.id,
-                    source_good_type_id=good_type_id,
-                    source_type="GOOD_TYPE_PROFILE",
-                    matched_term=good_type.name_ar,
-                    is_cross_root_ambiguous=False,
-                    is_cross_good_type_ambiguous=False,
-                    text=(
-                        f"Goods type: {good_type.name_ar}. "
-                        f"Main goods group: {root.name_ar}. "
-                        f"Related names: {examples}."
-                    ),
-                )
-            )
-
     return tuple(documents)
 
 
-def _term_examples(terms: list[SearchTerm], *, limit: int = 69) -> str:
-    unique_terms = dict.fromkeys(term.raw_term for term in terms)
-    return ", ".join(list(unique_terms)[:limit])
-
-
-def _embedding_cache_path(catalog: Catalog, model_name: str, cache_root: Path) -> Path:
-    cache_key = (
-        f"semantic-documents-v3\x1f{catalog.version}\x1f"
-        f"{catalog.source_sha256}\x1f{model_name}"
-    )
-    digest = sha256(cache_key.encode("utf-8")).hexdigest()[:20]
-    return cache_root / f"{digest}.npy"
-
-
 def _model_version_label(model_name: str) -> str:
-    model_path = Path(model_name)
-    if model_path.exists():
-        return f"{model_path.name}@local"
-    return f"{model_name}@local"
+    cleaned = model_name.replace("/", "-").replace("\\", "-").strip()
+    return f"dense-{cleaned}"
 
 
-def _load_embedding_cache(path: Path, *, expected_rows: int) -> np.ndarray | None:
+def _embedding_cache_path(catalog: Catalog, model_name: str, cache_dir: Path) -> Path:
+    hasher = sha256()
+    hasher.update(catalog.version.encode("utf-8"))
+    hasher.update(model_name.encode("utf-8"))
+    for term in catalog.selectable_terms:
+        hasher.update(str(term.id).encode("utf-8"))
+        hasher.update(term.normalized_term.encode("utf-8"))
+        hasher.update(str(term.source_good_type_id).encode("utf-8"))
+        hasher.update(str(term.root_good_type_id).encode("utf-8"))
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    return cache_dir / f"embeddings_{hasher.hexdigest()[:16]}.npz"
+
+
+def _load_embedding_cache(cache_path: Path, *, expected_rows: int) -> np.ndarray | None:
+    if not cache_path.exists():
+        return None
     try:
-        embeddings = np.load(path, allow_pickle=False)
-    except (OSError, ValueError):
+        data = np.load(cache_path)
+        embeddings = data["embeddings"]
+        if embeddings.shape[0] != expected_rows:
+            return None
+        return embeddings
+    except Exception:
         return None
-    if embeddings.ndim != 2 or embeddings.shape[0] != expected_rows:
-        return None
-    if not np.isfinite(embeddings).all():
-        return None
-    return np.asarray(embeddings, dtype=np.float32)
 
 
-def _write_embedding_cache(path: Path, embeddings: np.ndarray) -> None:
+def _write_embedding_cache(cache_path: Path, embeddings: np.ndarray) -> None:
     try:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        temporary_path = path.with_name(f"{path.stem}.{getpid()}.tmp.npy")
-        np.save(temporary_path, embeddings)
-        temporary_path.replace(path)
-    except OSError:
-        # The cache is an optimisation only; classification must still work without it.
-        return
+        cache_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp_path = cache_path.with_suffix(f".tmp.{getpid()}.npz")
+        np.savez_compressed(tmp_path, embeddings=embeddings)
+        tmp_path.replace(cache_path)
+    except Exception:
+        pass

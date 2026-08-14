@@ -17,6 +17,7 @@ from app.classifier.service import RootCategoryClassifier
 from app.core.config import get_settings
 from app.search.semantic import (
     BaseSemanticRetriever,
+    GeminiSemanticRetriever,
     RemoteSemanticRetriever,
     SemanticUnavailable,
     SentenceTransformerRetriever,
@@ -71,15 +72,27 @@ async def lifespan(app: FastAPI):
 
 
 def _build_semantic(settings, catalog):
+    import os
     if settings.semantic_remote_url:
         logger.info("Using Remote Semantic AI Engine via Colab: %s", settings.semantic_remote_url)
         return RemoteSemanticRetriever(settings.semantic_remote_url)
     if not settings.enable_semantic:
         return BaseSemanticRetriever()
+
+    model_choice = os.environ.get("DANDAN_SEMANTIC_MODEL", settings.semantic_model_name)
+    gemini_key = os.environ.get("GEMINI_API_KEY", "")
+
+    if model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004"):
+        try:
+            return GeminiSemanticRetriever(catalog, api_key=gemini_key)
+        except Exception as exc:
+            logger.warning("Gemini semantic initialization failed (%s); falling back", exc)
+            return BaseSemanticRetriever()
+
     try:
         return SentenceTransformerRetriever(
             catalog,
-            model_name=settings.semantic_model_name,
+            model_name=model_choice,
         )
     except SemanticUnavailable as exc:
         logger.warning("Semantic search is unavailable: %s", exc)

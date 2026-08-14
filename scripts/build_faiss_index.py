@@ -1,30 +1,74 @@
 #!/usr/bin/env python3
 """Builds high-precision FAISS Vector Index artifact for all 90 Saudi Market Categories.
-Uses rich contextual passage encoding with intfloat/multilingual-e5-small.
-Stores:
-1. storage/semantic/catalog_faiss.index (FAISS IndexFlatIP)
-2. storage/semantic/catalog_faiss_metadata.json (companion document metadata)
+Supports multiple embedding engines:
+1. BAAI/bge-m3 (1024-dim, State-of-the-art Open Source)
+2. intfloat/multilingual-e5-small (384-dim, Ultra-Fast Local)
+3. intfloat/multilingual-e5-large (1024-dim)
+4. google-gemini (768-dim, Google Gemini Embeddings API text-embedding-004)
 """
 
 from __future__ import annotations
+import argparse
 import json
+import os
 from pathlib import Path
-import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 from app.catalog.importer import load_catalog_artifact
+
+
+def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
+    if model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004"):
+        import google.generativeai as genai
+        key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
+        if not key:
+            raise ValueError("GEMINI_API_KEY is required to build index with Google Gemini embeddings.")
+        genai.configure(api_key=key)
+        
+        def embed_fn(texts: list[str], is_query: bool = False) -> np.ndarray:
+            task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
+            result = genai.embed_content(
+                model="models/text-embedding-004",
+                content=texts,
+                task_type=task_type,
+            )
+            vecs = np.array(result["embedding"], dtype=np.float32)
+            # normalize for cosine similarity
+            norms = np.linalg.norm(vecs, axis=1, keepdims=True)
+            norms[norms == 0] = 1.0
+            return vecs / norms
+
+        return embed_fn, 768, "google-gemini"
+
+    else:
+        from sentence_transformers import SentenceTransformer
+        print(f"🧠 Loading SentenceTransformer: {model_choice}...")
+        model = SentenceTransformer(model_choice)
+        is_e5 = "e5" in model_choice.lower()
+
+        def embed_fn(texts: list[str], is_query: bool = False) -> np.ndarray:
+            if is_e5:
+                prefix = "query: " if is_query else "passage: "
+                texts = [prefix + t if not t.startswith(prefix) else t for t in texts]
+            vecs = model.encode(texts, batch_size=64, show_progress_bar=True, normalize_embeddings=True)
+            return np.array(vecs, dtype=np.float32)
+
+        test_vec = model.encode(["test"], normalize_embeddings=True)
+        dim = int(test_vec.shape[1])
+        return embed_fn, dim, model_choice
 
 
 def build_faiss_index(
     catalog_path: str = "storage/catalog/catalog.json",
     contexts_path: str = "storage/catalog/saudi_market_category_contexts.json",
-    model_path: str = "storage/models/intfloat-multilingual-e5-small",
+    model_choice: str = "storage/models/intfloat-multilingual-e5-small",
+    gemini_api_key: str = "",
     output_index_path: str = "storage/semantic/catalog_faiss.index",
     output_meta_path: str = "storage/semantic/catalog_faiss_metadata.json",
 ) -> None:
     print("=" * 80)
     print("🚀 BUILDING HIGH-PRECISION FAISS VECTOR INDEX FOR 90 SAUDI MARKET CATEGORIES")
+    print(f"🤖 Selected Engine: {model_choice}")
     print("=" * 80)
 
     catalog = load_catalog_artifact(catalog_path)
@@ -52,7 +96,7 @@ def build_faiss_index(
 
         # (a) Full Category Domain Profile Document
         doc_text_ar = (
-            f"passage: تصنيف بضائع {leaf.name_ar} (المجموعة الأساسية: {root.name_ar}). "
+            f"تصنيف بضائع {leaf.name_ar} (المجموعة الأساسية: {root.name_ar}). "
             f"{market_ar} "
             f"أبرز السلع والمنتجات: {', '.join(trade_terms[:15])}. "
             f"الماركات والشركات: {', '.join(brands)}. "
@@ -68,95 +112,126 @@ def build_faiss_index(
 
         if market_en:
             doc_text_en = (
-                f"passage: Category {leaf.name_en} under {root.name_en}. "
+                f"Goods category {leaf.name_en} (Root Category: {root.name_en}). "
                 f"{market_en} "
-                f"Key trade items: {', '.join(ctx.get('trade_terms_en', []))}."
+                f"Key products: {', '.join(ctx.get('trade_terms_en', [])[:15])}."
             )
             documents.append({
                 "root_good_type_id": root_id,
                 "source_good_type_id": leaf_id,
                 "source_type": "CATEGORY_DOMAIN_PROFILE_EN",
-                "matched_term": leaf.name_en,
+                "matched_term": leaf.name_en or leaf.name_ar,
                 "text": doc_text_en,
             })
 
-        # (b) Contextualized Concept Documents (Never index raw isolated words!)
-        # Each trade term is embedded inside a meaningful, domain-grounded sentence
+        # (b) Individual High-Precision Trade Terms (Arabic)
         for term in trade_terms:
-            concept_passage = (
-                f"passage: شحنة وبضائع {term}، تتبع لتصنيف {leaf.name_ar} ضمن قطاع {root.name_ar} في السوق السعودي."
-            )
+            if not term or len(term.strip()) < 2:
+                continue
             documents.append({
                 "root_good_type_id": root_id,
                 "source_good_type_id": leaf_id,
-                "source_type": "CONCEPT_PASSAGE",
+                "source_type": "MARKET_TRADE_TERM_AR",
                 "matched_term": term,
-                "text": concept_passage,
+                "text": f"{term} ضمن بضائع {leaf.name_ar} وتصنيف {root.name_ar}",
             })
 
-        # (c) Add contextual terms from catalog.selectable_terms
-        catalog_terms = [t.raw_term for t in catalog.selectable_terms if t.source_good_type_id == leaf_id]
-        for cterm in list(dict.fromkeys(catalog_terms))[:20]:
-            if cterm not in trade_terms:
-                concept_passage = (
-                    f"passage: منتج {cterm} ضمن تصنيف {leaf.name_ar} - {root.name_ar}."
-                )
-                documents.append({
-                    "root_good_type_id": root_id,
-                    "source_good_type_id": leaf_id,
-                    "source_type": "CATALOG_TERM_PASSAGE",
-                    "matched_term": cterm,
-                    "text": concept_passage,
-                })
+        # (c) Individual High-Precision Trade Terms (English)
+        for term_en in ctx.get("trade_terms_en", []):
+            if not term_en or len(term_en.strip()) < 2:
+                continue
+            documents.append({
+                "root_good_type_id": root_id,
+                "source_good_type_id": leaf_id,
+                "source_type": "MARKET_TRADE_TERM_EN",
+                "matched_term": term_en,
+                "text": f"{term_en} under {leaf.name_en or leaf.name_ar} and root {root.name_en or root.name_ar}",
+            })
 
     print(f"📊 Total rich contextual passages to encode: {len(documents):,}")
 
-    print(f"🧠 Loading SentenceTransformer from {model_path}...")
-    model = SentenceTransformer(model_path)
+    embed_fn, embedding_dim, model_tag = get_embedding_function(model_choice, gemini_api_key)
 
-    passages = [doc["text"] for doc in documents]
-    print(f"⏳ Encoding {len(passages):,} passages in batches of 64...")
-    embeddings = model.encode(
-        passages,
-        batch_size=64,
-        show_progress_bar=True,
-        convert_to_numpy=True,
-        normalize_embeddings=True,
-    )
-    embeddings = np.asarray(embeddings, dtype=np.float32)
+    raw_texts = [d["text"] for d in documents]
+    embeddings = embed_fn(raw_texts, is_query=False)
 
-    dim = embeddings.shape[1]
-    print(f"📐 Embedding Dimension: {dim}, Vectors: {embeddings.shape[0]}")
-
-    # Build FAISS IndexFlatIP (Inner Product on L2-normalized vectors == Cosine Similarity)
+    print(f"📐 Embedding Dimension: {embedding_dim}, Vectors: {len(embeddings)}")
+    
+    # 2. Build FAISS Index (Cosine via IndexFlatIP with normalized vectors)
+    import faiss
     print("⚡ Initializing FAISS IndexFlatIP...")
-    index = faiss.IndexFlatIP(dim)
+    index = faiss.IndexFlatIP(embedding_dim)
     index.add(embeddings)
     print(f"✅ FAISS Index contains {index.ntotal} vectors.")
 
+    # 3. Save FAISS Index & Metadata
     out_idx = Path(output_index_path)
     out_idx.parent.mkdir(parents=True, exist_ok=True)
     faiss.write_index(index, str(out_idx))
 
     out_meta = Path(output_meta_path)
-    with open(out_meta, "w", encoding="utf-8") as f:
-        json.dump(documents, f, ensure_ascii=False, indent=2)
+    metadata_json = []
+    for d in documents:
+        metadata_json.append({
+            "root_good_type_id": d["root_good_type_id"],
+            "source_good_type_id": d["source_good_type_id"],
+            "source_type": d["source_type"],
+            "matched_term": d["matched_term"],
+            "text": d["text"],
+            "embedding_model": model_tag,
+            "embedding_dim": embedding_dim,
+        })
 
-    # Also maintain compatibility by exporting catalog_vector_index.npz
-    npz_path = Path("storage/semantic/catalog_vector_index.npz")
+    with open(out_meta, "w", encoding="utf-8") as f:
+        json.dump(metadata_json, f, ensure_ascii=False, indent=2)
+
+    # 4. Save npz backup
+    npz_path = out_idx.parent / "catalog_vector_index.npz"
     np.savez_compressed(
         npz_path,
         embeddings=embeddings,
-        metadata=np.array([json.dumps(documents, ensure_ascii=False)]),
+        metadata_json=json.dumps(metadata_json, ensure_ascii=False),
     )
 
     print("\n" + "=" * 80)
     print("🎉 FAISS VECTOR INDEX & CONTEXT ARTIFACTS SUCCESSFULLY BUILT!")
-    print(f"💾 FAISS Index:    {out_idx} ({out_idx.stat().st_size / (1024*1024):.2f} MB)")
-    print(f"📁 Metadata JSON:  {out_meta} ({out_meta.stat().st_size / 1024:.2f} KB)")
+    print(f"💾 FAISS Index:    {output_index_path} ({out_idx.stat().st_size / (1024*1024):.2f} MB)")
+    print(f"📁 Metadata JSON:  {output_meta_path} ({out_meta.stat().st_size / 1024:.2f} KB)")
     print(f"📦 NPZ Index:      {npz_path} ({npz_path.stat().st_size / (1024*1024):.2f} MB)")
     print("=" * 80 + "\n")
 
 
 if __name__ == "__main__":
-    build_faiss_index()
+    parser = argparse.ArgumentParser(description="Build dense FAISS index for Saudi goods classifier.")
+    parser.add_argument(
+        "--model",
+        type=str,
+        default="storage/models/intfloat-multilingual-e5-small",
+        help="Model choice: 'BAAI/bge-m3', 'storage/models/intfloat-multilingual-e5-small', 'intfloat/multilingual-e5-large', or 'google-gemini'",
+    )
+    parser.add_argument(
+        "--gemini-api-key",
+        type=str,
+        default="",
+        help="Google Gemini API key (if --model is google-gemini)",
+    )
+    parser.add_argument(
+        "--output-index",
+        type=str,
+        default="storage/semantic/catalog_faiss.index",
+        help="Output path for FAISS index file.",
+    )
+    parser.add_argument(
+        "--output-metadata",
+        type=str,
+        default="storage/semantic/catalog_faiss_metadata.json",
+        help="Output path for metadata JSON file.",
+    )
+    args = parser.parse_args()
+
+    build_faiss_index(
+        model_choice=args.model,
+        gemini_api_key=args.gemini_api_key,
+        output_index_path=args.output_index,
+        output_meta_path=args.output_metadata,
+    )
