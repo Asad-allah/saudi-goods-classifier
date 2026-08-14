@@ -21,6 +21,7 @@ from app.classifier.service import CatalogNotReady, RootCategoryClassifier
 from app.core.config import Settings
 from app.core.security import require_api_key
 from app.nlp.input_quality import InputRejected
+from app.search.semantic import BaseSemanticRetriever, RemoteSemanticRetriever
 
 router = APIRouter()
 
@@ -289,12 +290,15 @@ def semantic_search_endpoint(
 
 
 @router.post("/demo/configure-semantic")
-def configure_remote_semantic(
-    payload: dict,
+async def configure_remote_semantic(
     request: Request,
     classifier: RootCategoryClassifier = Depends(_classifier),
 ) -> dict:
     """Dynamically connect Render to Google Colab GPU Semantic AI Engine."""
+    try:
+        payload = await request.json()
+    except Exception:
+        payload = {}
     remote_url = str(payload.get("url", "")).strip()
     if remote_url:
         classifier.set_semantic_retriever(RemoteSemanticRetriever(remote_url))
