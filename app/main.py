@@ -32,14 +32,26 @@ async def lifespan(app: FastAPI):
     app.state.classifier = None
 
     catalog = None
-    if settings.catalog_artifact and Path(settings.catalog_artifact).exists():
-        try:
-            catalog = load_catalog_artifact(settings.catalog_artifact)
-        except ValueError as exc:
-            logger.warning("Catalog artifact is stale; rebuilding from SQL: %s", exc)
+    candidates = []
+    if settings.catalog_artifact:
+        candidates.append(Path(settings.catalog_artifact))
+        candidates.append(Path(__file__).resolve().parent.parent / settings.catalog_artifact)
+    candidates.append(Path(__file__).resolve().parent.parent / "storage" / "catalog" / "catalog.json")
+    candidates.append(Path("storage") / "catalog" / "catalog.json")
+
+    for candidate in candidates:
+        if candidate.exists():
+            try:
+                catalog = load_catalog_artifact(str(candidate))
+                logger.info("Successfully loaded catalog artifact from: %s", candidate)
+                break
+            except Exception as exc:
+                logger.warning("Failed loading catalog candidate %s: %s", candidate, exc)
 
     if catalog is None and settings.catalog_source:
         source_path = Path(settings.catalog_source)
+        if not source_path.is_absolute():
+            source_path = Path(__file__).resolve().parent.parent / source_path
         if source_path.exists():
             catalog = load_catalog_from_sql(
                 source_path,

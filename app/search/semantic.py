@@ -50,13 +50,22 @@ class SentenceTransformerRetriever(BaseSemanticRetriever):
         cache_root: Path | None = None,
     ) -> None:
         try:
+            import torch
+            torch.set_num_threads(1)
+            torch.set_grad_enabled(False)
             from sentence_transformers import SentenceTransformer
         except ImportError as exc:  # pragma: no cover - depends on optional install
             raise SemanticUnavailable("sentence-transformers is not installed") from exc
 
         self.model_version = _model_version_label(model_name)
         self._faiss_index = None
-        sem_dir = cache_root or Path("storage") / "semantic"
+        sem_dir = cache_root
+        if sem_dir is None:
+            candidate_sem_dir = Path(__file__).resolve().parent.parent.parent / "storage" / "semantic"
+            if candidate_sem_dir.exists():
+                sem_dir = candidate_sem_dir
+            else:
+                sem_dir = Path("storage") / "semantic"
         faiss_path = sem_dir / "catalog_faiss.index"
         faiss_meta_path = sem_dir / "catalog_faiss_metadata.json"
 
