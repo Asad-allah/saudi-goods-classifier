@@ -571,8 +571,9 @@
       root.querySelectorAll("[data-live-example]").forEach((button) => button.classList.toggle("is-active",button.dataset.liveExample === text));
       let response = null;
       let lastFetchError = null;
-      const targetUrls = window.location.port === "8000" 
-        ? ["/demo/classify", "http://localhost:8000/demo/classify", "http://127.0.0.1:8000/demo/classify"]
+      const isRenderOrWeb = window.location.hostname.includes("onrender.com") || window.location.protocol === "https:";
+      const targetUrls = isRenderOrWeb || window.location.port === "8000"
+        ? ["/demo/classify", "http://localhost:8000/demo/classify"]
         : ["http://localhost:8000/demo/classify", "http://127.0.0.1:8000/demo/classify", "/demo/classify"];
 
       for (const targetUrl of targetUrls) {
