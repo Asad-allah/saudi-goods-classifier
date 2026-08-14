@@ -54,8 +54,9 @@ class Settings:
     event_log_path: str
     semantic_model_name: str
     enable_semantic: bool
-    max_text_length: int
-    demo_enabled: bool
+    semantic_remote_url: str = ""
+    max_text_length: int = 191
+    demo_enabled: bool = True
     demo_allowed_origins: tuple[str, ...] = ()
     input_validation_enabled: bool = True
 
@@ -78,7 +79,8 @@ def get_settings() -> Settings:
         semantic_model_name=os.getenv(
             "DANDAN_SEMANTIC_MODEL", "intfloat/multilingual-e5-small"
         ),
-        enable_semantic=_bool_env("DANDAN_ENABLE_SEMANTIC", True),
+        enable_semantic=_bool_env("DANDAN_ENABLE_SEMANTIC", False),
+        semantic_remote_url=os.getenv("DANDAN_SEMANTIC_REMOTE_URL", ""),
         max_text_length=int(os.getenv("DANDAN_MAX_TEXT_LENGTH", "191")),
         demo_enabled=_bool_env("DANDAN_DEMO_ENABLED", True),
         demo_allowed_origins=_csv_env("DANDAN_DEMO_ALLOWED_ORIGINS"),

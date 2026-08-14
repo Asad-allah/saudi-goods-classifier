@@ -263,6 +263,50 @@ def demo_classify_feedback(
     return _record_feedback(request_id, payload, classifier, event_logger)
 
 
+@router.post("/semantic/search")
+def semantic_search_endpoint(
+    payload: dict,
+    classifier: RootCategoryClassifier = Depends(_classifier),
+) -> dict:
+    """Microservice endpoint used by Colab to return semantic FAISS candidate hits."""
+    query = str(payload.get("query", ""))
+    top_k = int(payload.get("top_k", 20))
+    hits = classifier._semantic.search(query, top_k=top_k)
+    return {
+        "hits": [
+            {
+                "root_good_type_id": h.root_good_type_id,
+                "source_good_type_id": h.source_good_type_id,
+                "rank": h.rank,
+                "score": round(float(h.score), 4),
+                "matched_term": h.matched_term,
+                "is_cross_root_ambiguous": h.is_cross_root_ambiguous,
+                "is_cross_good_type_ambiguous": h.is_cross_good_type_ambiguous,
+            }
+            for h in hits
+        ]
+    }
+
+
+@router.post("/demo/configure-semantic")
+def configure_remote_semantic(
+    payload: dict,
+    request: Request,
+    classifier: RootCategoryClassifier = Depends(_classifier),
+) -> dict:
+    """Dynamically connect Render to Google Colab GPU Semantic AI Engine."""
+    remote_url = str(payload.get("url", "")).strip()
+    if remote_url:
+        classifier._semantic = RemoteSemanticRetriever(remote_url)
+    else:
+        classifier._semantic = BaseSemanticRetriever()
+    return {
+        "status": "ok",
+        "remote_url": remote_url,
+        "is_available": classifier._semantic.is_available(),
+    }
+
+
 def _classify_without_auth(
     payload: ClassifyRequest,
     classifier: RootCategoryClassifier,

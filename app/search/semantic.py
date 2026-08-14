@@ -41,6 +41,51 @@ class BaseSemanticRetriever:
         return []
 
 
+class RemoteSemanticRetriever(BaseSemanticRetriever):
+    """Delegates dense FAISS / E5 semantic vector search to a remote Colab GPU microservice."""
+
+    def __init__(self, remote_url: str, model_version: str = "e5-small@colab-gpu") -> None:
+        self.remote_url = remote_url.rstrip("/") if remote_url else ""
+        self.model_version = model_version
+
+    def is_available(self) -> bool:
+        return bool(self.remote_url)
+
+    def search(self, query: str, *, top_k: int = 20) -> list[CandidateHit]:
+        if not self.remote_url:
+            return []
+        import json
+        import urllib.request
+        try:
+            url = f"{self.remote_url}/semantic/search"
+            req = urllib.request.Request(
+                url,
+                data=json.dumps({"query": query, "top_k": top_k}).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            with urllib.request.urlopen(req, timeout=3.5) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                hits = []
+                for item in data.get("hits", []):
+                    hits.append(
+                        CandidateHit(
+                            root_good_type_id=int(item["root_good_type_id"]),
+                            source_good_type_id=int(item["source_good_type_id"]),
+                            rank=int(item["rank"]),
+                            score=float(item["score"]),
+                            method="SEMANTIC",
+                            matched_term=str(item["matched_term"]),
+                            is_cross_root_ambiguous=bool(item.get("is_cross_root_ambiguous", False)),
+                            is_cross_good_type_ambiguous=bool(item.get("is_cross_good_type_ambiguous", False)),
+                        )
+                    )
+                return hits
+        except Exception as exc:
+            logger.warning("Remote semantic call to Colab failed (%s); continuing with exact/fuzzy", exc)
+            return []
+
+
 class SentenceTransformerRetriever(BaseSemanticRetriever):
     def __init__(
         self,

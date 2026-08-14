@@ -17,6 +17,7 @@ from app.classifier.service import RootCategoryClassifier
 from app.core.config import get_settings
 from app.search.semantic import (
     BaseSemanticRetriever,
+    RemoteSemanticRetriever,
     SemanticUnavailable,
     SentenceTransformerRetriever,
 )
@@ -70,6 +71,9 @@ async def lifespan(app: FastAPI):
 
 
 def _build_semantic(settings, catalog):
+    if settings.semantic_remote_url:
+        logger.info("Using Remote Semantic AI Engine via Colab: %s", settings.semantic_remote_url)
+        return RemoteSemanticRetriever(settings.semantic_remote_url)
     if not settings.enable_semantic:
         return BaseSemanticRetriever()
     try:
