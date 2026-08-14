@@ -1,0 +1,151 @@
+<style>
+  .trace-preview { direction: ltr; color: #18231f; font-family: Consolas, "Cascadia Code", monospace; }
+  .trace-preview * { box-sizing: border-box; }
+  .trace-shell { border: 1px solid #bdc8c1; background: #f3f5f2; min-height: 720px; }
+  .trace-top { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid #bdc8c1; background: #fbfcfa; }
+  .trace-brand { display: flex; align-items: center; gap: 9px; font-family: Tahoma, sans-serif; font-weight: 800; direction: rtl; }
+  .trace-mark { width: 25px; height: 25px; display: grid; place-items: center; background: #173b2e; color: #fff; }
+  .trace-health { color: #27664f; font-size: 11px; }
+  .trace-main { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 30px 0 38px; }
+  .trace-request { display: grid; grid-template-columns: 150px minmax(0, 1fr) 110px; border: 1px solid #9eaaa3; background: #fff; }
+  .trace-method { padding: 15px; border-right: 1px solid #c8d0cb; color: #506159; font-size: 11px; }
+  .trace-input { padding: 15px; font-family: Tahoma, sans-serif; direction: rtl; text-align: right; font-size: 16px; }
+  .trace-run { border: 0; background: #116849; color: #fff; font-weight: 800; }
+  .trace-meta { display: flex; flex-wrap: wrap; gap: 18px; padding: 10px 0 22px; color: #607068; font-size: 10px; }
+  .flow { display: grid; gap: 0; }
+  .flow-row { display: grid; grid-template-columns: 170px 32px minmax(0, 1fr); align-items: stretch; min-height: 76px; }
+  .flow-index { padding: 13px 12px; border-top: 1px solid #c7d0ca; color: #75817b; font-size: 10px; }
+  .flow-index strong { display: block; color: #1f342b; font-size: 12px; margin-bottom: 5px; }
+  .flow-line { position: relative; }
+  .flow-line::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #8ca097; }
+  .flow-line::after { content: ""; position: absolute; left: calc(50% - 3px); top: 36px; width: 7px; height: 7px; background: #116849; }
+  .flow-node { margin: 0 0 0 2px; padding: 12px 16px; border-top: 1px solid #c7d0ca; background: #fbfcfa; }
+  .node-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .node-path { color: #1e392e; font-size: 11px; font-weight: 800; }
+  .node-state { color: #116849; font-size: 10px; font-weight: 800; }
+  .node-data { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 7px 18px; color: #53635c; font-size: 10px; line-height: 1.7; }
+  .node-data code { color: #17251f; }
+  .retrieval-row { min-height: 190px; }
+  .retrieval-grid { display: grid; grid-template-columns: repeat(3, 1fr); min-height: 166px; border-top: 1px solid #c7d0ca; background: #fbfcfa; }
+  .retrieval-lane { padding: 12px 14px; }
+  .retrieval-lane + .retrieval-lane { border-left: 1px solid #d4dbd7; }
+  .lane-head { display: flex; justify-content: space-between; gap: 8px; padding-bottom: 9px; border-bottom: 1px solid #d9dfdb; font-size: 10px; font-weight: 800; }
+  .lane-result { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 8px 0; border-bottom: 1px solid #e1e5e2; font-size: 10px; }
+  .lane-muted { color: #819088; }
+  .lane-ignored { color: #9b5c24; text-decoration: line-through; }
+  .flow-final .flow-node { background: #eaf0ec; border-top-color: #91a69a; }
+  .response-bar { display: grid; grid-template-columns: 1fr auto auto auto; gap: 0; margin-top: 22px; border-top: 2px solid #173b2e; border-bottom: 1px solid #aab7af; background: #fff; }
+  .response-cell { padding: 14px 16px; }
+  .response-cell + .response-cell { border-left: 1px solid #cbd3ce; }
+  .response-cell span { display: block; color: #6f7b75; font-size: 9px; margin-bottom: 5px; }
+  .response-cell strong { font-size: 12px; }
+  .approve-row { display: flex; justify-content: flex-end; margin-top: 20px; }
+  .approve-row button { border: 1px solid #173b2e; background: transparent; color: #173b2e; padding: 9px 13px; font: 700 11px Consolas, monospace; cursor: pointer; }
+  @media (max-width: 820px) {
+    .trace-request { grid-template-columns: 1fr; }
+    .trace-method { border-right: 0; border-bottom: 1px solid #c8d0cb; }
+    .trace-run { min-height: 44px; }
+    .flow-row { grid-template-columns: 88px 20px minmax(0, 1fr); }
+    .retrieval-grid { grid-template-columns: 1fr; }
+    .retrieval-lane + .retrieval-lane { border-left: 0; border-top: 1px solid #d4dbd7; }
+    .response-bar { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<div class="trace-preview">
+  <h2>Backend Classification Trace</h2>
+  <p class="subtitle">Wireframe v2 · runtime evidence, scores, files, decision.</p>
+
+  <div class="trace-shell">
+    <header class="trace-top">
+      <div class="trace-brand"><span class="trace-mark">د</span> DANDAN / CLASSIFIER LAB</div>
+      <div class="trace-health">● READY · E5 LOCAL · CATALOG 2026-08-12.1a140133</div>
+    </header>
+
+    <main class="trace-main">
+      <div class="trace-request">
+        <div class="trace-method">POST /v1/classify</div>
+        <div class="trace-input">كياس زبالة</div>
+        <button class="trace-run">RUN</button>
+      </div>
+      <div class="trace-meta">
+        <span>requestId: 7c6fe31e…</span>
+        <span>catalog: 37 roots / 2308 terms</span>
+        <span>model: multilingual-e5-small@local</span>
+      </div>
+
+      <section class="flow" aria-label="Backend pipeline trace">
+        <div class="flow-row">
+          <div class="flow-index"><strong>01 · GATE</strong>input_quality.py</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">
+            <div class="node-head"><span class="node-path">InputQualityGate.require_meaningful()</span><span class="node-state">PASS</span></div>
+            <div class="node-data"><code>letters=true</code><code>min_token_len=4</code><code>repeat_noise=false</code><code>lexical_anchor=true</code></div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-index"><strong>02 · NLP</strong>normalizer.py</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">
+            <div class="node-head"><span class="node-path">normalize_text() + detect_language()</span><span class="node-state">AR</span></div>
+            <div class="node-data"><code>raw="كياس زبالة"</code><code>normalized="كياس زباله"</code><code>compact="كياسزباله"</code></div>
+          </div>
+        </div>
+
+        <div class="flow-row retrieval-row">
+          <div class="flow-index"><strong>03 · RETRIEVE</strong>parallel evidence</div>
+          <div class="flow-line"></div>
+          <div class="retrieval-grid">
+            <div class="retrieval-lane">
+              <div class="lane-head"><span>EXACT</span><span class="lane-muted">0 HIT</span></div>
+              <div class="lane-result lane-muted"><span>exact_lookup[normalized]</span><span>∅</span></div>
+              <div class="lane-result lane-muted"><span>exact_lookup[compact]</span><span>∅</span></div>
+            </div>
+            <div class="retrieval-lane">
+              <div class="lane-head"><span>FUZZY · RapidFuzz</span><span>TOP 20</span></div>
+              <div class="lane-result lane-ignored"><span>مواد غذائية / «اكياس بطاطس»</span><span>0.663</span></div>
+              <div class="lane-result"><span>ranking vote threshold</span><span>≥ 0.800</span></div>
+              <div class="lane-result"><span>contributing hits</span><span>0</span></div>
+            </div>
+            <div class="retrieval-lane">
+              <div class="lane-head"><span>SEMANTIC · E5</span><span>COSINE</span></div>
+              <div class="lane-result"><span>141 · النفايات</span><span>0.899</span></div>
+              <div class="lane-result"><span>163 · مواد تنظيف</span><span>0.882</span></div>
+              <div class="lane-result"><span>12 · مواد غذائية</span><span>0.874</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-row">
+          <div class="flow-index"><strong>04 · FUSION</strong>fusion.py</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">
+            <div class="node-head"><span class="node-path">fuse_hits(root_good_type_id)</span><span class="node-state">TOP 3</span></div>
+            <div class="node-data"><code>weak_fuzzy_excluded=true</code><code>root[141]=rank1</code><code>margin=small</code><code>evidence=SEMANTIC</code></div>
+          </div>
+        </div>
+
+        <div class="flow-row flow-final">
+          <div class="flow-index"><strong>05 · POLICY</strong>policy.py</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">
+            <div class="node-head"><span class="node-path">decide(candidates, language, embedding_available)</span><span class="node-state">AMBIGUOUS</span></div>
+            <div class="node-data"><code>top_root_id=141</code><code>requiresReview=true</code><code>reason="AMBIGUOUS"</code></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="response-bar">
+        <div class="response-cell"><span>topCategory</span><strong>141 · النفايات</strong></div>
+        <div class="response-cell"><span>reason</span><strong>AMBIGUOUS</strong></div>
+        <div class="response-cell"><span>review</span><strong>true</strong></div>
+        <div class="response-cell"><span>latency</span><strong>184 ms</strong></div>
+      </div>
+
+      <div class="approve-row">
+        <button data-choice="approve-engineering-trace" onclick="toggleSelect(this)">APPROVE ENGINEERING TRACE</button>
+      </div>
+    </main>
+  </div>
+</div>

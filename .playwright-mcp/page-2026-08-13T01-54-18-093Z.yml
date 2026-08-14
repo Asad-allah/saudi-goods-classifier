@@ -1,0 +1,44 @@
+- main [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]: ↢
+      - generic [ref=f1e6]:
+        - paragraph [ref=f1e7]: منصة دندن · خدمة مستقلة
+        - heading "مختبر تصنيف البضائع" [level=1] [ref=f1e8]
+    - status [ref=f1e9]: البحث الدلالي جاهز
+  - region [ref=f1e10]:
+    - generic [ref=f1e11]:
+      - heading "اكتشف الصنف الرئيسي من وصف البضاعة الحر." [level=2] [ref=f1e12]
+      - paragraph [ref=f1e13]: النتيجة لا تطابق منتجاً بعينه؛ بل تعيد root_good_type_id فقط. تعرض هذه الصفحة الدليل الذي وصل إلى القرار لتتأكد من استخدام المسار الدلالي أو التقريبي.
+    - generic [ref=f1e14]:
+      - strong [ref=f1e15]: "37"
+      - text: صنف رئيسي · 2308 مصطلح بحث
+  - generic [ref=f1e16]:
+    - region [ref=f1e17]:
+      - paragraph [ref=f1e18]: إدخال تجريبي
+      - heading "وصف البضاعة" [level=3] [ref=f1e19]
+      - paragraph [ref=f1e20]: "اكتب كما يكتب السائق: عربي، إنجليزي، لهجة أو خليط بينهما."
+      - generic [ref=f1e21]:
+        - generic [ref=f1e22]: النص
+        - textbox "النص" [ref=f1e23]: تلفزيون ذكي 65 بوصة
+        - generic [ref=f1e24]:
+          - generic [ref=f1e25]: الحد الأقصى 191 حرفاً
+          - generic [ref=f1e26]: 19 / 191
+        - paragraph [ref=f1e27]: أمثلة سريعة
+        - generic "أمثلة جاهزة" [ref=f1e28]:
+          - button "تلفزيون ذكي" [ref=f1e29] [cursor=pointer]
+          - button "حليب أطفال عضوي" [ref=f1e30] [cursor=pointer]
+          - button "خطأ إملائي" [ref=f1e31] [cursor=pointer]
+          - button "نص إنجليزي قصير" [ref=f1e32] [cursor=pointer]
+        - button "حلّل الصنف الرئيسي" [ref=f1e33] [cursor=pointer]
+      - paragraph [ref=f1e34]: هذه شاشة عرض تجريبية. الربط الإنتاجي يجب أن يستدعي POST /v1/classify من backend التطبيق، وليس من هاتف السائق مباشرة.
+    - region [ref=f1e35]:
+      - generic [ref=f1e36]:
+        - generic [ref=f1e37]:
+          - paragraph [ref=f1e38]: نتيجة التصنيف
+          - heading "القرار والدليل" [level=3] [ref=f1e39]
+          - paragraph [ref=f1e40]: تظهر المسارات التي دعمت الصنف الفائز فقط.
+        - generic [ref=f1e41]: بانتظار إدخال
+      - generic [ref=f1e43]:
+        - generic [ref=f1e44]: ⌁
+        - paragraph [ref=f1e45]: أدخل وصفاً ثم اضغط التحليل. سيظهر الصنف الرئيسي، درجة الحاجة للمراجعة، ومسار القرار.

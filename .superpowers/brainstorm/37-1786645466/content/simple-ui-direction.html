@@ -1,0 +1,100 @@
+<style>
+  .dandan-preview { direction: rtl; color: #14251f; font-family: Tahoma, "Segoe UI", sans-serif; }
+  .dandan-preview * { box-sizing: border-box; }
+  .preview-shell { background: #f4f6f3; border: 1px solid #d7ded9; min-height: 650px; }
+  .preview-bar { display: flex; align-items: center; justify-content: space-between; padding: 18px 28px; border-bottom: 1px solid #d7ded9; background: #fbfcf9; }
+  .preview-brand { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 800; }
+  .preview-mark { width: 28px; height: 28px; display: grid; place-items: center; background: #183b2e; color: #fff; font-size: 14px; }
+  .preview-state { font-size: 12px; color: #52645d; }
+  .preview-state::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-left: 7px; background: #16825d; border-radius: 50%; }
+  .preview-main { width: min(940px, calc(100% - 40px)); margin: 0 auto; padding: 54px 0; }
+  .preview-kicker { margin: 0 0 8px; color: #62736c; font-size: 12px; font-weight: 700; }
+  .preview-title { margin: 0 0 28px; font-size: clamp(26px, 4vw, 42px); line-height: 1.2; letter-spacing: -.5px; }
+  .preview-input-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: stretch; padding-bottom: 34px; border-bottom: 1px solid #cbd4ce; }
+  .preview-input { min-height: 58px; border: 1px solid #aab8b0; background: #fff; padding: 16px; color: #20342c; font-size: 17px; text-align: right; }
+  .preview-action { min-width: 118px; border: 0; background: #116b4d; color: #fff; padding: 0 22px; font-weight: 800; }
+  .preview-result { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 30px; align-items: end; padding: 32px 0 26px; }
+  .preview-label { display: block; margin-bottom: 5px; color: #62736c; font-size: 11px; font-weight: 800; }
+  .preview-category { margin: 0; font-size: 34px; line-height: 1.15; }
+  .preview-id { color: #62736c; font-size: 13px; }
+  .preview-review { border-right: 3px solid #c37a15; padding: 5px 12px 5px 0; color: #774909; font-size: 13px; }
+  .preview-flow { display: grid; grid-template-columns: repeat(7, 1fr); border-top: 1px solid #d2dad5; border-bottom: 1px solid #d2dad5; }
+  .preview-step { position: relative; padding: 14px 6px; color: #64736d; font-size: 11px; text-align: center; }
+  .preview-step + .preview-step::after { content: ""; position: absolute; top: 50%; right: -9px; width: 18px; height: 1px; background: #bac6bf; }
+  .preview-step strong { display: block; width: 22px; height: 22px; margin: 0 auto 6px; border: 1px solid #9fb0a7; line-height: 20px; color: #50645a; font-size: 10px; }
+  .preview-step.used { color: #153e30; font-weight: 800; }
+  .preview-step.used strong { border-color: #16825d; background: #16825d; color: #fff; }
+  .preview-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-top: 26px; }
+  .preview-bottom h4 { margin: 0 0 10px; font-size: 13px; }
+  .preview-alt { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #dfe5e1; font-size: 13px; }
+  .preview-select { border: 0; border-bottom: 1px solid #183b2e; background: transparent; color: #183b2e; padding: 0; font-size: 12px; }
+  .preview-details { color: #62736c; font-size: 12px; line-height: 1.8; }
+  .preview-approve { display: flex; justify-content: flex-end; margin-top: 24px; }
+  .preview-approve button { border: 1px solid #183b2e; background: transparent; color: #183b2e; padding: 9px 14px; font-weight: 800; cursor: pointer; }
+  @media (max-width: 700px) {
+    .preview-main { width: min(100% - 24px, 940px); padding: 30px 0; }
+    .preview-input-row, .preview-result, .preview-bottom { grid-template-columns: 1fr; }
+    .preview-action { min-height: 48px; }
+    .preview-flow { grid-template-columns: repeat(4, 1fr); }
+    .preview-step + .preview-step::after { display: none; }
+  }
+</style>
+
+<div class="dandan-preview">
+  <h2>اتجاه واجهة دندن التجريبية</h2>
+  <p class="subtitle">سطح عمل واحد، نص قليل، والـpipeline ظاهر بصرياً.</p>
+
+  <div class="preview-shell">
+    <div class="preview-bar">
+      <div class="preview-brand"><span class="preview-mark">د</span> دندن · مختبر الصنف</div>
+      <div class="preview-state">الخدمة جاهزة</div>
+    </div>
+
+    <main class="preview-main">
+      <p class="preview-kicker">وصف البضاعة</p>
+      <h3 class="preview-title">ما الذي يتم شحنه؟</h3>
+
+      <div class="preview-input-row">
+        <div class="preview-input">كياس زبالة</div>
+        <button class="preview-action">تصنيف</button>
+      </div>
+
+      <section class="preview-result">
+        <div>
+          <span class="preview-label">الصنف المقترح</span>
+          <h3 class="preview-category">النفايات</h3>
+          <span class="preview-id">Root ID 141</span>
+        </div>
+        <div class="preview-review">تحتاج تأكيداً</div>
+      </section>
+
+      <div class="preview-flow" aria-label="مسار التصنيف">
+        <div class="preview-step used"><strong>1</strong>تحقق</div>
+        <div class="preview-step used"><strong>2</strong>تطبيع</div>
+        <div class="preview-step"><strong>3</strong>حرفي</div>
+        <div class="preview-step"><strong>4</strong>إملائي</div>
+        <div class="preview-step used"><strong>5</strong>دلالي</div>
+        <div class="preview-step used"><strong>6</strong>دمج</div>
+        <div class="preview-step used"><strong>7</strong>قرار</div>
+      </div>
+
+      <div class="preview-bottom">
+        <section>
+          <h4>بدائل</h4>
+          <div class="preview-alt"><span>مواد تنظيف</span><button class="preview-select">اختيار</button></div>
+          <div class="preview-alt"><span>منتجات بلاستيكية</span><button class="preview-select">اختيار</button></div>
+        </section>
+        <section class="preview-details">
+          <h4>الدليل</h4>
+          <div>Semantic · «نفايات منزلية»</div>
+          <div>الزمن · 184 ms</div>
+          <div>التفاصيل التقنية ▾</div>
+        </section>
+      </div>
+
+      <div class="preview-approve">
+        <button data-choice="approve-simple-ui" onclick="toggleSelect(this)">اعتماد هذا الاتجاه</button>
+      </div>
+    </main>
+  </div>
+</div>

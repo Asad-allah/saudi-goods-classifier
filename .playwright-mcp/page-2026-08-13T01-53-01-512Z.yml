@@ -1,0 +1,80 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: ↢
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: منصة دندن · خدمة مستقلة
+        - heading "مختبر تصنيف البضائع" [level=1] [ref=e8]
+    - status [ref=e9]: البحث الدلالي جاهز
+  - region [ref=e10]:
+    - generic [ref=e11]:
+      - heading "اكتشف الصنف الرئيسي من وصف البضاعة الحر." [level=2] [ref=e12]
+      - paragraph [ref=e13]: النتيجة لا تطابق منتجاً بعينه؛ بل تعيد root_good_type_id فقط. تعرض هذه الصفحة الدليل الذي وصل إلى القرار لتتأكد من استخدام المسار الدلالي أو التقريبي.
+    - generic [ref=e14]:
+      - strong [ref=e15]: "37"
+      - text: صنف رئيسي · 2308 مصطلح بحث
+  - generic [ref=e16]:
+    - region [ref=e17]:
+      - paragraph [ref=e18]: إدخال تجريبي
+      - heading "وصف البضاعة" [level=3] [ref=e19]
+      - paragraph [ref=e20]: "اكتب كما يكتب السائق: عربي، إنجليزي، لهجة أو خليط بينهما."
+      - generic [ref=e21]:
+        - generic [ref=e22]: النص
+        - textbox "النص" [active] [ref=e23]: تلفزيون ذكي 65 بوصة
+        - generic [ref=e24]:
+          - generic [ref=e25]: الحد الأقصى 191 حرفاً
+          - generic [ref=e26]: 19 / 191
+        - paragraph [ref=e27]: أمثلة سريعة
+        - generic "أمثلة جاهزة" [ref=e28]:
+          - button "تلفزيون ذكي" [ref=e29] [cursor=pointer]
+          - button "حليب أطفال عضوي" [ref=e30] [cursor=pointer]
+          - button "خطأ إملائي" [ref=e31] [cursor=pointer]
+          - button "نص إنجليزي قصير" [ref=e32] [cursor=pointer]
+        - button "حلّل الصنف الرئيسي" [ref=e33] [cursor=pointer]
+      - paragraph [ref=e34]: هذه شاشة عرض تجريبية. الربط الإنتاجي يجب أن يستدعي POST /v1/classify من backend التطبيق، وليس من هاتف السائق مباشرة.
+    - region [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: نتيجة التصنيف
+          - heading "القرار والدليل" [level=3] [ref=e39]
+          - paragraph [ref=e40]: تظهر المسارات التي دعمت الصنف الفائز فقط.
+        - generic [ref=e41]: تحتاج مراجعة
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - heading "الأثاث" [level=4] [ref=e49]
+            - paragraph [ref=e50]: Furniture
+          - generic [ref=e51]: ID 133
+        - generic [ref=e52]:
+          - heading "مسار القرار" [level=4] [ref=e53]
+          - paragraph [ref=e54]: تم استخدام البحث الدلالي بالـ Embedding لإيجاد الصنف الأقرب من المعنى.
+          - generic "محركات البحث المستخدمة" [ref=e55]: ✓ بحث دلالي بالـ Embedding
+          - generic "الأسماء أو المصطلحات المطابقة" [ref=e57]: الأثاث
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - term [ref=e61]: قوة أقوى دليل
+            - definition [ref=e62]: 84%
+          - generic [ref=e63]:
+            - term [ref=e64]: فارق المرشح الأول
+            - definition [ref=e65]: "0.0015"
+          - generic [ref=e66]:
+            - term [ref=e67]: لغة النص
+            - definition [ref=e68]: إنجليزي
+          - generic [ref=e69]:
+            - term [ref=e70]: زمن الاستجابة
+            - definition [ref=e71]: 57 ms
+        - generic [ref=e72]:
+          - heading "بدائل مقترحة" [level=4] [ref=e73]
+          - list [ref=e74]:
+            - listitem [ref=e75]:
+              - generic [ref=e76]: الأثاث
+              - generic [ref=e77]: "#1 · ID 133"
+            - listitem [ref=e78]:
+              - generic [ref=e79]: الأسفنج
+              - generic [ref=e80]: "#2 · ID 169"
+            - listitem [ref=e81]:
+              - generic [ref=e82]: منظفات
+              - generic [ref=e83]: "#3 · ID 175"
+        - paragraph [ref=e84]: هناك أكثر من صنف قريب أو مصطلح مشترك؛ يلزم تأكيد بشري.
+        - group [ref=e85]:
+          - generic "عرض الاستجابة التقنية الكاملة" [ref=e86] [cursor=pointer]

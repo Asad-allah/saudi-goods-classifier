@@ -1,0 +1,3686 @@
+{
+  "14": {
+    "good_type_id": 14,
+    "name_ar": "سلع استهلاكية سريعة الحركة الجافة",
+    "name_en": "Dry Fast-Moving Consum",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف سلع استهلاكية سريعة الحركة الجافة (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: سلع استهلاكية سريعة الحركة الجافة، برغل، برقوق، بزورات، بسكويت، بطاطا شيبس، بقوليات، بهارات، تمر، تين مجفف، جوز، حصائب ذرة مصنعة، حصائب ذرة نصف مصنعة، حلاوة، حلويات وتشمل البسكويت والشوكولا. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Dry Fast-Moving Consum under main group Food Items covers genuine market goods in Saudi Arabia: سلع استهلاكية سريعة الحركة الجافة, برغل, برقوق, بزورات, بسكويت, بطاطا شيبس, بقوليات, بهارات, تمر, تين مجفف.",
+    "trade_terms_ar": [
+      "سلع استهلاكية سريعة الحركة الجافة",
+      "برغل",
+      "برقوق",
+      "بزورات",
+      "بسكويت",
+      "بطاطا شيبس",
+      "بقوليات",
+      "بهارات",
+      "تمر",
+      "تين مجفف",
+      "جوز",
+      "حصائب ذرة مصنعة",
+      "حصائب ذرة نصف مصنعة",
+      "حلاوة",
+      "حلويات وتشمل البسكويت والشوكولا",
+      "حمص",
+      "دانيت",
+      "ذرة",
+      "حب",
+      "رز",
+      "زبيب",
+      "زعتر",
+      "زيتون",
+      "سكر",
+      "سمنة"
+    ],
+    "trade_terms_en": [
+      "Dry Fast-Moving Consum",
+      "Dry Fast-Moving Consum supplies",
+      "genuine Dry Fast-Moving Consum"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "15": {
+    "good_type_id": 15,
+    "name_ar": "سلع استهلاكية سريعة الحركة المبردة",
+    "name_en": "Cold Fast-Moving Consum",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف سلع استهلاكية سريعة الحركة المبردة (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: سلع استهلاكية سريعة الحركة المبردة، ايس كريم، بازلاء مجمد، بط مجمد، بطاطس مجمد، بوظة، حمام مجمد، خصروات مجمدة، دجاج مجمد، ديك رومي مجمد، سمك مجمد، عصير، فطائر مجمدة، فواكه مجمدة، لحم مجمد. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Cold Fast-Moving Consum under main group Food Items covers genuine market goods in Saudi Arabia: سلع استهلاكية سريعة الحركة المبردة, ايس كريم, بازلاء مجمد, بط مجمد, بطاطس مجمد, بوظة, حمام مجمد, خصروات مجمدة, دجاج مجمد, ديك رومي مجمد.",
+    "trade_terms_ar": [
+      "سلع استهلاكية سريعة الحركة المبردة",
+      "ايس كريم",
+      "بازلاء مجمد",
+      "بط مجمد",
+      "بطاطس مجمد",
+      "بوظة",
+      "حمام مجمد",
+      "خصروات مجمدة",
+      "دجاج مجمد",
+      "ديك رومي مجمد",
+      "سمك مجمد",
+      "عصير",
+      "فطائر مجمدة",
+      "فواكه مجمدة",
+      "لحم مجمد",
+      "مناقيش مجمدة",
+      "مواد غذائية مجمدة",
+      "عصير ربيع",
+      "اكياس ماء مجمده",
+      "عصير مشكل",
+      "مجمدات بطاطس",
+      "نشاء مبرد",
+      "عصائر",
+      "عصير ميزو",
+      "مواد غذائيه سريعه الحركه مبرد"
+    ],
+    "trade_terms_en": [
+      "Cold Fast-Moving Consum",
+      "Cold Fast-Moving Consum supplies",
+      "genuine Cold Fast-Moving Consum"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "16": {
+    "good_type_id": 16,
+    "name_ar": "مواد الرعاية الصحية الجافة",
+    "name_en": "Dry Health Care",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف مواد الرعاية الصحية الجافة (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد الرعاية الصحية الجافة، بامبرز، حليب اطفال، حليب بودرة، حنه، سريلاك، مسحوق البروتين، نان، نيدو، حفائظ اطفال، جفائظ اطفال، حفائظ، حفاضات، حفايض بيبي جوي، حفايض. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Dry Health Care under main group Food Items covers genuine market goods in Saudi Arabia: مواد الرعاية الصحية الجافة, بامبرز, حليب اطفال, حليب بودرة, حنه, سريلاك, مسحوق البروتين, نان, نيدو, حفائظ اطفال.",
+    "trade_terms_ar": [
+      "مواد الرعاية الصحية الجافة",
+      "بامبرز",
+      "حليب اطفال",
+      "حليب بودرة",
+      "حنه",
+      "سريلاك",
+      "مسحوق البروتين",
+      "نان",
+      "نيدو",
+      "حفائظ اطفال",
+      "جفائظ اطفال",
+      "حفائظ",
+      "حفاضات",
+      "حفايض بيبي جوي",
+      "حفايض",
+      "حفائظ اطفال حفائض",
+      "حفضات",
+      "حفوضات",
+      "فوط نسائية + أطفال",
+      "حليب جاف",
+      "بابونج اعشاب",
+      "زهرات العطار",
+      "حفائظ اطفال ومحروم",
+      "حليب بدره",
+      "Dry Health Care"
+    ],
+    "trade_terms_en": [
+      "Dry Health Care",
+      "Dry Health Care supplies",
+      "genuine Dry Health Care"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "17": {
+    "good_type_id": 17,
+    "name_ar": "مواد الرعاية الصحية المبردة",
+    "name_en": "Cold Health Care",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف مواد الرعاية الصحية المبردة (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد الرعاية الصحية المبردة، Cold Health Care، Cold Health Care supplies، genuine Cold Health Care. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Cold Health Care under main group Food Items covers genuine market goods in Saudi Arabia: مواد الرعاية الصحية المبردة, Cold Health Care, Cold Health Care supplies, genuine Cold Health Care.",
+    "trade_terms_ar": [
+      "مواد الرعاية الصحية المبردة",
+      "Cold Health Care",
+      "Cold Health Care supplies",
+      "genuine Cold Health Care"
+    ],
+    "trade_terms_en": [
+      "Cold Health Care",
+      "Cold Health Care supplies",
+      "genuine Cold Health Care"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "19": {
+    "good_type_id": 19,
+    "name_ar": "95بنزين",
+    "name_en": "Petrol 95",
+    "root_id": 10,
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "market_context_ar": "يشمل تصنيف 95بنزين (المجموعة الرئيسية: منتجات بترولية) البضائع والمنتجات المتداولة في السوق السعودي مثل: 95بنزين، بنزين، Petrol 95، Petrol 95 supplies، genuine Petrol 95. يتم تداولها عبر مستودعات وموزعي قطاع منتجات بترولية بالمملكة.",
+    "market_context_en": "Category Petrol 95 under main group Petroleum Products covers genuine market goods in Saudi Arabia: 95بنزين, بنزين, Petrol 95, Petrol 95 supplies, genuine Petrol 95.",
+    "trade_terms_ar": [
+      "95بنزين",
+      "بنزين",
+      "Petrol 95",
+      "Petrol 95 supplies",
+      "genuine Petrol 95"
+    ],
+    "trade_terms_en": [
+      "Petrol 95",
+      "Petrol 95 supplies",
+      "genuine Petrol 95"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "20": {
+    "good_type_id": 20,
+    "name_ar": "ديزل",
+    "name_en": "Diesel",
+    "root_id": 10,
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "market_context_ar": "يشمل تصنيف ديزل (المجموعة الرئيسية: منتجات بترولية) البضائع والمنتجات المتداولة في السوق السعودي مثل: ديزل، مازوت، Diesel، Diesel supplies، genuine Diesel. يتم تداولها عبر مستودعات وموزعي قطاع منتجات بترولية بالمملكة.",
+    "market_context_en": "Category Diesel under main group Petroleum Products covers genuine market goods in Saudi Arabia: ديزل, مازوت, Diesel, Diesel supplies, genuine Diesel.",
+    "trade_terms_ar": [
+      "ديزل",
+      "مازوت",
+      "Diesel",
+      "Diesel supplies",
+      "genuine Diesel"
+    ],
+    "trade_terms_en": [
+      "Diesel",
+      "Diesel supplies",
+      "genuine Diesel"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "23": {
+    "good_type_id": 23,
+    "name_ar": "زيوت",
+    "name_en": "Oils",
+    "root_id": 10,
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "market_context_ar": "يشمل تصنيف زيوت (المجموعة الرئيسية: منتجات بترولية) البضائع والمنتجات المتداولة في السوق السعودي مثل: زيوت، Oils، Oils supplies، genuine Oils. يتم تداولها عبر مستودعات وموزعي قطاع منتجات بترولية بالمملكة.",
+    "market_context_en": "Category Oils under main group Petroleum Products covers genuine market goods in Saudi Arabia: زيوت, Oils, Oils supplies, genuine Oils.",
+    "trade_terms_ar": [
+      "زيوت",
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "trade_terms_en": [
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "27": {
+    "good_type_id": 27,
+    "name_ar": "اسفلت",
+    "name_en": "Asphalt",
+    "root_id": 10,
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "market_context_ar": "يشمل تصنيف اسفلت (المجموعة الرئيسية: منتجات بترولية) البضائع والمنتجات المتداولة في السوق السعودي مثل: اسفلت، منتجات بترولية اسفلت، مواد البناء والتشييد -مواد الدفان والسفلته، ازفلت، سفلت، Asphalt، Asphalt supplies، genuine Asphalt. يتم تداولها عبر مستودعات وموزعي قطاع منتجات بترولية بالمملكة.",
+    "market_context_en": "Category Asphalt under main group Petroleum Products covers genuine market goods in Saudi Arabia: اسفلت, منتجات بترولية اسفلت, مواد البناء والتشييد -مواد الدفان والسفلته, ازفلت, سفلت, Asphalt, Asphalt supplies, genuine Asphalt.",
+    "trade_terms_ar": [
+      "اسفلت",
+      "منتجات بترولية اسفلت",
+      "مواد البناء والتشييد -مواد الدفان والسفلته",
+      "ازفلت",
+      "سفلت",
+      "Asphalt",
+      "Asphalt supplies",
+      "genuine Asphalt"
+    ],
+    "trade_terms_en": [
+      "Asphalt",
+      "Asphalt supplies",
+      "genuine Asphalt"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "29": {
+    "good_type_id": 29,
+    "name_ar": "النقل الخاص للافراد",
+    "name_en": "Private Transportation For Individuals",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف النقل الخاص للافراد (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: النقل الخاص للافراد، دينه ونش و سياره صغيره، دنات، وانيتات، سيارة وانيت، قطار كهربائي، Private Transportation For Individuals، Private Transportation For Individuals supplies، genuine Private Transportation For Individuals. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Private Transportation For Individuals under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: النقل الخاص للافراد, دينه ونش و سياره صغيره, دنات, وانيتات, سيارة وانيت, قطار كهربائي, Private Transportation For Individuals, Private Transportation For Individuals supplies, genuine Private Transportation For Individuals.",
+    "trade_terms_ar": [
+      "النقل الخاص للافراد",
+      "دينه ونش و سياره صغيره",
+      "دنات",
+      "وانيتات",
+      "سيارة وانيت",
+      "قطار كهربائي",
+      "Private Transportation For Individuals",
+      "Private Transportation For Individuals supplies",
+      "genuine Private Transportation For Individuals"
+    ],
+    "trade_terms_en": [
+      "Private Transportation For Individuals",
+      "Private Transportation For Individuals supplies",
+      "genuine Private Transportation For Individuals"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "30": {
+    "good_type_id": 30,
+    "name_ar": "نقل المركبات للافراد",
+    "name_en": "Vehicle Transportation For Individuals",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف نقل المركبات للافراد (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: نقل المركبات للافراد، جمس، دينه، دينه براد، دينه صندوق، دينه قلاب، دينه لوري، دينه ونش، وانيت، دينات، هيلكس و دينه، دينه و شاص، مركبة افراد، سيارة جيب، ناقلات افراد. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Vehicle Transportation For Individuals under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: نقل المركبات للافراد, جمس, دينه, دينه براد, دينه صندوق, دينه قلاب, دينه لوري, دينه ونش, وانيت, دينات.",
+    "trade_terms_ar": [
+      "نقل المركبات للافراد",
+      "جمس",
+      "دينه",
+      "دينه براد",
+      "دينه صندوق",
+      "دينه قلاب",
+      "دينه لوري",
+      "دينه ونش",
+      "وانيت",
+      "دينات",
+      "هيلكس و دينه",
+      "دينه و شاص",
+      "مركبة افراد",
+      "سيارة جيب",
+      "ناقلات افراد",
+      "هوندااكورد",
+      "شياره",
+      "Vehicle Transportation For Individuals",
+      "Vehicle Transportation For Individuals supplies",
+      "genuine Vehicle Transportation For Individuals"
+    ],
+    "trade_terms_en": [
+      "Vehicle Transportation For Individuals",
+      "Vehicle Transportation For Individuals supplies",
+      "genuine Vehicle Transportation For Individuals"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "31": {
+    "good_type_id": 31,
+    "name_ar": "النقل الخاص لقطاع الاعمال",
+    "name_en": "Private Transport For Business Sector",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف النقل الخاص لقطاع الاعمال (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: النقل الخاص لقطاع الاعمال، اغراض عمال، بريمات كسارة، تانكي، تاور لايت، توابع حفار، تيدر، تيدر تريله، تيدر جوانب، تيدر سطحة، تيدر ماء، حراثة، حصادة زراعية، خلاطة، دقاق كسارة. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Private Transport For Business Sector under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: النقل الخاص لقطاع الاعمال, اغراض عمال, بريمات كسارة, تانكي, تاور لايت, توابع حفار, تيدر, تيدر تريله, تيدر جوانب, تيدر سطحة.",
+    "trade_terms_ar": [
+      "النقل الخاص لقطاع الاعمال",
+      "اغراض عمال",
+      "بريمات كسارة",
+      "تانكي",
+      "تاور لايت",
+      "توابع حفار",
+      "تيدر",
+      "تيدر تريله",
+      "تيدر جوانب",
+      "تيدر سطحة",
+      "تيدر ماء",
+      "حراثة",
+      "حصادة زراعية",
+      "خلاطة",
+      "دقاق كسارة",
+      "رصاصة اسفلت",
+      "صندوق قلاب",
+      "طاحونة كسارة",
+      "طاقم فرادة",
+      "غربال كساره",
+      "قطع خلاطة",
+      "قلص تانكي",
+      "كساره",
+      "مضخة خرسانة",
+      "مضخة ماء"
+    ],
+    "trade_terms_en": [
+      "Private Transport For Business Sector",
+      "Private Transport For Business Sector supplies",
+      "genuine Private Transport For Business Sector"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "32": {
+    "good_type_id": 32,
+    "name_ar": "نقل المركبات لقطاع الاعمال",
+    "name_en": "Business Vehicle Transportation",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف نقل المركبات لقطاع الاعمال (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: نقل المركبات لقطاع الاعمال، باص، باص كوستر، بلدوزر، بوبكات، بوبكات دريل، بوكلين اكتربلر، جي سي بي، حفار، دركتر، دريل، دنبر، راس اكتروس، راس تريله، راس شاصي سكس. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Business Vehicle Transportation under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: نقل المركبات لقطاع الاعمال, باص, باص كوستر, بلدوزر, بوبكات, بوبكات دريل, بوكلين اكتربلر, جي سي بي, حفار, دركتر.",
+    "trade_terms_ar": [
+      "نقل المركبات لقطاع الاعمال",
+      "باص",
+      "باص كوستر",
+      "بلدوزر",
+      "بوبكات",
+      "بوبكات دريل",
+      "بوكلين اكتربلر",
+      "جي سي بي",
+      "حفار",
+      "دركتر",
+      "دريل",
+      "دنبر",
+      "راس اكتروس",
+      "راس تريله",
+      "راس شاصي سكس",
+      "راس مع تانكي",
+      "راس مع تريله",
+      "راس و صندوق",
+      "راس و قلاب",
+      "سيارات",
+      "سيارات صغيرة",
+      "سياره دفاع مدني",
+      "شاصي سكس",
+      "شاصيه سكس",
+      "شيول"
+    ],
+    "trade_terms_en": [
+      "Business Vehicle Transportation",
+      "Business Vehicle Transportation supplies",
+      "genuine Business Vehicle Transportation"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "33": {
+    "good_type_id": 33,
+    "name_ar": "نقل المركبات المتضررة",
+    "name_en": "Damaged Vehicles Transportation",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف نقل المركبات المتضررة (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: نقل المركبات المتضررة، سيارات تالفة، سيارات حوادث، سيارات محروقة، سيارات سكراب، راس تريلا معطل، نقل المركبات المتضررة تشليح، Damaged Vehicles Transportation، Damaged Vehicles Transportation supplies، genuine Damaged Vehicles Transportation. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Damaged Vehicles Transportation under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: نقل المركبات المتضررة, سيارات تالفة, سيارات حوادث, سيارات محروقة, سيارات سكراب, راس تريلا معطل, نقل المركبات المتضررة تشليح, Damaged Vehicles Transportation, Damaged Vehicles Transportation supplies, genuine Damaged Vehicles Transportation.",
+    "trade_terms_ar": [
+      "نقل المركبات المتضررة",
+      "سيارات تالفة",
+      "سيارات حوادث",
+      "سيارات محروقة",
+      "سيارات سكراب",
+      "راس تريلا معطل",
+      "نقل المركبات المتضررة تشليح",
+      "Damaged Vehicles Transportation",
+      "Damaged Vehicles Transportation supplies",
+      "genuine Damaged Vehicles Transportation"
+    ],
+    "trade_terms_en": [
+      "Damaged Vehicles Transportation",
+      "Damaged Vehicles Transportation supplies",
+      "genuine Damaged Vehicles Transportation"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "45": {
+    "good_type_id": 45,
+    "name_ar": "الخرسانة",
+    "name_en": "Concrete",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الخرسانة (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الخرسانة، حواجز أسمنتية، حواجز خرسانية، صبات خرسانة، صبيات، صبات خرسانية سفتي، عبارات، مناهل، مناهل خرسانية، صومعة قمح، صبيات خرسانه، خرسانه جاهزه مسبق الصنع، هياكل خرسانه، مواد البناء الخرسانيه، صبيات خرسانيه مسبقة الصنع. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Concrete under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الخرسانة, حواجز أسمنتية, حواجز خرسانية, صبات خرسانة, صبيات, صبات خرسانية سفتي, عبارات, مناهل, مناهل خرسانية, صومعة قمح.",
+    "trade_terms_ar": [
+      "الخرسانة",
+      "حواجز أسمنتية",
+      "حواجز خرسانية",
+      "صبات خرسانة",
+      "صبيات",
+      "صبات خرسانية سفتي",
+      "عبارات",
+      "مناهل",
+      "مناهل خرسانية",
+      "صومعة قمح",
+      "صبيات خرسانه",
+      "خرسانه جاهزه مسبق الصنع",
+      "هياكل خرسانه",
+      "مواد البناء الخرسانيه",
+      "صبيات خرسانيه مسبقة الصنع",
+      "خرصانه",
+      "صبيات خرسانه مسبقة الصنع",
+      "مواد البناء والتشييد الخرسانيه",
+      "مواد البناء والتشييد -بلك",
+      "خرصانه بركاني",
+      "خرصنه بركاني",
+      "من الأسمنت أو الخرسانة",
+      "حرسانه سبيت",
+      "مواد التشيد والبناء",
+      "مواد بناء"
+    ],
+    "trade_terms_en": [
+      "Concrete",
+      "Concrete supplies",
+      "genuine Concrete"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "46": {
+    "good_type_id": 46,
+    "name_ar": "الصلب",
+    "name_en": "Steel",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الصلب (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الصلب، Steel، Steel supplies، genuine Steel. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Steel under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الصلب, Steel, Steel supplies, genuine Steel.",
+    "trade_terms_ar": [
+      "الصلب",
+      "Steel",
+      "Steel supplies",
+      "genuine Steel"
+    ],
+    "trade_terms_en": [
+      "Steel",
+      "Steel supplies",
+      "genuine Steel"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "47": {
+    "good_type_id": 47,
+    "name_ar": "الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات",
+    "name_en": "Pipes and water extension materials include tanks",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات، احواض مغسلة، ادوات سباكة، انابيب ماء، انبولات، خرطوم ماء، خزان سايلو، خزانات، خزانات ولوازمها وتشمل مواسير وبيبات، خلاطات المياه، دشات وحمامات، سخان ماء، ماسورة فايبر، محابس وصمامات، مضخات ماء. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Pipes and water extension materials include tanks under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات, احواض مغسلة, ادوات سباكة, انابيب ماء, انبولات, خرطوم ماء, خزان سايلو, خزانات, خزانات ولوازمها وتشمل مواسير وبيبات, خلاطات المياه.",
+    "trade_terms_ar": [
+      "الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات",
+      "احواض مغسلة",
+      "ادوات سباكة",
+      "انابيب ماء",
+      "انبولات",
+      "خرطوم ماء",
+      "خزان سايلو",
+      "خزانات",
+      "خزانات ولوازمها وتشمل مواسير وبيبات",
+      "خلاطات المياه",
+      "دشات وحمامات",
+      "سخان ماء",
+      "ماسورة فايبر",
+      "محابس وصمامات",
+      "مضخات ماء",
+      "مواد سباكة",
+      "مواسير الصرف",
+      "مواسير المياه",
+      "خزان استيل",
+      "فلاتر تحلية مياه",
+      "مواد البناء والتشييد- وتشمل الانابيب والخزانات",
+      "خزانات ماء",
+      "خزان ماء",
+      "خزانات ارامكو",
+      "خزانات فيبر"
+    ],
+    "trade_terms_en": [
+      "Pipes and water extension materials include tanks",
+      "Pipes and water extension materials include tanks supplies",
+      "genuine Pipes and water extension materials include tanks"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "48": {
+    "good_type_id": 48,
+    "name_ar": "الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ",
+    "name_en": "Glass and aluminum panels include doors and windows",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ، المنيوم، الواح المنيوم، الواح زجاج، زجاج، مواد البناء والتشييد-وتشمل الالمنيوم والابواب والنوافذ والزجاج، قزاز، لامنيوم خشب، الامنيوم وخشب، سلالم المنيوم، قزاز فرق، رول الالمنيوم، الواح المنيوم  المنيوم، إلا المنيوم، ابواب المنيوم. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Glass and aluminum panels include doors and windows under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ, المنيوم, الواح المنيوم, الواح زجاج, زجاج, مواد البناء والتشييد-وتشمل الالمنيوم والابواب والنوافذ والزجاج, قزاز, لامنيوم خشب, الامنيوم وخشب, سلالم المنيوم.",
+    "trade_terms_ar": [
+      "الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ",
+      "المنيوم",
+      "الواح المنيوم",
+      "الواح زجاج",
+      "زجاج",
+      "مواد البناء والتشييد-وتشمل الالمنيوم والابواب والنوافذ والزجاج",
+      "قزاز",
+      "لامنيوم خشب",
+      "الامنيوم وخشب",
+      "سلالم المنيوم",
+      "قزاز فرق",
+      "رول الالمنيوم",
+      "الواح المنيوم  المنيوم",
+      "إلا المنيوم",
+      "ابواب المنيوم",
+      "المينو",
+      "نوافذ المنيوم وابواب",
+      "نوافذ المنيوم",
+      "جدران المنيوم",
+      "Glass and aluminum panels include doors and windows",
+      "Glass and aluminum panels include doors and windows supplies",
+      "genuine Glass and aluminum panels include doors and windows"
+    ],
+    "trade_terms_en": [
+      "Glass and aluminum panels include doors and windows",
+      "Glass and aluminum panels include doors and windows supplies",
+      "genuine Glass and aluminum panels include doors and windows"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "49": {
+    "good_type_id": 49,
+    "name_ar": "اعمال التشطيب والدهانات والتكسيات الخارجية",
+    "name_en": "Finishing works, paints and external textures",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف اعمال التشطيب والدهانات والتكسيات الخارجية (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: اعمال التشطيب والدهانات والتكسيات الخارجية، دهان، مواد البناء-دهانات، مواد البناء والتشيد اعمال التشطيب والدهدنات والتكسيات، دهانات اوسكار، معجون بوياء، بويا دهان، دهانات الجزيرة، معجون ودهانات، دهانات وملحقاتها، مواد البناء دهانات -عوازل، Finishing works, paints and external textures، Finishing works, paints and external textures supplies، genuine Finishing works, paints and external textures. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Finishing works, paints and external textures under main group Building And Construction Items covers genuine market goods in Saudi Arabia: اعمال التشطيب والدهانات والتكسيات الخارجية, دهان, مواد البناء-دهانات, مواد البناء والتشيد اعمال التشطيب والدهدنات والتكسيات, دهانات اوسكار, معجون بوياء, بويا دهان, دهانات الجزيرة, معجون ودهانات, دهانات وملحقاتها.",
+    "trade_terms_ar": [
+      "اعمال التشطيب والدهانات والتكسيات الخارجية",
+      "دهان",
+      "مواد البناء-دهانات",
+      "مواد البناء والتشيد اعمال التشطيب والدهدنات والتكسيات",
+      "دهانات اوسكار",
+      "معجون بوياء",
+      "بويا دهان",
+      "دهانات الجزيرة",
+      "معجون ودهانات",
+      "دهانات وملحقاتها",
+      "مواد البناء دهانات -عوازل",
+      "Finishing works, paints and external textures",
+      "Finishing works, paints and external textures supplies",
+      "genuine Finishing works, paints and external textures"
+    ],
+    "trade_terms_en": [
+      "Finishing works, paints and external textures",
+      "Finishing works, paints and external textures supplies",
+      "genuine Finishing works, paints and external textures"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "50": {
+    "good_type_id": 50,
+    "name_ar": "المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة",
+    "name_en": "Equipment and tools include saws, hammers, fisher",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة، هزازة خرسانة، مواد البناء والتشييد- المعدات والادوات وتشمل المناشير وهزازات الخرسانة، مواد البناء والتشييد المعدات والادوات وتشمل المناشير، كراتين براغي، براغي حديد، براغي، مناشير كهربائية، مناشير يدوية، مطارق يدوية والية، مفكات ومفاتيح، معدات التشييد وتشمل مفكات وبراغي ومناشير، معدات التشييد والبناء وتشمل مناشير ومطارق وبراغي، معدات وادوات البناء وتشمل الدريلات، دريل. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Equipment and tools include saws, hammers, fisher under main group Building And Construction Items covers genuine market goods in Saudi Arabia: المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة, هزازة خرسانة, مواد البناء والتشييد- المعدات والادوات وتشمل المناشير وهزازات الخرسانة, مواد البناء والتشييد المعدات والادوات وتشمل المناشير, كراتين براغي, براغي حديد, براغي, مناشير كهربائية, مناشير يدوية, مطارق يدوية والية.",
+    "trade_terms_ar": [
+      "المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة",
+      "هزازة خرسانة",
+      "مواد البناء والتشييد- المعدات والادوات وتشمل المناشير وهزازات الخرسانة",
+      "مواد البناء والتشييد المعدات والادوات وتشمل المناشير",
+      "كراتين براغي",
+      "براغي حديد",
+      "براغي",
+      "مناشير كهربائية",
+      "مناشير يدوية",
+      "مطارق يدوية والية",
+      "مفكات ومفاتيح",
+      "معدات التشييد وتشمل مفكات وبراغي ومناشير",
+      "معدات التشييد والبناء وتشمل مناشير ومطارق وبراغي",
+      "معدات وادوات البناء وتشمل الدريلات",
+      "دريل",
+      "براغي مفكات مناشير وخلافه",
+      "عدد صناعيه اقفال",
+      "بسامير حديد",
+      "Equipment and tools include saws, hammers, fisher",
+      "Equipment and tools include saws, hammers, fisher supplies",
+      "genuine Equipment and tools include saws, hammers, fisher"
+    ],
+    "trade_terms_en": [
+      "Equipment and tools include saws, hammers, fisher",
+      "Equipment and tools include saws, hammers, fisher supplies",
+      "genuine Equipment and tools include saws, hammers, fisher"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "51": {
+    "good_type_id": 51,
+    "name_ar": "أعمال السباكة والتمديدات الصحية",
+    "name_en": "Plumbing work and health extensions",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف أعمال السباكة والتمديدات الصحية (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: أعمال السباكة والتمديدات الصحية، Plumbing work and health extensions، Plumbing work and health extensions supplies، genuine Plumbing work and health extensions. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Plumbing work and health extensions under main group Building And Construction Items covers genuine market goods in Saudi Arabia: أعمال السباكة والتمديدات الصحية, Plumbing work and health extensions, Plumbing work and health extensions supplies, genuine Plumbing work and health extensions.",
+    "trade_terms_ar": [
+      "أعمال السباكة والتمديدات الصحية",
+      "Plumbing work and health extensions",
+      "Plumbing work and health extensions supplies",
+      "genuine Plumbing work and health extensions"
+    ],
+    "trade_terms_en": [
+      "Plumbing work and health extensions",
+      "Plumbing work and health extensions supplies",
+      "genuine Plumbing work and health extensions"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "52": {
+    "good_type_id": 52,
+    "name_ar": "مواد العزل",
+    "name_en": "Insulating materials",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف مواد العزل (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد العزل، بانل صغير، بانل كبير، بانل كبير وصغير، عازل فلين، مواد البناء والتشييد - سيكا، عازل اسمنت، صوف عازل صخري، عازل صوف صخري، جدار ساندوتش، ساندويتش بانل، عازل حراري، عازل فوم، عازل رول، اطباق الفوم. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Insulating materials under main group Building And Construction Items covers genuine market goods in Saudi Arabia: مواد العزل, بانل صغير, بانل كبير, بانل كبير وصغير, عازل فلين, مواد البناء والتشييد - سيكا, عازل اسمنت, صوف عازل صخري, عازل صوف صخري, جدار ساندوتش.",
+    "trade_terms_ar": [
+      "مواد العزل",
+      "بانل صغير",
+      "بانل كبير",
+      "بانل كبير وصغير",
+      "عازل فلين",
+      "مواد البناء والتشييد - سيكا",
+      "عازل اسمنت",
+      "صوف عازل صخري",
+      "عازل صوف صخري",
+      "جدار ساندوتش",
+      "ساندويتش بانل",
+      "عازل حراري",
+      "عازل فوم",
+      "عازل رول",
+      "اطباق الفوم",
+      "مواد العازل",
+      "مود عازل حراري",
+      "عازل مواسير",
+      "رولات لفات بوليمرات",
+      "Insulating materials",
+      "Insulating materials supplies",
+      "genuine Insulating materials"
+    ],
+    "trade_terms_en": [
+      "Insulating materials",
+      "Insulating materials supplies",
+      "genuine Insulating materials"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "53": {
+    "good_type_id": 53,
+    "name_ar": "مواد الدفان والسفلتة",
+    "name_en": "Book and asphalt materials",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف مواد الدفان والسفلتة (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد الدفان والسفلتة، دفان، ردم، مواد الدفن، بحص، Book and asphalt materials، Book and asphalt materials supplies، genuine Book and asphalt materials. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Book and asphalt materials under main group Building And Construction Items covers genuine market goods in Saudi Arabia: مواد الدفان والسفلتة, دفان, ردم, مواد الدفن, بحص, Book and asphalt materials, Book and asphalt materials supplies, genuine Book and asphalt materials.",
+    "trade_terms_ar": [
+      "مواد الدفان والسفلتة",
+      "دفان",
+      "ردم",
+      "مواد الدفن",
+      "بحص",
+      "Book and asphalt materials",
+      "Book and asphalt materials supplies",
+      "genuine Book and asphalt materials"
+    ],
+    "trade_terms_en": [
+      "Book and asphalt materials",
+      "Book and asphalt materials supplies",
+      "genuine Book and asphalt materials"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "54": {
+    "good_type_id": 54,
+    "name_ar": "الأخشاب وتشمل أخشاب النجارة والأبواب وخلافة",
+    "name_en": "Woods include carpentry wood, doors and succession",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "الأخشاب وأعمال النجارة والأبواب والبوابات الجاهزة والداخلية والخارجية وخشب الطوبار والبليود والألواح. يشمل الأبواب الخشبية، بوابات وأبواب المداخل، الأبواب المصفحة، أبواب الألمنيوم، أبواب الكراجات والسحاب، حلوق الأبواب، كوالين ومفصلات الأبواب، خشب البليود، خشب الطوبار، خشب السويدي، خشب الزان، ألواح الـ MDF، الفايبر، وأخشاب الديكور والباركيه.",
+    "market_context_en": "Timber, carpentry wood, interior/exterior doors, entry gates, formwork plywood, MDF sheets, and door hardware: wooden doors, gates, security doors, aluminum doors, garage doors, door frames, locksets, Swedish timber, beech wood, and plywood sheets.",
+    "trade_terms_ar": [
+      "باب",
+      "أبواب",
+      "ابواب",
+      "بوابة",
+      "بوابات",
+      "بيبان",
+      "باب خشب",
+      "أبواب خشب",
+      "أبواب خشبية",
+      "باب حديد",
+      "أبواب حديد",
+      "بوابات ليزر",
+      "أبواب ألمنيوم",
+      "أبواب سحاب",
+      "أبواب كراج",
+      "حلق باب",
+      "حلوق أبواب خشب",
+      "كوالين ومفصلات أبواب",
+      "أخشاب نجارة",
+      "خشب طوبار بناء",
+      "خشب بليود",
+      "خشب سويدي",
+      "خشب زان أحمر",
+      "ألواح خشب MDF",
+      "خشب تيك",
+      "باركيه خشب"
+    ],
+    "trade_terms_en": [
+      "door",
+      "doors",
+      "gate",
+      "gates",
+      "wooden doors",
+      "metal doors",
+      "garage doors",
+      "door frames",
+      "plywood",
+      "formwork timber",
+      "MDF wood sheets",
+      "beech wood",
+      "Swedish timber",
+      "parquet flooring"
+    ],
+    "key_brands": [
+      "أبواب الموسى",
+      "أبواب سنديان",
+      "مصنع أبواب الرياض",
+      "أخشاب بن لادن",
+      "المنجرة الحديثة"
+    ],
+    "allowed_containers": [
+      "ربطات أبواب جاهزة",
+      "طبالي خشب بليود",
+      "حزم أخشاب مشدودة بحديد",
+      "شاحنة جوانب"
+    ]
+  },
+  "55": {
+    "good_type_id": 55,
+    "name_ar": "حديد التسليح",
+    "name_en": "Reinforcing",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف حديد التسليح (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: حديد التسليح، حديد، حديد بناء، حديد تسليح، حديد مصنع، كراسي حديد، حديد التسليح وتشديد، جكات وسقايل حديد للبناء، Reinforcing، Reinforcing supplies، genuine Reinforcing. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Reinforcing under main group Building And Construction Items covers genuine market goods in Saudi Arabia: حديد التسليح, حديد, حديد بناء, حديد تسليح, حديد مصنع, كراسي حديد, حديد التسليح وتشديد, جكات وسقايل حديد للبناء, Reinforcing, Reinforcing supplies.",
+    "trade_terms_ar": [
+      "حديد التسليح",
+      "حديد",
+      "حديد بناء",
+      "حديد تسليح",
+      "حديد مصنع",
+      "كراسي حديد",
+      "حديد التسليح وتشديد",
+      "جكات وسقايل حديد للبناء",
+      "Reinforcing",
+      "Reinforcing supplies",
+      "genuine Reinforcing"
+    ],
+    "trade_terms_en": [
+      "Reinforcing",
+      "Reinforcing supplies",
+      "genuine Reinforcing"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "56": {
+    "good_type_id": 56,
+    "name_ar": "مواد تمديدات الكهرباء",
+    "name_en": "Electricity extensions materials",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف مواد تمديدات الكهرباء (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد تمديدات الكهرباء، اسلاك كهرباء، افياش وقواطع كهرباء، اكبال كهرباء، انابيب كهرباء، بكرة كيبل خشب، كهرباء منزل، كيبل كهرباء، لوحات توزيع كهرباء، محولات كهرباء، مفاتيح كهرباء، منظمات كهرباء، مواد تمديد كهرباء، مواسير كهرباء، بكر كابلات. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Electricity extensions materials under main group Building And Construction Items covers genuine market goods in Saudi Arabia: مواد تمديدات الكهرباء, اسلاك كهرباء, افياش وقواطع كهرباء, اكبال كهرباء, انابيب كهرباء, بكرة كيبل خشب, كهرباء منزل, كيبل كهرباء, لوحات توزيع كهرباء, محولات كهرباء.",
+    "trade_terms_ar": [
+      "مواد تمديدات الكهرباء",
+      "اسلاك كهرباء",
+      "افياش وقواطع كهرباء",
+      "اكبال كهرباء",
+      "انابيب كهرباء",
+      "بكرة كيبل خشب",
+      "كهرباء منزل",
+      "كيبل كهرباء",
+      "لوحات توزيع كهرباء",
+      "محولات كهرباء",
+      "مفاتيح كهرباء",
+      "منظمات كهرباء",
+      "مواد تمديد كهرباء",
+      "مواسير كهرباء",
+      "بكر كابلات",
+      "سخانات",
+      "مواد البناء والتشييد-وتشمل مواد تمديدات الكهرباء",
+      "أدوات كهربائية",
+      "كبلات كهرباء",
+      "كابلات كهرباء بكر",
+      "كابلات نحاس",
+      "كيبلات",
+      "تور لايت",
+      "معدات كهرباء",
+      "عمود كهرباء"
+    ],
+    "trade_terms_en": [
+      "Electricity extensions materials",
+      "Electricity extensions materials supplies",
+      "genuine Electricity extensions materials"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "57": {
+    "good_type_id": 57,
+    "name_ar": "الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط",
+    "name_en": "Stones, rocks and paving materials, and this is formed tiles",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط، انتر لوك، بلاط، حجر اصطناعي، حجر صخري، سراميك، صخر، صخور، قرميد، مواد البناء والتشييد-وتشمل البلاط والسرميك واحجار الرصف، حجر تلبيس، انتر لك، حجر كسارات، سرمييك، بلك ارصفه. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Stones, rocks and paving materials, and this is formed tiles under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط, انتر لوك, بلاط, حجر اصطناعي, حجر صخري, سراميك, صخر, صخور, قرميد, مواد البناء والتشييد-وتشمل البلاط والسرميك واحجار الرصف.",
+    "trade_terms_ar": [
+      "الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط",
+      "انتر لوك",
+      "بلاط",
+      "حجر اصطناعي",
+      "حجر صخري",
+      "سراميك",
+      "صخر",
+      "صخور",
+      "قرميد",
+      "مواد البناء والتشييد-وتشمل البلاط والسرميك واحجار الرصف",
+      "حجر تلبيس",
+      "انتر لك",
+      "حجر كسارات",
+      "سرمييك",
+      "بلك ارصفه",
+      "سيراميك",
+      "كاولين",
+      "بلاط سرميك",
+      "انترلك",
+      "حجر  طبيعي",
+      "بلاط ارصفه",
+      "تراب وحجر",
+      "حجرالواح للبناء",
+      "مواد البناء والتشيد الاحجار والصخور ومواد الرصف وبشكل ذالك",
+      "طبليات رخام"
+    ],
+    "trade_terms_en": [
+      "Stones, rocks and paving materials, and this is formed tiles",
+      "Stones, rocks and paving materials, and this is formed tiles supplies",
+      "genuine Stones, rocks and paving materials, and this is formed tiles"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "58": {
+    "good_type_id": 58,
+    "name_ar": "الطين",
+    "name_en": "Clay",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الطين (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الطين، طين، كاولين، Clay، Clay supplies، genuine Clay. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Clay under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الطين, طين, كاولين, Clay, Clay supplies, genuine Clay.",
+    "trade_terms_ar": [
+      "الطين",
+      "طين",
+      "كاولين",
+      "Clay",
+      "Clay supplies",
+      "genuine Clay"
+    ],
+    "trade_terms_en": [
+      "Clay",
+      "Clay supplies",
+      "genuine Clay"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "59": {
+    "good_type_id": 59,
+    "name_ar": "الطوب",
+    "name_en": "Brick",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الطوب (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الطوب، بلوك، طوب، بلك ابيض، اسمنت بلك، طوب احمر، بلوك احمر، طوب حجر، Brick، Brick supplies، genuine Brick. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Brick under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الطوب, بلوك, طوب, بلك ابيض, اسمنت بلك, طوب احمر, بلوك احمر, طوب حجر, Brick, Brick supplies.",
+    "trade_terms_ar": [
+      "الطوب",
+      "بلوك",
+      "طوب",
+      "بلك ابيض",
+      "اسمنت بلك",
+      "طوب احمر",
+      "بلوك احمر",
+      "طوب حجر",
+      "Brick",
+      "Brick supplies",
+      "genuine Brick"
+    ],
+    "trade_terms_en": [
+      "Brick",
+      "Brick supplies",
+      "genuine Brick"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "60": {
+    "good_type_id": 60,
+    "name_ar": "أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية",
+    "name_en": "Air conditioning tools and machines include extension tubes and air dictations",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية، ادوات وفلاتر هواء، مواد البناء والشييد- وتشمل ادوات والات التكييف، َمكيفات، قواعد مكيفات، نقل مكيف، مكيفات شباك، مراوح وتكيف، Air conditioning tools and machines include extension tubes and air dictations، Air conditioning tools and machines include extension tubes and air dictations supplies، genuine Air conditioning tools and machines include extension tubes and air dictations. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Air conditioning tools and machines include extension tubes and air dictations under main group Building And Construction Items covers genuine market goods in Saudi Arabia: أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية, ادوات وفلاتر هواء, مواد البناء والشييد- وتشمل ادوات والات التكييف, َمكيفات, قواعد مكيفات, نقل مكيف, مكيفات شباك, مراوح وتكيف, Air conditioning tools and machines include extension tubes and air dictations, Air conditioning tools and machines include extension tubes and air dictations supplies.",
+    "trade_terms_ar": [
+      "أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية",
+      "ادوات وفلاتر هواء",
+      "مواد البناء والشييد- وتشمل ادوات والات التكييف",
+      "َمكيفات",
+      "قواعد مكيفات",
+      "نقل مكيف",
+      "مكيفات شباك",
+      "مراوح وتكيف",
+      "Air conditioning tools and machines include extension tubes and air dictations",
+      "Air conditioning tools and machines include extension tubes and air dictations supplies",
+      "genuine Air conditioning tools and machines include extension tubes and air dictations"
+    ],
+    "trade_terms_en": [
+      "Air conditioning tools and machines include extension tubes and air dictations",
+      "Air conditioning tools and machines include extension tubes and air dictations supplies",
+      "genuine Air conditioning tools and machines include extension tubes and air dictations"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "62": {
+    "good_type_id": 62,
+    "name_ar": "النحاس",
+    "name_en": "Copper",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "خام النحاس وخردة وسكراب النحاس الأحمر والأصفر والقضبان والكابلات النحاسية للتعدين والصناعة. يشمل كتل خام النحاس من المناجم، نحاس أحمر خردة مقشر ونظيف (Millberry)، نحاس أصفر (سباكة ورديترات)، قضبان وأسلاك نحاس نقي للصناعات الكهربائية والسبك.",
+    "market_context_en": "Raw copper ore, copper scrap (Millberry copper, yellow brass), copper rods, and electrolytic copper cathodes for smelting and manufacturing.",
+    "trade_terms_ar": [
+      "خام نحاس تعدين",
+      "نحاس أحمر سكراب مقشر ملبري",
+      "نحاس أصفر خردة سباكة",
+      "سبائك وقضبان نحاس نقي",
+      "كابلات نحاس سكراب",
+      "شحنة خردة نحاس كبس تريلا"
+    ],
+    "trade_terms_en": [
+      "copper ore",
+      "Millberry copper scrap",
+      "yellow brass scrap",
+      "copper cathodes",
+      "copper rods",
+      "scrap copper wire"
+    ],
+    "key_brands": [
+      "شركة معادن للنحاس والذهب",
+      "مصانع النحاس السعودية",
+      "تجار ومستودعات السكراب"
+    ],
+    "allowed_containers": [
+      "بالات كبس سكراب مشدودة بسلك",
+      "صناديق حديدية",
+      "حمولة تريلا سطحة وجوانب",
+      "أكياس جامبو"
+    ]
+  },
+  "105": {
+    "good_type_id": 105,
+    "name_ar": "الطين الاحمر",
+    "name_en": "Red clay",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "يشمل تصنيف الطين الاحمر (المجموعة الرئيسية: مواد أعمال التعدين أو التحجير) البضائع والمنتجات المتداولة في السوق السعودي مثل: الطين الاحمر، تراب احمر، طين احمر، Red clay، Red clay supplies، genuine Red clay. يتم تداولها عبر مستودعات وموزعي قطاع مواد أعمال التعدين أو التحجير بالمملكة.",
+    "market_context_en": "Category Red clay under main group Mining or Fossilization Materials covers genuine market goods in Saudi Arabia: الطين الاحمر, تراب احمر, طين احمر, Red clay, Red clay supplies, genuine Red clay.",
+    "trade_terms_ar": [
+      "الطين الاحمر",
+      "تراب احمر",
+      "طين احمر",
+      "Red clay",
+      "Red clay supplies",
+      "genuine Red clay"
+    ],
+    "trade_terms_en": [
+      "Red clay",
+      "Red clay supplies",
+      "genuine Red clay"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "113": {
+    "good_type_id": 113,
+    "name_ar": "جبس وانهيدرايت",
+    "name_en": "Gypsum & Anhydrite",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "يشمل تصنيف جبس وانهيدرايت (المجموعة الرئيسية: مواد أعمال التعدين أو التحجير) البضائع والمنتجات المتداولة في السوق السعودي مثل: جبس وانهيدرايت، Gypsum & Anhydrite، Gypsum & Anhydrite supplies، genuine Gypsum & Anhydrite. يتم تداولها عبر مستودعات وموزعي قطاع مواد أعمال التعدين أو التحجير بالمملكة.",
+    "market_context_en": "Category Gypsum & Anhydrite under main group Mining or Fossilization Materials covers genuine market goods in Saudi Arabia: جبس وانهيدرايت, Gypsum & Anhydrite, Gypsum & Anhydrite supplies, genuine Gypsum & Anhydrite.",
+    "trade_terms_ar": [
+      "جبس وانهيدرايت",
+      "Gypsum & Anhydrite",
+      "Gypsum & Anhydrite supplies",
+      "genuine Gypsum & Anhydrite"
+    ],
+    "trade_terms_en": [
+      "Gypsum & Anhydrite",
+      "Gypsum & Anhydrite supplies",
+      "genuine Gypsum & Anhydrite"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "114": {
+    "good_type_id": 114,
+    "name_ar": "خام الحديد منخفض النسبة",
+    "name_en": "Iron ore - Fe<40?",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "يشمل تصنيف خام الحديد منخفض النسبة (المجموعة الرئيسية: مواد أعمال التعدين أو التحجير) البضائع والمنتجات المتداولة في السوق السعودي مثل: خام الحديد منخفض النسبة، Iron ore - Fe<40?، Iron ore - Fe<40? supplies، genuine Iron ore - Fe<40?. يتم تداولها عبر مستودعات وموزعي قطاع مواد أعمال التعدين أو التحجير بالمملكة.",
+    "market_context_en": "Category Iron ore - Fe<40? under main group Mining or Fossilization Materials covers genuine market goods in Saudi Arabia: خام الحديد منخفض النسبة, Iron ore - Fe<40?, Iron ore - Fe<40? supplies, genuine Iron ore - Fe<40?.",
+    "trade_terms_ar": [
+      "خام الحديد منخفض النسبة",
+      "Iron ore - Fe<40?",
+      "Iron ore - Fe<40? supplies",
+      "genuine Iron ore - Fe<40?"
+    ],
+    "trade_terms_en": [
+      "Iron ore - Fe<40?",
+      "Iron ore - Fe<40? supplies",
+      "genuine Iron ore - Fe<40?"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "115": {
+    "good_type_id": 115,
+    "name_ar": "حجر جيري للصناعة",
+    "name_en": "Limestone for industry",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "خام الحجر الجيري وكربونات الكالسيوم المستخرج من المحاجر والكسارات لصناعات الأسمنت والحديد والصلب والزجاج والزراعة والتغذية. يشمل صخور الحجر الجيري الخام، حجر جيري مكسر، بودرة كربونات الكالسيوم الناعمة للمصانع والدهانات.",
+    "market_context_en": "Industrial limestone, raw calcium carbonate rock, crushed limestone, and ground calcium carbonate (GCC) for cement, glass, and steel industries.",
+    "trade_terms_ar": [
+      "حجر جيري خام محاجر",
+      "كربونات كالسيوم بودرة أكياس",
+      "صخور حجر جيري للكسارات والمصانع",
+      "حجر جيري مكسر تريلا صب",
+      "خام جيري لمعامل الأسمنت"
+    ],
+    "trade_terms_en": [
+      "raw limestone",
+      "calcium carbonate powder",
+      "crushed limestone",
+      "industrial limestone rocks",
+      "cement grade limestone"
+    ],
+    "key_brands": [
+      "محاجر وكسارات الحجر الجيري المرخصة",
+      "شركة التعدين العربية السعودية (معادن)",
+      "مصانع كربونات الكالسيوم"
+    ],
+    "allowed_containers": [
+      "شحنات تريلا قلاب صب 30 طن",
+      "أكياس ورقية وبولي بروبيلين 25 و 50 كجم للبودرة",
+      "أكياس جامبو 1 طن"
+    ]
+  },
+  "117": {
+    "good_type_id": 117,
+    "name_ar": "رخام للصناعة",
+    "name_en": "Marble for industry",
+    "root_id": 6,
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "market_context_ar": "كتل وصخور الرخام والجرانيت الخام المستخرجة من محاجر التعدين بالمملكة (نجران، رنية، المدينة) المخصصة للمصانع والقطع والتلميع. يشمل كتل صخرية ضخمة من الرخام الأبيض والروزا والجرانيت الأسود والبني لقص الألواح والدرج والواجهات.",
+    "market_context_en": "Raw dimensional marble and granite quarry blocks (Najran, Ranyah) for stone processing factories, cutting, and polishing.",
+    "trade_terms_ar": [
+      "كتل رخام خام محاجر صخور ضخمة",
+      "صخور جرانيت نجران خام كتل",
+      "كتل حجر طبيعي للمناشير والمصانع",
+      "رخام خام صب تريلا ثقيلة"
+    ],
+    "trade_terms_en": [
+      "raw marble blocks",
+      "quarry granite blocks",
+      "rough marble stones",
+      "quarry dimensional stone blocks"
+    ],
+    "key_brands": [
+      "محاجر رخام وجرانيت نجران",
+      "شركة التعدين العربية السعودية",
+      "مصانع مناشير الرخام الوطنية"
+    ],
+    "allowed_containers": [
+      "كتل صخرية حرة مثبتة على تريلات سطحة ثقيلة متعددة المحاور",
+      "حوامل حديدية للأحجار الكبيرة"
+    ]
+  },
+  "121": {
+    "good_type_id": 121,
+    "name_ar": "أسمنت",
+    "name_en": "Cement",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف أسمنت (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: أسمنت، سمنت نجران، مواد البناء اسمنت، مواد اسمنت، كياس سمنت، ‏سمنت أبيض، الواح اسمنت، Cement، Cement supplies، genuine Cement. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Cement under main group Building And Construction Items covers genuine market goods in Saudi Arabia: أسمنت, سمنت نجران, مواد البناء اسمنت, مواد اسمنت, كياس سمنت, ‏سمنت أبيض, الواح اسمنت, Cement, Cement supplies, genuine Cement.",
+    "trade_terms_ar": [
+      "أسمنت",
+      "سمنت نجران",
+      "مواد البناء اسمنت",
+      "مواد اسمنت",
+      "كياس سمنت",
+      "‏سمنت أبيض",
+      "الواح اسمنت",
+      "Cement",
+      "Cement supplies",
+      "genuine Cement"
+    ],
+    "trade_terms_en": [
+      "Cement",
+      "Cement supplies",
+      "genuine Cement"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "122": {
+    "good_type_id": 122,
+    "name_ar": "الألبان",
+    "name_en": "Dairy",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف الألبان (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الألبان، الالبان معلبة، جبنة، زبادي، زبدة، عيران، لبن، لبنة، البان واجبان، البان، مشتقات البان، البان وقشطه، جبنه مثلثات، معلبات قشطة، Dairy. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Dairy under main group Food Items covers genuine market goods in Saudi Arabia: الألبان, الالبان معلبة, جبنة, زبادي, زبدة, عيران, لبن, لبنة, البان واجبان, البان.",
+    "trade_terms_ar": [
+      "الألبان",
+      "الالبان معلبة",
+      "جبنة",
+      "زبادي",
+      "زبدة",
+      "عيران",
+      "لبن",
+      "لبنة",
+      "البان واجبان",
+      "البان",
+      "مشتقات البان",
+      "البان وقشطه",
+      "جبنه مثلثات",
+      "معلبات قشطة",
+      "Dairy",
+      "Dairy supplies",
+      "genuine Dairy"
+    ],
+    "trade_terms_en": [
+      "Dairy",
+      "Dairy supplies",
+      "genuine Dairy"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "123": {
+    "good_type_id": 123,
+    "name_ar": "الطيور",
+    "name_en": "Birds",
+    "root_id": 11,
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "market_context_ar": "يشمل تصنيف الطيور (المجموعة الرئيسية: حيوانات حية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الطيور، بط، حبش، حجل، حمام، دجاج حي، درغل، ديك رومي، سمان، طاووس، طيور، طيور زينة، عصافير، نعام، وز. يتم تداولها عبر مستودعات وموزعي قطاع حيوانات حية بالمملكة.",
+    "market_context_en": "Category Birds under main group LIVE ANIMALS covers genuine market goods in Saudi Arabia: الطيور, بط, حبش, حجل, حمام, دجاج حي, درغل, ديك رومي, سمان, طاووس.",
+    "trade_terms_ar": [
+      "الطيور",
+      "بط",
+      "حبش",
+      "حجل",
+      "حمام",
+      "دجاج حي",
+      "درغل",
+      "ديك رومي",
+      "سمان",
+      "طاووس",
+      "طيور",
+      "طيور زينة",
+      "عصافير",
+      "نعام",
+      "وز",
+      "نحل",
+      "خلايه نحل",
+      "خلايا نحل مع النحل",
+      "خلايا نحل منحله مع نحل",
+      "Birds",
+      "Birds supplies",
+      "genuine Birds"
+    ],
+    "trade_terms_en": [
+      "Birds",
+      "Birds supplies",
+      "genuine Birds"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "124": {
+    "good_type_id": 124,
+    "name_ar": "المواشي",
+    "name_en": "Cattles",
+    "root_id": 11,
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "market_context_ar": "يشمل تصنيف المواشي (المجموعة الرئيسية: حيوانات حية) البضائع والمنتجات المتداولة في السوق السعودي مثل: المواشي، ابقار، ثور، جواميس، عجل، غنم، ماعز، مواشي، حيوانات، حيونات، حيوانات حية، اغنام حيه، موشي غنم، حيوانات حية_مواشي، حيوانات حية_مواشي اجمال شبوك حديد. يتم تداولها عبر مستودعات وموزعي قطاع حيوانات حية بالمملكة.",
+    "market_context_en": "Category Cattles under main group LIVE ANIMALS covers genuine market goods in Saudi Arabia: المواشي, ابقار, ثور, جواميس, عجل, غنم, ماعز, مواشي, حيوانات, حيونات.",
+    "trade_terms_ar": [
+      "المواشي",
+      "ابقار",
+      "ثور",
+      "جواميس",
+      "عجل",
+      "غنم",
+      "ماعز",
+      "مواشي",
+      "حيوانات",
+      "حيونات",
+      "حيوانات حية",
+      "اغنام حيه",
+      "موشي غنم",
+      "حيوانات حية_مواشي",
+      "حيوانات حية_مواشي اجمال شبوك حديد",
+      "حيوانات حية_مواشي_اجمال",
+      "حيوانات حية_مواشي اجمال شبوك حديد ابل_اجمال",
+      "الحيوانات",
+      "Cattles",
+      "Cattles supplies",
+      "genuine Cattles"
+    ],
+    "trade_terms_en": [
+      "Cattles",
+      "Cattles supplies",
+      "genuine Cattles"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "125": {
+    "good_type_id": 125,
+    "name_ar": "الصرف الصحي",
+    "name_en": "Sanitation",
+    "root_id": 125,
+    "root_name_ar": "الصرف الصحي",
+    "root_name_en": "Sanitation",
+    "market_context_ar": "يشمل تصنيف الصرف الصحي (المجموعة الرئيسية: الصرف الصحي) البضائع والمنتجات المتداولة في السوق السعودي مثل: الصرف الصحي، Sanitation، Sanitation supplies، genuine Sanitation. يتم تداولها عبر مستودعات وموزعي قطاع الصرف الصحي بالمملكة.",
+    "market_context_en": "Category Sanitation under main group Sanitation covers genuine market goods in Saudi Arabia: الصرف الصحي, Sanitation, Sanitation supplies, genuine Sanitation.",
+    "trade_terms_ar": [
+      "الصرف الصحي",
+      "Sanitation",
+      "Sanitation supplies",
+      "genuine Sanitation"
+    ],
+    "trade_terms_en": [
+      "Sanitation",
+      "Sanitation supplies",
+      "genuine Sanitation"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "126": {
+    "good_type_id": 126,
+    "name_ar": "صهاريج الماء",
+    "name_en": "Water Tanks",
+    "root_id": 126,
+    "root_name_ar": "صهاريج الماء",
+    "root_name_en": "Water Tanks",
+    "market_context_ar": "يشمل تصنيف صهاريج الماء (المجموعة الرئيسية: صهاريج الماء) البضائع والمنتجات المتداولة في السوق السعودي مثل: صهاريج الماء، وايت  ماء اكترس، ويت مسكس، Water Tanks، Water Tanks supplies، genuine Water Tanks. يتم تداولها عبر مستودعات وموزعي قطاع صهاريج الماء بالمملكة.",
+    "market_context_en": "Category Water Tanks under main group Water Tanks covers genuine market goods in Saudi Arabia: صهاريج الماء, وايت  ماء اكترس, ويت مسكس, Water Tanks, Water Tanks supplies, genuine Water Tanks.",
+    "trade_terms_ar": [
+      "صهاريج الماء",
+      "وايت  ماء اكترس",
+      "ويت مسكس",
+      "Water Tanks",
+      "Water Tanks supplies",
+      "genuine Water Tanks"
+    ],
+    "trade_terms_en": [
+      "Water Tanks",
+      "Water Tanks supplies",
+      "genuine Water Tanks"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "127": {
+    "good_type_id": 127,
+    "name_ar": "صهاريج الغاز",
+    "name_en": "Gas Tanks",
+    "root_id": 127,
+    "root_name_ar": "صهاريج الغاز",
+    "root_name_en": "Gas Tanks",
+    "market_context_ar": "يشمل تصنيف صهاريج الغاز (المجموعة الرئيسية: صهاريج الغاز) البضائع والمنتجات المتداولة في السوق السعودي مثل: صهاريج الغاز، Gas Tanks، Gas Tanks supplies، genuine Gas Tanks. يتم تداولها عبر مستودعات وموزعي قطاع صهاريج الغاز بالمملكة.",
+    "market_context_en": "Category Gas Tanks under main group Gas Tanks covers genuine market goods in Saudi Arabia: صهاريج الغاز, Gas Tanks, Gas Tanks supplies, genuine Gas Tanks.",
+    "trade_terms_ar": [
+      "صهاريج الغاز",
+      "Gas Tanks",
+      "Gas Tanks supplies",
+      "genuine Gas Tanks"
+    ],
+    "trade_terms_en": [
+      "Gas Tanks",
+      "Gas Tanks supplies",
+      "genuine Gas Tanks"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "128": {
+    "good_type_id": 128,
+    "name_ar": "الرمل",
+    "name_en": "Sand",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف الرمل (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: الرمل، رمل، رمل أبيض، رمل أحمر، رمل السيليكا، رمل سليكا، رمل سليك، بودرة رمل السيليكا، رمل ابيض اكياس جنبو، رمال، رمل السليكاء، رمل أبيه، ونش رمل، نقل مواد بناء وتشييد رمل، Sand. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Sand under main group Building And Construction Items covers genuine market goods in Saudi Arabia: الرمل, رمل, رمل أبيض, رمل أحمر, رمل السيليكا, رمل سليكا, رمل سليك, بودرة رمل السيليكا, رمل ابيض اكياس جنبو, رمال.",
+    "trade_terms_ar": [
+      "الرمل",
+      "رمل",
+      "رمل أبيض",
+      "رمل أحمر",
+      "رمل السيليكا",
+      "رمل سليكا",
+      "رمل سليك",
+      "بودرة رمل السيليكا",
+      "رمل ابيض اكياس جنبو",
+      "رمال",
+      "رمل السليكاء",
+      "رمل أبيه",
+      "ونش رمل",
+      "نقل مواد بناء وتشييد رمل",
+      "Sand",
+      "Sand supplies",
+      "genuine Sand"
+    ],
+    "trade_terms_en": [
+      "Sand",
+      "Sand supplies",
+      "genuine Sand"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "130": {
+    "good_type_id": 130,
+    "name_ar": "قطع الغيار المستعملة والسكراب",
+    "name_en": "Used spare and scrap",
+    "root_id": 129,
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "market_context_ar": "يشمل تصنيف قطع الغيار المستعملة والسكراب (المجموعة الرئيسية: قطع غيار) البضائع والمنتجات المتداولة في السوق السعودي مثل: قطع الغيار المستعملة والسكراب، أبواب وشاصي سيارات مستعمل، المنيوم سكراب، بطاريات قديمة، حديد سكراب، سكراب، سكراب حديد، سكراب محركات ثقيلة، طبلون سيارات، قطع غيار مستعملة، كفرات قديمة، محركات مستعملة، نحاس سكراب، سيارت سكراب، سيارة صغيرة سكراب. يتم تداولها عبر مستودعات وموزعي قطاع قطع غيار بالمملكة.",
+    "market_context_en": "Category Used spare and scrap under main group Spares covers genuine market goods in Saudi Arabia: قطع الغيار المستعملة والسكراب, أبواب وشاصي سيارات مستعمل, المنيوم سكراب, بطاريات قديمة, حديد سكراب, سكراب, سكراب حديد, سكراب محركات ثقيلة, طبلون سيارات, قطع غيار مستعملة.",
+    "trade_terms_ar": [
+      "قطع الغيار المستعملة والسكراب",
+      "أبواب وشاصي سيارات مستعمل",
+      "المنيوم سكراب",
+      "بطاريات قديمة",
+      "حديد سكراب",
+      "سكراب",
+      "سكراب حديد",
+      "سكراب محركات ثقيلة",
+      "طبلون سيارات",
+      "قطع غيار مستعملة",
+      "كفرات قديمة",
+      "محركات مستعملة",
+      "نحاس سكراب",
+      "سيارت سكراب",
+      "سيارة صغيرة سكراب",
+      "راس مرسيديس سكراب",
+      "‏ دينات2 سكراب",
+      "زجاج سكراب",
+      "بطاريات سيارات مستعملة",
+      "Used spare and scrap",
+      "Used spare and scrap supplies",
+      "genuine Used spare and scrap"
+    ],
+    "trade_terms_en": [
+      "Used spare and scrap",
+      "Used spare and scrap supplies",
+      "genuine Used spare and scrap"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "132": {
+    "good_type_id": 132,
+    "name_ar": "الحواسيب والمنتجات الإلكترونية والبصرية",
+    "name_en": "Computers, electronic and optical products",
+    "root_id": 131,
+    "root_name_ar": "الإلكترونيات",
+    "root_name_en": "Reinforcing",
+    "market_context_ar": "يشمل تصنيف الحواسيب والمنتجات الإلكترونية والبصرية (المجموعة الرئيسية: الإلكترونيات) البضائع والمنتجات المتداولة في السوق السعودي مثل: الحواسيب والمنتجات الإلكترونية والبصرية، تلفزيونات، اجهزة كهربائية، شاشات، مجموعة صوت، مسجلات، سماعات، سبيكرات، قلايات كهرباء، مكانس كهرباء، عصارات فواكه، كولارات ماء، توربينات، أدوات كهربائية، اكترونيات. يتم تداولها عبر مستودعات وموزعي قطاع الإلكترونيات بالمملكة.",
+    "market_context_en": "Category Computers, electronic and optical products under main group Reinforcing covers genuine market goods in Saudi Arabia: الحواسيب والمنتجات الإلكترونية والبصرية, تلفزيونات, اجهزة كهربائية, شاشات, مجموعة صوت, مسجلات, سماعات, سبيكرات, قلايات كهرباء, مكانس كهرباء.",
+    "trade_terms_ar": [
+      "الحواسيب والمنتجات الإلكترونية والبصرية",
+      "تلفزيونات",
+      "اجهزة كهربائية",
+      "شاشات",
+      "مجموعة صوت",
+      "مسجلات",
+      "سماعات",
+      "سبيكرات",
+      "قلايات كهرباء",
+      "مكانس كهرباء",
+      "عصارات فواكه",
+      "كولارات ماء",
+      "توربينات",
+      "أدوات كهربائية",
+      "اكترونيات",
+      "كمبيوترات مستعمله",
+      "شاشات الكترونية",
+      "ادوات كوفي مكاين وثلاجات وخلاطات",
+      "غسالات",
+      "مكاين قهوه كوفي",
+      "كاميرات مراقبه",
+      "شاشات وثلاجات",
+      "Computers, electronic and optical products",
+      "Computers, electronic and optical products supplies",
+      "genuine Computers, electronic and optical products"
+    ],
+    "trade_terms_en": [
+      "Computers, electronic and optical products",
+      "Computers, electronic and optical products supplies",
+      "genuine Computers, electronic and optical products"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "134": {
+    "good_type_id": 134,
+    "name_ar": "الإطارات",
+    "name_en": "Tires",
+    "root_id": 129,
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "market_context_ar": "يشمل تصنيف الإطارات (المجموعة الرئيسية: قطع غيار) البضائع والمنتجات المتداولة في السوق السعودي مثل: الإطارات، اطارات شاحنات وسيارات، كفرات، كفرات سيارات، كفرات شاحنات، كفرات معدات ثقيلة، كفرات معدات زراعية، قطع الاطارات، Tires، Tires supplies، genuine Tires. يتم تداولها عبر مستودعات وموزعي قطاع قطع غيار بالمملكة.",
+    "market_context_en": "Category Tires under main group Spares covers genuine market goods in Saudi Arabia: الإطارات, اطارات شاحنات وسيارات, كفرات, كفرات سيارات, كفرات شاحنات, كفرات معدات ثقيلة, كفرات معدات زراعية, قطع الاطارات, Tires, Tires supplies.",
+    "trade_terms_ar": [
+      "الإطارات",
+      "اطارات شاحنات وسيارات",
+      "كفرات",
+      "كفرات سيارات",
+      "كفرات شاحنات",
+      "كفرات معدات ثقيلة",
+      "كفرات معدات زراعية",
+      "قطع الاطارات",
+      "Tires",
+      "Tires supplies",
+      "genuine Tires"
+    ],
+    "trade_terms_en": [
+      "Tires",
+      "Tires supplies",
+      "genuine Tires"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "135": {
+    "good_type_id": 135,
+    "name_ar": "المواد البلاستيكية",
+    "name_en": "Plastic materials",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "المنتجات والمصنوعات البلاستيكية واللدائن الاستهلاكية والصناعية وحبيبات البوليمر من سابك. يشمل أكياس الزبالة والقمامة والنفايات بمقاسات (30، 50، 55 جالون رولات)، سفر الطعام النايلون، أكياس التسوق والتعبئة، البراميل والسطول والجوالين البلاستيكية، الكاسات والصحون البلاستيكية، العبوات والقوارير البلاستيكية الفارغة، الطبالي والصناديق البلاستيكية، وحبيبات البلاستيك الخام (HDPE, LDPE, PP, PVC).",
+    "market_context_en": "Plastic goods and polymers: garbage bags, trash roll liners (30/50/55 gal), plastic dining sheets (Sufra), shopping bags, empty plastic bottles/drums, plastic crates, disposables, and SABIC raw polymer granules (HDPE, PP, PVC).",
+    "trade_terms_ar": [
+      "أكياس زبالة",
+      "كياس زبالة",
+      "كياس زباله",
+      "اكياس زباله",
+      "كيس زبالة",
+      "كيس زباله",
+      "أكياس قمامة",
+      "كياس قمامة",
+      "كياس قمامه",
+      "اكياس قمامه",
+      "كيس قمامة",
+      "أكياس نفايات",
+      "كياس نفايات",
+      "اكياس نفايات",
+      "كيس نفايات",
+      "رولات أكياس زبالة 50 جالون",
+      "رولات أكياس نفايات سوداء",
+      "سفر طعام نايلون",
+      "سفرة نايلون",
+      "رولات سفر",
+      "أكياس تسوق بلاستيك",
+      "أكياس بلاستيك مقاسات",
+      "حبيبات بلاستيك سابك",
+      "براميل بلاستيك",
+      "سطول بلاستيك",
+      "عبوات بلاستيك فارغة",
+      "كاسات بلاستيك",
+      "طبالي بلاستيك",
+      "صناديق بلاستيك خضار",
+      "رول بلاستيك شفاف"
+    ],
+    "trade_terms_en": [
+      "garbage bags",
+      "trash bags",
+      "waste bin liners",
+      "plastic table rolls",
+      "shopping bags",
+      "SABIC plastic granules",
+      "plastic drums",
+      "plastic buckets",
+      "empty plastic containers",
+      "plastic cups",
+      "plastic pallets"
+    ],
+    "key_brands": [
+      "سابك للبوليمرات",
+      "بلاستيك الرياض",
+      "مصنع الشرق للبلاستيك",
+      "مصنع ساسكو للبلاستيك",
+      "مصانع الحبيب للبلاستيك"
+    ],
+    "allowed_containers": [
+      "كراتين رولات",
+      "شوالات 25 كجم للحبيبات",
+      "طبالي بلاستيكية مشدودة بستريتش",
+      "بالات أكياس"
+    ]
+  },
+  "136": {
+    "good_type_id": 136,
+    "name_ar": "المواد الكيميائية",
+    "name_en": "Chemicals materials",
+    "root_id": 136,
+    "root_name_ar": "المواد الكيميائية",
+    "root_name_en": "Chemicals materials",
+    "market_context_ar": "المواد الكيميائية الصناعية والمذيبات والأحماض والقلويات والمواد الكيميائية لمعالجة المياه والصناعات البتروكيماوية. يشمل حمض الفوسفوريك، الصودا الكاوية (هيدروكسيد الصوديوم)، حمض الهيدروكلوريك HCl، حمض الكبريتيك، الميثانول، الإيثانول، الأسيتون، التولوين، الثنر، مياه النار، ومواد معالجة مياه المراجل وأبراج التبريد.",
+    "market_context_en": "Industrial chemicals, raw solvents, acids, alkalis, and petrochemical reagents: phosphoric acid, caustic soda flakes/liquid, hydrochloric acid, sulfuric acid, methanol, acetone, toluene, and water treatment chemicals.",
+    "trade_terms_ar": [
+      "حمض الفوسفوريك",
+      "صودا كاوية قشور سابك",
+      "حمض هيدروكلوريك",
+      "حمض كبريتيك مركز",
+      "مذيب أسيتون وتولوين",
+      "ثنر ناري وحار",
+      "ميثانول صناعي",
+      "هيبوكلوريت صوديوم وكلور معالجة مياه"
+    ],
+    "trade_terms_en": [
+      "phosphoric acid",
+      "caustic soda flakes",
+      "hydrochloric acid",
+      "sulfuric acid",
+      "industrial acetone",
+      "paint thinner",
+      "methanol",
+      "sodium hypochlorite"
+    ],
+    "key_brands": [
+      "سابك للكيماويات",
+      "شركة التصنيع الوطنية",
+      "شركة صدارة للكيميائيات",
+      "شركة كيمانول",
+      "كيميا"
+    ],
+    "allowed_containers": [
+      "خزانات وسائط IBC 1000 لتر",
+      "براميل كيميائية مقاومة للأحماض 200 لتر",
+      "أكياس 25 كجم محكمة",
+      "صهاريج ADR"
+    ]
+  },
+  "137": {
+    "good_type_id": 137,
+    "name_ar": "الأعلاف والحبوب",
+    "name_en": "Forage and grain",
+    "root_id": 4,
+    "root_name_ar": "زراعية",
+    "root_name_en": "Agricultural",
+    "market_context_ar": "يشمل تصنيف الأعلاف والحبوب (المجموعة الرئيسية: زراعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأعلاف والحبوب، اعلاف ابقار واغنام، اعلاف دواجن، برسيم، علف، علف ابل، علف اخضر، علف دجاج، علف شعير، علف قمح، نخالة القمح، اكياس اعلاف، ‏زراعية الاعلاف والحبوب، تبن، تبن اعلاف. يتم تداولها عبر مستودعات وموزعي قطاع زراعية بالمملكة.",
+    "market_context_en": "Category Forage and grain under main group Agricultural covers genuine market goods in Saudi Arabia: الأعلاف والحبوب, اعلاف ابقار واغنام, اعلاف دواجن, برسيم, علف, علف ابل, علف اخضر, علف دجاج, علف شعير, علف قمح.",
+    "trade_terms_ar": [
+      "الأعلاف والحبوب",
+      "اعلاف ابقار واغنام",
+      "اعلاف دواجن",
+      "برسيم",
+      "علف",
+      "علف ابل",
+      "علف اخضر",
+      "علف دجاج",
+      "علف شعير",
+      "علف قمح",
+      "نخالة القمح",
+      "اكياس اعلاف",
+      "‏زراعية الاعلاف والحبوب",
+      "تبن",
+      "تبن اعلاف",
+      "علف مكعب",
+      "علف برسيم",
+      "نخاله",
+      "أعلاف برسيم",
+      "اكياس اعلاف وحبوب مشكل",
+      "اعلاف اكياس للمواشي والطيور",
+      "اعلاف وحبوب للطيور",
+      "حبوب واعلاف للمواشي والحيوانات",
+      "علف قطط",
+      "اكل حيوان"
+    ],
+    "trade_terms_en": [
+      "Forage and grain",
+      "Forage and grain supplies",
+      "genuine Forage and grain"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "138": {
+    "good_type_id": 138,
+    "name_ar": "الزيوت",
+    "name_en": "Oils",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف الزيوت (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الزيوت، زبدة، زيت اكل، زيت ذرة، زيت زيتون، زيت طبخ، زيت نباتي، زيت طعام، زيوت طعام مستخدمه، مواد غذائيه زيت طعام، زيت زيتون بكر، مواد غذائيه سمنة وزيت، Oils، Oils supplies، genuine Oils. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Oils under main group Food Items covers genuine market goods in Saudi Arabia: الزيوت, زبدة, زيت اكل, زيت ذرة, زيت زيتون, زيت طبخ, زيت نباتي, زيت طعام, زيوت طعام مستخدمه, مواد غذائيه زيت طعام.",
+    "trade_terms_ar": [
+      "الزيوت",
+      "زبدة",
+      "زيت اكل",
+      "زيت ذرة",
+      "زيت زيتون",
+      "زيت طبخ",
+      "زيت نباتي",
+      "زيت طعام",
+      "زيوت طعام مستخدمه",
+      "مواد غذائيه زيت طعام",
+      "زيت زيتون بكر",
+      "مواد غذائيه سمنة وزيت",
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "trade_terms_en": [
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "139": {
+    "good_type_id": 139,
+    "name_ar": "الزيوت",
+    "name_en": "Oils",
+    "root_id": 10,
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "market_context_ar": "يشمل تصنيف الزيوت (المجموعة الرئيسية: منتجات بترولية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الزيوت، زيت التبريد، زيت التشحيم، زيت الفرامل، زيت القير، زيت سيارات، زيت هيدروليك، زيوت وشحم، شحم، زيت اسود، زيت سيارات اسود، زيوت اسود، منتجات بتروليه زيوت، براميل شحوم، Oils. يتم تداولها عبر مستودعات وموزعي قطاع منتجات بترولية بالمملكة.",
+    "market_context_en": "Category Oils under main group Petroleum Products covers genuine market goods in Saudi Arabia: الزيوت, زيت التبريد, زيت التشحيم, زيت الفرامل, زيت القير, زيت سيارات, زيت هيدروليك, زيوت وشحم, شحم, زيت اسود.",
+    "trade_terms_ar": [
+      "الزيوت",
+      "زيت التبريد",
+      "زيت التشحيم",
+      "زيت الفرامل",
+      "زيت القير",
+      "زيت سيارات",
+      "زيت هيدروليك",
+      "زيوت وشحم",
+      "شحم",
+      "زيت اسود",
+      "زيت سيارات اسود",
+      "زيوت اسود",
+      "منتجات بتروليه زيوت",
+      "براميل شحوم",
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "trade_terms_en": [
+      "Oils",
+      "Oils supplies",
+      "genuine Oils"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "140": {
+    "good_type_id": 140,
+    "name_ar": "البيوت الجاهزة",
+    "name_en": "Prefabricated Houses",
+    "root_id": 140,
+    "root_name_ar": "البيوت الجاهزة",
+    "root_name_en": "Prefabricated Houses",
+    "market_context_ar": "يشمل تصنيف البيوت الجاهزة (المجموعة الرئيسية: البيوت الجاهزة) البضائع والمنتجات المتداولة في السوق السعودي مثل: البيوت الجاهزة، بيت خشبي، بيت مسبق الصنع، بيوت جاهزة، غرفة جاهزة، غرفة كرفان، غرفة كهرباء، كرفان، مضلات وسواتر، خيام، هناجر، غرف جاهزه، غرفه، سكن عمال، قرفه. يتم تداولها عبر مستودعات وموزعي قطاع البيوت الجاهزة بالمملكة.",
+    "market_context_en": "Category Prefabricated Houses under main group Prefabricated Houses covers genuine market goods in Saudi Arabia: البيوت الجاهزة, بيت خشبي, بيت مسبق الصنع, بيوت جاهزة, غرفة جاهزة, غرفة كرفان, غرفة كهرباء, كرفان, مضلات وسواتر, خيام.",
+    "trade_terms_ar": [
+      "البيوت الجاهزة",
+      "بيت خشبي",
+      "بيت مسبق الصنع",
+      "بيوت جاهزة",
+      "غرفة جاهزة",
+      "غرفة كرفان",
+      "غرفة كهرباء",
+      "كرفان",
+      "مضلات وسواتر",
+      "خيام",
+      "هناجر",
+      "غرف جاهزه",
+      "غرفه",
+      "سكن عمال",
+      "قرفه",
+      "قرف",
+      "سحب غرفه",
+      "تحميل غرف جاهزه",
+      "غرفة مسجد",
+      "غرفه  جاهزه و خزان",
+      "حمام سفري",
+      "غرفه  +خزان",
+      "غرفه وكلنتر",
+      "طبالي و طرود و كبينة صناعية",
+      "غرفة جاهزة مع خشاب بناء"
+    ],
+    "trade_terms_en": [
+      "Prefabricated Houses",
+      "Prefabricated Houses supplies",
+      "genuine Prefabricated Houses"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "142": {
+    "good_type_id": 142,
+    "name_ar": "المشروبات الغازية",
+    "name_en": "Soft drinks",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف المشروبات الغازية (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: المشروبات الغازية، بيبسي، كولا، مشروبات غازية، تانج، فيمتو قاروره، ببسي، كوكا كولا، صودا مشروبات، صودا مشروبات غازيه، Soft drinks، Soft drinks supplies، genuine Soft drinks. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Soft drinks under main group Food Items covers genuine market goods in Saudi Arabia: المشروبات الغازية, بيبسي, كولا, مشروبات غازية, تانج, فيمتو قاروره, ببسي, كوكا كولا, صودا مشروبات, صودا مشروبات غازيه.",
+    "trade_terms_ar": [
+      "المشروبات الغازية",
+      "بيبسي",
+      "كولا",
+      "مشروبات غازية",
+      "تانج",
+      "فيمتو قاروره",
+      "ببسي",
+      "كوكا كولا",
+      "صودا مشروبات",
+      "صودا مشروبات غازيه",
+      "Soft drinks",
+      "Soft drinks supplies",
+      "genuine Soft drinks"
+    ],
+    "trade_terms_en": [
+      "Soft drinks",
+      "Soft drinks supplies",
+      "genuine Soft drinks"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "143": {
+    "good_type_id": 143,
+    "name_ar": "المواد الأولية للصناعات التحويلية",
+    "name_en": "Raw materials for manufacturing industries",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "يشمل تصنيف المواد الأولية للصناعات التحويلية (المجموعة الرئيسية: صناعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: المواد الأولية للصناعات التحويلية، البريد السريع، طرود، لوحات، منتجات نون، كورات وأصناف الاجهزة، كرات حديد الطحن، قوارير زجاج، ادوات تجميل ومكياج، اسطوانات غاز، علب فارغة حديد، براميل حديد، براميل مواد الاوليه، نجيله صناعية، نجيل صناعي. يتم تداولها عبر مستودعات وموزعي قطاع صناعية بالمملكة.",
+    "market_context_en": "Category Raw materials for manufacturing industries under main group Industrial covers genuine market goods in Saudi Arabia: المواد الأولية للصناعات التحويلية, البريد السريع, طرود, لوحات, منتجات نون, كورات وأصناف الاجهزة, كرات حديد الطحن, قوارير زجاج, ادوات تجميل ومكياج, اسطوانات غاز.",
+    "trade_terms_ar": [
+      "المواد الأولية للصناعات التحويلية",
+      "البريد السريع",
+      "طرود",
+      "لوحات",
+      "منتجات نون",
+      "كورات وأصناف الاجهزة",
+      "كرات حديد الطحن",
+      "قوارير زجاج",
+      "ادوات تجميل ومكياج",
+      "اسطوانات غاز",
+      "علب فارغة حديد",
+      "براميل حديد",
+      "براميل مواد الاوليه",
+      "نجيله صناعية",
+      "نجيل صناعي",
+      "نجيل",
+      "مواد اولية للصناعات التحويلية",
+      "العاب مهرجان مشكله",
+      "لفات افلام بولي بروبلين",
+      "مواد تجميلية",
+      "علب فارغة كولا",
+      "مواد أولية غرا",
+      "الصناعات التحويلية",
+      "العاب حدائق",
+      "مواد اوليه"
+    ],
+    "trade_terms_en": [
+      "Raw materials for manufacturing industries",
+      "Raw materials for manufacturing industries supplies",
+      "genuine Raw materials for manufacturing industries"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "144": {
+    "good_type_id": 144,
+    "name_ar": "الجمال والأحصنة",
+    "name_en": "Camels and Horses",
+    "root_id": 11,
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "market_context_ar": "يشمل تصنيف الجمال والأحصنة (المجموعة الرئيسية: حيوانات حية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الجمال والأحصنة، بعير، جمال، حصان، خيل، Camels and Horses، Camels and Horses supplies، genuine Camels and Horses. يتم تداولها عبر مستودعات وموزعي قطاع حيوانات حية بالمملكة.",
+    "market_context_en": "Category Camels and Horses under main group LIVE ANIMALS covers genuine market goods in Saudi Arabia: الجمال والأحصنة, بعير, جمال, حصان, خيل, Camels and Horses, Camels and Horses supplies, genuine Camels and Horses.",
+    "trade_terms_ar": [
+      "الجمال والأحصنة",
+      "بعير",
+      "جمال",
+      "حصان",
+      "خيل",
+      "Camels and Horses",
+      "Camels and Horses supplies",
+      "genuine Camels and Horses"
+    ],
+    "trade_terms_en": [
+      "Camels and Horses",
+      "Camels and Horses supplies",
+      "genuine Camels and Horses"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "145": {
+    "good_type_id": 145,
+    "name_ar": "الأثاث المستعمل",
+    "name_en": "Used Furniture",
+    "root_id": 133,
+    "root_name_ar": "الأثاث",
+    "root_name_en": "Furniture",
+    "market_context_ar": "يشمل تصنيف الأثاث المستعمل (المجموعة الرئيسية: الأثاث) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأثاث المستعمل، عفش منزل مستعمل، غرف نوم مستعملة، كنب مستعمل، مجالس مستعملة، أجهزة ستوك، عفش منزل مستعمل بضاعه، عفش منزلي مستخدم، عفش بيت، Used Furniture، Used Furniture supplies، genuine Used Furniture. يتم تداولها عبر مستودعات وموزعي قطاع الأثاث بالمملكة.",
+    "market_context_en": "Category Used Furniture under main group Furniture covers genuine market goods in Saudi Arabia: الأثاث المستعمل, عفش منزل مستعمل, غرف نوم مستعملة, كنب مستعمل, مجالس مستعملة, أجهزة ستوك, عفش منزل مستعمل بضاعه, عفش منزلي مستخدم, عفش بيت, Used Furniture.",
+    "trade_terms_ar": [
+      "الأثاث المستعمل",
+      "عفش منزل مستعمل",
+      "غرف نوم مستعملة",
+      "كنب مستعمل",
+      "مجالس مستعملة",
+      "أجهزة ستوك",
+      "عفش منزل مستعمل بضاعه",
+      "عفش منزلي مستخدم",
+      "عفش بيت",
+      "Used Furniture",
+      "Used Furniture supplies",
+      "genuine Used Furniture"
+    ],
+    "trade_terms_en": [
+      "Used Furniture",
+      "Used Furniture supplies",
+      "genuine Used Furniture"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "146": {
+    "good_type_id": 146,
+    "name_ar": "الأثاث الجديد",
+    "name_en": "New Furniture",
+    "root_id": 133,
+    "root_name_ar": "الأثاث",
+    "root_name_en": "Furniture",
+    "market_context_ar": "يشمل تصنيف الأثاث الجديد (المجموعة الرئيسية: الأثاث) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأثاث الجديد، طاولات طعام والكراسي، عفش منزل جديد، كنب، مجالس، مخدات، مراتب، مفارش، مكاتب، أغراض صالات اعراس، أغراض اثاث، مفروشات، إكسسوارات المطابخ، ادوات مطابخ، اثاث بيت. يتم تداولها عبر مستودعات وموزعي قطاع الأثاث بالمملكة.",
+    "market_context_en": "Category New Furniture under main group Furniture covers genuine market goods in Saudi Arabia: الأثاث الجديد, طاولات طعام والكراسي, عفش منزل جديد, كنب, مجالس, مخدات, مراتب, مفارش, مكاتب, أغراض صالات اعراس.",
+    "trade_terms_ar": [
+      "الأثاث الجديد",
+      "طاولات طعام والكراسي",
+      "عفش منزل جديد",
+      "كنب",
+      "مجالس",
+      "مخدات",
+      "مراتب",
+      "مفارش",
+      "مكاتب",
+      "أغراض صالات اعراس",
+      "أغراض اثاث",
+      "مفروشات",
+      "إكسسوارات المطابخ",
+      "ادوات مطابخ",
+      "اثاث بيت",
+      "الاثاث",
+      "أدوات منزليه",
+      "اثاث مدرسة",
+      "اثاث بيت ومفروشات",
+      "أثاث مكتبي",
+      "أواني منزليه وبلاستيك",
+      "مواد منزليه",
+      "اثاث بيت ومفروشات رخام لوزم رحلات",
+      "اثاث بيت ومفروشات رخام",
+      "اساس منزلي"
+    ],
+    "trade_terms_en": [
+      "New Furniture",
+      "New Furniture supplies",
+      "genuine New Furniture"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "147": {
+    "good_type_id": 147,
+    "name_ar": "الملابس والأحذية",
+    "name_en": "Clothes and Shoes",
+    "root_id": 147,
+    "root_name_ar": "الملابس والأحذية",
+    "root_name_en": "Clothes and Shoes",
+    "market_context_ar": "يشمل تصنيف الملابس والأحذية (المجموعة الرئيسية: الملابس والأحذية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الملابس والأحذية، احذية، ملابس، ملابس وأحذية، شنط معتمرين، ملابس وأحذية مفروشات منظفات، اقمشة . رخام، اقمشة، ملبس واحذيه، احزيه وملابس، شناتي، حقائب، Clothes and Shoes، Clothes and Shoes supplies، genuine Clothes and Shoes. يتم تداولها عبر مستودعات وموزعي قطاع الملابس والأحذية بالمملكة.",
+    "market_context_en": "Category Clothes and Shoes under main group Clothes and Shoes covers genuine market goods in Saudi Arabia: الملابس والأحذية, احذية, ملابس, ملابس وأحذية, شنط معتمرين, ملابس وأحذية مفروشات منظفات, اقمشة . رخام, اقمشة, ملبس واحذيه, احزيه وملابس.",
+    "trade_terms_ar": [
+      "الملابس والأحذية",
+      "احذية",
+      "ملابس",
+      "ملابس وأحذية",
+      "شنط معتمرين",
+      "ملابس وأحذية مفروشات منظفات",
+      "اقمشة . رخام",
+      "اقمشة",
+      "ملبس واحذيه",
+      "احزيه وملابس",
+      "شناتي",
+      "حقائب",
+      "Clothes and Shoes",
+      "Clothes and Shoes supplies",
+      "genuine Clothes and Shoes"
+    ],
+    "trade_terms_en": [
+      "Clothes and Shoes",
+      "Clothes and Shoes supplies",
+      "genuine Clothes and Shoes"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "148": {
+    "good_type_id": 148,
+    "name_ar": "الفحم والحطب",
+    "name_en": "Charcoal and Firewood",
+    "root_id": 148,
+    "root_name_ar": "الفحم والحطب",
+    "root_name_en": "Charcoal and Firewood",
+    "market_context_ar": "يشمل تصنيف الفحم والحطب (المجموعة الرئيسية: الفحم والحطب) البضائع والمنتجات المتداولة في السوق السعودي مثل: الفحم والحطب، حطب، فحم، فحم مستورد، فحم صناعي، فحم اسود، فحم وحطب، Charcoal and Firewood، Charcoal and Firewood supplies، genuine Charcoal and Firewood. يتم تداولها عبر مستودعات وموزعي قطاع الفحم والحطب بالمملكة.",
+    "market_context_en": "Category Charcoal and Firewood under main group Charcoal and Firewood covers genuine market goods in Saudi Arabia: الفحم والحطب, حطب, فحم, فحم مستورد, فحم صناعي, فحم اسود, فحم وحطب, Charcoal and Firewood, Charcoal and Firewood supplies, genuine Charcoal and Firewood.",
+    "trade_terms_ar": [
+      "الفحم والحطب",
+      "حطب",
+      "فحم",
+      "فحم مستورد",
+      "فحم صناعي",
+      "فحم اسود",
+      "فحم وحطب",
+      "Charcoal and Firewood",
+      "Charcoal and Firewood supplies",
+      "genuine Charcoal and Firewood"
+    ],
+    "trade_terms_en": [
+      "Charcoal and Firewood",
+      "Charcoal and Firewood supplies",
+      "genuine Charcoal and Firewood"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "149": {
+    "good_type_id": 149,
+    "name_ar": "الأدوية",
+    "name_en": "Medicines",
+    "root_id": 149,
+    "root_name_ar": "الأدوية",
+    "root_name_en": "Medicines",
+    "market_context_ar": "يشمل تصنيف الأدوية (المجموعة الرئيسية: الأدوية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأدوية، ادوية، لادوية، محاليل طبيه، الدواء، ادويه طبيه، ادوات صحية وطبية، شاش طبي، قطن طبي، سبيترو، سبيرتو تعقيم، معقمات طبية، تحليل طبي، Medicines، Medicines supplies. يتم تداولها عبر مستودعات وموزعي قطاع الأدوية بالمملكة.",
+    "market_context_en": "Category Medicines under main group Medicines covers genuine market goods in Saudi Arabia: الأدوية, ادوية, لادوية, محاليل طبيه, الدواء, ادويه طبيه, ادوات صحية وطبية, شاش طبي, قطن طبي, سبيترو.",
+    "trade_terms_ar": [
+      "الأدوية",
+      "ادوية",
+      "لادوية",
+      "محاليل طبيه",
+      "الدواء",
+      "ادويه طبيه",
+      "ادوات صحية وطبية",
+      "شاش طبي",
+      "قطن طبي",
+      "سبيترو",
+      "سبيرتو تعقيم",
+      "معقمات طبية",
+      "تحليل طبي",
+      "Medicines",
+      "Medicines supplies",
+      "genuine Medicines"
+    ],
+    "trade_terms_en": [
+      "Medicines",
+      "Medicines supplies",
+      "genuine Medicines"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "150": {
+    "good_type_id": 150,
+    "name_ar": "المنتجات الجلدية والمنتجات ذات الصلة",
+    "name_en": "Leather products and related products",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "يشمل تصنيف المنتجات الجلدية والمنتجات ذات الصلة (المجموعة الرئيسية: صناعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: المنتجات الجلدية والمنتجات ذات الصلة، صناعية-المنتجات الجلدية والمنتجات ذات الصلة، صناعة الدباغه والجلود، جلود، جلد، منتجات ومواد جلد، مواد ومنتجات جلدية، جلد مدبوغ، Leather products and related products، Leather products and related products supplies، genuine Leather products and related products. يتم تداولها عبر مستودعات وموزعي قطاع صناعية بالمملكة.",
+    "market_context_en": "Category Leather products and related products under main group Industrial covers genuine market goods in Saudi Arabia: المنتجات الجلدية والمنتجات ذات الصلة, صناعية-المنتجات الجلدية والمنتجات ذات الصلة, صناعة الدباغه والجلود, جلود, جلد, منتجات ومواد جلد, مواد ومنتجات جلدية, جلد مدبوغ, Leather products and related products, Leather products and related products supplies.",
+    "trade_terms_ar": [
+      "المنتجات الجلدية والمنتجات ذات الصلة",
+      "صناعية-المنتجات الجلدية والمنتجات ذات الصلة",
+      "صناعة الدباغه والجلود",
+      "جلود",
+      "جلد",
+      "منتجات ومواد جلد",
+      "مواد ومنتجات جلدية",
+      "جلد مدبوغ",
+      "Leather products and related products",
+      "Leather products and related products supplies",
+      "genuine Leather products and related products"
+    ],
+    "trade_terms_en": [
+      "Leather products and related products",
+      "Leather products and related products supplies",
+      "genuine Leather products and related products"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "151": {
+    "good_type_id": 151,
+    "name_ar": "الورق ومنتجاته",
+    "name_en": "Paper and its products",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "يشمل تصنيف الورق ومنتجاته (المجموعة الرئيسية: صناعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الورق ومنتجاته، دفاتر، ورق، ورق تغليف، ورق رول، دفاتر مدرسة، مصحف، ورق صنفره، رول ورقي، رول كرتون، كرتون، كرتون سكراب، كرتون مصنع، ورق كرتون، كتون. يتم تداولها عبر مستودعات وموزعي قطاع صناعية بالمملكة.",
+    "market_context_en": "Category Paper and its products under main group Industrial covers genuine market goods in Saudi Arabia: الورق ومنتجاته, دفاتر, ورق, ورق تغليف, ورق رول, دفاتر مدرسة, مصحف, ورق صنفره, رول ورقي, رول كرتون.",
+    "trade_terms_ar": [
+      "الورق ومنتجاته",
+      "دفاتر",
+      "ورق",
+      "ورق تغليف",
+      "ورق رول",
+      "دفاتر مدرسة",
+      "مصحف",
+      "ورق صنفره",
+      "رول ورقي",
+      "رول كرتون",
+      "كرتون",
+      "كرتون سكراب",
+      "كرتون مصنع",
+      "ورق كرتون",
+      "كتون",
+      "روال ورق",
+      "كزتون",
+      "اوراق",
+      "مانلفت",
+      "كاسات وراق",
+      "طبالي كرتون",
+      "كاسات كرتون",
+      "كرتون مواد تغليف",
+      "اطباق كرتون",
+      "اطباق كرتون بيض للتعبئة"
+    ],
+    "trade_terms_en": [
+      "Paper and its products",
+      "Paper and its products supplies",
+      "genuine Paper and its products"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "152": {
+    "good_type_id": 152,
+    "name_ar": "المطاط واللدائن",
+    "name_en": "Rubber and plastics",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "يشمل تصنيف المطاط واللدائن (المجموعة الرئيسية: صناعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: المطاط واللدائن، Rubber and plastics، Rubber and plastics supplies، genuine Rubber and plastics. يتم تداولها عبر مستودعات وموزعي قطاع صناعية بالمملكة.",
+    "market_context_en": "Category Rubber and plastics under main group Industrial covers genuine market goods in Saudi Arabia: المطاط واللدائن, Rubber and plastics, Rubber and plastics supplies, genuine Rubber and plastics.",
+    "trade_terms_ar": [
+      "المطاط واللدائن",
+      "Rubber and plastics",
+      "Rubber and plastics supplies",
+      "genuine Rubber and plastics"
+    ],
+    "trade_terms_en": [
+      "Rubber and plastics",
+      "Rubber and plastics supplies",
+      "genuine Rubber and plastics"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "153": {
+    "good_type_id": 153,
+    "name_ar": "الأدوية البيطرية",
+    "name_en": "Veterinary medicines",
+    "root_id": 153,
+    "root_name_ar": "الأدوية البيطرية",
+    "root_name_en": "Veterinary medicines",
+    "market_context_ar": "يشمل تصنيف الأدوية البيطرية (المجموعة الرئيسية: الأدوية البيطرية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأدوية البيطرية، ادوية حيوانات، ادوية بيطرية حيوانية، Veterinary medicines، Veterinary medicines supplies، genuine Veterinary medicines. يتم تداولها عبر مستودعات وموزعي قطاع الأدوية البيطرية بالمملكة.",
+    "market_context_en": "Category Veterinary medicines under main group Veterinary medicines covers genuine market goods in Saudi Arabia: الأدوية البيطرية, ادوية حيوانات, ادوية بيطرية حيوانية, Veterinary medicines, Veterinary medicines supplies, genuine Veterinary medicines.",
+    "trade_terms_ar": [
+      "الأدوية البيطرية",
+      "ادوية حيوانات",
+      "ادوية بيطرية حيوانية",
+      "Veterinary medicines",
+      "Veterinary medicines supplies",
+      "genuine Veterinary medicines"
+    ],
+    "trade_terms_en": [
+      "Veterinary medicines",
+      "Veterinary medicines supplies",
+      "genuine Veterinary medicines"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "154": {
+    "good_type_id": 154,
+    "name_ar": "الدراجات الهوائية",
+    "name_en": "Bicycles",
+    "root_id": 154,
+    "root_name_ar": "الدراجات الهوائية",
+    "root_name_en": "Bicycles",
+    "market_context_ar": "يشمل تصنيف الدراجات الهوائية (المجموعة الرئيسية: الدراجات الهوائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الدراجات الهوائية، سيكلات، Bicycles، Bicycles supplies، genuine Bicycles. يتم تداولها عبر مستودعات وموزعي قطاع الدراجات الهوائية بالمملكة.",
+    "market_context_en": "Category Bicycles under main group Bicycles covers genuine market goods in Saudi Arabia: الدراجات الهوائية, سيكلات, Bicycles, Bicycles supplies, genuine Bicycles.",
+    "trade_terms_ar": [
+      "الدراجات الهوائية",
+      "سيكلات",
+      "Bicycles",
+      "Bicycles supplies",
+      "genuine Bicycles"
+    ],
+    "trade_terms_en": [
+      "Bicycles",
+      "Bicycles supplies",
+      "genuine Bicycles"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "155": {
+    "good_type_id": 155,
+    "name_ar": "الدراجات النارية",
+    "name_en": "Motorbikes",
+    "root_id": 155,
+    "root_name_ar": "الدراجات النارية",
+    "root_name_en": "Motorbikes",
+    "market_context_ar": "يشمل تصنيف الدراجات النارية (المجموعة الرئيسية: الدراجات النارية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الدراجات النارية، موتورات نارية، درجات ناريه، دباب، Motorbikes، Motorbikes supplies، genuine Motorbikes. يتم تداولها عبر مستودعات وموزعي قطاع الدراجات النارية بالمملكة.",
+    "market_context_en": "Category Motorbikes under main group Motorbikes covers genuine market goods in Saudi Arabia: الدراجات النارية, موتورات نارية, درجات ناريه, دباب, Motorbikes, Motorbikes supplies, genuine Motorbikes.",
+    "trade_terms_ar": [
+      "الدراجات النارية",
+      "موتورات نارية",
+      "درجات ناريه",
+      "دباب",
+      "Motorbikes",
+      "Motorbikes supplies",
+      "genuine Motorbikes"
+    ],
+    "trade_terms_en": [
+      "Motorbikes",
+      "Motorbikes supplies",
+      "genuine Motorbikes"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "156": {
+    "good_type_id": 156,
+    "name_ar": "المستلزمات الطبية و مستلزمات المستشفيات",
+    "name_en": "Medical supplies and hospital supplies",
+    "root_id": 156,
+    "root_name_ar": "المستلزمات الطبية و مستلزمات المستشفيات",
+    "root_name_en": "Medical supplies and hospital supplies",
+    "market_context_ar": "يشمل تصنيف المستلزمات الطبية و مستلزمات المستشفيات (المجموعة الرئيسية: المستلزمات الطبية و مستلزمات المستشفيات) البضائع والمنتجات المتداولة في السوق السعودي مثل: المستلزمات الطبية و مستلزمات المستشفيات، اجهزة طبية، كراسي ذوي الاحتياجات الخاصة، مراتب طبية، مستلزمات مستشفى، معدات طبية، بودرة اطفال، تجهيزات طبية، ادوات طبيه، تحاليل طبيه، مستلزمات طبية، ملتزمات طيبة، محاليل طبية، ديتول، معقمات طبيه. يتم تداولها عبر مستودعات وموزعي قطاع المستلزمات الطبية و مستلزمات المستشفيات بالمملكة.",
+    "market_context_en": "Category Medical supplies and hospital supplies under main group Medical supplies and hospital supplies covers genuine market goods in Saudi Arabia: المستلزمات الطبية و مستلزمات المستشفيات, اجهزة طبية, كراسي ذوي الاحتياجات الخاصة, مراتب طبية, مستلزمات مستشفى, معدات طبية, بودرة اطفال, تجهيزات طبية, ادوات طبيه, تحاليل طبيه.",
+    "trade_terms_ar": [
+      "المستلزمات الطبية و مستلزمات المستشفيات",
+      "اجهزة طبية",
+      "كراسي ذوي الاحتياجات الخاصة",
+      "مراتب طبية",
+      "مستلزمات مستشفى",
+      "معدات طبية",
+      "بودرة اطفال",
+      "تجهيزات طبية",
+      "ادوات طبيه",
+      "تحاليل طبيه",
+      "مستلزمات طبية",
+      "ملتزمات طيبة",
+      "محاليل طبية",
+      "ديتول",
+      "معقمات طبيه",
+      "Medical supplies and hospital supplies",
+      "Medical supplies and hospital supplies supplies",
+      "genuine Medical supplies and hospital supplies"
+    ],
+    "trade_terms_en": [
+      "Medical supplies and hospital supplies",
+      "Medical supplies and hospital supplies supplies",
+      "genuine Medical supplies and hospital supplies"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "157": {
+    "good_type_id": 157,
+    "name_ar": "الكتب",
+    "name_en": "Books",
+    "root_id": 157,
+    "root_name_ar": "الكتب",
+    "root_name_en": "Books",
+    "market_context_ar": "يشمل تصنيف الكتب (المجموعة الرئيسية: الكتب) البضائع والمنتجات المتداولة في السوق السعودي مثل: الكتب، كتب، كتب مدرسية، كتب مدرسة، Books، Books supplies، genuine Books. يتم تداولها عبر مستودعات وموزعي قطاع الكتب بالمملكة.",
+    "market_context_en": "Category Books under main group Books covers genuine market goods in Saudi Arabia: الكتب, كتب, كتب مدرسية, كتب مدرسة, Books, Books supplies, genuine Books.",
+    "trade_terms_ar": [
+      "الكتب",
+      "كتب",
+      "كتب مدرسية",
+      "كتب مدرسة",
+      "Books",
+      "Books supplies",
+      "genuine Books"
+    ],
+    "trade_terms_en": [
+      "Books",
+      "Books supplies",
+      "genuine Books"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "158": {
+    "good_type_id": 158,
+    "name_ar": "المواد الزراعية والأسمدة",
+    "name_en": "Agricultural materials and fertilizers",
+    "root_id": 4,
+    "root_name_ar": "زراعية",
+    "root_name_en": "Agricultural",
+    "market_context_ar": "الأسمدة الزراعية الكيميائية والفوسفاتية والعضوية ومحسنات التربة والمبيدات الزراعية. يشمل أسمدة الفوسفات، سماد الداب DAP (فوسفات ثنائي الأمونيوم)، سماد الماب MAP (فوسفات أحادي الأمونيوم)، أسمدة اليوريا 46%، سلفات البوتاسيوم، سماد NPK المركب، الهيوميك أسيد، العناصر الصغرى، والمبيدات الحشرية والفطرية المرخصة.",
+    "market_context_en": "Phosphate and chemical fertilizers: Diammonium Phosphate (DAP), Monoammonium Phosphate (MAP), Urea 46%, Potassium Sulfate, NPK compounds, humic acid, and licensed agricultural pesticides.",
+    "trade_terms_ar": [
+      "فوسفات",
+      "سماد فوسفات",
+      "سماد فوسفاتي",
+      "أسمدة فوسفاتية",
+      "سماد داب",
+      "سماد داب DAP فوسفات ثنائي الأمونيوم",
+      "سماد ماب",
+      "سماد ماب MAP فوسفات أحادي الأمونيوم",
+      "يوريا سابك زراعي 46%",
+      "سلفات بوتاسيوم ذواب",
+      "سماد مركب NPK",
+      "هيوميك اسيد",
+      "مبيدات زراعية حشرية وفطرية",
+      "سماد زراعي"
+    ],
+    "trade_terms_en": [
+      "phosphate",
+      "phosphate fertilizer",
+      "DAP diammonium phosphate",
+      "MAP monoammonium phosphate",
+      "SABIC urea 46%",
+      "potassium sulfate",
+      "NPK fertilizer",
+      "humic acid",
+      "agricultural pesticides"
+    ],
+    "key_brands": [
+      "سابك للمغذيات الزراعية",
+      "معادن للفوسفات والأسمدة",
+      "سافكو SAFCO",
+      "أسترا الزراعية",
+      "تنمية"
+    ],
+    "allowed_containers": [
+      "أكياس 50 كجم بولي بروبيلين",
+      "أكياس جامبو 1 طن",
+      "طبالي خشبية مشدودة بنايلون",
+      "تريلا جوانب"
+    ]
+  },
+  "159": {
+    "good_type_id": 159,
+    "name_ar": "مولدات الكهرباء",
+    "name_en": "Electricity Generators",
+    "root_id": 159,
+    "root_name_ar": "مولدات الكهرباء",
+    "root_name_en": "Electricity Generators",
+    "market_context_ar": "يشمل تصنيف مولدات الكهرباء (المجموعة الرئيسية: مولدات الكهرباء) البضائع والمنتجات المتداولة في السوق السعودي مثل: مولدات الكهرباء، الواح شمسية، الواح طاقة شمسية، جنريتر ماطور، سولار، مولد كهرباء، محولات كهربائية، لود بنك منظمات كهربائية، مولد كهرباء و صناديق مواسير، مولده، بطارية كهرباء، بطاريات الكهرباء، مولد كهربائي واعمده، بطاريات كهرباء جديد، جنيتر. يتم تداولها عبر مستودعات وموزعي قطاع مولدات الكهرباء بالمملكة.",
+    "market_context_en": "Category Electricity Generators under main group Electricity Generators covers genuine market goods in Saudi Arabia: مولدات الكهرباء, الواح شمسية, الواح طاقة شمسية, جنريتر ماطور, سولار, مولد كهرباء, محولات كهربائية, لود بنك منظمات كهربائية, مولد كهرباء و صناديق مواسير, مولده.",
+    "trade_terms_ar": [
+      "مولدات الكهرباء",
+      "الواح شمسية",
+      "الواح طاقة شمسية",
+      "جنريتر ماطور",
+      "سولار",
+      "مولد كهرباء",
+      "محولات كهربائية",
+      "لود بنك منظمات كهربائية",
+      "مولد كهرباء و صناديق مواسير",
+      "مولده",
+      "بطارية كهرباء",
+      "بطاريات الكهرباء",
+      "مولد كهربائي واعمده",
+      "بطاريات كهرباء جديد",
+      "جنيتر",
+      "بطاريه طاقه شمسيه",
+      "معدات التشييد تشمل المناشير والمسامير مولدات الكهرباء",
+      "مولد كهرباء عدد ٢",
+      "مكينه كهرب",
+      "جهاز توليد كهرباء",
+      "مولد كهرباء ومكابن لحام",
+      "لوح طاقه",
+      "Electricity Generators",
+      "Electricity Generators supplies",
+      "genuine Electricity Generators"
+    ],
+    "trade_terms_en": [
+      "Electricity Generators",
+      "Electricity Generators supplies",
+      "genuine Electricity Generators"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "160": {
+    "good_type_id": 160,
+    "name_ar": "مواد النسيج والخياطة",
+    "name_en": "Textile and sewing materials",
+    "root_id": 160,
+    "root_name_ar": "مواد النسيج والخياطة",
+    "root_name_en": "Textile and sewing materials",
+    "market_context_ar": "يشمل تصنيف مواد النسيج والخياطة (المجموعة الرئيسية: مواد النسيج والخياطة) البضائع والمنتجات المتداولة في السوق السعودي مثل: مواد النسيج والخياطة، اقمشي، اغطية، موكيت، ‏خيطان حق نسيج، قطن امسحه واقمشه، Textile and sewing materials، Textile and sewing materials supplies، genuine Textile and sewing materials. يتم تداولها عبر مستودعات وموزعي قطاع مواد النسيج والخياطة بالمملكة.",
+    "market_context_en": "Category Textile and sewing materials under main group Textile and sewing materials covers genuine market goods in Saudi Arabia: مواد النسيج والخياطة, اقمشي, اغطية, موكيت, ‏خيطان حق نسيج, قطن امسحه واقمشه, Textile and sewing materials, Textile and sewing materials supplies, genuine Textile and sewing materials.",
+    "trade_terms_ar": [
+      "مواد النسيج والخياطة",
+      "اقمشي",
+      "اغطية",
+      "موكيت",
+      "‏خيطان حق نسيج",
+      "قطن امسحه واقمشه",
+      "Textile and sewing materials",
+      "Textile and sewing materials supplies",
+      "genuine Textile and sewing materials"
+    ],
+    "trade_terms_en": [
+      "Textile and sewing materials",
+      "Textile and sewing materials supplies",
+      "genuine Textile and sewing materials"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "161": {
+    "good_type_id": 161,
+    "name_ar": "منتجات التبغ",
+    "name_en": "Tobacco Products",
+    "root_id": 161,
+    "root_name_ar": "منتجات التبغ",
+    "root_name_en": "Tobacco Products",
+    "market_context_ar": "يشمل تصنيف منتجات التبغ (المجموعة الرئيسية: منتجات التبغ) البضائع والمنتجات المتداولة في السوق السعودي مثل: منتجات التبغ، دخان، معسل، شيشة الكترونية، Tobacco Products، Tobacco Products supplies، genuine Tobacco Products. يتم تداولها عبر مستودعات وموزعي قطاع منتجات التبغ بالمملكة.",
+    "market_context_en": "Category Tobacco Products under main group Tobacco Products covers genuine market goods in Saudi Arabia: منتجات التبغ, دخان, معسل, شيشة الكترونية, Tobacco Products, Tobacco Products supplies, genuine Tobacco Products.",
+    "trade_terms_ar": [
+      "منتجات التبغ",
+      "دخان",
+      "معسل",
+      "شيشة الكترونية",
+      "Tobacco Products",
+      "Tobacco Products supplies",
+      "genuine Tobacco Products"
+    ],
+    "trade_terms_en": [
+      "Tobacco Products",
+      "Tobacco Products supplies",
+      "genuine Tobacco Products"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "162": {
+    "good_type_id": 162,
+    "name_ar": "مخلفات",
+    "name_en": "Remnants",
+    "root_id": 162,
+    "root_name_ar": "مخلفات",
+    "root_name_en": "Remnants",
+    "market_context_ar": "يشمل تصنيف مخلفات (المجموعة الرئيسية: مخلفات) البضائع والمنتجات المتداولة في السوق السعودي مثل: مخلفات، مخلفات البناء، Remnants، Remnants supplies، genuine Remnants. يتم تداولها عبر مستودعات وموزعي قطاع مخلفات بالمملكة.",
+    "market_context_en": "Category Remnants under main group Remnants covers genuine market goods in Saudi Arabia: مخلفات, مخلفات البناء, Remnants, Remnants supplies, genuine Remnants.",
+    "trade_terms_ar": [
+      "مخلفات",
+      "مخلفات البناء",
+      "Remnants",
+      "Remnants supplies",
+      "genuine Remnants"
+    ],
+    "trade_terms_en": [
+      "Remnants",
+      "Remnants supplies",
+      "genuine Remnants"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "164": {
+    "good_type_id": 164,
+    "name_ar": "المواد الحديدية",
+    "name_en": "Ferrous materials",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "المواد والمنتجات الحديدية والهياكل المعدنية والصفائح والأنابيب والتيوبات والشبك والدرابزينات والأبواب والبوابات الحديدية. يشمل بوابات وأبواب حديد ليزر، تيوبات حديد مربعة ومستطيلة، زوايا حديد، كمرات حديد جسور (IPE, HEA, UNP)، صاج حديد أسود ومجلفن ومبزر، شبوك حديد مجلفنة، أسلاك تربيط، ومواسير حديد أسود ومجلفن.",
+    "market_context_en": "Iron and steel products: laser cut steel gates, metal doors, steel tubes/pipes, structural steel beams (IPE, HEA), hot/cold rolled steel sheets, galvanized wire mesh, and tie wires.",
+    "trade_terms_ar": [
+      "بوابات حديد",
+      "بوابة حديد",
+      "أبواب حديد",
+      "بوابات ليزر",
+      "حديد مشغول",
+      "درابزين حديد",
+      "تيوبات حديد",
+      "تيوب حديد",
+      "زوايا حديد",
+      "كمرات حديد",
+      "جسور حديد",
+      "صاج حديد أسود ومجلفن",
+      "صفائح حديد",
+      "شبوك حديد مجلفنة",
+      "سلك تربيط حديد",
+      "مواسير حديد مجلفنة",
+      "حديد هناجر"
+    ],
+    "trade_terms_en": [
+      "steel gates",
+      "metal doors",
+      "laser cut gates",
+      "steel tubes",
+      "steel beams",
+      "steel sheets",
+      "wire mesh",
+      "galvanized iron pipes"
+    ],
+    "key_brands": [
+      "حديد سابك",
+      "حديد الراجحي",
+      "مصنع حديد الاتفاق",
+      "حديد اليمامة",
+      "الأنابيب السعودية"
+    ],
+    "allowed_containers": [
+      "ربطات حديد مشدودة بأشرطة فولاذية",
+      "طبالي صفائح حديد",
+      "تريلا سطحة طويلة"
+    ]
+  },
+  "165": {
+    "good_type_id": 165,
+    "name_ar": "قطع غيار جديدة",
+    "name_en": "New spare",
+    "root_id": 129,
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "market_context_ar": "يشمل تصنيف قطع غيار جديدة (المجموعة الرئيسية: قطع غيار) البضائع والمنتجات المتداولة في السوق السعودي مثل: قطع غيار جديدة، ابواب وشاصي سيارات جديد، بطاريات جديد، طبلون سيارات جديد، فلاتر سيارات، قطع سيارات داخلية جديدة، محركات جديدة، محركات سيارات جديدة، كفرات و بطاريات، معدات سيارت، قطع كرين، حديد ونش، قطع غيار كرين، قطع غيار ونش، كويلات قطع غيار. يتم تداولها عبر مستودعات وموزعي قطاع قطع غيار بالمملكة.",
+    "market_context_en": "Category New spare under main group Spares covers genuine market goods in Saudi Arabia: قطع غيار جديدة, ابواب وشاصي سيارات جديد, بطاريات جديد, طبلون سيارات جديد, فلاتر سيارات, قطع سيارات داخلية جديدة, محركات جديدة, محركات سيارات جديدة, كفرات و بطاريات, معدات سيارت.",
+    "trade_terms_ar": [
+      "قطع غيار جديدة",
+      "ابواب وشاصي سيارات جديد",
+      "بطاريات جديد",
+      "طبلون سيارات جديد",
+      "فلاتر سيارات",
+      "قطع سيارات داخلية جديدة",
+      "محركات جديدة",
+      "محركات سيارات جديدة",
+      "كفرات و بطاريات",
+      "معدات سيارت",
+      "قطع كرين",
+      "حديد ونش",
+      "قطع غيار كرين",
+      "قطع غيار ونش",
+      "كويلات قطع غيار",
+      "قطع مكنيكيه وصحيه",
+      "قطع غيار جديدة شاحنات",
+      "‏قطع",
+      "قطع سيارات خارجية",
+      "قطع غيار مستعمل وجديد",
+      "قطع غيار شاحنات",
+      "قطع غيار حفارة",
+      "سله مالفت",
+      "قطع غيار سيارات",
+      "New spare"
+    ],
+    "trade_terms_en": [
+      "New spare",
+      "New spare supplies",
+      "genuine New spare"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "166": {
+    "good_type_id": 166,
+    "name_ar": "مياه معبأة",
+    "name_en": "Bottled water",
+    "root_id": 166,
+    "root_name_ar": "مياه معبأة",
+    "root_name_en": "Bottled water",
+    "market_context_ar": "يشمل تصنيف مياه معبأة (المجموعة الرئيسية: مياه معبأة) البضائع والمنتجات المتداولة في السوق السعودي مثل: مياه معبأة، كراتين ماء، ماي، مياه شرب، مياه، ماء، ماء زمزم، مواد غذائية ماء، طبليات مياه، ماء شرب، مضخه مياه، مواد مياه، مياء، مياه زمزم، مياه نبع. يتم تداولها عبر مستودعات وموزعي قطاع مياه معبأة بالمملكة.",
+    "market_context_en": "Category Bottled water under main group Bottled water covers genuine market goods in Saudi Arabia: مياه معبأة, كراتين ماء, ماي, مياه شرب, مياه, ماء, ماء زمزم, مواد غذائية ماء, طبليات مياه, ماء شرب.",
+    "trade_terms_ar": [
+      "مياه معبأة",
+      "كراتين ماء",
+      "ماي",
+      "مياه شرب",
+      "مياه",
+      "ماء",
+      "ماء زمزم",
+      "مواد غذائية ماء",
+      "طبليات مياه",
+      "ماء شرب",
+      "مضخه مياه",
+      "مواد مياه",
+      "مياء",
+      "مياه زمزم",
+      "مياه نبع",
+      "مويه زلال",
+      "Bottled water",
+      "Bottled water supplies",
+      "genuine Bottled water"
+    ],
+    "trade_terms_en": [
+      "Bottled water",
+      "Bottled water supplies",
+      "genuine Bottled water"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "167": {
+    "good_type_id": 167,
+    "name_ar": "حاويات",
+    "name_en": "Medical Waste",
+    "root_id": 167,
+    "root_name_ar": "حاويات",
+    "root_name_en": "Medical Waste",
+    "market_context_ar": "يشمل تصنيف حاويات (المجموعة الرئيسية: حاويات) البضائع والمنتجات المتداولة في السوق السعودي مثل: حاويات، حاوية، حاويات بلدية، كنتينر، حاوية بضائع، حاوية كونتينر، حاويه خشب، كونتانر، كنتنر، حاويات بلدب، كنيتر، حاويات بلدية +دينة، حاوية كونتينر+آلات خرسانية، كنتنر غرفة، حويت. يتم تداولها عبر مستودعات وموزعي قطاع حاويات بالمملكة.",
+    "market_context_en": "Category Medical Waste under main group Medical Waste covers genuine market goods in Saudi Arabia: حاويات, حاوية, حاويات بلدية, كنتينر, حاوية بضائع, حاوية كونتينر, حاويه خشب, كونتانر, كنتنر, حاويات بلدب.",
+    "trade_terms_ar": [
+      "حاويات",
+      "حاوية",
+      "حاويات بلدية",
+      "كنتينر",
+      "حاوية بضائع",
+      "حاوية كونتينر",
+      "حاويه خشب",
+      "كونتانر",
+      "كنتنر",
+      "حاويات بلدب",
+      "كنيتر",
+      "حاويات بلدية +دينة",
+      "حاوية كونتينر+آلات خرسانية",
+      "كنتنر غرفة",
+      "حويت",
+      "Medical Waste",
+      "Medical Waste supplies",
+      "genuine Medical Waste"
+    ],
+    "trade_terms_en": [
+      "Medical Waste",
+      "Medical Waste supplies",
+      "genuine Medical Waste"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "168": {
+    "good_type_id": 168,
+    "name_ar": "نفايات طبية",
+    "name_en": "sponges",
+    "root_id": 141,
+    "root_name_ar": "النفايات",
+    "root_name_en": "Waste material",
+    "market_context_ar": "يشمل تصنيف نفايات طبية (المجموعة الرئيسية: النفايات) البضائع والمنتجات المتداولة في السوق السعودي مثل: نفايات طبية، sponges، sponges supplies، genuine sponges. يتم تداولها عبر مستودعات وموزعي قطاع النفايات بالمملكة.",
+    "market_context_en": "Category sponges under main group Waste material covers genuine market goods in Saudi Arabia: نفايات طبية, sponges, sponges supplies, genuine sponges.",
+    "trade_terms_ar": [
+      "نفايات طبية",
+      "sponges",
+      "sponges supplies",
+      "genuine sponges"
+    ],
+    "trade_terms_en": [
+      "sponges",
+      "sponges supplies",
+      "genuine sponges"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "169": {
+    "good_type_id": 169,
+    "name_ar": "الأسفنج",
+    "name_en": "gypsum",
+    "root_id": 169,
+    "root_name_ar": "الأسفنج",
+    "root_name_en": "gypsum",
+    "market_context_ar": "يشمل تصنيف الأسفنج (المجموعة الرئيسية: الأسفنج) البضائع والمنتجات المتداولة في السوق السعودي مثل: الأسفنج، اسفنج، فرشات تخت، اسفنج مراتب، gypsum، gypsum supplies، genuine gypsum. يتم تداولها عبر مستودعات وموزعي قطاع الأسفنج بالمملكة.",
+    "market_context_en": "Category gypsum under main group gypsum covers genuine market goods in Saudi Arabia: الأسفنج, اسفنج, فرشات تخت, اسفنج مراتب, gypsum, gypsum supplies, genuine gypsum.",
+    "trade_terms_ar": [
+      "الأسفنج",
+      "اسفنج",
+      "فرشات تخت",
+      "اسفنج مراتب",
+      "gypsum",
+      "gypsum supplies",
+      "genuine gypsum"
+    ],
+    "trade_terms_en": [
+      "gypsum",
+      "gypsum supplies",
+      "genuine gypsum"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "170": {
+    "good_type_id": 170,
+    "name_ar": "جبس",
+    "name_en": "Vegetables and fruits",
+    "root_id": 34,
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "market_context_ar": "يشمل تصنيف جبس (المجموعة الرئيسية: مواد البناء و التشييد) البضائع والمنتجات المتداولة في السوق السعودي مثل: جبس، جبصين، طبالي جبس بورد، اسقف مستعارة، جبس ألواح، الواح جبسيه، ديكورات، جبس ألواح+ادوات صحيه، جبس بورد، الألواح جبسيه، المواد البنا جبس، Vegetables and fruits، Vegetables and fruits supplies، genuine Vegetables and fruits. يتم تداولها عبر مستودعات وموزعي قطاع مواد البناء و التشييد بالمملكة.",
+    "market_context_en": "Category Vegetables and fruits under main group Building And Construction Items covers genuine market goods in Saudi Arabia: جبس, جبصين, طبالي جبس بورد, اسقف مستعارة, جبس ألواح, الواح جبسيه, ديكورات, جبس ألواح+ادوات صحيه, جبس بورد, الألواح جبسيه.",
+    "trade_terms_ar": [
+      "جبس",
+      "جبصين",
+      "طبالي جبس بورد",
+      "اسقف مستعارة",
+      "جبس ألواح",
+      "الواح جبسيه",
+      "ديكورات",
+      "جبس ألواح+ادوات صحيه",
+      "جبس بورد",
+      "الألواح جبسيه",
+      "المواد البنا جبس",
+      "Vegetables and fruits",
+      "Vegetables and fruits supplies",
+      "genuine Vegetables and fruits"
+    ],
+    "trade_terms_en": [
+      "Vegetables and fruits",
+      "Vegetables and fruits supplies",
+      "genuine Vegetables and fruits"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "171": {
+    "good_type_id": 171,
+    "name_ar": "الخضروات والفواكه",
+    "name_en": "Electrical Appliances",
+    "root_id": 12,
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "market_context_ar": "يشمل تصنيف الخضروات والفواكه (المجموعة الرئيسية: مواد غذائية) البضائع والمنتجات المتداولة في السوق السعودي مثل: الخضروات والفواكه، اناناس، باذنجان، بامية، برتقال، بصل، بطاطا، بطيخ، بندورة، تفاح، توت، تين، ثوم، جرجير وخس وبقدونس، جزر. يتم تداولها عبر مستودعات وموزعي قطاع مواد غذائية بالمملكة.",
+    "market_context_en": "Category Electrical Appliances under main group Food Items covers genuine market goods in Saudi Arabia: الخضروات والفواكه, اناناس, باذنجان, بامية, برتقال, بصل, بطاطا, بطيخ, بندورة, تفاح.",
+    "trade_terms_ar": [
+      "الخضروات والفواكه",
+      "اناناس",
+      "باذنجان",
+      "بامية",
+      "برتقال",
+      "بصل",
+      "بطاطا",
+      "بطيخ",
+      "بندورة",
+      "تفاح",
+      "توت",
+      "تين",
+      "ثوم",
+      "جرجير وخس وبقدونس",
+      "جزر",
+      "جوافه",
+      "حبحب",
+      "حشايش",
+      "خضار",
+      "خيار",
+      "دراق",
+      "ذرة صفراء",
+      "رمان",
+      "زهرة",
+      "شمام"
+    ],
+    "trade_terms_en": [
+      "Electrical Appliances",
+      "Electrical Appliances supplies",
+      "genuine Electrical Appliances"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "175": {
+    "good_type_id": 175,
+    "name_ar": "منظفات",
+    "name_en": "Refrigerators",
+    "root_id": 175,
+    "root_name_ar": "منظفات",
+    "root_name_en": "Refrigerators",
+    "market_context_ar": "المنظفات ومساحيق الغسيل ومطهرات الأرضيات والمراحيض وسائل غسيل الصحون ومعطرات الجو ومستلزمات النظافة المنزلية والتجارية. يشمل مساحيق غسيل الملابس (تايد، أريال، أومو، برسيل)، سائل غسيل الأطباق (فيري، لوكس، داك)، الكلور والمبيضات (كلوركس)، مطهرات الأرضيات (ديتول، داك، فلاش للمراحيض)، منظفات الزجاج، ومنظفات الصرف الصحي ومزيلات الشحوم.",
+    "market_context_en": "Detergents, laundry powders, liquid dish soaps, disinfectants, and surface cleaners: Tide, Ariel, Persil, Fairy, Clorox, Dettol, DAC, toilet cleaners, and floor polish.",
+    "trade_terms_ar": [
+      "صابون تايد وأريال أكياس كراتين",
+      "سائل غسيل صحون فيري طبالي",
+      "كلوركس مبيض ومعقم جوالين",
+      "مطهر ومعقم أرضيات داك وديتول",
+      "منظف مراحيض فلاش",
+      "صابون غسيل أيدي لوكس",
+      "منظف زجاج وملمع أثاث",
+      "معطر جو ومفارش",
+      "براميل منظفات للمغاسل"
+    ],
+    "trade_terms_en": [
+      "Tide laundry powder",
+      "Ariel detergent",
+      "Fairy dishwashing liquid",
+      "Clorox bleach",
+      "Dettol disinfectant",
+      "DAC floor cleaner",
+      "Flash toilet cleaner",
+      "glass cleaner",
+      "fabric softener"
+    ],
+    "key_brands": [
+      "بروكتر آند جامبل (P&G)",
+      "يونيليفر السعودية",
+      "هنكل (برسيل)",
+      "كلوركس السعودية",
+      "سيبكو"
+    ],
+    "allowed_containers": [
+      "كراتين كرتون مقوى",
+      "أكياس بلاستيكية 5 و 10 كجم",
+      "براميل وجركانات 20 و 30 لتر",
+      "طبالي شحن مشدودة"
+    ]
+  },
+  "179": {
+    "good_type_id": 179,
+    "name_ar": "وحدات تبريد",
+    "name_en": "Stoves",
+    "root_id": 179,
+    "root_name_ar": "وحدات تبريد",
+    "root_name_en": "Stoves",
+    "market_context_ar": "يشمل تصنيف وحدات تبريد (المجموعة الرئيسية: وحدات تبريد) البضائع والمنتجات المتداولة في السوق السعودي مثل: وحدات تبريد، اجهزة تبريد الخزانات، ثلاجات تبريد، مواد البناء والشييد- وتشمل  التكييف، ثلاجة، ثلاجات ومكيفات، Stoves، Stoves supplies، genuine Stoves. يتم تداولها عبر مستودعات وموزعي قطاع وحدات تبريد بالمملكة.",
+    "market_context_en": "Category Stoves under main group Stoves covers genuine market goods in Saudi Arabia: وحدات تبريد, اجهزة تبريد الخزانات, ثلاجات تبريد, مواد البناء والشييد- وتشمل  التكييف, ثلاجة, ثلاجات ومكيفات, Stoves, Stoves supplies, genuine Stoves.",
+    "trade_terms_ar": [
+      "وحدات تبريد",
+      "اجهزة تبريد الخزانات",
+      "ثلاجات تبريد",
+      "مواد البناء والشييد- وتشمل  التكييف",
+      "ثلاجة",
+      "ثلاجات ومكيفات",
+      "Stoves",
+      "Stoves supplies",
+      "genuine Stoves"
+    ],
+    "trade_terms_en": [
+      "Stoves",
+      "Stoves supplies",
+      "genuine Stoves"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "184": {
+    "good_type_id": 184,
+    "name_ar": "صابون",
+    "name_en": "Ovens",
+    "root_id": 163,
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "market_context_ar": "يشمل تصنيف صابون (المجموعة الرئيسية: مواد تنظيف) البضائع والمنتجات المتداولة في السوق السعودي مثل: صابون، منظفات صابون، صابون منظفات، صبون، منضفات صابون، Ovens، Ovens supplies، genuine Ovens. يتم تداولها عبر مستودعات وموزعي قطاع مواد تنظيف بالمملكة.",
+    "market_context_en": "Category Ovens under main group Cleaning materials covers genuine market goods in Saudi Arabia: صابون, منظفات صابون, صابون منظفات, صبون, منضفات صابون, Ovens, Ovens supplies, genuine Ovens.",
+    "trade_terms_ar": [
+      "صابون",
+      "منظفات صابون",
+      "صابون منظفات",
+      "صبون",
+      "منضفات صابون",
+      "Ovens",
+      "Ovens supplies",
+      "genuine Ovens"
+    ],
+    "trade_terms_en": [
+      "Ovens",
+      "Ovens supplies",
+      "genuine Ovens"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "185": {
+    "good_type_id": 185,
+    "name_ar": "مناديل ورقية",
+    "name_en": "Other unclassified",
+    "root_id": 163,
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "market_context_ar": "يشمل تصنيف مناديل ورقية (المجموعة الرئيسية: مواد تنظيف) البضائع والمنتجات المتداولة في السوق السعودي مثل: مناديل ورقية، رولات محارم، منتجات ورقية، Other unclassified، Other unclassified supplies، genuine Other unclassified. يتم تداولها عبر مستودعات وموزعي قطاع مواد تنظيف بالمملكة.",
+    "market_context_en": "Category Other unclassified under main group Cleaning materials covers genuine market goods in Saudi Arabia: مناديل ورقية, رولات محارم, منتجات ورقية, Other unclassified, Other unclassified supplies, genuine Other unclassified.",
+    "trade_terms_ar": [
+      "مناديل ورقية",
+      "رولات محارم",
+      "منتجات ورقية",
+      "Other unclassified",
+      "Other unclassified supplies",
+      "genuine Other unclassified"
+    ],
+    "trade_terms_en": [
+      "Other unclassified",
+      "Other unclassified supplies",
+      "genuine Other unclassified"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "186": {
+    "good_type_id": 186,
+    "name_ar": "مناديل",
+    "name_en": "containers",
+    "root_id": 163,
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "market_context_ar": "يشمل تصنيف مناديل (المجموعة الرئيسية: مواد تنظيف) البضائع والمنتجات المتداولة في السوق السعودي مثل: مناديل، محارم، مناديل معطرة، فاين مناديل، فاين مناديل+صابون، منديل، containers، containers supplies، genuine containers. يتم تداولها عبر مستودعات وموزعي قطاع مواد تنظيف بالمملكة.",
+    "market_context_en": "Category containers under main group Cleaning materials covers genuine market goods in Saudi Arabia: مناديل, محارم, مناديل معطرة, فاين مناديل, فاين مناديل+صابون, منديل, containers, containers supplies, genuine containers.",
+    "trade_terms_ar": [
+      "مناديل",
+      "محارم",
+      "مناديل معطرة",
+      "فاين مناديل",
+      "فاين مناديل+صابون",
+      "منديل",
+      "containers",
+      "containers supplies",
+      "genuine containers"
+    ],
+    "trade_terms_en": [
+      "containers",
+      "containers supplies",
+      "genuine containers"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "188": {
+    "good_type_id": 188,
+    "name_ar": "مكائن صناعية",
+    "name_en": "washing machines",
+    "root_id": 5,
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "market_context_ar": "يشمل تصنيف مكائن صناعية (المجموعة الرئيسية: صناعية) البضائع والمنتجات المتداولة في السوق السعودي مثل: مكائن صناعية، مخرطة، وحدة حقن، خط انتاج مصنع، عجانة، معدات مطعم، خط سير فرن، قطع حديد كسارة، مواد كسارات، مكينه، كنبريسر هوا، مكاين، قطع كساره حديد، كنترول مكينه، بوش رينج. يتم تداولها عبر مستودعات وموزعي قطاع صناعية بالمملكة.",
+    "market_context_en": "Category washing machines under main group Industrial covers genuine market goods in Saudi Arabia: مكائن صناعية, مخرطة, وحدة حقن, خط انتاج مصنع, عجانة, معدات مطعم, خط سير فرن, قطع حديد كسارة, مواد كسارات, مكينه.",
+    "trade_terms_ar": [
+      "مكائن صناعية",
+      "مخرطة",
+      "وحدة حقن",
+      "خط انتاج مصنع",
+      "عجانة",
+      "معدات مطعم",
+      "خط سير فرن",
+      "قطع حديد كسارة",
+      "مواد كسارات",
+      "مكينه",
+      "كنبريسر هوا",
+      "مكاين",
+      "قطع كساره حديد",
+      "كنترول مكينه",
+      "بوش رينج",
+      "جاك مكينه",
+      "مكينة صناعية",
+      "مكينة حفارة",
+      "مكائن صناعية الاطارات",
+      "معدات تصنيع أبواب",
+      "مكينه بنشر",
+      "عده بنشر",
+      "قوالب صبيات",
+      "washing machines",
+      "washing machines supplies"
+    ],
+    "trade_terms_en": [
+      "washing machines",
+      "washing machines supplies",
+      "genuine washing machines"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "190": {
+    "good_type_id": 190,
+    "name_ar": "نقل رافعة",
+    "name_en": "Industrial machines",
+    "root_id": 13,
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "market_context_ar": "يشمل تصنيف نقل رافعة (المجموعة الرئيسية: نقل المركبات) البضائع والمنتجات المتداولة في السوق السعودي مثل: نقل رافعة، كرين، رافعه، كرين سلة، تاور كرين، كرين سطحي، رافعة كهربا، شاحنه رافعه، رافعات شوكية، بوم تراك، تلي هندر، سيزر لفت، بكلين فوركلفت، رفعات شوكيه، ونش مرسيدس. يتم تداولها عبر مستودعات وموزعي قطاع نقل المركبات بالمملكة.",
+    "market_context_en": "Category Industrial machines under main group Vehicle Transportation covers genuine market goods in Saudi Arabia: نقل رافعة, كرين, رافعه, كرين سلة, تاور كرين, كرين سطحي, رافعة كهربا, شاحنه رافعه, رافعات شوكية, بوم تراك.",
+    "trade_terms_ar": [
+      "نقل رافعة",
+      "كرين",
+      "رافعه",
+      "كرين سلة",
+      "تاور كرين",
+      "كرين سطحي",
+      "رافعة كهربا",
+      "شاحنه رافعه",
+      "رافعات شوكية",
+      "بوم تراك",
+      "تلي هندر",
+      "سيزر لفت",
+      "بكلين فوركلفت",
+      "رفعات شوكيه",
+      "ونش مرسيدس",
+      "دينة ونش",
+      "كرين تركس",
+      "رافعة شوكية",
+      "رافعات شويكه",
+      "سلي  رافعه  افراد",
+      "رافعه شوكية و راس تريله",
+      "مالفت",
+      "مالفت شيز لفت رافعه شوكيه",
+      "رفعات افراد",
+      "فوركلفت عدد3"
+    ],
+    "trade_terms_en": [
+      "Industrial machines",
+      "Industrial machines supplies",
+      "genuine Industrial machines"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "192": {
+    "good_type_id": 192,
+    "name_ar": "عطور",
+    "name_en": "Air conditioners",
+    "root_id": 192,
+    "root_name_ar": "عطور",
+    "root_name_en": "Air conditioners",
+    "market_context_ar": "يشمل تصنيف عطور (المجموعة الرئيسية: عطور) البضائع والمنتجات المتداولة في السوق السعودي مثل: عطور، عطورات، بارفان، معطرات منزل، بخور، دخون، شموع معطرة، ديودورانات، مزيل عرق، معطرات جو، ملطف جو، معطر حمامات، عطورات ادوات تجميل، Air conditioners، Air conditioners supplies. يتم تداولها عبر مستودعات وموزعي قطاع عطور بالمملكة.",
+    "market_context_en": "Category Air conditioners under main group Air conditioners covers genuine market goods in Saudi Arabia: عطور, عطورات, بارفان, معطرات منزل, بخور, دخون, شموع معطرة, ديودورانات, مزيل عرق, معطرات جو.",
+    "trade_terms_ar": [
+      "عطور",
+      "عطورات",
+      "بارفان",
+      "معطرات منزل",
+      "بخور",
+      "دخون",
+      "شموع معطرة",
+      "ديودورانات",
+      "مزيل عرق",
+      "معطرات جو",
+      "ملطف جو",
+      "معطر حمامات",
+      "عطورات ادوات تجميل",
+      "Air conditioners",
+      "Air conditioners supplies",
+      "genuine Air conditioners"
+    ],
+    "trade_terms_en": [
+      "Air conditioners",
+      "Air conditioners supplies",
+      "genuine Air conditioners"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  },
+  "193": {
+    "good_type_id": 193,
+    "name_ar": "معدات السلامة والأمن",
+    "name_en": "Safety  Firefighting Equipment",
+    "root_id": 193,
+    "root_name_ar": "معدات السلامة والأمن",
+    "root_name_en": "Safety  Firefighting Equipment",
+    "market_context_ar": "يشمل تصنيف معدات السلامة والأمن (المجموعة الرئيسية: معدات السلامة والأمن) البضائع والمنتجات المتداولة في السوق السعودي مثل: معدات السلامة والأمن، أدوات ومعدات السلامة والامان، مطافئ حريق، معدات السلامة، معدات امان وسلامة، أدوات السلامة مطافة حريق، حواجز السلامة، Safety  Firefighting Equipment، Safety  Firefighting Equipment supplies، genuine Safety  Firefighting Equipment. يتم تداولها عبر مستودعات وموزعي قطاع معدات السلامة والأمن بالمملكة.",
+    "market_context_en": "Category Safety  Firefighting Equipment under main group Safety  Firefighting Equipment covers genuine market goods in Saudi Arabia: معدات السلامة والأمن, أدوات ومعدات السلامة والامان, مطافئ حريق, معدات السلامة, معدات امان وسلامة, أدوات السلامة مطافة حريق, حواجز السلامة, Safety  Firefighting Equipment, Safety  Firefighting Equipment supplies, genuine Safety  Firefighting Equipment.",
+    "trade_terms_ar": [
+      "معدات السلامة والأمن",
+      "أدوات ومعدات السلامة والامان",
+      "مطافئ حريق",
+      "معدات السلامة",
+      "معدات امان وسلامة",
+      "أدوات السلامة مطافة حريق",
+      "حواجز السلامة",
+      "Safety  Firefighting Equipment",
+      "Safety  Firefighting Equipment supplies",
+      "genuine Safety  Firefighting Equipment"
+    ],
+    "trade_terms_en": [
+      "Safety  Firefighting Equipment",
+      "Safety  Firefighting Equipment supplies",
+      "genuine Safety  Firefighting Equipment"
+    ],
+    "key_brands": [
+      "الموردين والمصانع المعتمدة في المملكة"
+    ],
+    "allowed_containers": [
+      "كراتين",
+      "طبالي شحن",
+      "دينا صندوق",
+      "تريلا"
+    ]
+  }
+}

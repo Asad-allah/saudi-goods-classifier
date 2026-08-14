@@ -1,0 +1,45 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: ↢
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: منصة دندن · خدمة مستقلة
+        - heading "مختبر تصنيف البضائع" [level=1] [ref=e8]
+    - status [ref=e9]: البحث الدلالي جاهز
+  - region [ref=e10]:
+    - generic [ref=e11]:
+      - heading "اكتشف الصنف الرئيسي من وصف البضاعة الحر." [level=2] [ref=e12]
+      - paragraph [ref=e13]: النتيجة لا تطابق منتجاً بعينه؛ بل تعيد root_good_type_id فقط. تعرض هذه الصفحة الدليل الذي وصل إلى القرار لتتأكد من استخدام المسار الدلالي أو التقريبي.
+    - generic [ref=e14]:
+      - strong [ref=e15]: "37"
+      - text: صنف رئيسي · 2308 مصطلح بحث
+  - generic [ref=e16]:
+    - region [ref=e17]:
+      - paragraph [ref=e18]: إدخال تجريبي
+      - heading "وصف البضاعة" [level=3] [ref=e19]
+      - paragraph [ref=e20]: "اكتب كما يكتب السائق: عربي، إنجليزي، لهجة أو خليط بينهما."
+      - generic [ref=e21]:
+        - generic [ref=e22]: النص
+        - textbox "النص" [ref=e23]: zzzz
+        - generic [ref=e24]:
+          - generic [ref=e25]: الحد الأقصى 191 حرفاً
+          - generic [ref=e26]: 4 / 191
+        - paragraph [ref=e27]: أمثلة سريعة
+        - generic "أمثلة جاهزة" [ref=e28]:
+          - button "تلفزيون ذكي" [ref=e29] [cursor=pointer]
+          - button "حليب أطفال عضوي" [ref=e30] [cursor=pointer]
+          - button "خطأ إملائي" [ref=e31] [cursor=pointer]
+          - button "نص إنجليزي قصير" [ref=e32] [cursor=pointer]
+        - button "حلّل الصنف الرئيسي" [active] [ref=e33] [cursor=pointer]
+      - paragraph [ref=e34]: يجب أن يكون كل لفظ 3 أحرف على الأقل. لا تُقبل الأرقام فقط أو الحروف المكررة/العشوائية. هذه شاشة عرض تجريبية؛ الربط الإنتاجي يستدعي POST /v1/classify من backend التطبيق.
+    - region [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: نتيجة التصنيف
+          - heading "القرار والدليل" [level=3] [ref=e39]
+          - paragraph [ref=e40]: تظهر المسارات التي دعمت الصنف الفائز فقط.
+        - generic [ref=e41]: تعذّر التصنيف
+      - alert [ref=e46]: أدخل وصفاً مفهوماً للبضاعة من 3 أحرف على الأقل؛ لا تُدخل أرقاماً فقط أو حروفاً مكررة أو عشوائية.
+      - generic [ref=e43]:
+        - generic [ref=e44]: ⌁
+        - paragraph [ref=e45]: أدخل وصفاً ثم اضغط التحليل. سيظهر الصنف الرئيسي، درجة الحاجة للمراجعة، ومسار القرار.

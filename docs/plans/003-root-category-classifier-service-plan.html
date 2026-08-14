@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>خدمة تصنيف الصنف الرئيسي</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f3ec;
+      --surface: #fffdf8;
+      --ink: #16242b;
+      --muted: #62717a;
+      --line: #d8d5ca;
+      --green: #1f7a5a;
+      --blue: #173f50;
+      --amber: #9f681d;
+      --red: #9c463b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      line-height: 1.85;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      width: min(1080px, calc(100% - 28px));
+      margin: 28px auto;
+      background: var(--surface);
+      border: 1px solid rgba(22, 36, 43, 0.14);
+    }
+
+    header, section, footer {
+      padding: clamp(24px, 5vw, 56px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    header {
+      border-top: 7px solid var(--green);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 820px;
+      margin-bottom: 14px;
+      color: var(--blue);
+      font-size: clamp(2rem, 4.8vw, 3.7rem);
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: clamp(1.35rem, 2.8vw, 2rem);
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    p { margin-bottom: 14px; }
+
+    .lead {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .term {
+      direction: ltr;
+      unicode-bidi: isolate;
+      display: inline-block;
+      padding: 0.04em 0.36em;
+      border-radius: 5px;
+      background: #eef1ee;
+      color: #243f4b;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.9em;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .print-button {
+      margin-top: 18px;
+      border: 1px solid var(--blue);
+      border-radius: 7px;
+      padding: 9px 14px;
+      background: transparent;
+      color: var(--blue);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .print-button:hover,
+    .print-button:focus-visible {
+      background: var(--blue);
+      color: white;
+      outline: none;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 26px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .metric {
+      padding: 22px;
+      background: #fbfaf5;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--green);
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(22px, 5vw, 56px);
+      align-items: start;
+    }
+
+    ul, ol {
+      margin: 0;
+      padding-right: 1.25rem;
+    }
+
+    li { margin-bottom: 9px; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .flow li {
+      position: relative;
+      min-height: 145px;
+      padding: 46px 16px 16px;
+      border-top: 3px solid var(--green);
+      background: #f3f5f1;
+      counter-increment: step;
+    }
+
+    .flow li::before {
+      content: counter(step, decimal-leading-zero);
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      color: var(--green);
+      font-weight: 800;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+    }
+
+    .flow p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .states {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .state {
+      padding: 18px;
+      background: #fbfaf5;
+      border-top: 4px solid var(--blue);
+    }
+
+    .state.good { border-top-color: var(--green); }
+    .state.warn { border-top-color: var(--amber); }
+    .state.risk { border-top-color: var(--red); }
+
+    .state p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    pre {
+      direction: ltr;
+      unicode-bidi: isolate;
+      overflow: auto;
+      margin: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: #17262e;
+      color: #edf7f1;
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      display: contents;
+    }
+
+    .timeline span,
+    .timeline div {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline span {
+      color: var(--green);
+      font-weight: 800;
+    }
+
+    .timeline p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    footer {
+      border-bottom: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      main { width: min(100%, calc(100% - 16px)); margin: 8px auto; }
+      .metrics, .split, .states { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .flow { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline span { padding-bottom: 2px; border-top: 1px solid var(--line); }
+      .timeline div { padding-top: 0; border-top: 0; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: white; font-size: 11pt; }
+      main { width: 100%; margin: 0; border: 0; }
+      header, section, footer { padding: 18px 0; }
+      .print-button { display: none; }
+      h1 { font-size: 25pt; }
+      .flow, .states, .metrics { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>خدمة تصنيف الصنف الرئيسي للبضاعة</h1>
+      <p class="lead">خدمة خارجية صغيرة تستقبل النص الذي يكتبه السائق وترجع الصنف الرئيسي فقط من <bdi class="term">good_types</bdi>. التطبيق الأساسي يتكفل بكل ما بعد ذلك.</p>
+      <button class="print-button" type="button" onclick="window.print()">طباعة أو حفظ PDF</button>
+
+      <div class="metrics" aria-label="أرقام من قاعدة البيانات">
+        <div class="metric"><strong>103</strong><span>نوع في جدول <bdi class="term">good_types</bdi></span></div>
+        <div class="metric"><strong>37</strong><span>صنف رئيسي حالياً</span></div>
+        <div class="metric"><strong>0</strong><span>منتجات جديدة تنشئها الخدمة</span></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>القرار المختصر</h2>
+      <div class="split">
+        <div>
+          <h3>ماذا نبني؟</h3>
+          <ul>
+            <li>API باسم <bdi class="term">POST /v1/classify</bdi>.</li>
+            <li>محرك بحث ذكي: حرفي، إملائي، ودلالي.</li>
+            <li>واجهة تجريبية بسيطة لعرض النتيجة للفريق.</li>
+            <li>إرجاع <bdi class="term">root_good_type_id</bdi> مع سبب وراية مراجعة.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>ماذا لا نبني؟</h3>
+          <ul>
+            <li>لا مطابقة منتج بعينه.</li>
+            <li>لا <bdi class="term">Agent</bdi> في نسخة الـMVP.</li>
+            <li>لا بحث إنترنت في الطلب المباشر.</li>
+            <li>لا <bdi class="term">Vector Database</bdi> حالياً.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>آلية العمل</h2>
+      <ol class="flow">
+        <li><h3>النص</h3><p>يدخل السائق أي وصف عربي، إنجليزي، مختلط، أو لغة أخرى.</p></li>
+        <li><h3>التطبيع</h3><p>تنظيف محافظ للنص بدون تغيير النص الأصلي.</p></li>
+        <li><h3>الحرفي</h3><p>بحث في أسماء الجذور والأبناء والأسماء الشائعة.</p></li>
+        <li><h3>الإملائي</h3><p>التقاط الأخطاء مثل مواد غزائيه أو كيتكات.</p></li>
+        <li><h3>الدلالي</h3><p>Embedding محلي لفهم المعنى واللهجات.</p></li>
+        <li><h3>القرار</h3><p>تجميع النتيجة على الصنف الرئيسي وإرجاع مراجعة عند الغموض.</p></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>شكل الاستجابة</h2>
+      <pre>{
+  "topCategory": {
+    "id": 12,
+    "nameAr": "مواد غذائية",
+    "rank": 1
+  },
+  "alternatives": [
+    { "id": 12, "nameAr": "مواد غذائية", "rank": 1 },
+    { "id": 5, "nameAr": "صناعية", "rank": 2 }
+  ],
+  "requiresReview": false,
+  "reason": "EXACT",
+  "language": "MIXED"
+}</pre>
+    </section>
+
+    <section>
+      <h2>حالات القرار</h2>
+      <div class="states">
+        <div class="state good"><h3><bdi class="term">EXACT</bdi></h3><p>تطابق واضح مع صنف رئيسي واحد.</p></div>
+        <div class="state good"><h3><bdi class="term">HYBRID_STRONG</bdi></h3><p>البحث الإملائي والدلالي متفقان.</p></div>
+        <div class="state warn"><h3><bdi class="term">AMBIGUOUS</bdi></h3><p>أكثر من صنف قريب، لذلك نرفع راية مراجعة.</p></div>
+        <div class="state risk"><h3><bdi class="term">LOW_EVIDENCE</bdi></h3><p>براند أو نص غير واضح ولا يجوز الثقة به آلياً.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>خطة التنفيذ</h2>
+      <ol class="timeline">
+        <li><span>1</span><div><h3>تأسيس الخدمة</h3><p>FastAPI، API key، schemas، health check، وواجهة demo.</p></div></li>
+        <li><span>2</span><div><h3>استيراد الكتالوج</h3><p>قراءة <bdi class="term">good_types</bdi>، استخراج الجذور، وتحويل aliases إلى الجذر.</p></div></li>
+        <li><span>3</span><div><h3>البحث الذكي</h3><p>Exact + Fuzzy + Semantic embeddings داخل الذاكرة.</p></div></li>
+        <li><span>4</span><div><h3>سياسة القرار</h3><p>Top 1، بدائل، و<bdi class="term">requiresReview</bdi> عند الغموض أو اللغة غير المدعومة.</p></div></li>
+        <li><span>5</span><div><h3>الاختبار والربط</h3><p>اختبارات API، قياس latency، وتوثيق استدعاء زر إضافة جديد.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>بعد الـMVP</h2>
+      <ul>
+        <li>بناء <bdi class="term">gold dataset</bdi> من قرارات دندن الفعلية.</li>
+        <li>إضافة قاموس براندات وaliases معتمدة.</li>
+        <li>إضافة <bdi class="term">reranker</bdi> فقط إذا أثبتت البيانات الحاجة.</li>
+        <li>إدخال Agent إداري لاحقاً للحالات الصعبة، خارج مسار الطلب المباشر.</li>
+      </ul>
+    </section>
+
+    <footer>
+      هذه النسخة تلغي افتراض مطابقة المنتج أو الفئة الفرعية. معيار النجاح هو إرجاع صنف رئيسي صحيح، سريع، وقابل للمراجعة عند الغموض.
+    </footer>
+  </main>
+</body>
+</html>

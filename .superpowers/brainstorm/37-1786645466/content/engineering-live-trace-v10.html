@@ -1,0 +1,561 @@
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+<style>
+  .eng-v10 { --ink:#17231e; --muted:#68766f; --line:#bdc8c1; --soft:#f1f4f1; --paper:#fbfcfa; --green:#116849; --green-soft:#e6efe9; --amber:#9a5a20; direction:ltr; color:var(--ink); font-family:Consolas,"Cascadia Code",monospace; }
+  .eng-v10 * { box-sizing:border-box; }
+  .eng-v10 h2 { margin-bottom:5px; }
+  .eng-v10 .subtitle { margin-top:0; }
+  .eng-v10 button,.eng-v10 input { font:inherit; }
+  .eng-shell { border:1px solid var(--line); background:var(--soft); }
+  .eng-top { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:13px 18px; border-bottom:1px solid var(--line); background:var(--paper); }
+  .eng-brand { display:flex; align-items:center; gap:9px; font-family:Tahoma,sans-serif; font-weight:800; direction:rtl; }
+  .eng-mark { width:25px; height:25px; display:grid; place-items:center; background:#173b2e; color:#fff; }
+  .eng-live { color:var(--green); font-size:10px; font-weight:800; }
+  .eng-main { width:min(1180px,calc(100% - 28px)); margin:auto; padding:24px 0 38px; }
+  .eng-runtime { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); background:var(--paper); }
+  .eng-runtime-item { padding:10px 12px; min-width:0; }
+  .eng-runtime-item + .eng-runtime-item { border-left:1px solid var(--line); }
+  .eng-runtime-item span { display:block; margin-bottom:4px; color:var(--muted); font-size:8px; }
+  .eng-runtime-item strong { display:block; overflow:hidden; text-overflow:ellipsis; font-size:10px; white-space:nowrap; }
+  .eng-request { display:grid; grid-template-columns:155px minmax(0,1fr) 110px; margin-top:16px; border:1px solid #8f9d95; background:#fff; }
+  .eng-method { padding:15px; border-right:1px solid var(--line); color:#506159; font-size:10px; }
+  .eng-input { width:100%; min-width:0; border:0; outline:0; padding:13px 15px; color:var(--ink); background:#fff; font:16px Tahoma,sans-serif; direction:auto; text-align:right; }
+  .eng-input:focus { box-shadow:inset 0 -2px var(--green); }
+  .eng-run { border:0; color:#fff; background:var(--green); cursor:pointer; font-size:10px; font-weight:800; }
+  .eng-run:disabled { cursor:wait; opacity:.62; }
+  .eng-examples { display:flex; flex-wrap:wrap; margin:7px 0 17px; }
+  .eng-example { padding:6px 11px; border:0; border-bottom:1px solid #9eaaa3; color:#5c6a63; background:transparent; cursor:pointer; font:11px Tahoma,sans-serif; direction:rtl; }
+  .eng-example:hover,.eng-example.is-active { color:var(--green); border-bottom-color:var(--green); }
+  .eng-rail { position:relative; display:grid; grid-template-columns:repeat(6,1fr); margin:0 0 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#f8faf8; }
+  .eng-rail::before { content:""; position:absolute; left:0; right:0; top:24px; height:1px; background:#aab7af; }
+  .eng-step { position:relative; z-index:1; min-width:0; padding:10px 8px 9px; text-align:center; color:#77847d; transition:color 180ms ease,background 180ms ease; }
+  .eng-step i { display:block; width:9px; height:9px; margin:10px auto 7px; border:1px solid #7f8d85; background:#f8faf8; }
+  .eng-step b { display:block; font-size:9px; }
+  .eng-step small { display:block; margin-top:3px; overflow:hidden; text-overflow:ellipsis; font-size:7px; white-space:nowrap; }
+  .eng-step[data-state="active"] { color:var(--green); background:#edf4ef; }
+  .eng-step[data-state="active"] i { border-color:var(--green); background:var(--green); animation:eng-pulse 850ms infinite; }
+  .eng-step[data-state="complete"] { color:#204838; }
+  .eng-step[data-state="complete"] i { border-color:var(--green); background:var(--green); }
+  @keyframes eng-pulse { 50% { box-shadow:0 0 0 5px rgba(17,104,73,.12); } }
+  .eng-trace { display:grid; gap:0; border-bottom:1px solid var(--line); }
+  .eng-row { display:grid; grid-template-columns:185px minmax(0,1fr); min-height:82px; border-top:1px solid var(--line); opacity:.44; transform:translateY(3px); transition:opacity 220ms ease,transform 220ms ease,background 220ms ease; }
+  .eng-row[data-state="active"],.eng-row[data-state="complete"] { opacity:1; transform:none; }
+  .eng-row[data-state="active"] { background:#edf4ef; }
+  .eng-row-head { padding:13px 14px; border-right:1px solid var(--line); }
+  .eng-row-head b { display:block; margin-bottom:5px; font-size:10px; }
+  .eng-row-head span { display:block; color:var(--muted); font-size:8px; line-height:1.55; }
+  .eng-row-body { padding:12px 15px; background:rgba(251,252,250,.72); }
+  .eng-kv { display:flex; flex-wrap:wrap; gap:7px 18px; font-size:9px; line-height:1.7; }
+  .eng-kv code { color:#18342a; }
+  .eng-state { color:var(--green); font-weight:800; }
+  .eng-retrieve { display:grid; grid-template-columns:repeat(3,1fr); padding:0; }
+  .eng-lane { min-width:0; padding:12px 13px; }
+  .eng-lane + .eng-lane { border-left:1px solid #d4dbd7; }
+  .eng-lane-title { display:flex; justify-content:space-between; gap:8px; padding-bottom:8px; border-bottom:1px solid #d9dfdb; font-size:9px; font-weight:800; }
+  .eng-hit { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; padding:8px 0; border-bottom:1px solid #e1e5e2; font-size:9px; }
+  .eng-hit span:first-child { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .eng-hit.is-empty { color:#87938d; }
+  .eng-ranks { display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid #c9d2cc; }
+  .eng-rank { padding:9px 11px; min-width:0; }
+  .eng-rank + .eng-rank { border-left:1px solid #c9d2cc; }
+  .eng-rank span { display:block; color:var(--muted); font-size:8px; }
+  .eng-rank strong { display:block; margin-top:5px; overflow:hidden; text-overflow:ellipsis; font:700 11px Tahoma,sans-serif; direction:rtl; white-space:nowrap; }
+  .eng-checks { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .eng-check { padding:5px 7px; border-left:2px solid #8c9a92; background:#eef1ef; font-size:8px; }
+  .eng-check.pass { border-left-color:var(--green); color:#1f5b43; }
+  .eng-check.fail { border-left-color:var(--amber); color:#794719; }
+  .eng-output { display:grid; grid-template-columns:1fr auto auto auto; margin-top:18px; border-top:2px solid #173b2e; border-bottom:1px solid #aab7af; background:#fff; }
+  .eng-output-item { padding:13px 15px; }
+  .eng-output-item + .eng-output-item { border-left:1px solid #cbd3ce; }
+  .eng-output-item span { display:block; margin-bottom:5px; color:var(--muted); font-size:8px; }
+  .eng-output-item strong { font-size:11px; }
+  .eng-error { display:none; margin-top:12px; padding:10px 12px; border-left:3px solid #a23a2d; color:#7a2b22; background:#f7ecea; font:12px Tahoma,sans-serif; direction:rtl; text-align:right; }
+  .eng-error.is-visible { display:block; }
+  .eng-note { margin-top:7px; color:var(--muted); font-size:8px; }
+  .eng-v10 .eng-rail { display:flex; align-items:stretch; gap:26px; overflow-x:auto; padding:5px 1px 18px; border:0; background:transparent; }
+  .eng-v10 .eng-rail::before { display:none; }
+  .eng-v10 .eng-step { position:relative; flex:1 0 128px; min-height:76px; padding:12px 30px 11px 11px; border:1px solid var(--line); color:var(--muted); background:var(--paper); cursor:pointer; font:inherit; text-align:left; }
+  .eng-v10 .eng-step:not(:last-child)::after { content:"→"; position:absolute; right:-20px; top:28px; width:14px; color:#7d8b84; font-size:14px; text-align:center; }
+  .eng-v10 .eng-step[data-state="complete"]:not(:last-child)::after { color:var(--green); }
+  .eng-v10 .eng-step i { position:absolute; top:11px; right:10px; width:8px; height:8px; margin:0; }
+  .eng-v10 .eng-step b { margin:0 0 10px; text-align:left; }
+  .eng-v10 .eng-step small { margin:0; overflow:visible; text-align:left; white-space:normal; line-height:1.45; }
+  .eng-v10 .eng-step:hover,.eng-v10 .eng-step.is-selected { color:var(--green); border-color:var(--green); background:#edf4ef; }
+  .eng-v10 .eng-step[data-state="active"] { border-color:var(--green); }
+  .eng-v10 .eng-step[data-state="active"] i { animation:eng-pulse 850ms infinite; }
+  .eng-v10 .eng-row { display:none; opacity:1; transform:none; }
+  .eng-v10 .eng-row.is-selected { display:grid; opacity:1; animation:eng-detail-in 180ms ease both; }
+  .eng-step-hint::before { content:"NODE INSPECTOR · "; color:var(--green); font-weight:800; }
+  .eng-step-hint { padding:12px 14px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); color:var(--muted); background:var(--paper); font-size:8px; text-align:center; }
+  .eng-step-hint[hidden] { display:none; }
+  @keyframes eng-detail-in { from { opacity:0; transform:translateY(3px); } to { opacity:1; transform:none; } }
+  .eng-tabs { display:flex; flex-wrap:wrap; margin:0 0 18px; border-bottom:1px solid var(--line); background:var(--paper); }
+  .eng-tab { padding:10px 13px; border:0; border-bottom:2px solid transparent; color:var(--muted); background:transparent; cursor:pointer; font-size:9px; font-weight:800; }
+  .eng-tab:hover,.eng-tab.is-active { color:var(--green); border-bottom-color:var(--green); }
+  .eng-page[hidden] { display:none; }
+  .eng-section { margin-top:28px; }
+  .eng-section-first { margin-top:0; }
+  .eng-section-title { display:flex; align-items:end; justify-content:space-between; gap:16px; padding-bottom:8px; border-bottom:2px solid #263c33; }
+  .eng-section-title h3 { margin:0; font-size:12px; }
+  .eng-section-title span { color:var(--muted); font-size:8px; }
+  .eng-system { display:grid; grid-template-columns:repeat(6,1fr); border-bottom:1px solid var(--line); }
+  .eng-system-node { position:relative; min-width:0; padding:13px 10px 15px; }
+  .eng-system-node + .eng-system-node { border-left:1px solid var(--line); }
+  .eng-system-node b { display:block; margin-bottom:7px; font-size:9px; }
+  .eng-system-node span { display:block; color:var(--muted); font-size:8px; line-height:1.65; }
+  .eng-system-node em { display:block; margin-top:8px; color:var(--green); font-size:7px; font-style:normal; }
+  .eng-spec-grid { display:grid; grid-template-columns:1.05fr .95fr; border-bottom:1px solid var(--line); }
+  .eng-spec { padding:13px 14px; }
+  .eng-spec + .eng-spec { border-left:1px solid var(--line); }
+  .eng-spec h4 { margin:0 0 9px; font-size:9px; }
+  .eng-spec-line { display:grid; grid-template-columns:145px minmax(0,1fr); gap:12px; padding:6px 0; border-top:1px solid #d7ddd9; font-size:8px; line-height:1.5; }
+  .eng-spec-line:first-of-type { border-top:0; }
+  .eng-spec-line b { color:#23493a; }
+  .eng-api { display:grid; grid-template-columns:185px 1fr 1fr; border-bottom:1px solid var(--line); }
+  .eng-api > div { padding:12px 13px; min-width:0; }
+  .eng-api > div + div { border-left:1px solid var(--line); }
+  .eng-api-route b { display:block; color:var(--green); font-size:10px; }
+  .eng-api-route span { display:block; margin-top:6px; color:var(--muted); font-size:8px; }
+  .eng-field { display:flex; justify-content:space-between; gap:12px; padding:5px 0; border-top:1px solid #dce1de; font-size:8px; }
+  .eng-field:first-child { border-top:0; }
+  .eng-field span:last-child { color:var(--muted); text-align:right; }
+  .eng-learning { display:grid; grid-template-columns:repeat(6,1fr); border-bottom:1px solid var(--line); }
+  .eng-learn-step { min-width:0; padding:13px 10px; }
+  .eng-learn-step + .eng-learn-step { border-left:1px solid var(--line); }
+  .eng-learn-step b { display:block; margin-bottom:6px; font-size:9px; }
+  .eng-learn-step span { display:block; color:var(--muted); font-size:8px; line-height:1.55; }
+  .eng-learn-step em { display:block; margin-top:8px; color:var(--amber); font-size:7px; font-style:normal; }
+  .eng-next { display:grid; grid-template-columns:repeat(5,1fr); border-bottom:1px solid var(--line); }
+  .eng-next-step { min-width:0; padding:12px 10px; }
+  .eng-next-step + .eng-next-step { border-left:1px solid var(--line); }
+  .eng-next-step b { display:block; margin-bottom:6px; font-size:9px; }
+  .eng-next-step span { display:block; color:var(--muted); font-size:8px; line-height:1.5; }
+  .eng-approve { display:flex; justify-content:flex-end; margin-top:22px; }
+  .eng-approve button { padding:9px 13px; border:1px solid #173b2e; color:#173b2e; background:transparent; cursor:pointer; font-size:10px; font-weight:700; }
+  @media(max-width:900px){
+    .eng-runtime,.eng-system { grid-template-columns:repeat(2,1fr); }
+    .eng-runtime-item:nth-child(3),.eng-system-node:nth-child(3) { border-left:0; }
+    .eng-request { grid-template-columns:1fr; }
+    .eng-method { border-right:0; border-bottom:1px solid var(--line); }
+    .eng-run { min-height:43px; }
+    .eng-rail { grid-template-columns:repeat(3,1fr); }
+    .eng-row { grid-template-columns:125px minmax(0,1fr); }
+    .eng-retrieve,.eng-spec-grid,.eng-api { grid-template-columns:1fr; }
+    .eng-lane + .eng-lane,.eng-spec + .eng-spec,.eng-api > div + div { border-left:0; border-top:1px solid var(--line); }
+    .eng-learning,.eng-next { grid-template-columns:repeat(2,1fr); }
+  }
+  @media(max-width:600px){
+    .eng-top { align-items:flex-start; flex-direction:column; }
+    .eng-runtime { grid-template-columns:1fr; }
+    .eng-runtime-item + .eng-runtime-item { border-left:0; border-top:1px solid var(--line); }
+    .eng-row { grid-template-columns:1fr; }
+    .eng-row-head { border-right:0; border-bottom:1px solid var(--line); }
+    .eng-output,.eng-ranks { grid-template-columns:1fr 1fr; }
+    .eng-output-item + .eng-output-item,.eng-rank + .eng-rank { border-left:0; }
+    .eng-system,.eng-learning,.eng-next { grid-template-columns:1fr; }
+    .eng-system-node + .eng-system-node,.eng-learn-step + .eng-learn-step,.eng-next-step + .eng-next-step { border-left:0; border-top:1px solid var(--line); }
+  }
+</style>
+
+<div class="eng-v10" id="eng-v10-root">
+  <h2>Root Category Runtime</h2>
+  <p class="subtitle">اختبار حي: النص → الأدلة → root_good_type_id</p>
+
+  <div class="eng-shell">
+    <header class="eng-top">
+      <div class="eng-brand"><span class="eng-mark">د</span> DANDAN / ROOT CATEGORY CLASSIFIER</div>
+      <div class="eng-live" id="eng-live-state">● LIVE LOCAL SERVICE</div>
+    </header>
+
+    <main class="eng-main">
+      <div class="eng-runtime">
+        <div class="eng-runtime-item"><span>REQUEST PATH</span><strong>ONLINE · SYNCHRONOUS</strong></div>
+        <div class="eng-runtime-item"><span>SEMANTIC MODEL</span><strong id="eng-model">multilingual-e5-small@local</strong></div>
+        <div class="eng-runtime-item"><span>CATALOG</span><strong id="eng-catalog">37 roots · 2308 terms</strong></div>
+        <div class="eng-runtime-item"><span>LEARNING</span><strong>OFFLINE · PROMOTION GATED</strong></div>
+      </div>
+
+      <form class="eng-request" id="eng-v10-form">
+        <div class="eng-method">POST /demo/classify</div>
+        <input class="eng-input" id="eng-v10-query" data-testid="eng-v10-query" aria-label="Goods description" value="كياس زبالة" autocomplete="off">
+        <button class="eng-run" id="eng-v10-run" type="submit">RUN LIVE</button>
+      </form>
+      <div class="eng-examples">
+        <button class="eng-example is-active" type="button" data-live-example="كياس زبالة">كياس زبالة</button>
+        <button class="eng-example" type="button" data-live-example="بسكوتة سنيكرز">بسكوتة سنيكرز</button>
+        <button class="eng-example" type="button" data-live-example="شحاطة بلاستيك">شحاطة بلاستيك</button>
+      </div>
+
+      <nav class="eng-tabs" aria-label="Engineering pages">
+        <button class="eng-tab is-active" type="button" data-eng-tab="test">الاختبار</button>
+        <button class="eng-tab" type="button" data-eng-tab="architecture">النظام والموديل</button>
+        <button class="eng-tab" type="button" data-eng-tab="api">API</button>
+        <button class="eng-tab" type="button" data-eng-tab="learning">التعلّم والتطوير</button>
+      </nav>
+
+      <div class="eng-page" data-eng-page="test">
+      <div class="eng-rail" aria-label="Execution sequence">
+        <button type="button" class="eng-step" data-step="request"><b>01 INPUT</b><i></i><small>API contract</small></button>
+        <button type="button" class="eng-step" data-step="gate"><b>02 VALIDATE</b><i></i><small>noise gate</small></button>
+        <button type="button" class="eng-step" data-step="nlp"><b>03 NORMALIZE</b><i></i><small>Arabic / English</small></button>
+        <button type="button" class="eng-step" data-step="retrieve"><b>04 SEARCH</b><i></i><small>EXACT │ FUZZY │ E5</small></button>
+        <button type="button" class="eng-step" data-step="rank"><b>05 FUSE</b><i></i><small>Top‑3 roots</small></button>
+        <button type="button" class="eng-step" data-step="decide"><b>06 DECIDE</b><i></i><small>accept / review</small></button>
+      </div>
+      <div class="eng-step-hint" id="eng-step-hint">اضغط على خطوة لعرض مدخلها ونتيجتها</div>
+
+      <section class="eng-trace" aria-label="Live backend trace">
+        <div class="eng-row" data-row="request">
+          <div class="eng-row-head"><b>INPUT</b><span>text + requestId</span></div>
+          <div class="eng-row-body"><div class="eng-kv" id="eng-request-data"><code>awaiting request</code></div></div>
+        </div>
+        <div class="eng-row" data-row="gate">
+          <div class="eng-row-head"><b>VALIDATION</b><span>مقبول أو مرفوض قبل البحث</span></div>
+          <div class="eng-row-body"><div class="eng-kv" id="eng-gate-data"><code>letters</code><code>≥ 3 chars / content word</code><code>repeat noise</code><code>keyboard mash</code><code>lexical/catalog anchor</code></div></div>
+        </div>
+        <div class="eng-row" data-row="nlp">
+          <div class="eng-row-head"><b>NORMALIZATION</b><span>RAW → NORMALIZED · لا يصحح الإملاء</span></div>
+          <div class="eng-row-body"><div class="eng-kv" id="eng-nlp-data"><code>awaiting accepted response</code></div></div>
+        </div>
+        <div class="eng-row" data-row="retrieve">
+          <div class="eng-row-head"><b>SEARCH</b><span>Fuzzy يسترجع أقرب كتابة · E5 يسترجع أقرب معنى</span></div>
+          <div class="eng-row-body eng-retrieve">
+            <div class="eng-lane"><div class="eng-lane-title"><span>EXACT LOOKUP</span><span>DICT</span></div><div id="eng-exact"></div></div>
+            <div class="eng-lane"><div class="eng-lane-title"><span>FUZZY</span><span>RapidFuzz</span></div><div id="eng-fuzzy"></div></div>
+            <div class="eng-lane"><div class="eng-lane-title"><span>SEMANTIC</span><span>E5 · COSINE</span></div><div id="eng-semantic"></div></div>
+          </div>
+        </div>
+        <div class="eng-row" data-row="rank">
+          <div class="eng-row-head"><b>FUSION</b><span>تجميع الأدلة على مستوى root ID</span></div>
+          <div class="eng-row-body">
+            <div class="eng-ranks" id="eng-ranks"></div>
+            <div class="eng-kv" style="margin-top:9px" id="eng-rank-data"><code>weights: EXACT 2.0 · SEMANTIC 1.0 · FUZZY 0.35 · hybrid bonus 0.08</code></div>
+          </div>
+        </div>
+        <div class="eng-row" data-row="decide">
+          <div class="eng-row-head"><b>DECISION</b><span>قبول تلقائي أو requiresReview</span></div>
+          <div class="eng-row-body"><div class="eng-kv" id="eng-policy-data"></div><div class="eng-checks" id="eng-policy-checks"></div></div>
+        </div>
+      </section>
+
+      <div class="eng-output" aria-live="polite">
+        <div class="eng-output-item"><span>root category</span><strong id="eng-category">—</strong></div>
+        <div class="eng-output-item"><span>reason</span><strong id="eng-reason">—</strong></div>
+        <div class="eng-output-item"><span>review</span><strong id="eng-review">—</strong></div>
+        <div class="eng-output-item"><span>latency</span><strong id="eng-latency">—</strong></div>
+      </div>
+      <div class="eng-error" id="eng-error"></div>
+      <div class="eng-note">Observed values = API response. Thresholds/weights = current policy constants. No synthetic confidence score.</div>
+      </div>
+
+      <div class="eng-page" data-eng-page="architecture" hidden>
+      <section class="eng-section eng-section-first">
+        <div class="eng-section-title"><h3>SYSTEM + MODEL</h3><span>runtime only</span></div>
+        <div class="eng-system">
+          <div class="eng-system-node"><b>NLP</b><span>unicodedata + wordfreq</span><em>normalize / validate</em></div>
+          <div class="eng-system-node"><b>EXACT</b><span>Python dictionary</span><em>literal lookup</em></div>
+          <div class="eng-system-node"><b>FUZZY</b><span>RapidFuzz</span><em>spelling / lexical variants</em></div>
+          <div class="eng-system-node"><b>SEMANTIC</b><span>SentenceTransformers + multilingual‑E5</span><em>meaning / dialect</em></div>
+          <div class="eng-system-node"><b>VECTOR</b><span>NumPy · L2 · cosine · Top‑20</span><em>in memory</em></div>
+          <div class="eng-system-node"><b>DECISION</b><span>weighted fusion + policy</span><em>root ID / review</em></div>
+        </div>
+        <div class="eng-spec-grid">
+          <div class="eng-spec">
+            <h4>SEMANTIC PATH</h4>
+            <div class="eng-spec-line"><b>Catalog text</b><span>roots + children + common_names</span></div>
+            <div class="eng-spec-line"><b>Stored</b><span>local E5 vectors · .npy cache</span></div>
+            <div class="eng-spec-line"><b>Request</b><span>query vector → cosine → Top‑20</span></div>
+          </div>
+          <div class="eng-spec">
+            <h4>DECISION LIMITS</h4>
+            <div class="eng-spec-line"><b>Fuzzy vote</b><span>≥ 0.80</span></div>
+            <div class="eng-spec-line"><b>Hybrid accept</b><span>Fuzzy ≥ .80 · Semantic ≥ .86 · Margin ≥ .004</span></div>
+            <div class="eng-spec-line"><b>Otherwise</b><span>requiresReview = true</span></div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div class="eng-page" data-eng-page="api" hidden>
+      <section class="eng-section eng-section-first">
+        <div class="eng-section-title"><h3>API</h3><span>Dandan integration</span></div>
+        <div class="eng-api">
+          <div class="eng-api-route"><b>POST /v1/classify</b><span>X-API-Key<br>application/json</span></div>
+          <div>
+            <div class="eng-field"><b>requestId</b><span>string · 1..80</span></div>
+            <div class="eng-field"><b>text</b><span>string · 1..191</span></div>
+            <div class="eng-field"><b>errors</b><span>401 · 422 · 503</span></div>
+          </div>
+          <div>
+            <div class="eng-field"><b>topCategory.id</b><span>root ID</span></div>
+            <div class="eng-field"><b>alternatives</b><span>Top‑3 roots</span></div>
+            <div class="eng-field"><b>matchSignals</b><span>method · term · score · margin</span></div>
+            <div class="eng-field"><b>decision</b><span>reason · requiresReview · latencyMs</span></div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div class="eng-page" data-eng-page="learning" hidden>
+      <section class="eng-section eng-section-first">
+        <div class="eng-section-title"><h3>LEARNING</h3><span>verified labels only · outside request path</span></div>
+        <div class="eng-learning">
+          <div class="eng-learn-step"><b>01 FEEDBACK</b><span>operator-approved root</span><em>COLLECT</em></div>
+          <div class="eng-learn-step"><b>02 DATASET</b><span>dedupe + remove conflicts</span><em>VERIFY</em></div>
+          <div class="eng-learn-step"><b>03 TRAIN</b><span>TF‑IDF + Logistic Regression</span><em>OFFLINE</em></div>
+          <div class="eng-learn-step"><b>04 EVALUATE</b><span>Top‑1 .90 · Top‑3 .97 · Precision .95</span><em>GATE</em></div>
+          <div class="eng-learn-step"><b>05 SHADOW</b><span>predict without driver impact</span><em>NEXT</em></div>
+          <div class="eng-learn-step"><b>06 CANARY</b><span>small traffic + rollback</span><em>LATER</em></div>
+        </div>
+        <div class="eng-note">E5 يعمل Online الآن. التعلم من التصحيحات Offline حتى تمر النتائج باختبارات الجودة.</div>
+      </section>
+      </div>
+
+      <div class="eng-approve"><button data-choice="approve-live-engineering-v10" onclick="toggleSelect(this)">APPROVE LIVE ENGINEERING FLOW</button></div>
+    </main>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const root = document.getElementById("eng-v10-root");
+    if (!root || root.dataset.ready === "true") return;
+    root.dataset.ready = "true";
+    const apiUrl = "http://127.0.0.1:8000/demo/classify";
+    const steps = ["request","gate","nlp","retrieve","rank","decide"];
+    const $ = (id) => document.getElementById(id);
+    const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+    const escapeText = (value) => value == null ? "—" : String(value);
+
+    const setCodes = (id, values) => {
+      const target = $(id);
+      target.replaceChildren(...values.map((value) => {
+        const item = document.createElement("code");
+        item.textContent = value;
+        return item;
+      }));
+    };
+
+    const setStep = (name,state) => {
+      root.querySelector(`[data-step="${name}"]`).dataset.state = state;
+      root.querySelector(`[data-row="${name}"]`).dataset.state = state;
+    };
+
+    const resetSteps = () => steps.forEach((name) => setStep(name,"idle"));
+
+    const selectPage = (pageName) => {
+      root.querySelectorAll("[data-eng-page]").forEach((page) => { page.hidden = page.dataset.engPage !== pageName; });
+      root.querySelectorAll("[data-eng-tab]").forEach((tab) => tab.classList.toggle("is-active",tab.dataset.engTab === pageName));
+    };
+
+    const selectTraceStep = (stepName) => {
+      root.querySelectorAll("[data-row]").forEach((row) => row.classList.toggle("is-selected",row.dataset.row === stepName));
+      root.querySelectorAll("[data-step]").forEach((step) => step.classList.toggle("is-selected",step.dataset.step === stepName));
+      $("eng-step-hint").hidden = Boolean(stepName);
+    };
+
+    const clearResult = () => {
+      setCodes("eng-request-data",["awaiting request"]);
+      setCodes("eng-gate-data",["awaiting validation"]);
+      setCodes("eng-nlp-data",["awaiting accepted response"]);
+      ["eng-exact","eng-fuzzy","eng-semantic","eng-ranks","eng-policy-data","eng-policy-checks"].forEach((id) => $(id).replaceChildren());
+      setCodes("eng-rank-data",["weights=EXACT 2.0 · SEMANTIC 1.0 · FUZZY 0.35 · BONUS 0.08"]);
+      $("eng-category").textContent = "—";
+      $("eng-reason").textContent = "—";
+      $("eng-review").textContent = "—";
+      $("eng-latency").textContent = "—";
+    };
+
+    const hitNode = (evidence, emptyLabel) => {
+      const row = document.createElement("div");
+      row.className = `eng-hit${evidence ? "" : " is-empty"}`;
+      const term = document.createElement("span");
+      const score = document.createElement("span");
+      term.textContent = evidence ? `#${evidence.rank} · ${evidence.matchedTerm}` : emptyLabel;
+      score.textContent = evidence ? Number(evidence.score).toFixed(4) : "—";
+      row.append(term,score);
+      return row;
+    };
+
+    const renderLane = (id,method,evidence) => {
+      const methodHits = evidence.filter((item) => item.method === method);
+      const labels = {EXACT:"exact catalog term",FUZZY:"closest spelling / lexical form",SEMANTIC:"nearest meaning in vector space"};
+      const nodes = methodHits.length
+        ? methodHits.map((item) => {
+            const node = hitNode(item,"");
+            const term = node.querySelector("span");
+            term.textContent = `${labels[method]}: ${item.matchedTerm}`;
+            return node;
+          })
+        : [hitNode(null,"NO CONTRIBUTING EVIDENCE")];
+      $(id).replaceChildren(...nodes);
+    };
+
+    const renderRanks = (alternatives) => {
+      $("eng-ranks").replaceChildren(...alternatives.map((item) => {
+        const node = document.createElement("div");
+        node.className = "eng-rank";
+        const label = document.createElement("span");
+        const value = document.createElement("strong");
+        label.textContent = `RANK ${item.rank} · ROOT ${item.id}`;
+        value.textContent = `${item.nameAr} / ${item.nameEn}`;
+        node.append(label,value);
+        return node;
+      }));
+    };
+
+    const checkNode = (label,pass) => {
+      const node = document.createElement("span");
+      node.className = `eng-check ${pass ? "pass" : "fail"}`;
+      node.textContent = `${pass ? "PASS" : "FAIL"} · ${label}`;
+      return node;
+    };
+
+    const renderPolicy = (data) => {
+      const signals = data.matchSignals;
+      const byMethod = new Map(signals.evidence.map((item) => [item.method,item.score]));
+      const fuzzy = byMethod.get("FUZZY");
+      const semantic = byMethod.get("SEMANTIC");
+      const exact = byMethod.get("EXACT");
+      const margin = signals.scoreMargin;
+      setCodes("eng-policy-data", [`reason=${data.reason}`,`requiresReview=${data.requiresReview}`,`maxEvidence=${Number(signals.maxEvidence).toFixed(4)}`,`scoreMargin=${margin == null ? "n/a" : Number(margin).toFixed(4)}`]);
+      const checks = [];
+      if (exact != null) checks.push(checkNode(`EXACT ${Number(exact).toFixed(4)}`,exact >= .99));
+      if (fuzzy != null) checks.push(checkNode(`FUZZY ${Number(fuzzy).toFixed(4)} ≥ 0.8000`,fuzzy >= .8));
+      else checks.push(checkNode("FUZZY evidence available",false));
+      if (semantic != null) checks.push(checkNode(`SEMANTIC ${Number(semantic).toFixed(4)} ≥ 0.8600`,semantic >= .86));
+      else checks.push(checkNode("SEMANTIC evidence available",false));
+      if (margin != null) checks.push(checkNode(`MARGIN ${Number(margin).toFixed(4)} ≥ 0.0040`,margin >= .004));
+      $("eng-policy-checks").replaceChildren(...checks);
+    };
+
+    const normalizationOperations = (raw,normalized) => {
+      const operations = [];
+      if (/[\u0610-\u061a\u064b-\u065f\u0670\u06d6-\u06ed\u0640]/.test(raw)) operations.push("remove_diacritics_or_tatweel");
+      if (/[أإآٱىؤة]/.test(raw)) operations.push("map_arabic_variants");
+      if (/[^\w\s\u0600-\u06ff]/u.test(raw)) operations.push("remove_punctuation");
+      if (/\s{2,}/.test(raw) || raw !== raw.trim()) operations.push("collapse_or_trim_spaces");
+      if (raw.toLocaleLowerCase() !== raw) operations.push("casefold");
+      if (raw.trim() !== normalized && operations.length === 0) operations.push("unicode_nfkc");
+      return operations.length ? operations : ["no_text_change"];
+    };
+
+    const renderResponse = (data,text) => {
+      const signals = data.matchSignals;
+      window.__engV10LastResponse = data;
+      setCodes("eng-request-data", [`requestId=${data.requestId}`,`text=${text}`,"transport=HTTP 200"]);
+      setCodes("eng-gate-data", ["Pydantic=PASS","InputQualityGate=PASS","retrieval_allowed=true"]);
+      const operations = normalizationOperations(text,data.normalizedText);
+      setCodes("eng-nlp-data", [`raw="${text}"`,`normalized="${data.normalizedText}"`,`changed=${text !== data.normalizedText}`,`applied=${operations.join(" + ")}`,`language=${data.language}`]);
+      renderLane("eng-exact","EXACT",signals.evidence);
+      renderLane("eng-fuzzy","FUZZY",signals.evidence);
+      renderLane("eng-semantic","SEMANTIC",signals.evidence);
+      renderRanks(data.alternatives);
+      setCodes("eng-rank-data", [`methods=${signals.methods.join("+") || "none"}`,`matchedTerms=${signals.matchedTerms.join(" | ") || "none"}`,`scoreMargin=${signals.scoreMargin == null ? "n/a" : Number(signals.scoreMargin).toFixed(4)}`,"weights=EXACT 2.0 · SEMANTIC 1.0 · FUZZY 0.35 · BONUS 0.08"]);
+      renderPolicy(data);
+      $("eng-category").textContent = `${data.topCategory.id} · ${data.topCategory.nameAr}`;
+      $("eng-reason").textContent = data.reason;
+      $("eng-review").textContent = escapeText(data.requiresReview);
+      $("eng-latency").textContent = `${data.latencyMs} ms`;
+      $("eng-model").textContent = data.modelVersion;
+      $("eng-catalog").textContent = `${data.catalogVersion}`;
+    };
+
+    const animateSuccess = async () => {
+      for (let index=0;index<steps.length;index+=1) {
+        if (index>0) setStep(steps[index-1],"complete");
+        setStep(steps[index],"active");
+        selectTraceStep(steps[index]);
+        await wait(index === 3 ? 700 : 420);
+      }
+      setStep("decide","complete");
+    };
+
+    const showError = async (message,requestId,text) => {
+      setCodes("eng-request-data",[`requestId=${requestId}`,`text=${text}`]);
+      setCodes("eng-gate-data",["InputQualityGate=REJECT","retrieval_allowed=false"]);
+      setStep("request","complete");
+      setStep("gate","active");
+      selectTraceStep("gate");
+      $("eng-error").textContent = message;
+      $("eng-error").classList.add("is-visible");
+      await wait(220);
+      setStep("gate","complete");
+    };
+
+    const run = async () => {
+      const text = $("eng-v10-query").value.trim();
+      if (!text) { $("eng-v10-query").focus(); return; }
+      const requestId = crypto.randomUUID();
+      selectPage("test");
+      clearResult();
+      resetSteps();
+      selectTraceStep("request");
+      setCodes("eng-request-data",[`requestId=${requestId}`,`text=${text}`,"transport=PENDING"]);
+      setStep("request","active");
+      $("eng-error").classList.remove("is-visible");
+      $("eng-v10-run").disabled = true;
+      $("eng-v10-run").textContent = "RUNNING";
+      root.querySelectorAll("[data-live-example]").forEach((button) => button.classList.toggle("is-active",button.dataset.liveExample === text));
+      try {
+        const response = await fetch(apiUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({requestId,text})});
+        const data = await response.json();
+        window.__engV10LastHttpStatus = response.status;
+        if (!response.ok) {
+          const message = data?.error?.message || `HTTP ${response.status}`;
+          await showError(message,requestId,text);
+          return;
+        }
+        renderResponse(data,text);
+        await animateSuccess();
+      } catch (error) {
+        await showError("Local classification service is unavailable.",requestId,text);
+        $("eng-live-state").textContent = "● SERVICE UNAVAILABLE";
+      } finally {
+        $("eng-v10-run").disabled = false;
+        $("eng-v10-run").textContent = "RUN LIVE";
+      }
+    };
+
+    root.querySelectorAll("[data-eng-tab]").forEach((tab) => tab.addEventListener("click",() => selectPage(tab.dataset.engTab)));
+    root.querySelectorAll("[data-step]").forEach((step) => step.addEventListener("click",() => selectTraceStep(step.dataset.step)));
+    root.querySelectorAll("[data-live-example]").forEach((button) => button.addEventListener("click",() => {
+      $("eng-v10-query").value = button.dataset.liveExample;
+      root.querySelectorAll("[data-live-example]").forEach((item) => item.classList.toggle("is-active",item === button));
+      $("eng-v10-query").focus();
+    }));
+    $("eng-v10-form").addEventListener("submit",(event) => { event.preventDefault(); run(); });
+    clearResult();
+    resetSteps();
+    selectPage("test");
+    selectTraceStep("request");
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

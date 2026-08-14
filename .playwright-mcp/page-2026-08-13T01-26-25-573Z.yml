@@ -1,0 +1,9 @@
+- main [ref=e2]:
+  - heading "تجربة تصنيف الصنف الرئيسي" [level=1] [ref=e3]
+  - paragraph [ref=e4]: هذه واجهة اختبار فقط. التطبيق الأساسي سيستدعي API ويكمل باقي التدفق.
+  - generic [ref=e5]:
+    - generic [ref=e6]: نص البضاعة
+    - textbox "نص البضاعة" [ref=e7]: كيت كات وشوكلاته
+    - button "تصنيف" [ref=e8] [cursor=pointer]
+  - heading "النتيجة" [level=2] [ref=e9]
+  - generic [ref=e10]: "{}"

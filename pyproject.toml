@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dandan-root-category-classifier"
+version = "0.1.0"
+description = "FastAPI service that classifies free-text goods descriptions into Dandan root good_types."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "pydantic>=2.7",
+  "numpy>=1.26",
+  "rapidfuzz>=3.9",
+  "wordfreq>=3.1.1",
+]
+
+[project.optional-dependencies]
+semantic = ["sentence-transformers>=5.0"]
+ml = ["scikit-learn>=1.5", "joblib>=1.3"]
+dev = ["pytest>=8.3", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff.lint.per-file-ignores]
+# FastAPI resolves dependencies from these declarative defaults at request time.
+"app/api/routes.py" = ["B008"]

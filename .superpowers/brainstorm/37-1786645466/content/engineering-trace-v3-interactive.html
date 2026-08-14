@@ -1,0 +1,302 @@
+<style>
+  .trace-v3 { direction: ltr; color: #18231f; font-family: Consolas, "Cascadia Code", monospace; }
+  .trace-v3 * { box-sizing: border-box; }
+  .trace-v3 h2 { margin-bottom: 6px; }
+  .trace-v3 .subtitle { margin-top: 0; }
+  .trace-v3-shell { border: 1px solid #bdc8c1; background: #f3f5f2; min-height: 720px; }
+  .trace-v3-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 13px 18px; border-bottom: 1px solid #bdc8c1; background: #fbfcfa; }
+  .trace-v3-brand { display: flex; align-items: center; gap: 9px; font-family: Tahoma, sans-serif; font-weight: 800; direction: rtl; }
+  .trace-v3-mark { width: 25px; height: 25px; display: grid; place-items: center; background: #173b2e; color: #fff; }
+  .trace-v3-health { color: #27664f; font-size: 11px; white-space: nowrap; }
+  .trace-v3-main { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 30px 0 38px; }
+  .trace-v3-request { display: grid; grid-template-columns: 150px minmax(0, 1fr) 110px; border: 1px solid #9eaaa3; background: #fff; }
+  .trace-v3-method { padding: 15px; border-right: 1px solid #c8d0cb; color: #506159; font-size: 11px; }
+  .trace-v3-input { width: 100%; min-width: 0; padding: 14px 15px; border: 0; outline: 0; background: #fff; color: #18231f; font: 16px Tahoma, sans-serif; direction: auto; text-align: right; }
+  .trace-v3-input:focus { box-shadow: inset 0 -2px #116849; }
+  .trace-v3-run { border: 0; background: #116849; color: #fff; font: 800 11px Consolas, monospace; cursor: pointer; transition: background 140ms ease, opacity 140ms ease; }
+  .trace-v3-run:hover { background: #0d573e; }
+  .trace-v3-run:disabled { cursor: wait; opacity: .65; }
+  .trace-v3-examples { display: flex; flex-wrap: wrap; gap: 0; margin-top: 9px; }
+  .trace-v3-example { border: 0; border-bottom: 1px solid #9eaaa3; background: transparent; color: #5c6a63; padding: 7px 11px; font: 11px Tahoma, sans-serif; cursor: pointer; direction: rtl; }
+  .trace-v3-example:hover, .trace-v3-example.is-active { border-bottom-color: #116849; color: #116849; }
+  .trace-v3-meta { display: flex; flex-wrap: wrap; gap: 18px; padding: 10px 0 22px; color: #607068; font-size: 10px; }
+  .trace-v3-flow { display: grid; gap: 0; }
+  .trace-v3-row { display: grid; grid-template-columns: 170px 32px minmax(0, 1fr); align-items: stretch; min-height: 76px; }
+  .trace-v3-index { padding: 13px 12px; border-top: 1px solid #c7d0ca; color: #75817b; font-size: 10px; }
+  .trace-v3-index strong { display: block; color: #1f342b; font-size: 12px; margin-bottom: 5px; }
+  .trace-v3-line { position: relative; }
+  .trace-v3-line::before { content: ""; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #8ca097; }
+  .trace-v3-line::after { content: ""; position: absolute; left: calc(50% - 3px); top: 36px; width: 7px; height: 7px; background: #116849; }
+  .trace-v3-node { margin-left: 2px; padding: 12px 16px; border-top: 1px solid #c7d0ca; background: #fbfcfa; transition: background 180ms ease; }
+  .trace-v3-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .trace-v3-path { color: #1e392e; font-size: 11px; font-weight: 800; }
+  .trace-v3-state { color: #116849; font-size: 10px; font-weight: 800; }
+  .trace-v3-data { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 7px 18px; color: #53635c; font-size: 10px; line-height: 1.7; }
+  .trace-v3-data code { color: #17251f; }
+  .trace-v3-retrieval { min-height: 190px; }
+  .trace-v3-grid { display: grid; grid-template-columns: repeat(3, 1fr); min-height: 166px; border-top: 1px solid #c7d0ca; background: #fbfcfa; }
+  .trace-v3-lane { padding: 12px 14px; }
+  .trace-v3-lane + .trace-v3-lane { border-left: 1px solid #d4dbd7; }
+  .trace-v3-lane-head { display: flex; justify-content: space-between; gap: 8px; padding-bottom: 9px; border-bottom: 1px solid #d9dfdb; font-size: 10px; font-weight: 800; }
+  .trace-v3-lane-result { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 8px 0; border-bottom: 1px solid #e1e5e2; font-size: 10px; }
+  .trace-v3-muted { color: #819088; }
+  .trace-v3-ignored { color: #9b5c24; text-decoration: line-through; }
+  .trace-v3-final .trace-v3-node { background: #eaf0ec; border-top-color: #91a69a; }
+  .trace-v3-response { display: grid; grid-template-columns: 1fr auto auto auto; margin-top: 22px; border-top: 2px solid #173b2e; border-bottom: 1px solid #aab7af; background: #fff; }
+  .trace-v3-cell { padding: 14px 16px; }
+  .trace-v3-cell + .trace-v3-cell { border-left: 1px solid #cbd3ce; }
+  .trace-v3-cell span { display: block; color: #6f7b75; font-size: 9px; margin-bottom: 5px; }
+  .trace-v3-cell strong { font-size: 12px; }
+  .trace-v3-note { margin-top: 9px; color: #6f7b75; font-size: 9px; }
+  .trace-v3-approve { display: flex; justify-content: flex-end; margin-top: 20px; }
+  .trace-v3-approve button { border: 1px solid #173b2e; background: transparent; color: #173b2e; padding: 9px 13px; font: 700 11px Consolas, monospace; cursor: pointer; }
+  .trace-v3.is-running .trace-v3-node, .trace-v3.is-running .trace-v3-grid { background: #f5f8f5; }
+  @media (max-width: 820px) {
+    .trace-v3-top { align-items: flex-start; flex-direction: column; }
+    .trace-v3-request { grid-template-columns: 1fr; }
+    .trace-v3-method { border-right: 0; border-bottom: 1px solid #c8d0cb; }
+    .trace-v3-run { min-height: 44px; }
+    .trace-v3-row { grid-template-columns: 88px 20px minmax(0, 1fr); }
+    .trace-v3-grid { grid-template-columns: 1fr; }
+    .trace-v3-lane + .trace-v3-lane { border-left: 0; border-top: 1px solid #d4dbd7; }
+    .trace-v3-response { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<div class="trace-v3" id="trace-v3-root">
+  <h2>Backend Classification Trace</h2>
+  <p class="subtitle">Interactive wireframe · input → evidence → decision.</p>
+
+  <div class="trace-v3-shell">
+    <header class="trace-v3-top">
+      <div class="trace-v3-brand"><span class="trace-v3-mark">د</span> DANDAN / CLASSIFIER LAB</div>
+      <div class="trace-v3-health">● PROTOTYPE TRACE · 3 FIXTURES · CUSTOM PREVIEW</div>
+    </header>
+
+    <main class="trace-v3-main">
+      <form class="trace-v3-request" id="trace-v3-form">
+        <div class="trace-v3-method">POST /v1/classify</div>
+        <input class="trace-v3-input" id="trace-v3-query" data-testid="trace-query-v3" name="text" value="كياس زبالة" aria-label="Goods description" autocomplete="off">
+        <button class="trace-v3-run" id="trace-v3-run" type="submit">RUN</button>
+      </form>
+
+      <div class="trace-v3-examples" aria-label="Trace examples">
+        <button class="trace-v3-example is-active" type="button" data-example="كياس زبالة">كياس زبالة</button>
+        <button class="trace-v3-example" type="button" data-example="بسكوتة سنيكرز">بسكوتة سنيكرز</button>
+        <button class="trace-v3-example" type="button" data-example="شحاطة بلاستيك">شحاطة بلاستيك</button>
+      </div>
+
+      <div class="trace-v3-meta">
+        <span id="trace-v3-request-id">requestId: fixture-waste</span>
+        <span>catalog: 37 roots / 2308 terms</span>
+        <span>model: multilingual-e5-small@local</span>
+      </div>
+
+      <section class="trace-v3-flow" aria-label="Backend pipeline trace">
+        <div class="trace-v3-row">
+          <div class="trace-v3-index"><strong>01 · GATE</strong>input_quality.py</div>
+          <div class="trace-v3-line"></div>
+          <div class="trace-v3-node">
+            <div class="trace-v3-head"><span class="trace-v3-path">InputQualityGate.require_meaningful()</span><span class="trace-v3-state" id="trace-v3-gate-state">PASS</span></div>
+            <div class="trace-v3-data" id="trace-v3-gate-data"></div>
+          </div>
+        </div>
+
+        <div class="trace-v3-row">
+          <div class="trace-v3-index"><strong>02 · NLP</strong>normalizer.py</div>
+          <div class="trace-v3-line"></div>
+          <div class="trace-v3-node">
+            <div class="trace-v3-head"><span class="trace-v3-path">normalize_text() + detect_language()</span><span class="trace-v3-state" id="trace-v3-language">AR</span></div>
+            <div class="trace-v3-data" id="trace-v3-nlp-data"></div>
+          </div>
+        </div>
+
+        <div class="trace-v3-row trace-v3-retrieval">
+          <div class="trace-v3-index"><strong>03 · RETRIEVE</strong>parallel evidence</div>
+          <div class="trace-v3-line"></div>
+          <div class="trace-v3-grid">
+            <div class="trace-v3-lane">
+              <div class="trace-v3-lane-head"><span>EXACT</span><span id="trace-v3-exact-state">0 HIT</span></div>
+              <div id="trace-v3-exact-results"></div>
+            </div>
+            <div class="trace-v3-lane">
+              <div class="trace-v3-lane-head"><span>FUZZY · RapidFuzz</span><span>TOP 20</span></div>
+              <div id="trace-v3-fuzzy-results"></div>
+            </div>
+            <div class="trace-v3-lane">
+              <div class="trace-v3-lane-head"><span>SEMANTIC · E5</span><span>COSINE</span></div>
+              <div id="trace-v3-semantic-results"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trace-v3-row">
+          <div class="trace-v3-index"><strong>04 · FUSION</strong>fusion.py</div>
+          <div class="trace-v3-line"></div>
+          <div class="trace-v3-node">
+            <div class="trace-v3-head"><span class="trace-v3-path">fuse_hits(root_good_type_id)</span><span class="trace-v3-state">TOP 3</span></div>
+            <div class="trace-v3-data" id="trace-v3-fusion-data"></div>
+          </div>
+        </div>
+
+        <div class="trace-v3-row trace-v3-final">
+          <div class="trace-v3-index"><strong>05 · POLICY</strong>policy.py</div>
+          <div class="trace-v3-line"></div>
+          <div class="trace-v3-node">
+            <div class="trace-v3-head"><span class="trace-v3-path">decide(candidates, language, embedding_available)</span><span class="trace-v3-state" id="trace-v3-policy-state">AMBIGUOUS</span></div>
+            <div class="trace-v3-data" id="trace-v3-policy-data"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="trace-v3-response" aria-live="polite">
+        <div class="trace-v3-cell"><span>topCategory</span><strong id="trace-v3-category">141 · النفايات</strong></div>
+        <div class="trace-v3-cell"><span>reason</span><strong id="trace-v3-reason">AMBIGUOUS</strong></div>
+        <div class="trace-v3-cell"><span>review</span><strong id="trace-v3-review">true</strong></div>
+        <div class="trace-v3-cell"><span>latency</span><strong id="trace-v3-latency">119 ms</strong></div>
+      </div>
+      <div class="trace-v3-note" id="trace-v3-note">Fixture mirrors the current local service response. Custom text renders the request path without inventing a category.</div>
+
+      <div class="trace-v3-approve">
+        <button data-choice="approve-engineering-trace-v3" onclick="toggleSelect(this)">APPROVE INTERACTIVE TRACE</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const root = document.getElementById("trace-v3-root");
+    if (!root || root.dataset.ready === "true") return;
+    root.dataset.ready = "true";
+
+    const $ = (id) => document.getElementById(id);
+    const fixtures = {
+      "كياس زبالة": {
+        id: "fixture-waste", language: "AR", fuzzy: [["مواد غذائية / «اكياس بطاطس»", "0.663", "ignored"], ["ranking vote threshold", "≥ 0.800"], ["contributing hits", "0"]],
+        semantic: [["141 · النفايات", "0.899"], ["162 · مخلفات", "rank 2"], ["167 · نفايات طبية", "rank 3"]],
+        root: "141 · النفايات", rootId: "141", margin: "0.0011", evidence: "SEMANTIC", reason: "AMBIGUOUS", review: "true", latency: "119 ms"
+      },
+      "بسكوتة سنيكرز": {
+        id: "fixture-snickers", language: "AR", fuzzy: [["12 · مواد غذائية / «بسكوت»", "0.980"], ["ranking vote threshold", "≥ 0.800"], ["contributing hits", "1"]],
+        semantic: [["12 · مواد غذائية / «بسكت»", "0.853"], ["169 · الأسفنج", "rank 2"], ["129 · قطع غيار", "rank 3"]],
+        root: "12 · مواد غذائية", rootId: "12", margin: "0.3909", evidence: "FUZZY + SEMANTIC", reason: "LOW_EVIDENCE", review: "true", latency: "113 ms"
+      },
+      "شحاطة بلاستيك": {
+        id: "fixture-slipper", language: "AR", fuzzy: [["5 · صناعية / «بلاستيك»", "1.000"], ["ranking vote threshold", "≥ 0.800"], ["contributing hits", "1"]],
+        semantic: [["5 · صناعية / «سطول بلاستيك»", "0.878"], ["169 · الأسفنج", "rank 2"], ["129 · قطع غيار", "rank 3"]],
+        root: "5 · صناعية", rootId: "5", margin: "0.4138", evidence: "FUZZY + SEMANTIC", reason: "HYBRID_STRONG", review: "false", latency: "105 ms"
+      }
+    };
+
+    const normalize = (value) => value
+      .trim()
+      .toLowerCase()
+      .replace(/[\u064B-\u065F\u0670\u0640]/g, "")
+      .replace(/[أإآٱ]/g, "ا")
+      .replace(/ى/g, "ي")
+      .replace(/ؤ/g, "و")
+      .replace(/ئ/g, "ي")
+      .replace(/ة/g, "ه")
+      .replace(/\s+/g, " ");
+
+    const detectLanguage = (value) => {
+      const ar = /[\u0600-\u06FF]/.test(value);
+      const en = /[A-Za-z]/.test(value);
+      return ar && en ? "MIXED" : ar ? "AR" : en ? "EN" : "UNKNOWN";
+    };
+
+    const code = (text) => {
+      const node = document.createElement("code");
+      node.textContent = text;
+      return node;
+    };
+
+    const setCodeList = (id, values) => {
+      const target = $(id);
+      target.replaceChildren(...values.map(code));
+    };
+
+    const setLane = (id, rows) => {
+      const target = $(id);
+      const nodes = rows.map(([label, score, state]) => {
+        const row = document.createElement("div");
+        row.className = `trace-v3-lane-result${state === "ignored" ? " trace-v3-ignored" : ""}${state === "muted" ? " trace-v3-muted" : ""}`;
+        const left = document.createElement("span");
+        const right = document.createElement("span");
+        left.textContent = label;
+        right.textContent = score;
+        row.append(left, right);
+        return row;
+      });
+      target.replaceChildren(...nodes);
+    };
+
+    const makePreview = (text) => ({
+      id: `preview-${Date.now().toString(36)}`,
+      language: detectLanguage(text),
+      fuzzy: [["runtime candidate set", "—", "muted"], ["ranking vote threshold", "≥ 0.800"], ["prototype fixture", "not found", "muted"]],
+      semantic: [["query embedding", "runtime", "muted"], ["cosine ranking", "runtime", "muted"], ["category scores", "not simulated", "muted"]],
+      root: "— · BACKEND REQUIRED", rootId: "—", margin: "—", evidence: "RUNTIME", reason: "TRACE_PREVIEW", review: "—", latency: "—"
+    });
+
+    const render = (text) => {
+      const cleaned = text.trim();
+      const normalized = normalize(cleaned);
+      const compact = normalized.replace(/\s/g, "");
+      const fixture = fixtures[cleaned];
+      const data = fixture || makePreview(cleaned);
+      const tokens = normalized.split(" ").filter(Boolean);
+      const minLength = tokens.length ? Math.min(...tokens.map((token) => token.length)) : 0;
+
+      $("trace-v3-request-id").textContent = `requestId: ${data.id}`;
+      $("trace-v3-language").textContent = data.language;
+      $("trace-v3-gate-state").textContent = cleaned.length >= 3 ? "PASS" : "REJECT";
+      setCodeList("trace-v3-gate-data", [`letters=${/[A-Za-z\u0600-\u06FF]/.test(cleaned)}`, `min_token_len=${minLength}`, "repeat_noise=false", `lexical_anchor=${cleaned.length >= 3}`]);
+      setCodeList("trace-v3-nlp-data", [`raw=\"${cleaned}\"`, `normalized=\"${normalized}\"`, `compact=\"${compact}\"`]);
+      $("trace-v3-exact-state").textContent = "0 HIT";
+      setLane("trace-v3-exact-results", [["exact_lookup[normalized]", "∅", "muted"], ["exact_lookup[compact]", "∅", "muted"]]);
+      setLane("trace-v3-fuzzy-results", data.fuzzy);
+      setLane("trace-v3-semantic-results", data.semantic);
+      setCodeList("trace-v3-fusion-data", [`root[${data.rootId}]=rank1`, `margin=${data.margin}`, `evidence=${data.evidence}`]);
+      $("trace-v3-policy-state").textContent = data.reason;
+      setCodeList("trace-v3-policy-data", [`top_root_id=${data.rootId}`, `requiresReview=${data.review}`, `reason=\"${data.reason}\"`]);
+      $("trace-v3-category").textContent = data.root;
+      $("trace-v3-reason").textContent = data.reason;
+      $("trace-v3-review").textContent = data.review;
+      $("trace-v3-latency").textContent = data.latency;
+      $("trace-v3-note").textContent = fixture
+        ? "Fixture mirrors the current local service response."
+        : "Custom input is editable; category scores remain blank until this approved UI is connected to /demo/classify.";
+      root.querySelectorAll("[data-example]").forEach((button) => button.classList.toggle("is-active", button.dataset.example === cleaned));
+    };
+
+    root.querySelectorAll("[data-example]").forEach((button) => {
+      button.addEventListener("click", () => {
+        $("trace-v3-query").value = button.dataset.example;
+        render(button.dataset.example);
+        $("trace-v3-query").focus();
+      });
+    });
+
+    $("trace-v3-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const value = $("trace-v3-query").value;
+      if (!value.trim()) {
+        $("trace-v3-query").focus();
+        return;
+      }
+      root.classList.add("is-running");
+      $("trace-v3-run").disabled = true;
+      $("trace-v3-run").textContent = "RUNNING";
+      window.setTimeout(() => {
+        render(value);
+        root.classList.remove("is-running");
+        $("trace-v3-run").disabled = false;
+        $("trace-v3-run").textContent = "RUN";
+      }, 180);
+    });
+
+    render($("trace-v3-query").value);
+  })();
+</script>

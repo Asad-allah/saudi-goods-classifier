@@ -1,0 +1,85 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]: ↢
+      - generic [ref=e6]:
+        - paragraph [ref=e7]: منصة دندن · خدمة مستقلة
+        - heading "مختبر تصنيف البضائع" [level=1] [ref=e8]
+    - status [ref=e9]: البحث الدلالي جاهز
+  - region [ref=e10]:
+    - generic [ref=e11]:
+      - heading "اكتشف الصنف الرئيسي من وصف البضاعة الحر." [level=2] [ref=e12]
+      - paragraph [ref=e13]: النتيجة لا تطابق منتجاً بعينه؛ بل تعيد root_good_type_id فقط. تعرض هذه الصفحة الدليل الذي وصل إلى القرار لتتأكد من استخدام المسار الدلالي أو التقريبي.
+    - generic [ref=e14]:
+      - strong [ref=e15]: "37"
+      - text: صنف رئيسي · 2308 مصطلح بحث
+  - generic [ref=e16]:
+    - region [ref=e17]:
+      - paragraph [ref=e18]: إدخال تجريبي
+      - heading "وصف البضاعة" [level=3] [ref=e19]
+      - paragraph [ref=e20]: "اكتب كما يكتب السائق: عربي، إنجليزي، لهجة أو خليط بينهما."
+      - generic [ref=e21]:
+        - generic [ref=e22]: النص
+        - textbox "النص" [active] [ref=e23]: تلفزيون ذكي 65 بوصة
+        - generic [ref=e24]:
+          - generic [ref=e25]: الحد الأقصى 191 حرفاً
+          - generic [ref=e26]: 19 / 191
+        - paragraph [ref=e27]: أمثلة سريعة
+        - generic "أمثلة جاهزة" [ref=e28]:
+          - button "تلفزيون ذكي" [ref=e29] [cursor=pointer]
+          - button "حليب أطفال عضوي" [ref=e30] [cursor=pointer]
+          - button "خطأ إملائي" [ref=e31] [cursor=pointer]
+          - button "نص إنجليزي قصير" [ref=e32] [cursor=pointer]
+        - button "حلّل الصنف الرئيسي" [ref=e33] [cursor=pointer]
+      - paragraph [ref=e34]: هذه شاشة عرض تجريبية. الربط الإنتاجي يجب أن يستدعي POST /v1/classify من backend التطبيق، وليس من هاتف السائق مباشرة.
+    - region [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: نتيجة التصنيف
+          - heading "القرار والدليل" [level=3] [ref=e39]
+          - paragraph [ref=e40]: تظهر المسارات التي دعمت الصنف الفائز فقط.
+        - generic [ref=e41]: تحتاج مراجعة
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - heading "الإلكترونيات" [level=4] [ref=e90]
+            - paragraph [ref=e50]: Reinforcing
+          - generic [ref=e51]: ID 131
+        - generic [ref=e52]:
+          - heading "مسار القرار" [level=4] [ref=e53]
+          - paragraph [ref=e54]: تم دمج البحث الدلالي مع البحث التقريبي؛ كل منهما دعم الصنف الفائز.
+          - generic "محركات البحث المستخدمة" [ref=e55]:
+            - generic [ref=e91]: ✓ بحث تقريبي / إملائي
+            - generic [ref=e92]: ✓ بحث دلالي بالـ Embedding
+          - generic "الأسماء أو المصطلحات المطابقة" [ref=e58]:
+            - generic [ref=e93]: تلفزيونات
+            - generic [ref=e94]: الإلكترونيات
+            - generic [ref=e95]: مجموعة صوت
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - term [ref=e64]: قوة أقوى دليل
+            - definition [ref=e65]: 86%
+          - generic [ref=e66]:
+            - term [ref=e67]: فارق المرشح الأول
+            - definition [ref=e68]: "0.0555"
+          - generic [ref=e69]:
+            - term [ref=e70]: لغة النص
+            - definition [ref=e71]: عربي
+          - generic [ref=e72]:
+            - term [ref=e73]: زمن الاستجابة
+            - definition [ref=e74]: 73 ms
+        - generic [ref=e75]:
+          - heading "بدائل مقترحة" [level=4] [ref=e76]
+          - list [ref=e77]:
+            - listitem [ref=e96]:
+              - generic [ref=e97]: الإلكترونيات
+              - generic [ref=e98]: "#1 · ID 131"
+            - listitem [ref=e99]:
+              - generic [ref=e100]: مواد غذائية
+              - generic [ref=e101]: "#2 · ID 12"
+            - listitem [ref=e102]:
+              - generic [ref=e103]: منتجات بترولية
+              - generic [ref=e104]: "#3 · ID 10"
+        - paragraph [ref=e87]: يوجد مرشح أول، لكن الدليل أو الفارق عن البدائل غير كافٍ للثقة النهائية.
+        - group [ref=e88]:
+          - generic "عرض الاستجابة التقنية الكاملة" [ref=e89] [cursor=pointer]

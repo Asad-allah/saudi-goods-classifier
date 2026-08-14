@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2323785e'/%3E%3Cpath d='M8 17l5 5L24 10' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <title>خطة مطابقة نوع البضاعة - مكالمة 5 دقائق</title>
+  <style>
+    :root {
+      --paper: #f4f1ea;
+      --surface: #fffdf8;
+      --ink: #15262d;
+      --muted: #647178;
+      --line: #d8d8cf;
+      --navy: #173f50;
+      --green: #23785e;
+      --green-soft: #e3f0e9;
+      --amber: #a76514;
+      --amber-soft: #f7ead5;
+      --red: #a44337;
+      --red-soft: #f5e4e0;
+      --radius: 12px;
+      --shadow: 0 16px 44px rgba(20, 38, 45, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Tahoma, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.85;
+      text-rendering: optimizeLegibility;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 32px auto;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(23, 63, 80, 0.10);
+    }
+
+    .page-header {
+      position: relative;
+      padding: 56px clamp(24px, 6vw, 72px) 44px;
+      border-bottom: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: var(--green);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 850px;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.25;
+      letter-spacing: -0.04em;
+    }
+
+    .lead {
+      max-width: 830px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+    }
+
+    .print-button {
+      position: absolute;
+      top: 30px;
+      left: clamp(24px, 4vw, 52px);
+      border: 1px solid var(--navy);
+      border-radius: 8px;
+      padding: 9px 14px;
+      background: transparent;
+      color: var(--navy);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .print-button:hover,
+    .print-button:focus-visible {
+      background: var(--navy);
+      color: white;
+      outline: none;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 24px;
+      padding: 26px clamp(24px, 6vw, 72px);
+      background: var(--navy);
+      color: white;
+    }
+
+    .summary strong {
+      color: #9bd7c1;
+      font-size: 0.9rem;
+    }
+
+    .summary p { margin: 0; font-size: 1.08rem; }
+
+    section {
+      padding: 50px clamp(24px, 6vw, 72px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      align-items: start;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .section-number {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--navy);
+      border-radius: 50%;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      line-height: 1.4;
+    }
+
+    .section-heading p { margin: 0; color: var(--muted); }
+
+    .term {
+      display: inline-block;
+      direction: ltr;
+      unicode-bidi: isolate;
+      padding: 0.06em 0.42em;
+      border-radius: 5px;
+      background: #edf0ed;
+      color: #24414c;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.88em;
+      font-weight: 700;
+      line-height: 1.45;
+      vertical-align: baseline;
+    }
+
+    .current-grid {
+      display: grid;
+      grid-template-columns: 1fr 56px 1fr;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .current-block {
+      padding: 24px 0;
+      border-top: 3px solid var(--navy);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .current-block:last-child { border-top-color: var(--green); }
+
+    .current-block h3 { margin-bottom: 8px; font-size: 1.12rem; }
+    .current-block p { margin-bottom: 0; color: var(--muted); }
+
+    .bridge-arrow {
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      font-size: 2rem;
+      transform: rotate(180deg);
+    }
+
+    .note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border-right: 4px solid var(--red);
+      background: var(--red-soft);
+      color: #5c2a25;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 14px;
+      margin: 4px 0 24px;
+      padding: 0;
+      list-style: none;
+      counter-reset: flow;
+    }
+
+    .flow li {
+      position: relative;
+      min-height: 158px;
+      padding: 52px 17px 18px;
+      border-top: 3px solid var(--navy);
+      background: #f5f6f2;
+      counter-increment: flow;
+      transition: transform 150ms ease, background 150ms ease;
+    }
+
+    .flow li:hover { transform: translateY(-3px); background: #eef3ef; }
+
+    .flow li::before {
+      content: counter(flow, decimal-leading-zero);
+      position: absolute;
+      top: 12px;
+      right: 17px;
+      color: var(--green);
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .flow li:not(:last-child)::after {
+      content: "←";
+      position: absolute;
+      top: 50%;
+      left: -21px;
+      z-index: 2;
+      color: var(--green);
+      font-size: 1.45rem;
+      transform: translateY(-50%);
+    }
+
+    .flow h3 { margin-bottom: 8px; font-size: 1rem; }
+    .flow p { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+    .outcomes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .outcome {
+      padding: 16px;
+      border-right: 3px solid currentColor;
+      background: #f5f6f2;
+    }
+
+    .outcome strong { display: block; margin-bottom: 4px; font-size: 0.92rem; }
+    .outcome span { color: var(--muted); font-size: 0.83rem; }
+    .outcome.match { color: var(--green); background: var(--green-soft); }
+    .outcome.confirm { color: var(--amber); background: var(--amber-soft); }
+    .outcome.review { color: var(--red); background: var(--red-soft); }
+    .outcome.multi { color: var(--navy); }
+
+    .integration-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 36px;
+      margin: 30px 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: integration;
+    }
+
+    .integration-list li {
+      position: relative;
+      padding: 14px 42px 14px 0;
+      border-bottom: 1px solid var(--line);
+      counter-increment: integration;
+    }
+
+    .integration-list li::before {
+      content: counter(integration);
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green);
+      text-align: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 27px;
+    }
+
+    .roadmap {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .roadmap li {
+      display: grid;
+      grid-template-columns: 110px 1fr 230px;
+      gap: 24px;
+      align-items: start;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .roadmap li:last-child { border-bottom: 1px solid var(--line); }
+
+    .phase-label {
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .roadmap h3 { margin-bottom: 5px; font-size: 1.1rem; }
+    .roadmap p { margin: 0; color: var(--muted); }
+
+    .phase-result {
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .agent-rule {
+      margin-top: 20px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .agent-rule strong { color: var(--red); }
+
+    .talk-track {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .talk-track li {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 28px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .talk-track li:last-child { border-bottom: 1px solid var(--line); }
+
+    .minute {
+      color: var(--green);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .talk-track p { margin: 0; }
+
+    .decisions {
+      background: #eef2ef;
+    }
+
+    .decision-list {
+      margin: 0;
+      padding-right: 1.25rem;
+    }
+
+    .decision-list li { margin-bottom: 9px; padding-right: 5px; }
+
+    footer {
+      padding: 24px clamp(24px, 6vw, 72px);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @keyframes enter {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-header > *, .summary > * { animation: enter 450ms ease both; }
+    .page-header .lead { animation-delay: 80ms; }
+    .summary p { animation-delay: 130ms; }
+
+    @media (max-width: 850px) {
+      body { font-size: 16px; }
+      main { width: min(100%, calc(100% - 18px)); margin: 9px auto; }
+      .print-button { position: static; margin-top: 20px; }
+      .summary { grid-template-columns: 1fr; gap: 5px; }
+      .current-grid { grid-template-columns: 1fr; }
+      .bridge-arrow { transform: rotate(-90deg); }
+      .flow { grid-template-columns: 1fr; }
+      .flow li { min-height: auto; padding-bottom: 20px; }
+      .flow li:not(:last-child)::after {
+        content: "↓";
+        top: auto;
+        right: 50%;
+        bottom: -28px;
+        left: auto;
+        transform: translateX(50%);
+      }
+      .outcomes { grid-template-columns: repeat(2, 1fr); }
+      .integration-list { grid-template-columns: 1fr; }
+      .roadmap li { grid-template-columns: 1fr; gap: 6px; }
+      .talk-track li { grid-template-columns: 1fr; gap: 5px; }
+    }
+
+    @media (max-width: 480px) {
+      .page-header, section { padding-right: 20px; padding-left: 20px; }
+      .summary, footer { padding-right: 20px; padding-left: 20px; }
+      .outcomes { grid-template-columns: 1fr; }
+      .section-heading { grid-template-columns: 42px 1fr; gap: 12px; }
+      .section-number { width: 38px; height: 38px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: white; font-size: 11pt; line-height: 1.6; }
+      main { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      .print-button { display: none; }
+      .page-header { padding: 22px 0 18px; }
+      .page-header::before { display: none; }
+      h1 { font-size: 26pt; }
+      .summary { padding: 14px 16px; }
+      section { padding: 22px 0; }
+      .section-heading { margin-bottom: 16px; }
+      .flow li, .outcome, .roadmap li, .talk-track li { break-inside: avoid; }
+      footer { padding: 18px 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <p class="eyebrow">منصة دندن · مذكرة تشغيلية · 5 دقائق</p>
+      <h1>خطة مطابقة نوع البضاعة</h1>
+      <p class="lead">كيف نربط البحث الذكي بالبرنامج الحالي، ثم نطوره بأمان حتى مرحلة الوكيل الإداري.</p>
+      <button class="print-button" type="button" onclick="window.print()" aria-label="طباعة الخطة أو حفظها بصيغة PDF">طباعة أو حفظ PDF</button>
+    </header>
+
+    <div class="summary" aria-label="الخلاصة">
+      <strong>الخلاصة</strong>
+      <p>لا نعيد بناء البرنامج. نضيف طبقة حلّ أسماء البضائع قبل إرسال المعرّف الحالي أو إنشاء طلب مراجعة جديد.</p>
+    </div>
+
+    <section aria-labelledby="current-title">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">١</span>
+        <div>
+          <h2 id="current-title">أين نحن الآن؟</h2>
+          <p>الجدولان الحاليان يبقيان كما هما؛ التغيير في نقطة اتخاذ القرار.</p>
+        </div>
+      </div>
+
+      <div class="current-grid">
+        <article class="current-block">
+          <h3>المصدر الرسمي</h3>
+          <p>جدول الأنواع <bdi class="term" dir="ltr">good_types</bdi> يحتوي الأسماء الرسمية، الأسماء الشائعة، علاقات الفئات، والـIDs المعتمدة.</p>
+        </article>
+
+        <div class="bridge-arrow" aria-hidden="true">←</div>
+
+        <article class="current-block">
+          <h3>الحالات غير المعروفة</h3>
+          <p>جدول المراجعة <bdi class="term" dir="ltr">new_good_types</bdi> يحتفظ مؤقتاً بما لم يتعرف عليه النظام حتى تراجعه الإدارة.</p>
+        </article>
+      </div>
+
+      <div class="note"><strong>المشكلة:</strong> البحث الحرفي لا يغطي الأخطاء واللهجات وتعريب البراندات، وقد ينشئ تكراراً أو يختار فئة عامة خاطئة. المعرّف 31 ليس قيمة «غير معروف».</div>
+    </section>
+
+    <section aria-labelledby="mvp-title">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">٢</span>
+        <div>
+          <h2 id="mvp-title">ماذا نضيف في النسخة الأولية؟</h2>
+          <p>طبقة واحدة بين إدخال السائق ومسار الشحنة الحالي.</p>
+        </div>
+      </div>
+
+      <ol class="flow" aria-label="مراحل حل اسم البضاعة">
+        <li>
+          <h3>إدخال السائق</h3>
+          <p>اختيار نوع موجود أو كتابة اسم البضاعة.</p>
+        </li>
+        <li>
+          <h3>مطابقة حتمية</h3>
+          <p>تطبيع محافظ ثم بحث في الاسم الرسمي والأسماء البديلة المعتمدة.</p>
+        </li>
+        <li>
+          <h3>استرجاع ذكي</h3>
+          <p>بحث إملائي <bdi class="term" dir="ltr">Fuzzy</bdi> وتمثيل دلالي <bdi class="term" dir="ltr">Embedding</bdi>.</p>
+        </li>
+        <li>
+          <h3>دمج وتصفية</h3>
+          <p>دمج الرتب <bdi class="term" dir="ltr">RRF</bdi> ثم الاحتفاظ بالفئات النهائية فقط <bdi class="term" dir="ltr">leaf</bdi>.</p>
+        </li>
+        <li>
+          <h3>القرار</h3>
+          <p>إعادة المعرّف المؤكد، أو عرض ثلاثة خيارات، أو إرسال الحالة للمراجعة.</p>
+        </li>
+      </ol>
+
+      <div class="outcomes" aria-label="نتائج النظام">
+        <div class="outcome match">
+          <strong><bdi dir="ltr">MATCHED</bdi></strong>
+          <span>معرّف موجود ونهائي.</span>
+        </div>
+        <div class="outcome confirm">
+          <strong><bdi dir="ltr">NEEDS_CONFIRMATION</bdi></strong>
+          <span>عرض أفضل 3 للسائق.</span>
+        </div>
+        <div class="outcome review">
+          <strong><bdi dir="ltr">PENDING_REVIEW</bdi></strong>
+          <span>لا يوجد دليل كافٍ.</span>
+        </div>
+        <div class="outcome multi">
+          <strong><bdi dir="ltr">MULTI_ITEM</bdi></strong>
+          <span>يجب فصل المنتجات.</span>
+        </div>
+      </div>
+
+      <ol class="integration-list" aria-label="طريقة الربط بالبرنامج الحالي">
+        <li>إضافة جداول الأسماء البديلة وسجل محاولات المطابقة دون حذف البيانات الحالية.</li>
+        <li>استدعاء واجهة الحل قبل الكود الذي ينشئ سجلاً في جدول المراجعة.</li>
+        <li>عند نجاح المطابقة، يمر الـID إلى مسار الشحنة والتكامل الحالي بلا تغيير.</li>
+        <li>عند فشلها، تراجع الإدارة المصطلح وتعتمده اسماً بديلاً للمستقبل.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="future-title">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">٣</span>
+        <div>
+          <h2 id="future-title">ماذا بعد النسخة الأولية؟</h2>
+          <p>مرحلتان قبل إدخال الوكيل الإداري.</p>
+        </div>
+      </div>
+
+      <ol class="roadmap">
+        <li>
+          <span class="phase-label">المرحلة الأولى</span>
+          <div>
+            <h3>تحسين الجودة من بيانات دندن</h3>
+            <p>نجمع قرارات الإدارة وتأكيدات السائق، ونبني بيانات مراجعة، ومعرفة للبراند وخط المنتج، ثم نضيف معيد ترتيب ومعايرة لاحتمال صحة القرار.</p>
+          </div>
+          <span class="phase-result">النتيجة: ترتيب أدق مبني على حالات دندن الحقيقية.</span>
+        </li>
+        <li>
+          <span class="phase-label">المرحلة الثانية</span>
+          <div>
+            <h3>الأتمتة الآمنة</h3>
+            <p>نشغّل القرار الآلي في وضع المراقبة أولاً، ونقيس الدقة والسرعة والكلفة، ثم نفعّل المطابقة الآلية تدريجياً مع مفتاح إيقاف ورجوع سريع.</p>
+          </div>
+          <span class="phase-result">النتيجة: تقليل تدخل السائق دون قرارات عشوائية.</span>
+        </li>
+        <li>
+          <span class="phase-label">بعد الاستقرار</span>
+          <div>
+            <h3>وكيل إداري اختياري</h3>
+            <p>يبحث فقط في الحالات الصعبة عن البراند أو المنتج، ثم يقترح معرّفاً موجوداً أو «لا نتيجة». لا يصبح اقتراحه فعالاً قبل موافقة الإدارة.</p>
+          </div>
+          <span class="phase-result">النتيجة: تسريع المراجعة مع بقاء القرار بشرياً.</span>
+        </li>
+      </ol>
+
+      <p class="agent-rule"><strong>قاعدة ثابتة:</strong> الوكيل لا يعمل في مسار السائق، ولا ينشئ ID، ولا يعتمد اسماً بديلاً، ولا يرسل نتيجة للوزارة بنفسه.</p>
+    </section>
+
+    <section aria-labelledby="talk-title">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">٤</span>
+        <div>
+          <h2 id="talk-title">كلام جاهز للمكالمة</h2>
+          <p>أربع فقرات قصيرة تغطي خمس دقائق.</p>
+        </div>
+      </div>
+
+      <ol class="talk-track">
+        <li>
+          <span class="minute">الدقيقة الأولى</span>
+          <p>«حالياً جدول الأنواع هو المصدر الرسمي، وأي اسم غير معروف يذهب إلى جدول المراجعة. المشكلة أن السائق يكتب بأخطاء ولهجات وتعريب براندات، لذلك المطابقة الحرفية وحدها قد تنتج تكراراً أو اختياراً خاطئاً.»</p>
+        </li>
+        <li>
+          <span class="minute">الدقيقتان ٢ و٣</span>
+          <p>«سنضيف طبقة حل قبل إنشاء السجل الجديد. تبدأ بالمطابقة الحتمية، ثم البحث الإملائي والدلالي لاسترجاع أفضل المرشحين. إذا تأكدنا نعيد الـID الموجود، وإذا كان الاسم ملتبساً نعرض أفضل ثلاثة، وإلا نحوله للإدارة.»</p>
+        </li>
+        <li>
+          <span class="minute">الدقيقة الرابعة</span>
+          <p>«بعد النسخة الأولية نجمع القرارات الصحيحة، ونبني معرفة للبراندات وتحسيناً لترتيب النتائج ومعايرة للثقة. بعدها نجرب المطابقة الآلية في وضع المراقبة قبل تفعيلها تدريجياً.»</p>
+        </li>
+        <li>
+          <span class="minute">الدقيقة الخامسة</span>
+          <p>«بعد استقرار المرحلتين يمكن إدخال وكيل للإدارة فقط، يبحث عن الحالات غير المعروفة ويقترح التصنيف، لكن القرار النهائي واعتماد الاسم البديل يبقيان بيد الإدارة.»</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="decisions" aria-labelledby="decision-title">
+      <div class="section-heading">
+        <span class="section-number" aria-hidden="true">٥</span>
+        <div>
+          <h2 id="decision-title">ما الذي نحتاج حسمه في الاجتماع؟</h2>
+          <p>أربع نقاط فقط لبدء التنفيذ.</p>
+        </div>
+      </div>
+
+      <ul class="decision-list">
+        <li>هل التكامل يقبل أكثر من معرّف عندما تحتوي الشحنة عدة منتجات؟</li>
+        <li>هل يوجد معرّف رسمي لـ«غير معروف»؟ إن لم يوجد نتوقف للمراجعة، ولا نستخدم المعرّف 31.</li>
+        <li>هل تسمح سياسة البيانات بإرسال نص المنتج وحده إلى مزود التمثيل الدلالي؟</li>
+        <li>توفير مستودعي الخادم وتطبيق السائق لتحديد نقاط الربط والمدة النهائية بدقة.</li>
+      </ul>
+    </section>
+
+    <footer>أُعدّت هذه الصفحة من تدفق أنواع البضائع ومخطط قاعدة البيانات المرفقين. النسخة الحالية خطة ربط وليست تغييراً منفذاً على النظام.</footer>
+  </main>
+</body>
+</html>
