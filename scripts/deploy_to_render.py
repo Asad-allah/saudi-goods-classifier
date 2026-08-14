@@ -64,11 +64,12 @@ def main():
             "env": "python",
             "plan": "free",
             "region": "oregon",
-            "buildCommand": "pip install --upgrade pip && pip install -e . sentence-transformers faiss-cpu",
-            "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port $PORT",
+            "envSpecificDetails": {
+                "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt",
+                "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+            },
             "envVars": [
-                {"key": "PYTHON_VERSION", "value": "3.12.0"},
-                {"key": "PORT", "value": "10000"}
+                {"key": "PYTHON_VERSION", "value": "3.12.0"}
             ]
         }
     }

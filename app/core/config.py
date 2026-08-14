@@ -82,7 +82,7 @@ def get_settings() -> Settings:
         enable_semantic=_bool_env("DANDAN_ENABLE_SEMANTIC", False),
         semantic_remote_url=os.getenv("DANDAN_SEMANTIC_REMOTE_URL", ""),
         max_text_length=int(os.getenv("DANDAN_MAX_TEXT_LENGTH", "191")),
-        demo_enabled=_bool_env("DANDAN_DEMO_ENABLED", True),
+        demo_enabled=_bool_env("DANDAN_DEMO_ENABLED", False),
         demo_allowed_origins=_csv_env("DANDAN_DEMO_ALLOWED_ORIGINS"),
         input_validation_enabled=_bool_env(
             "DANDAN_INPUT_VALIDATION_ENABLED",

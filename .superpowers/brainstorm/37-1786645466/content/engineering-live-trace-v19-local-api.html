@@ -172,7 +172,19 @@
     <main class="eng-main">
       <div class="eng-runtime">
         <div class="eng-runtime-item"><span>SEMANTIC MODEL · FAISS DENSE INDEX</span><strong id="eng-model">intfloat-multilingual-e5-small + FAISS IndexFlatIP</strong></div>
-        <div class="eng-runtime-item"><span>CATALOG KNOWLEDGE ARTIFACTS</span><strong id="eng-catalog">90 selectable leaves · 103 total types · 1344 FAISS passages</strong></div>
+        <div class="eng-runtime-item"><span>CATALOG KNOWLEDGE ARTIFACTS</span><strong id="eng-catalog">90 selectable categories · 103 total types · 1460 FAISS passages</strong></div>
+      </div>
+
+      <!-- 🔗 شريط ربط سيرفر الذكاء الاصطناعي مع Google Colab -->
+      <div id="eng-colab-panel" style="margin-top:14px;padding:12px 16px;background:#eef5f1;border:1px solid #116849;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;direction:rtl;">
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:280px;">
+          <span style="font-size:11px;font-weight:800;color:#116849;white-space:nowrap;">🔗 ربط محرك الذكاء الاصطناعي (Google Colab GPU):</span>
+          <input id="eng-colab-url" placeholder="الصق رابط كولاب هنا (مثال: https://xxxx.trycloudflare.com)" style="flex:1;min-width:180px;padding:7px 11px;border:1px solid #9bb7a8;font:12px Tahoma,sans-serif;direction:ltr;background:#fff;">
+          <button type="button" id="eng-colab-btn" style="padding:7px 16px;background:#116849;color:#fff;border:0;cursor:pointer;font:800 11px Tahoma,sans-serif;white-space:nowrap;">⚡ ربط الآن</button>
+        </div>
+        <div id="eng-colab-status" style="font:700 10px Tahoma,sans-serif;color:#556;background:#fff;padding:6px 12px;border:1px solid #ccd;white-space:nowrap;">
+          ⚪ السيمنتك: محلي / غير متصل بـ Colab
+        </div>
       </div>
 
       <form class="eng-request" id="eng-v14-form">
@@ -602,6 +614,61 @@
         $("eng-v14-run").textContent = "RUN LIVE";
       }
     };
+
+    const connectColab = async () => {
+      const urlInput = $("eng-colab-url");
+      const statusEl = $("eng-colab-status");
+      const btnEl = $("eng-colab-btn");
+      const rawUrl = urlInput.value.trim();
+      if (!rawUrl) {
+        statusEl.innerHTML = "⚪ السيمنتك: محلي / غير متصل بـ Colab";
+        statusEl.style.color = "#556";
+        try {
+          await fetch("/demo/configure-semantic", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({url: ""})
+          });
+        } catch(e) {}
+        localStorage.removeItem("dandan_colab_url");
+        return;
+      }
+      statusEl.innerHTML = "⏳ جاري الربط والتحقق من Colab...";
+      statusEl.style.color = "#9a5a20";
+      btnEl.disabled = true;
+      try {
+        const res = await fetch("/demo/configure-semantic", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({url: rawUrl})
+        });
+        const data = await res.json();
+        if (data.is_available) {
+          statusEl.innerHTML = "🟢 متصل بمحرك Colab (E5-Small + FAISS GPU نشط)";
+          statusEl.style.color = "#116849";
+          $("eng-model").textContent = "intfloat-multilingual-e5-small @ Google Colab GPU (Remote)";
+          localStorage.setItem("dandan_colab_url", rawUrl);
+        } else {
+          statusEl.innerHTML = "⚠️ تعذر الاتصال بـ Colab - تأكد من تشغيل الخلية";
+          statusEl.style.color = "#a23a2d";
+        }
+      } catch (e) {
+        statusEl.innerHTML = "❌ خطأ في الاتصال بسيرفر Render";
+        statusEl.style.color = "#a23a2d";
+      } finally {
+        btnEl.disabled = false;
+      }
+    };
+
+    $("eng-colab-btn").addEventListener("click", connectColab);
+    $("eng-colab-url").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); connectColab(); } });
+
+    // Restore saved Colab URL automatically
+    const savedColabUrl = localStorage.getItem("dandan_colab_url");
+    if (savedColabUrl) {
+      $("eng-colab-url").value = savedColabUrl;
+      connectColab();
+    }
 
     root.querySelectorAll("[data-eng-tab]").forEach((tab) => tab.addEventListener("click",() => selectPage(tab.dataset.engTab)));
     root.querySelectorAll("[data-step]").forEach((step) => step.addEventListener("click",() => selectTraceStep(step.dataset.step)));
