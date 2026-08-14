@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Builds high-precision FAISS Vector Index artifact for all 90 Saudi Market Categories.
 Supports multiple embedding engines:
-1. BAAI/bge-m3 (1024-dim, State-of-the-art Open Source)
+1. BAAI/bge-m3 (1024-dim, State-of-the-art Open Source, Recommended)
 2. intfloat/multilingual-e5-small (384-dim, Ultra-Fast Local)
 3. intfloat/multilingual-e5-large (1024-dim)
 4. google-gemini (768-dim, Google Gemini Embeddings API text-embedding-004)
@@ -12,6 +12,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 import numpy as np
 
@@ -28,27 +29,50 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
         import google.generativeai as genai
         key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
         if not key:
-            raise ValueError("GEMINI_API_KEY is required to build index with Google Gemini embeddings.")
-        genai.configure(api_key=key)
-        
-        def embed_fn(texts: list[str], is_query: bool = False) -> np.ndarray:
-            task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
-            result = genai.embed_content(
-                model="models/text-embedding-004",
-                content=texts,
-                task_type=task_type,
+            raise ValueError(
+                "❌ GEMINI_API_KEY is empty! Please provide a valid Gemini API key in Colab, or choose 'BAAI/bge-m3' (which requires no API key)."
             )
-            vecs = np.array(result["embedding"], dtype=np.float32)
-            # normalize for cosine similarity
+        genai.configure(api_key=key)
+
+        def embed_single_or_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
+            task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
+            all_vecs = []
+            batch_size = 50
+            for i in range(0, len(texts), batch_size):
+                chunk = texts[i : i + batch_size]
+                try:
+                    res = genai.embed_content(
+                        model="models/text-embedding-004",
+                        content=chunk,
+                        task_type=task_type,
+                    )
+                    all_vecs.extend(res["embedding"])
+                except Exception as exc:
+                    # fallback to models/embedding-001 if text-embedding-004 is not accessible
+                    try:
+                        res = genai.embed_content(
+                            model="models/embedding-001",
+                            content=chunk,
+                            task_type=task_type,
+                        )
+                        all_vecs.extend(res["embedding"])
+                    except Exception as fallback_exc:
+                        raise RuntimeError(f"Gemini embedding API error: {exc} | fallback error: {fallback_exc}")
+                time.sleep(0.1)
+
+            vecs = np.array(all_vecs, dtype=np.float32)
             norms = np.linalg.norm(vecs, axis=1, keepdims=True)
             norms[norms == 0] = 1.0
             return vecs / norms
 
-        return embed_fn, 768, "google-gemini"
+        test_vec = embed_single_or_batch(["test"], is_query=True)
+        dim = int(test_vec.shape[1])
+        print(f"✅ Connected to Google Gemini Embeddings (dim: {dim})")
+        return embed_single_or_batch, dim, "google-gemini"
 
     else:
         from sentence_transformers import SentenceTransformer
-        print(f"🧠 Loading SentenceTransformer: {model_choice}...")
+        print(f"🧠 Loading SentenceTransformer on GPU/CPU: {model_choice}...")
         model = SentenceTransformer(model_choice)
         is_e5 = "e5" in model_choice.lower()
 
@@ -61,13 +85,14 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
 
         test_vec = model.encode(["test"], normalize_embeddings=True)
         dim = int(test_vec.shape[1])
+        print(f"✅ Loaded SentenceTransformer model: {model_choice} (dim: {dim})")
         return embed_fn, dim, model_choice
 
 
 def build_faiss_index(
     catalog_path: str = "storage/catalog/catalog.json",
     contexts_path: str = "storage/catalog/saudi_market_category_contexts.json",
-    model_choice: str = "storage/models/intfloat-multilingual-e5-small",
+    model_choice: str = "BAAI/bge-m3",
     gemini_api_key: str = "",
     output_index_path: str = "storage/semantic/catalog_faiss.index",
     output_meta_path: str = "storage/semantic/catalog_faiss_metadata.json",
@@ -212,7 +237,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        default="storage/models/intfloat-multilingual-e5-small",
+        default="BAAI/bge-m3",
         help="Model choice: 'BAAI/bge-m3', 'storage/models/intfloat-multilingual-e5-small', 'intfloat/multilingual-e5-large', or 'google-gemini'",
     )
     parser.add_argument(
