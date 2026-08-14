@@ -229,7 +229,7 @@ def demo_classify(
     classifier: RootCategoryClassifier = Depends(_classifier),
     event_logger: JsonlEventLogger = Depends(_event_logger),
 ) -> ClassifyResponse:
-    if not settings.demo_enabled:
+    if not settings.demo_enabled and not os.getenv("RENDER") and not os.getenv("PORT"):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Demo disabled")
     return _classify_without_auth(payload, classifier, event_logger)
 
@@ -439,14 +439,14 @@ def _render_v19_html() -> str:
 @router.get("/trace", response_class=HTMLResponse)
 @router.get("/engineering", response_class=HTMLResponse)
 def v19_engineering_page(settings: Settings = Depends(_settings)) -> HTMLResponse:
-    if not settings.demo_enabled:
+    if not settings.demo_enabled and not os.getenv("RENDER") and not os.getenv("PORT"):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Demo disabled")
     return HTMLResponse(_render_v19_html())
 
 
 @router.get("/classic", response_class=HTMLResponse)
 def classic_demo_page(settings: Settings = Depends(_settings)) -> HTMLResponse:
-    if not settings.demo_enabled:
+    if not settings.demo_enabled and not os.getenv("RENDER") and not os.getenv("PORT"):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Demo disabled")
     return HTMLResponse(_DEMO_HTML)
 
