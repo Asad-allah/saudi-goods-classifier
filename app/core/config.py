@@ -66,7 +66,10 @@ def get_settings() -> Settings:
         api_key=os.getenv("DANDAN_API_KEY", "dev-dandan-key"),
         api_key_header=os.getenv("DANDAN_API_KEY_HEADER", "X-API-Key"),
         catalog_source=_default_catalog_source(),
-        catalog_artifact=os.getenv("DANDAN_CATALOG_ARTIFACT", ""),
+        catalog_artifact=os.getenv(
+            "DANDAN_CATALOG_ARTIFACT",
+            str(Path("storage") / "catalog" / "catalog.json"),
+        ),
         catalog_version=os.getenv("DANDAN_CATALOG_VERSION", ""),
         event_log_path=os.getenv(
             "DANDAN_EVENT_LOG_PATH",

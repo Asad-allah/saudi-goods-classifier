@@ -82,16 +82,12 @@ app = FastAPI(
 # Only the local prototype and explicitly configured review URLs may call the
 # unauthenticated demo endpoint from a browser. The production API remains
 # protected by its API key.
-_cors_settings = get_settings()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:52345",
-        "http://127.0.0.1:52345",
-        *_cors_settings.demo_allowed_origins,
-    ],
-    allow_methods=["POST"],
-    allow_headers=["Content-Type"],
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
