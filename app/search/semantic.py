@@ -90,15 +90,9 @@ class GeminiSemanticRetriever(BaseSemanticRetriever):
     """Semantic retriever powered by Google Gemini Embeddings API (text-embedding-004)."""
 
     def __init__(self, catalog: Catalog, api_key: str = "", cache_root: Path | None = None) -> None:
-        key = api_key or os.environ.get("GEMINI_API_KEY", "")
-        if not key:
+        self.api_key = api_key or os.environ.get("GEMINI_API_KEY", "")
+        if not self.api_key:
             raise SemanticUnavailable("GEMINI_API_KEY is not set")
-        try:
-            import google.generativeai as genai
-            genai.configure(api_key=key)
-            self.genai = genai
-        except ImportError as exc:
-            raise SemanticUnavailable("google-generativeai package is not installed") from exc
 
         self.model_version = "google-gemini@text-embedding-004"
         self._faiss_index = None
@@ -140,13 +134,24 @@ class GeminiSemanticRetriever(BaseSemanticRetriever):
     def search(self, query: str, *, top_k: int = 20) -> list[CandidateHit]:
         if not self._documents or self._faiss_index is None:
             return []
+        import urllib.request
         try:
-            result = self.genai.embed_content(
-                model="models/text-embedding-004",
-                content=query,
-                task_type="RETRIEVAL_QUERY",
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key={self.api_key}"
+            payload = {
+                "model": "models/text-embedding-004",
+                "content": {"parts": [{"text": query}]},
+                "taskType": "RETRIEVAL_QUERY",
+            }
+            req_data = json.dumps(payload).encode("utf-8")
+            req = urllib.request.Request(
+                url,
+                data=req_data,
+                headers={"Content-Type": "application/json"},
             )
-            vec = np.array([result["embedding"]], dtype=np.float32)
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+            
+            vec = np.array([result["embedding"]["values"]], dtype=np.float32)
             norm = np.linalg.norm(vec, axis=1, keepdims=True)
             norm[norm == 0] = 1.0
             query_embedding = vec / norm

@@ -26,13 +26,12 @@ from app.catalog.importer import load_catalog_artifact
 
 def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
     if model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004"):
-        import google.generativeai as genai
+        import urllib.request
         key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
         if not key:
             raise ValueError(
-                "❌ GEMINI_API_KEY is empty! Please provide a valid Gemini API key in Colab, or choose 'BAAI/bge-m3' (which requires no API key)."
+                "❌ GEMINI_API_KEY is empty! Please provide a valid Gemini API key in Colab, or choose 'BAAI/bge-m3' (which requires no API key and runs 100% free on GPU)."
             )
-        genai.configure(api_key=key)
 
         def embed_single_or_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
             task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
@@ -40,25 +39,29 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
             batch_size = 50
             for i in range(0, len(texts), batch_size):
                 chunk = texts[i : i + batch_size]
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents?key={key}"
+                requests_body = [
+                    {
+                        "model": "models/text-embedding-004",
+                        "content": {"parts": [{"text": t}]},
+                        "taskType": task_type,
+                    }
+                    for t in chunk
+                ]
+                req_data = json.dumps({"requests": requests_body}).encode("utf-8")
+                req = urllib.request.Request(
+                    url,
+                    data=req_data,
+                    headers={"Content-Type": "application/json"},
+                )
                 try:
-                    res = genai.embed_content(
-                        model="models/text-embedding-004",
-                        content=chunk,
-                        task_type=task_type,
-                    )
-                    all_vecs.extend(res["embedding"])
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        res = json.loads(resp.read().decode("utf-8"))
+                        for emb in res.get("embeddings", []):
+                            all_vecs.append(emb["values"])
                 except Exception as exc:
-                    # fallback to models/embedding-001 if text-embedding-004 is not accessible
-                    try:
-                        res = genai.embed_content(
-                            model="models/embedding-001",
-                            content=chunk,
-                            task_type=task_type,
-                        )
-                        all_vecs.extend(res["embedding"])
-                    except Exception as fallback_exc:
-                        raise RuntimeError(f"Gemini embedding API error: {exc} | fallback error: {fallback_exc}")
-                time.sleep(0.1)
+                    raise RuntimeError(f"Gemini REST embedding API error: {exc}. Ensure your GEMINI_API_KEY is valid.")
+                time.sleep(0.05)
 
             vecs = np.array(all_vecs, dtype=np.float32)
             norms = np.linalg.norm(vecs, axis=1, keepdims=True)
@@ -67,8 +70,9 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
 
         test_vec = embed_single_or_batch(["test"], is_query=True)
         dim = int(test_vec.shape[1])
-        print(f"✅ Connected to Google Gemini Embeddings (dim: {dim})")
+        print(f"✅ Connected to Google Gemini Embeddings via REST API (dim: {dim})")
         return embed_single_or_batch, dim, "google-gemini"
+
 
     else:
         from sentence_transformers import SentenceTransformer
