@@ -25,11 +25,14 @@ from app.catalog.importer import load_catalog_artifact
 
 
 def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
-    key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
+    raw_key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
+    key = raw_key.strip("'\" \t\r\n")
     use_gemini = model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004")
 
     if use_gemini and key:
         import urllib.request
+        masked_key = f"{key[:8]}...{key[-4:]}" if len(key) > 12 else "***"
+        print(f"🔑 Using Gemini API Key: {masked_key} (length: {len(key)})")
 
         def embed_single_or_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
             task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
@@ -57,8 +60,11 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
                         res = json.loads(resp.read().decode("utf-8"))
                         for emb in res.get("embeddings", []):
                             all_vecs.append(emb["values"])
+                except urllib.error.HTTPError as http_err:
+                    err_body = http_err.read().decode("utf-8", errors="ignore")
+                    raise RuntimeError(f"Google Gemini API error ({http_err.code}): {err_body}")
                 except Exception as exc:
-                    raise RuntimeError(f"Gemini REST embedding API error: {exc}. Ensure your GEMINI_API_KEY is valid.")
+                    raise RuntimeError(f"Gemini request failed: {exc}")
                 time.sleep(0.05)
 
             vecs = np.array(all_vecs, dtype=np.float32)
@@ -66,10 +72,15 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
             norms[norms == 0] = 1.0
             return vecs / norms
 
-        test_vec = embed_single_or_batch(["test"], is_query=True)
-        dim = int(test_vec.shape[1])
-        print(f"✅ Connected to Google Gemini Embeddings via REST API (dim: {dim})")
-        return embed_single_or_batch, dim, "google-gemini"
+        try:
+            test_vec = embed_single_or_batch(["test"], is_query=True)
+            dim = int(test_vec.shape[1])
+            print(f"✅ Connected to Google Gemini Embeddings via REST API (dim: {dim})")
+            return embed_single_or_batch, dim, "google-gemini"
+        except Exception as test_exc:
+            print(f"⚠️ Gemini Connection failed: {test_exc}")
+            print("🔄 Falling back automatically to 'BAAI/bge-m3' (Runs 100% on GPU with no API key needed)...")
+            model_choice = "BAAI/bge-m3"
 
     if use_gemini and not key:
         print("⚠️ GEMINI_API_KEY was not provided. Automatically switching to 'BAAI/bge-m3' (Runs 100% free on Colab GPU with no API key needed)!")
