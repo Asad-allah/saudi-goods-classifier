@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Builds high-precision FAISS Vector Index artifact for all 90 Saudi Market Categories.
-Supports multiple embedding engines:
-1. BAAI/bge-m3 (1024-dim, State-of-the-art Open Source, Recommended)
-2. intfloat/multilingual-e5-small (384-dim, Ultra-Fast Local)
-3. intfloat/multilingual-e5-large (1024-dim)
-4. google-gemini (768-dim, Google Gemini Embeddings API text-embedding-004)
+"""Dual-Stream Disentangled Semantic Index Builder.
+Builds two orthogonal, high-precision semantic search indices for all 90 Saudi categories:
+1. Stream 1 (Concept Index): Pure ontological identity of the 90 categories (Zero noise).
+2. Stream 2 (Evidence Index): Fine-grained trade terms, regional cultivars, dialect names, and brands.
 """
 
 from __future__ import annotations
@@ -104,18 +102,17 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
     return embed_fn, dim, model_choice
 
 
-def build_faiss_index(
+def build_dual_stream_faiss_index(
     catalog_path: str = "storage/catalog/catalog.json",
     contexts_path: str = "storage/catalog/saudi_market_category_contexts.json",
-    model_choice: str = "BAAI/bge-m3",
+    model_choice: str = "storage/models/intfloat-multilingual-e5-small",
     gemini_api_key: str = "",
-    output_index_path: str = "storage/semantic/catalog_faiss.index",
-    output_meta_path: str = "storage/semantic/catalog_faiss_metadata.json",
+    output_dir: str = "storage/semantic",
 ) -> None:
-    print("=" * 80)
-    print("🚀 BUILDING HIGH-PRECISION FAISS VECTOR INDEX FOR 90 SAUDI MARKET CATEGORIES")
+    print("=" * 88)
+    print("🚀 BUILDING DUAL-STREAM DISENTANGLED FAISS RETRIEVAL ARTIFACTS")
     print(f"🤖 Selected Engine: {model_choice}")
-    print("=" * 80)
+    print("=" * 88)
 
     catalog = load_catalog_artifact(catalog_path)
     leaves = [g for g in catalog.good_types.values() if len(g.child_ids) == 0]
@@ -125,134 +122,151 @@ def build_faiss_index(
 
     print(f"📖 Loaded {len(leaves)} leaf categories & {len(contexts)} market contexts.")
 
-    documents: list[dict] = []
+    embed_fn, embedding_dim, model_tag = get_embedding_function(model_choice, gemini_api_key)
 
-    # 1. High-Density Contextual Documents for all 90 categories
+    # -------------------------------------------------------------------------
+    # STREAM 1: PURE CONCEPT VECTORS (Canonical Identity - Zero Ambient Noise)
+    # -------------------------------------------------------------------------
+    print("\n🎯 [STREAM 1] Encoding Pure Category Concepts (90 canonical classes)...")
+    concept_docs: list[dict] = []
     for leaf in leaves:
         leaf_id = leaf.id
         root_id = catalog.root_id_for(leaf_id)
         root = catalog.root(root_id)
         ctx = contexts.get(str(leaf_id), {})
 
-        market_ar = ctx.get("market_context_ar", "")
-        market_en = ctx.get("market_context_en", "")
-        trade_terms = ctx.get("trade_terms_ar", [])
-        brands = ctx.get("key_brands", [])
-        containers = ctx.get("allowed_containers", [])
+        # Precise concept text without wordy filler
+        concept_ar = f"تصنيف بضائع {leaf.name_ar} التابع للمجموعة الرئيسية {root.name_ar}"
+        concept_en = f"Goods Category {leaf.name_en or leaf.name_ar} under Root Category {root.name_en or root.name_ar}"
+        
+        # Primary anchor synonyms (first 3 direct terms)
+        primary_terms = ", ".join(ctx.get("trade_terms_ar", [])[:4])
+        if primary_terms:
+            concept_text = f"{concept_ar}. المنتجات الأساسية: {primary_terms}. {concept_en}."
+        else:
+            concept_text = f"{concept_ar}. {concept_en}."
 
-        # (a) Full Category Domain Profile Document
-        doc_text_ar = (
-            f"تصنيف بضائع {leaf.name_ar} (المجموعة الأساسية: {root.name_ar}). "
-            f"{market_ar} "
-            f"أبرز السلع والمنتجات: {', '.join(trade_terms[:15])}. "
-            f"الماركات والشركات: {', '.join(brands)}. "
-            f"طرق التعبئة والشحن: {', '.join(containers)}."
-        )
-        documents.append({
+        concept_docs.append({
             "root_good_type_id": root_id,
             "source_good_type_id": leaf_id,
-            "source_type": "CATEGORY_DOMAIN_PROFILE",
-            "matched_term": leaf.name_ar,
-            "text": doc_text_ar,
+            "name_ar": leaf.name_ar,
+            "name_en": leaf.name_en or "",
+            "root_name_ar": root.name_ar,
+            "root_name_en": root.name_en or "",
+            "text": concept_text,
         })
 
-        if market_en:
-            doc_text_en = (
-                f"Goods category {leaf.name_en} (Root Category: {root.name_en}). "
-                f"{market_en} "
-                f"Key products: {', '.join(ctx.get('trade_terms_en', [])[:15])}."
-            )
-            documents.append({
-                "root_good_type_id": root_id,
-                "source_good_type_id": leaf_id,
-                "source_type": "CATEGORY_DOMAIN_PROFILE_EN",
-                "matched_term": leaf.name_en or leaf.name_ar,
-                "text": doc_text_en,
-            })
+    concept_texts = [d["text"] for d in concept_docs]
+    concept_embeddings = embed_fn(concept_texts, is_query=False)
+    print(f"✅ Stream 1 Concepts encoded: {len(concept_embeddings)} vectors (dim: {embedding_dim})")
 
-        # (b) Individual High-Precision Trade Terms (Arabic)
-        for term in trade_terms:
+    # -------------------------------------------------------------------------
+    # STREAM 2: DEEP EVIDENCE VECTORS (Trade Terms, Cultivars, Brands, Dialects)
+    # -------------------------------------------------------------------------
+    print("\n🔍 [STREAM 2] Encoding Fine-Grained Evidence & Trade Manifest...")
+    evidence_docs: list[dict] = []
+    for leaf in leaves:
+        leaf_id = leaf.id
+        root_id = catalog.root_id_for(leaf_id)
+        root = catalog.root(root_id)
+        ctx = contexts.get(str(leaf_id), {})
+
+        trade_terms_ar = ctx.get("trade_terms_ar", [])
+        trade_terms_en = ctx.get("trade_terms_en", [])
+        key_brands = ctx.get("key_brands", [])
+
+        # Individual trade terms
+        for term in trade_terms_ar:
             if not term or len(term.strip()) < 2:
                 continue
-            documents.append({
+            evidence_docs.append({
                 "root_good_type_id": root_id,
                 "source_good_type_id": leaf_id,
-                "source_type": "MARKET_TRADE_TERM_AR",
+                "source_type": "TRADE_TERM_AR",
                 "matched_term": term,
-                "text": f"{term} ضمن بضائع {leaf.name_ar} وتصنيف {root.name_ar}",
+                "text": f"{term} - {leaf.name_ar} ({root.name_ar})",
             })
 
-        # (c) Individual High-Precision Trade Terms (English)
-        for term_en in ctx.get("trade_terms_en", []):
+        for term_en in trade_terms_en:
             if not term_en or len(term_en.strip()) < 2:
                 continue
-            documents.append({
+            evidence_docs.append({
                 "root_good_type_id": root_id,
                 "source_good_type_id": leaf_id,
-                "source_type": "MARKET_TRADE_TERM_EN",
+                "source_type": "TRADE_TERM_EN",
                 "matched_term": term_en,
-                "text": f"{term_en} under {leaf.name_en or leaf.name_ar} and root {root.name_en or root.name_ar}",
+                "text": f"{term_en} - {leaf.name_en or leaf.name_ar} ({root.name_en or root.name_ar})",
             })
 
-    print(f"📊 Total rich contextual passages to encode: {len(documents):,}")
+        # Key brands & cultivars
+        for brand in key_brands:
+            if not brand or len(brand.strip()) < 2:
+                continue
+            evidence_docs.append({
+                "root_good_type_id": root_id,
+                "source_good_type_id": leaf_id,
+                "source_type": "BRAND_CULTIVAR",
+                "matched_term": brand,
+                "text": f"ماركة وصنف {brand} ضمن {leaf.name_ar}",
+            })
 
-    embed_fn, embedding_dim, model_tag = get_embedding_function(model_choice, gemini_api_key)
+    evidence_texts = [d["text"] for d in evidence_docs]
+    evidence_embeddings = embed_fn(evidence_texts, is_query=False)
+    print(f"✅ Stream 2 Evidence encoded: {len(evidence_embeddings):,} vectors (dim: {embedding_dim})")
 
-    raw_texts = [d["text"] for d in documents]
-    embeddings = embed_fn(raw_texts, is_query=False)
-
-    print(f"📐 Embedding Dimension: {embedding_dim}, Vectors: {len(embeddings)}")
-    
-    # 2. Build FAISS Index (Cosine via IndexFlatIP with normalized vectors)
+    # -------------------------------------------------------------------------
+    # COMPILE DUAL FAISS INDICES & METADATA
+    # -------------------------------------------------------------------------
     import faiss
-    print("⚡ Initializing FAISS IndexFlatIP...")
-    index = faiss.IndexFlatIP(embedding_dim)
-    index.add(embeddings)
-    print(f"✅ FAISS Index contains {index.ntotal} vectors.")
+    out_dir = Path(output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    # 3. Save FAISS Index & Metadata
-    out_idx = Path(output_index_path)
-    out_idx.parent.mkdir(parents=True, exist_ok=True)
-    faiss.write_index(index, str(out_idx))
+    # 1. Concept FAISS Index (Stream 1)
+    concept_index = faiss.IndexFlatIP(embedding_dim)
+    concept_index.add(concept_embeddings)
+    faiss.write_index(concept_index, str(out_dir / "catalog_concept_faiss.index"))
 
-    out_meta = Path(output_meta_path)
-    metadata_json = []
-    for d in documents:
-        metadata_json.append({
-            "root_good_type_id": d["root_good_type_id"],
-            "source_good_type_id": d["source_good_type_id"],
-            "source_type": d["source_type"],
-            "matched_term": d["matched_term"],
-            "text": d["text"],
-            "embedding_model": model_tag,
-            "embedding_dim": embedding_dim,
-        })
+    with open(out_dir / "catalog_concept_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(concept_docs, f, ensure_ascii=False, indent=2)
 
-    with open(out_meta, "w", encoding="utf-8") as f:
-        json.dump(metadata_json, f, ensure_ascii=False, indent=2)
+    # 2. Evidence FAISS Index (Stream 2)
+    evidence_index = faiss.IndexFlatIP(embedding_dim)
+    evidence_index.add(evidence_embeddings)
+    faiss.write_index(evidence_index, str(out_dir / "catalog_evidence_faiss.index"))
 
-    # 4. Save npz backup
-    npz_path = out_idx.parent / "catalog_vector_index.npz"
+    # Also save standard catalog_faiss.index for backward-compatibility
+    faiss.write_index(evidence_index, str(out_dir / "catalog_faiss.index"))
+
+    with open(out_dir / "catalog_evidence_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(evidence_docs, f, ensure_ascii=False, indent=2)
+    with open(out_dir / "catalog_faiss_metadata.json", "w", encoding="utf-8") as f:
+        json.dump(evidence_docs, f, ensure_ascii=False, indent=2)
+
+    # 3. Save combined NPZ artifact
     np.savez_compressed(
-        npz_path,
-        embeddings=embeddings,
-        metadata_json=json.dumps(metadata_json, ensure_ascii=False),
+        out_dir / "catalog_dual_stream_vectors.npz",
+        concept_embeddings=concept_embeddings,
+        concept_metadata=json.dumps(concept_docs, ensure_ascii=False),
+        evidence_embeddings=evidence_embeddings,
+        evidence_metadata=json.dumps(evidence_docs, ensure_ascii=False),
+        model_tag=model_tag,
+        embedding_dim=embedding_dim,
     )
 
-    print("\n" + "=" * 80)
-    print("🎉 FAISS VECTOR INDEX & CONTEXT ARTIFACTS SUCCESSFULLY BUILT!")
-    print(f"💾 FAISS Index:    {output_index_path} ({out_idx.stat().st_size / (1024*1024):.2f} MB)")
-    print(f"📁 Metadata JSON:  {output_meta_path} ({out_meta.stat().st_size / 1024:.2f} KB)")
-    print(f"📦 NPZ Index:      {npz_path} ({npz_path.stat().st_size / (1024*1024):.2f} MB)")
-    print("=" * 80 + "\n")
+    print("\n" + "=" * 88)
+    print("🎉 DUAL-STREAM ARTIFACTS SUCCESSFULLY GENERATED!")
+    print(f"📦 Concept Index:   {out_dir / 'catalog_concept_faiss.index'} ({len(concept_docs)} vectors)")
+    print(f"📦 Evidence Index:  {out_dir / 'catalog_evidence_faiss.index'} ({len(evidence_docs):,} vectors)")
+    print(f"📦 NPZ Bundle:      {out_dir / 'catalog_dual_stream_vectors.npz'}")
+    print("=" * 88 + "\n")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build dense FAISS index for Saudi goods classifier.")
+    parser = argparse.ArgumentParser(description="Build dual-stream FAISS index for Saudi goods classifier.")
     parser.add_argument(
         "--model",
         type=str,
-        default="BAAI/bge-m3",
+        default="storage/models/intfloat-multilingual-e5-small",
         help="Model choice: 'BAAI/bge-m3', 'storage/models/intfloat-multilingual-e5-small', 'intfloat/multilingual-e5-large', or 'google-gemini'",
     )
     parser.add_argument(
@@ -262,22 +276,15 @@ if __name__ == "__main__":
         help="Google Gemini API key (if --model is google-gemini)",
     )
     parser.add_argument(
-        "--output-index",
+        "--output-dir",
         type=str,
-        default="storage/semantic/catalog_faiss.index",
-        help="Output path for FAISS index file.",
-    )
-    parser.add_argument(
-        "--output-metadata",
-        type=str,
-        default="storage/semantic/catalog_faiss_metadata.json",
-        help="Output path for metadata JSON file.",
+        default="storage/semantic",
+        help="Output directory for dual-stream artifacts.",
     )
     args = parser.parse_args()
 
-    build_faiss_index(
+    build_dual_stream_faiss_index(
         model_choice=args.model,
         gemini_api_key=args.gemini_api_key,
-        output_index_path=args.output_index,
-        output_meta_path=args.output_metadata,
+        output_dir=args.output_dir,
     )

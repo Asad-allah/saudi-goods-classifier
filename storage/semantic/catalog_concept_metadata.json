@@ -1,0 +1,812 @@
+[
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 14,
+    "name_ar": "سلع استهلاكية سريعة الحركة الجافة",
+    "name_en": "Dry Fast-Moving Consum",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع سلع استهلاكية سريعة الحركة الجافة التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: سلع استهلاكية سريعة الحركة الجافة, برغل, برقوق, بزورات. Goods Category Dry Fast-Moving Consum under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 15,
+    "name_ar": "سلع استهلاكية سريعة الحركة المبردة",
+    "name_en": "Cold Fast-Moving Consum",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع سلع استهلاكية سريعة الحركة المبردة التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: سلع استهلاكية سريعة الحركة المبردة, ايس كريم, بازلاء مجمد, بط مجمد. Goods Category Cold Fast-Moving Consum under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 16,
+    "name_ar": "مواد الرعاية الصحية الجافة",
+    "name_en": "Dry Health Care",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع مواد الرعاية الصحية الجافة التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: مواد الرعاية الصحية الجافة, بامبرز, حليب اطفال, حليب بودرة. Goods Category Dry Health Care under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 17,
+    "name_ar": "مواد الرعاية الصحية المبردة",
+    "name_en": "Cold Health Care",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع مواد الرعاية الصحية المبردة التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: مواد الرعاية الصحية المبردة, Cold Health Care, Cold Health Care supplies, genuine Cold Health Care. Goods Category Cold Health Care under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 10,
+    "source_good_type_id": 19,
+    "name_ar": "95بنزين",
+    "name_en": "Petrol 95",
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "text": "تصنيف بضائع 95بنزين التابع للمجموعة الرئيسية منتجات بترولية. المنتجات الأساسية: 95بنزين, بنزين, Petrol 95, Petrol 95 supplies. Goods Category Petrol 95 under Root Category Petroleum Products."
+  },
+  {
+    "root_good_type_id": 10,
+    "source_good_type_id": 20,
+    "name_ar": "ديزل",
+    "name_en": "Diesel",
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "text": "تصنيف بضائع ديزل التابع للمجموعة الرئيسية منتجات بترولية. المنتجات الأساسية: ديزل, مازوت, Diesel, Diesel supplies. Goods Category Diesel under Root Category Petroleum Products."
+  },
+  {
+    "root_good_type_id": 10,
+    "source_good_type_id": 23,
+    "name_ar": "زيوت",
+    "name_en": "Oils",
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "text": "تصنيف بضائع زيوت التابع للمجموعة الرئيسية منتجات بترولية. المنتجات الأساسية: زيوت, Oils, Oils supplies, genuine Oils. Goods Category Oils under Root Category Petroleum Products."
+  },
+  {
+    "root_good_type_id": 10,
+    "source_good_type_id": 27,
+    "name_ar": "اسفلت",
+    "name_en": "Asphalt",
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "text": "تصنيف بضائع اسفلت التابع للمجموعة الرئيسية منتجات بترولية. المنتجات الأساسية: اسفلت, منتجات بترولية اسفلت, مواد البناء والتشييد -مواد الدفان والسفلته, ازفلت. Goods Category Asphalt under Root Category Petroleum Products."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 29,
+    "name_ar": "النقل الخاص للافراد",
+    "name_en": "Private Transportation For Individuals",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع النقل الخاص للافراد التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: النقل الخاص للافراد, دينه ونش و سياره صغيره, دنات, وانيتات. Goods Category Private Transportation For Individuals under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 30,
+    "name_ar": "نقل المركبات للافراد",
+    "name_en": "Vehicle Transportation For Individuals",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع نقل المركبات للافراد التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: نقل المركبات للافراد, جمس, دينه, دينه براد. Goods Category Vehicle Transportation For Individuals under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 31,
+    "name_ar": "النقل الخاص لقطاع الاعمال",
+    "name_en": "Private Transport For Business Sector",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع النقل الخاص لقطاع الاعمال التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: النقل الخاص لقطاع الاعمال, اغراض عمال, بريمات كسارة, تانكي. Goods Category Private Transport For Business Sector under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 32,
+    "name_ar": "نقل المركبات لقطاع الاعمال",
+    "name_en": "Business Vehicle Transportation",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع نقل المركبات لقطاع الاعمال التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: نقل المركبات لقطاع الاعمال, باص, باص كوستر, بلدوزر. Goods Category Business Vehicle Transportation under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 33,
+    "name_ar": "نقل المركبات المتضررة",
+    "name_en": "Damaged Vehicles Transportation",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع نقل المركبات المتضررة التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: نقل المركبات المتضررة, سيارات تالفة, سيارات حوادث, سيارات محروقة. Goods Category Damaged Vehicles Transportation under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 45,
+    "name_ar": "الخرسانة",
+    "name_en": "Concrete",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الخرسانة التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الخرسانة, حواجز أسمنتية, حواجز خرسانية, صبات خرسانة. Goods Category Concrete under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 46,
+    "name_ar": "الصلب",
+    "name_en": "Steel",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الصلب التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الصلب, Steel, Steel supplies, genuine Steel. Goods Category Steel under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 47,
+    "name_ar": "الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات",
+    "name_en": "Pipes and water extension materials include tanks",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الأنابيب ومواد تمديد الأعمال المائية وتشمل الخزانات, احواض مغسلة, ادوات سباكة, انابيب ماء. Goods Category Pipes and water extension materials include tanks under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 48,
+    "name_ar": "الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ",
+    "name_en": "Glass and aluminum panels include doors and windows",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الألواح الزجاجية والألمنيوم وتشمل الأبواب والنوافذ, المنيوم, الواح المنيوم, الواح زجاج. Goods Category Glass and aluminum panels include doors and windows under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 49,
+    "name_ar": "اعمال التشطيب والدهانات والتكسيات الخارجية",
+    "name_en": "Finishing works, paints and external textures",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع اعمال التشطيب والدهانات والتكسيات الخارجية التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: اعمال التشطيب والدهانات والتكسيات الخارجية, دهان, مواد البناء-دهانات, مواد البناء والتشيد اعمال التشطيب والدهدنات والتكسيات. Goods Category Finishing works, paints and external textures under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 50,
+    "name_ar": "المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة",
+    "name_en": "Equipment and tools include saws, hammers, fisher",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: المعدات والأدوات وتشمل المناشير والمطارق ومراوح اللياسة وهزازات الخرسانة, هزازة خرسانة, مواد البناء والتشييد- المعدات والادوات وتشمل المناشير وهزازات الخرسانة, مواد البناء والتشييد المعدات والادوات وتشمل المناشير. Goods Category Equipment and tools include saws, hammers, fisher under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 51,
+    "name_ar": "أعمال السباكة والتمديدات الصحية",
+    "name_en": "Plumbing work and health extensions",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع أعمال السباكة والتمديدات الصحية التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: أعمال السباكة والتمديدات الصحية, Plumbing work and health extensions, Plumbing work and health extensions supplies, genuine Plumbing work and health extensions. Goods Category Plumbing work and health extensions under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 52,
+    "name_ar": "مواد العزل",
+    "name_en": "Insulating materials",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع مواد العزل التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: مواد العزل, بانل صغير, بانل كبير, بانل كبير وصغير. Goods Category Insulating materials under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 53,
+    "name_ar": "مواد الدفان والسفلتة",
+    "name_en": "Book and asphalt materials",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع مواد الدفان والسفلتة التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: مواد الدفان والسفلتة, دفان, ردم, مواد الدفن. Goods Category Book and asphalt materials under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 54,
+    "name_ar": "الأخشاب وتشمل أخشاب النجارة والأبواب وخلافة",
+    "name_en": "Woods include carpentry wood, doors and succession",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الأخشاب وتشمل أخشاب النجارة والأبواب وخلافة التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: باب, أبواب, ابواب, بوابة. Goods Category Woods include carpentry wood, doors and succession under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 55,
+    "name_ar": "حديد التسليح",
+    "name_en": "Reinforcing",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع حديد التسليح التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: حديد التسليح, حديد, حديد بناء, حديد تسليح. Goods Category Reinforcing under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 56,
+    "name_ar": "مواد تمديدات الكهرباء",
+    "name_en": "Electricity extensions materials",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع مواد تمديدات الكهرباء التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: مواد تمديدات الكهرباء, اسلاك كهرباء, افياش وقواطع كهرباء, اكبال كهرباء. Goods Category Electricity extensions materials under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 57,
+    "name_ar": "الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط",
+    "name_en": "Stones, rocks and paving materials, and this is formed tiles",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الأحجار والصخور ومواد الرصف ويشكل ذلك البلاط, انتر لوك, بلاط, حجر اصطناعي. Goods Category Stones, rocks and paving materials, and this is formed tiles under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 58,
+    "name_ar": "الطين",
+    "name_en": "Clay",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الطين التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الطين, طين, كاولين, Clay. Goods Category Clay under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 59,
+    "name_ar": "الطوب",
+    "name_en": "Brick",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الطوب التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الطوب, بلوك, طوب, بلك ابيض. Goods Category Brick under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 60,
+    "name_ar": "أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية",
+    "name_en": "Air conditioning tools and machines include extension tubes and air dictations",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: أدوات وآلات التكييف وتشمل أنابيب التمديد والدكتات الهوائية, ادوات وفلاتر هواء, مواد البناء والشييد- وتشمل ادوات والات التكييف, َمكيفات. Goods Category Air conditioning tools and machines include extension tubes and air dictations under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 62,
+    "name_ar": "النحاس",
+    "name_en": "Copper",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع النحاس التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: خام نحاس تعدين, نحاس أحمر سكراب مقشر ملبري, نحاس أصفر خردة سباكة, سبائك وقضبان نحاس نقي. Goods Category Copper under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 105,
+    "name_ar": "الطين الاحمر",
+    "name_en": "Red clay",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع الطين الاحمر التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: الطين الاحمر, تراب احمر, طين احمر, Red clay. Goods Category Red clay under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 113,
+    "name_ar": "جبس وانهيدرايت",
+    "name_en": "Gypsum & Anhydrite",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع جبس وانهيدرايت التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: جبس وانهيدرايت, Gypsum & Anhydrite, Gypsum & Anhydrite supplies, genuine Gypsum & Anhydrite. Goods Category Gypsum & Anhydrite under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 114,
+    "name_ar": "خام الحديد منخفض النسبة",
+    "name_en": "Iron ore - Fe<40?",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع خام الحديد منخفض النسبة التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: خام الحديد منخفض النسبة, Iron ore - Fe<40?, Iron ore - Fe<40? supplies, genuine Iron ore - Fe<40?. Goods Category Iron ore - Fe<40? under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 115,
+    "name_ar": "حجر جيري للصناعة",
+    "name_en": "Limestone for industry",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع حجر جيري للصناعة التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: حجر جيري خام محاجر, كربونات كالسيوم بودرة أكياس, صخور حجر جيري للكسارات والمصانع, حجر جيري مكسر تريلا صب. Goods Category Limestone for industry under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 6,
+    "source_good_type_id": 117,
+    "name_ar": "رخام للصناعة",
+    "name_en": "Marble for industry",
+    "root_name_ar": "مواد أعمال التعدين أو التحجير",
+    "root_name_en": "Mining or Fossilization Materials",
+    "text": "تصنيف بضائع رخام للصناعة التابع للمجموعة الرئيسية مواد أعمال التعدين أو التحجير. المنتجات الأساسية: كتل رخام خام محاجر صخور ضخمة, صخور جرانيت نجران خام كتل, كتل حجر طبيعي للمناشير والمصانع, رخام خام صب تريلا ثقيلة. Goods Category Marble for industry under Root Category Mining or Fossilization Materials."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 121,
+    "name_ar": "أسمنت",
+    "name_en": "Cement",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع أسمنت التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: أسمنت, سمنت نجران, مواد البناء اسمنت, مواد اسمنت. Goods Category Cement under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 122,
+    "name_ar": "الألبان",
+    "name_en": "Dairy",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع الألبان التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: الألبان, الالبان معلبة, جبنة, زبادي. Goods Category Dairy under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 11,
+    "source_good_type_id": 123,
+    "name_ar": "الطيور",
+    "name_en": "Birds",
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "text": "تصنيف بضائع الطيور التابع للمجموعة الرئيسية حيوانات حية. المنتجات الأساسية: الطيور, بط, حبش, حجل. Goods Category Birds under Root Category LIVE ANIMALS."
+  },
+  {
+    "root_good_type_id": 11,
+    "source_good_type_id": 124,
+    "name_ar": "المواشي",
+    "name_en": "Cattles",
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "text": "تصنيف بضائع المواشي التابع للمجموعة الرئيسية حيوانات حية. المنتجات الأساسية: المواشي, ابقار, ثور, جواميس. Goods Category Cattles under Root Category LIVE ANIMALS."
+  },
+  {
+    "root_good_type_id": 125,
+    "source_good_type_id": 125,
+    "name_ar": "الصرف الصحي",
+    "name_en": "Sanitation",
+    "root_name_ar": "الصرف الصحي",
+    "root_name_en": "Sanitation",
+    "text": "تصنيف بضائع الصرف الصحي التابع للمجموعة الرئيسية الصرف الصحي. المنتجات الأساسية: الصرف الصحي, Sanitation, Sanitation supplies, genuine Sanitation. Goods Category Sanitation under Root Category Sanitation."
+  },
+  {
+    "root_good_type_id": 126,
+    "source_good_type_id": 126,
+    "name_ar": "صهاريج الماء",
+    "name_en": "Water Tanks",
+    "root_name_ar": "صهاريج الماء",
+    "root_name_en": "Water Tanks",
+    "text": "تصنيف بضائع صهاريج الماء التابع للمجموعة الرئيسية صهاريج الماء. المنتجات الأساسية: صهاريج الماء, وايت  ماء اكترس, ويت مسكس, Water Tanks. Goods Category Water Tanks under Root Category Water Tanks."
+  },
+  {
+    "root_good_type_id": 127,
+    "source_good_type_id": 127,
+    "name_ar": "صهاريج الغاز",
+    "name_en": "Gas Tanks",
+    "root_name_ar": "صهاريج الغاز",
+    "root_name_en": "Gas Tanks",
+    "text": "تصنيف بضائع صهاريج الغاز التابع للمجموعة الرئيسية صهاريج الغاز. المنتجات الأساسية: صهاريج الغاز, Gas Tanks, Gas Tanks supplies, genuine Gas Tanks. Goods Category Gas Tanks under Root Category Gas Tanks."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 128,
+    "name_ar": "الرمل",
+    "name_en": "Sand",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع الرمل التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: الرمل, رمل, رمل أبيض, رمل أحمر. Goods Category Sand under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 129,
+    "source_good_type_id": 130,
+    "name_ar": "قطع الغيار المستعملة والسكراب",
+    "name_en": "Used spare and scrap",
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "text": "تصنيف بضائع قطع الغيار المستعملة والسكراب التابع للمجموعة الرئيسية قطع غيار. المنتجات الأساسية: قطع الغيار المستعملة والسكراب, أبواب وشاصي سيارات مستعمل, المنيوم سكراب, بطاريات قديمة. Goods Category Used spare and scrap under Root Category Spares."
+  },
+  {
+    "root_good_type_id": 131,
+    "source_good_type_id": 132,
+    "name_ar": "الحواسيب والمنتجات الإلكترونية والبصرية",
+    "name_en": "Computers, electronic and optical products",
+    "root_name_ar": "الإلكترونيات",
+    "root_name_en": "Reinforcing",
+    "text": "تصنيف بضائع الحواسيب والمنتجات الإلكترونية والبصرية التابع للمجموعة الرئيسية الإلكترونيات. المنتجات الأساسية: الحواسيب والمنتجات الإلكترونية والبصرية, تلفزيونات, اجهزة كهربائية, شاشات. Goods Category Computers, electronic and optical products under Root Category Reinforcing."
+  },
+  {
+    "root_good_type_id": 129,
+    "source_good_type_id": 134,
+    "name_ar": "الإطارات",
+    "name_en": "Tires",
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "text": "تصنيف بضائع الإطارات التابع للمجموعة الرئيسية قطع غيار. المنتجات الأساسية: الإطارات, اطارات شاحنات وسيارات, كفرات, كفرات سيارات. Goods Category Tires under Root Category Spares."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 135,
+    "name_ar": "المواد البلاستيكية",
+    "name_en": "Plastic materials",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع المواد البلاستيكية التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: أكياس زبالة, كياس زبالة, كياس زباله, اكياس زباله. Goods Category Plastic materials under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 136,
+    "source_good_type_id": 136,
+    "name_ar": "المواد الكيميائية",
+    "name_en": "Chemicals materials",
+    "root_name_ar": "المواد الكيميائية",
+    "root_name_en": "Chemicals materials",
+    "text": "تصنيف بضائع المواد الكيميائية التابع للمجموعة الرئيسية المواد الكيميائية. المنتجات الأساسية: حمض الفوسفوريك, صودا كاوية قشور سابك, حمض هيدروكلوريك, حمض كبريتيك مركز. Goods Category Chemicals materials under Root Category Chemicals materials."
+  },
+  {
+    "root_good_type_id": 4,
+    "source_good_type_id": 137,
+    "name_ar": "الأعلاف والحبوب",
+    "name_en": "Forage and grain",
+    "root_name_ar": "زراعية",
+    "root_name_en": "Agricultural",
+    "text": "تصنيف بضائع الأعلاف والحبوب التابع للمجموعة الرئيسية زراعية. المنتجات الأساسية: الأعلاف والحبوب, اعلاف ابقار واغنام, اعلاف دواجن, برسيم. Goods Category Forage and grain under Root Category Agricultural."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 138,
+    "name_ar": "الزيوت",
+    "name_en": "Oils",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع الزيوت التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: الزيوت, زبدة, زيت اكل, زيت ذرة. Goods Category Oils under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 10,
+    "source_good_type_id": 139,
+    "name_ar": "الزيوت",
+    "name_en": "Oils",
+    "root_name_ar": "منتجات بترولية",
+    "root_name_en": "Petroleum Products",
+    "text": "تصنيف بضائع الزيوت التابع للمجموعة الرئيسية منتجات بترولية. المنتجات الأساسية: الزيوت, زيت التبريد, زيت التشحيم, زيت الفرامل. Goods Category Oils under Root Category Petroleum Products."
+  },
+  {
+    "root_good_type_id": 140,
+    "source_good_type_id": 140,
+    "name_ar": "البيوت الجاهزة",
+    "name_en": "Prefabricated Houses",
+    "root_name_ar": "البيوت الجاهزة",
+    "root_name_en": "Prefabricated Houses",
+    "text": "تصنيف بضائع البيوت الجاهزة التابع للمجموعة الرئيسية البيوت الجاهزة. المنتجات الأساسية: البيوت الجاهزة, بيت خشبي, بيت مسبق الصنع, بيوت جاهزة. Goods Category Prefabricated Houses under Root Category Prefabricated Houses."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 142,
+    "name_ar": "المشروبات الغازية",
+    "name_en": "Soft drinks",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع المشروبات الغازية التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: المشروبات الغازية, بيبسي, كولا, مشروبات غازية. Goods Category Soft drinks under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 143,
+    "name_ar": "المواد الأولية للصناعات التحويلية",
+    "name_en": "Raw materials for manufacturing industries",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع المواد الأولية للصناعات التحويلية التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: المواد الأولية للصناعات التحويلية, البريد السريع, طرود, لوحات. Goods Category Raw materials for manufacturing industries under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 11,
+    "source_good_type_id": 144,
+    "name_ar": "الجمال والأحصنة",
+    "name_en": "Camels and Horses",
+    "root_name_ar": "حيوانات حية",
+    "root_name_en": "LIVE ANIMALS",
+    "text": "تصنيف بضائع الجمال والأحصنة التابع للمجموعة الرئيسية حيوانات حية. المنتجات الأساسية: الجمال والأحصنة, بعير, جمال, حصان. Goods Category Camels and Horses under Root Category LIVE ANIMALS."
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "name_ar": "الأثاث المستعمل",
+    "name_en": "Used Furniture",
+    "root_name_ar": "الأثاث",
+    "root_name_en": "Furniture",
+    "text": "تصنيف بضائع الأثاث المستعمل التابع للمجموعة الرئيسية الأثاث. المنتجات الأساسية: الأثاث المستعمل, عفش منزل مستعمل, غرف نوم مستعملة, كنب مستعمل. Goods Category Used Furniture under Root Category Furniture."
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "name_ar": "الأثاث الجديد",
+    "name_en": "New Furniture",
+    "root_name_ar": "الأثاث",
+    "root_name_en": "Furniture",
+    "text": "تصنيف بضائع الأثاث الجديد التابع للمجموعة الرئيسية الأثاث. المنتجات الأساسية: الأثاث الجديد, طاولات طعام والكراسي, عفش منزل جديد, كنب. Goods Category New Furniture under Root Category Furniture."
+  },
+  {
+    "root_good_type_id": 147,
+    "source_good_type_id": 147,
+    "name_ar": "الملابس والأحذية",
+    "name_en": "Clothes and Shoes",
+    "root_name_ar": "الملابس والأحذية",
+    "root_name_en": "Clothes and Shoes",
+    "text": "تصنيف بضائع الملابس والأحذية التابع للمجموعة الرئيسية الملابس والأحذية. المنتجات الأساسية: الملابس والأحذية, احذية, ملابس, ملابس وأحذية. Goods Category Clothes and Shoes under Root Category Clothes and Shoes."
+  },
+  {
+    "root_good_type_id": 148,
+    "source_good_type_id": 148,
+    "name_ar": "الفحم والحطب",
+    "name_en": "Charcoal and Firewood",
+    "root_name_ar": "الفحم والحطب",
+    "root_name_en": "Charcoal and Firewood",
+    "text": "تصنيف بضائع الفحم والحطب التابع للمجموعة الرئيسية الفحم والحطب. المنتجات الأساسية: الفحم والحطب, حطب, فحم, فحم مستورد. Goods Category Charcoal and Firewood under Root Category Charcoal and Firewood."
+  },
+  {
+    "root_good_type_id": 149,
+    "source_good_type_id": 149,
+    "name_ar": "الأدوية",
+    "name_en": "Medicines",
+    "root_name_ar": "الأدوية",
+    "root_name_en": "Medicines",
+    "text": "تصنيف بضائع الأدوية التابع للمجموعة الرئيسية الأدوية. المنتجات الأساسية: الأدوية, ادوية, لادوية, محاليل طبيه. Goods Category Medicines under Root Category Medicines."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 150,
+    "name_ar": "المنتجات الجلدية والمنتجات ذات الصلة",
+    "name_en": "Leather products and related products",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع المنتجات الجلدية والمنتجات ذات الصلة التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: المنتجات الجلدية والمنتجات ذات الصلة, صناعية-المنتجات الجلدية والمنتجات ذات الصلة, صناعة الدباغه والجلود, جلود. Goods Category Leather products and related products under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 151,
+    "name_ar": "الورق ومنتجاته",
+    "name_en": "Paper and its products",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع الورق ومنتجاته التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: الورق ومنتجاته, دفاتر, ورق, ورق تغليف. Goods Category Paper and its products under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 152,
+    "name_ar": "المطاط واللدائن",
+    "name_en": "Rubber and plastics",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع المطاط واللدائن التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: المطاط واللدائن, Rubber and plastics, Rubber and plastics supplies, genuine Rubber and plastics. Goods Category Rubber and plastics under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 153,
+    "source_good_type_id": 153,
+    "name_ar": "الأدوية البيطرية",
+    "name_en": "Veterinary medicines",
+    "root_name_ar": "الأدوية البيطرية",
+    "root_name_en": "Veterinary medicines",
+    "text": "تصنيف بضائع الأدوية البيطرية التابع للمجموعة الرئيسية الأدوية البيطرية. المنتجات الأساسية: الأدوية البيطرية, ادوية حيوانات, ادوية بيطرية حيوانية, Veterinary medicines. Goods Category Veterinary medicines under Root Category Veterinary medicines."
+  },
+  {
+    "root_good_type_id": 154,
+    "source_good_type_id": 154,
+    "name_ar": "الدراجات الهوائية",
+    "name_en": "Bicycles",
+    "root_name_ar": "الدراجات الهوائية",
+    "root_name_en": "Bicycles",
+    "text": "تصنيف بضائع الدراجات الهوائية التابع للمجموعة الرئيسية الدراجات الهوائية. المنتجات الأساسية: الدراجات الهوائية, سيكلات, Bicycles, Bicycles supplies. Goods Category Bicycles under Root Category Bicycles."
+  },
+  {
+    "root_good_type_id": 155,
+    "source_good_type_id": 155,
+    "name_ar": "الدراجات النارية",
+    "name_en": "Motorbikes",
+    "root_name_ar": "الدراجات النارية",
+    "root_name_en": "Motorbikes",
+    "text": "تصنيف بضائع الدراجات النارية التابع للمجموعة الرئيسية الدراجات النارية. المنتجات الأساسية: الدراجات النارية, موتورات نارية, درجات ناريه, دباب. Goods Category Motorbikes under Root Category Motorbikes."
+  },
+  {
+    "root_good_type_id": 156,
+    "source_good_type_id": 156,
+    "name_ar": "المستلزمات الطبية و مستلزمات المستشفيات",
+    "name_en": "Medical supplies and hospital supplies",
+    "root_name_ar": "المستلزمات الطبية و مستلزمات المستشفيات",
+    "root_name_en": "Medical supplies and hospital supplies",
+    "text": "تصنيف بضائع المستلزمات الطبية و مستلزمات المستشفيات التابع للمجموعة الرئيسية المستلزمات الطبية و مستلزمات المستشفيات. المنتجات الأساسية: المستلزمات الطبية و مستلزمات المستشفيات, اجهزة طبية, كراسي ذوي الاحتياجات الخاصة, مراتب طبية. Goods Category Medical supplies and hospital supplies under Root Category Medical supplies and hospital supplies."
+  },
+  {
+    "root_good_type_id": 157,
+    "source_good_type_id": 157,
+    "name_ar": "الكتب",
+    "name_en": "Books",
+    "root_name_ar": "الكتب",
+    "root_name_en": "Books",
+    "text": "تصنيف بضائع الكتب التابع للمجموعة الرئيسية الكتب. المنتجات الأساسية: الكتب, كتب, كتب مدرسية, كتب مدرسة. Goods Category Books under Root Category Books."
+  },
+  {
+    "root_good_type_id": 4,
+    "source_good_type_id": 158,
+    "name_ar": "المواد الزراعية والأسمدة",
+    "name_en": "Agricultural materials and fertilizers",
+    "root_name_ar": "زراعية",
+    "root_name_en": "Agricultural",
+    "text": "تصنيف بضائع المواد الزراعية والأسمدة التابع للمجموعة الرئيسية زراعية. المنتجات الأساسية: فوسفات, سماد فوسفات, سماد فوسفاتي, أسمدة فوسفاتية. Goods Category Agricultural materials and fertilizers under Root Category Agricultural."
+  },
+  {
+    "root_good_type_id": 159,
+    "source_good_type_id": 159,
+    "name_ar": "مولدات الكهرباء",
+    "name_en": "Electricity Generators",
+    "root_name_ar": "مولدات الكهرباء",
+    "root_name_en": "Electricity Generators",
+    "text": "تصنيف بضائع مولدات الكهرباء التابع للمجموعة الرئيسية مولدات الكهرباء. المنتجات الأساسية: مولدات الكهرباء, الواح شمسية, الواح طاقة شمسية, جنريتر ماطور. Goods Category Electricity Generators under Root Category Electricity Generators."
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "name_ar": "مواد النسيج والخياطة",
+    "name_en": "Textile and sewing materials",
+    "root_name_ar": "مواد النسيج والخياطة",
+    "root_name_en": "Textile and sewing materials",
+    "text": "تصنيف بضائع مواد النسيج والخياطة التابع للمجموعة الرئيسية مواد النسيج والخياطة. المنتجات الأساسية: مواد النسيج والخياطة, اقمشي, اغطية, موكيت. Goods Category Textile and sewing materials under Root Category Textile and sewing materials."
+  },
+  {
+    "root_good_type_id": 161,
+    "source_good_type_id": 161,
+    "name_ar": "منتجات التبغ",
+    "name_en": "Tobacco Products",
+    "root_name_ar": "منتجات التبغ",
+    "root_name_en": "Tobacco Products",
+    "text": "تصنيف بضائع منتجات التبغ التابع للمجموعة الرئيسية منتجات التبغ. المنتجات الأساسية: منتجات التبغ, دخان, معسل, شيشة الكترونية. Goods Category Tobacco Products under Root Category Tobacco Products."
+  },
+  {
+    "root_good_type_id": 162,
+    "source_good_type_id": 162,
+    "name_ar": "مخلفات",
+    "name_en": "Remnants",
+    "root_name_ar": "مخلفات",
+    "root_name_en": "Remnants",
+    "text": "تصنيف بضائع مخلفات التابع للمجموعة الرئيسية مخلفات. المنتجات الأساسية: مخلفات, مخلفات البناء, Remnants, Remnants supplies. Goods Category Remnants under Root Category Remnants."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 164,
+    "name_ar": "المواد الحديدية",
+    "name_en": "Ferrous materials",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع المواد الحديدية التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: بوابات حديد, بوابة حديد, أبواب حديد, بوابات ليزر. Goods Category Ferrous materials under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 129,
+    "source_good_type_id": 165,
+    "name_ar": "قطع غيار جديدة",
+    "name_en": "New spare",
+    "root_name_ar": "قطع غيار",
+    "root_name_en": "Spares",
+    "text": "تصنيف بضائع قطع غيار جديدة التابع للمجموعة الرئيسية قطع غيار. المنتجات الأساسية: قطع غيار جديدة, ابواب وشاصي سيارات جديد, بطاريات جديد, طبلون سيارات جديد. Goods Category New spare under Root Category Spares."
+  },
+  {
+    "root_good_type_id": 166,
+    "source_good_type_id": 166,
+    "name_ar": "مياه معبأة",
+    "name_en": "Bottled water",
+    "root_name_ar": "مياه معبأة",
+    "root_name_en": "Bottled water",
+    "text": "تصنيف بضائع مياه معبأة التابع للمجموعة الرئيسية مياه معبأة. المنتجات الأساسية: مياه معبأة, كراتين ماء, ماي, مياه شرب. Goods Category Bottled water under Root Category Bottled water."
+  },
+  {
+    "root_good_type_id": 167,
+    "source_good_type_id": 167,
+    "name_ar": "حاويات",
+    "name_en": "Medical Waste",
+    "root_name_ar": "حاويات",
+    "root_name_en": "Medical Waste",
+    "text": "تصنيف بضائع حاويات التابع للمجموعة الرئيسية حاويات. المنتجات الأساسية: حاويات, حاوية, حاويات بلدية, كنتينر. Goods Category Medical Waste under Root Category Medical Waste."
+  },
+  {
+    "root_good_type_id": 141,
+    "source_good_type_id": 168,
+    "name_ar": "نفايات طبية",
+    "name_en": "sponges",
+    "root_name_ar": "النفايات",
+    "root_name_en": "Waste material",
+    "text": "تصنيف بضائع نفايات طبية التابع للمجموعة الرئيسية النفايات. المنتجات الأساسية: نفايات طبية, sponges, sponges supplies, genuine sponges. Goods Category sponges under Root Category Waste material."
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "name_ar": "الأسفنج",
+    "name_en": "gypsum",
+    "root_name_ar": "الأسفنج",
+    "root_name_en": "gypsum",
+    "text": "تصنيف بضائع الأسفنج التابع للمجموعة الرئيسية الأسفنج. المنتجات الأساسية: الأسفنج, اسفنج, فرشات تخت, اسفنج مراتب. Goods Category gypsum under Root Category gypsum."
+  },
+  {
+    "root_good_type_id": 34,
+    "source_good_type_id": 170,
+    "name_ar": "جبس",
+    "name_en": "Vegetables and fruits",
+    "root_name_ar": "مواد البناء و التشييد",
+    "root_name_en": "Building And Construction Items",
+    "text": "تصنيف بضائع جبس التابع للمجموعة الرئيسية مواد البناء و التشييد. المنتجات الأساسية: جبس, جبصين, طبالي جبس بورد, اسقف مستعارة. Goods Category Vegetables and fruits under Root Category Building And Construction Items."
+  },
+  {
+    "root_good_type_id": 12,
+    "source_good_type_id": 171,
+    "name_ar": "الخضروات والفواكه",
+    "name_en": "Electrical Appliances",
+    "root_name_ar": "مواد غذائية",
+    "root_name_en": "Food Items",
+    "text": "تصنيف بضائع الخضروات والفواكه التابع للمجموعة الرئيسية مواد غذائية. المنتجات الأساسية: الخضروات والفواكه, اناناس, باذنجان, بامية. Goods Category Electrical Appliances under Root Category Food Items."
+  },
+  {
+    "root_good_type_id": 175,
+    "source_good_type_id": 175,
+    "name_ar": "منظفات",
+    "name_en": "Refrigerators",
+    "root_name_ar": "منظفات",
+    "root_name_en": "Refrigerators",
+    "text": "تصنيف بضائع منظفات التابع للمجموعة الرئيسية منظفات. المنتجات الأساسية: صابون تايد وأريال أكياس كراتين, سائل غسيل صحون فيري طبالي, كلوركس مبيض ومعقم جوالين, مطهر ومعقم أرضيات داك وديتول. Goods Category Refrigerators under Root Category Refrigerators."
+  },
+  {
+    "root_good_type_id": 179,
+    "source_good_type_id": 179,
+    "name_ar": "وحدات تبريد",
+    "name_en": "Stoves",
+    "root_name_ar": "وحدات تبريد",
+    "root_name_en": "Stoves",
+    "text": "تصنيف بضائع وحدات تبريد التابع للمجموعة الرئيسية وحدات تبريد. المنتجات الأساسية: وحدات تبريد, اجهزة تبريد الخزانات, ثلاجات تبريد, مواد البناء والشييد- وتشمل  التكييف. Goods Category Stoves under Root Category Stoves."
+  },
+  {
+    "root_good_type_id": 163,
+    "source_good_type_id": 184,
+    "name_ar": "صابون",
+    "name_en": "Ovens",
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "text": "تصنيف بضائع صابون التابع للمجموعة الرئيسية مواد تنظيف. المنتجات الأساسية: صابون, منظفات صابون, صابون منظفات, صبون. Goods Category Ovens under Root Category Cleaning materials."
+  },
+  {
+    "root_good_type_id": 163,
+    "source_good_type_id": 185,
+    "name_ar": "مناديل ورقية",
+    "name_en": "Other unclassified",
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "text": "تصنيف بضائع مناديل ورقية التابع للمجموعة الرئيسية مواد تنظيف. المنتجات الأساسية: مناديل ورقية, رولات محارم, منتجات ورقية, Other unclassified. Goods Category Other unclassified under Root Category Cleaning materials."
+  },
+  {
+    "root_good_type_id": 163,
+    "source_good_type_id": 186,
+    "name_ar": "مناديل",
+    "name_en": "containers",
+    "root_name_ar": "مواد تنظيف",
+    "root_name_en": "Cleaning materials",
+    "text": "تصنيف بضائع مناديل التابع للمجموعة الرئيسية مواد تنظيف. المنتجات الأساسية: مناديل, محارم, مناديل معطرة, فاين مناديل. Goods Category containers under Root Category Cleaning materials."
+  },
+  {
+    "root_good_type_id": 5,
+    "source_good_type_id": 188,
+    "name_ar": "مكائن صناعية",
+    "name_en": "washing machines",
+    "root_name_ar": "صناعية",
+    "root_name_en": "Industrial",
+    "text": "تصنيف بضائع مكائن صناعية التابع للمجموعة الرئيسية صناعية. المنتجات الأساسية: مكائن صناعية, مخرطة, وحدة حقن, خط انتاج مصنع. Goods Category washing machines under Root Category Industrial."
+  },
+  {
+    "root_good_type_id": 13,
+    "source_good_type_id": 190,
+    "name_ar": "نقل رافعة",
+    "name_en": "Industrial machines",
+    "root_name_ar": "نقل المركبات",
+    "root_name_en": "Vehicle Transportation",
+    "text": "تصنيف بضائع نقل رافعة التابع للمجموعة الرئيسية نقل المركبات. المنتجات الأساسية: نقل رافعة, كرين, رافعه, كرين سلة. Goods Category Industrial machines under Root Category Vehicle Transportation."
+  },
+  {
+    "root_good_type_id": 192,
+    "source_good_type_id": 192,
+    "name_ar": "عطور",
+    "name_en": "Air conditioners",
+    "root_name_ar": "عطور",
+    "root_name_en": "Air conditioners",
+    "text": "تصنيف بضائع عطور التابع للمجموعة الرئيسية عطور. المنتجات الأساسية: عطور, عطورات, بارفان, معطرات منزل. Goods Category Air conditioners under Root Category Air conditioners."
+  },
+  {
+    "root_good_type_id": 193,
+    "source_good_type_id": 193,
+    "name_ar": "معدات السلامة والأمن",
+    "name_en": "Safety  Firefighting Equipment",
+    "root_name_ar": "معدات السلامة والأمن",
+    "root_name_en": "Safety  Firefighting Equipment",
+    "text": "تصنيف بضائع معدات السلامة والأمن التابع للمجموعة الرئيسية معدات السلامة والأمن. المنتجات الأساسية: معدات السلامة والأمن, أدوات ومعدات السلامة والامان, مطافئ حريق, معدات السلامة. Goods Category Safety  Firefighting Equipment under Root Category Safety  Firefighting Equipment."
+  }
+]
