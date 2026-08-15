@@ -25,13 +25,11 @@ from app.catalog.importer import load_catalog_artifact
 
 
 def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
-    if model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004"):
+    key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
+    use_gemini = model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004")
+
+    if use_gemini and key:
         import urllib.request
-        key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
-        if not key:
-            raise ValueError(
-                "❌ GEMINI_API_KEY is empty! Please provide a valid Gemini API key in Colab, or choose 'BAAI/bge-m3' (which requires no API key and runs 100% free on GPU)."
-            )
 
         def embed_single_or_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
             task_type = "RETRIEVAL_QUERY" if is_query else "RETRIEVAL_DOCUMENT"
@@ -73,24 +71,26 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
         print(f"✅ Connected to Google Gemini Embeddings via REST API (dim: {dim})")
         return embed_single_or_batch, dim, "google-gemini"
 
+    if use_gemini and not key:
+        print("⚠️ GEMINI_API_KEY was not provided. Automatically switching to 'BAAI/bge-m3' (Runs 100% free on Colab GPU with no API key needed)!")
+        model_choice = "BAAI/bge-m3"
 
-    else:
-        from sentence_transformers import SentenceTransformer
-        print(f"🧠 Loading SentenceTransformer on GPU/CPU: {model_choice}...")
-        model = SentenceTransformer(model_choice)
-        is_e5 = "e5" in model_choice.lower()
+    from sentence_transformers import SentenceTransformer
+    print(f"🧠 Loading SentenceTransformer on GPU/CPU: {model_choice}...")
+    model = SentenceTransformer(model_choice)
+    is_e5 = "e5" in model_choice.lower()
 
-        def embed_fn(texts: list[str], is_query: bool = False) -> np.ndarray:
-            if is_e5:
-                prefix = "query: " if is_query else "passage: "
-                texts = [prefix + t if not t.startswith(prefix) else t for t in texts]
-            vecs = model.encode(texts, batch_size=64, show_progress_bar=True, normalize_embeddings=True)
-            return np.array(vecs, dtype=np.float32)
+    def embed_fn(texts: list[str], is_query: bool = False) -> np.ndarray:
+        if is_e5:
+            prefix = "query: " if is_query else "passage: "
+            texts = [prefix + t if not t.startswith(prefix) else t for t in texts]
+        vecs = model.encode(texts, batch_size=64, show_progress_bar=True, normalize_embeddings=True)
+        return np.array(vecs, dtype=np.float32)
 
-        test_vec = model.encode(["test"], normalize_embeddings=True)
-        dim = int(test_vec.shape[1])
-        print(f"✅ Loaded SentenceTransformer model: {model_choice} (dim: {dim})")
-        return embed_fn, dim, model_choice
+    test_vec = model.encode(["test"], normalize_embeddings=True)
+    dim = int(test_vec.shape[1])
+    print(f"✅ Loaded SentenceTransformer model: {model_choice} (dim: {dim})")
+    return embed_fn, dim, model_choice
 
 
 def build_faiss_index(
