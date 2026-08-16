@@ -44,7 +44,7 @@ def get_embedding_function(
 
         def embed_openai_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
             all_vecs = []
-            batch_size = 100
+            batch_size = 250
             for i in range(0, len(texts), batch_size):
                 chunk = texts[i : i + batch_size]
                 url = "https://api.openai.com/v1/embeddings"
