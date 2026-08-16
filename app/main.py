@@ -81,21 +81,29 @@ def _build_semantic(settings, catalog):
 
     model_choice = os.environ.get("DANDAN_SEMANTIC_MODEL", settings.semantic_model_name)
     gemini_key = os.environ.get("GEMINI_API_KEY", "")
+    openai_key = os.environ.get("OPENAI_API_KEY", "")
+
+    if "openai" in model_choice.lower() or "text-embedding-3" in model_choice.lower():
+        try:
+            from app.search.semantic import OpenAISemanticRetriever
+            return OpenAISemanticRetriever(catalog, api_key=openai_key, model_name=model_choice)
+        except Exception as exc:
+            logger.warning("OpenAI semantic initialization failed (%s); falling back", exc)
+            return BaseSemanticRetriever()
 
     if model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004"):
         try:
+            from app.search.semantic import GeminiSemanticRetriever
             return GeminiSemanticRetriever(catalog, api_key=gemini_key)
         except Exception as exc:
             logger.warning("Gemini semantic initialization failed (%s); falling back", exc)
             return BaseSemanticRetriever()
 
     try:
-        return SentenceTransformerRetriever(
-            catalog,
-            model_name=model_choice,
-        )
-    except SemanticUnavailable as exc:
-        logger.warning("Semantic search is unavailable: %s", exc)
+        from app.search.semantic import SentenceTransformerRetriever
+        return SentenceTransformerRetriever(catalog, model_name=model_choice)
+    except Exception as exc:
+        logger.warning("Semantic retriever initialization failed (%s); running lexical-only mode", exc)
         return BaseSemanticRetriever()
     except Exception:
         logger.exception("Semantic search failed to initialise; falling back to exact/fuzzy")

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Dual-Stream Disentangled Semantic Index Builder.
-Builds two orthogonal, high-precision semantic search indices for all 90 Saudi categories:
-1. Stream 1 (Concept Index): Pure ontological identity of the 90 categories (Zero noise).
-2. Stream 2 (Evidence Index): Fine-grained trade terms, regional cultivars, dialect names, and brands.
+Supports multiple world-class embedding engines:
+1. OpenAI text-embedding-3-small (1536-dim) & text-embedding-3-large (3072-dim)
+2. BAAI/bge-m3 (1024-dim, State-of-the-art Open Source, Recommended on GPU)
+3. Google Gemini text-embedding-004 (768-dim)
+4. intfloat/multilingual-e5-small (384-dim) & e5-large (1024-dim)
 """
 
 from __future__ import annotations
@@ -22,7 +24,74 @@ if str(PROJECT_ROOT) not in sys.path:
 from app.catalog.importer import load_catalog_artifact
 
 
-def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
+def get_embedding_function(
+    model_choice: str,
+    gemini_api_key: str = "",
+    openai_api_key: str = "",
+):
+    # -------------------------------------------------------------------------
+    # 1. OPENAI EMBEDDINGS (GPT text-embedding-3-small / text-embedding-3-large)
+    # -------------------------------------------------------------------------
+    use_openai = "openai" in model_choice.lower() or "text-embedding-3" in model_choice.lower()
+    raw_openai_key = openai_api_key or os.environ.get("OPENAI_API_KEY", "")
+    openai_key = raw_openai_key.strip("'\" \t\r\n")
+
+    if use_openai and openai_key:
+        import urllib.request
+        openai_model = "text-embedding-3-large" if "large" in model_choice.lower() else "text-embedding-3-small"
+        masked_key = f"{openai_key[:7]}...{openai_key[-4:]}" if len(openai_key) > 12 else "***"
+        print(f"🔑 Using OpenAI API Key: {masked_key} (Model: {openai_model})")
+
+        def embed_openai_batch(texts: list[str], is_query: bool = False) -> np.ndarray:
+            all_vecs = []
+            batch_size = 100
+            for i in range(0, len(texts), batch_size):
+                chunk = texts[i : i + batch_size]
+                url = "https://api.openai.com/v1/embeddings"
+                payload = {
+                    "input": chunk,
+                    "model": openai_model,
+                    "encoding_format": "float",
+                }
+                req_data = json.dumps(payload).encode("utf-8")
+                req = urllib.request.Request(
+                    url,
+                    data=req_data,
+                    headers={
+                        "Content-Type": "application/json",
+                        "Authorization": f"Bearer {openai_key}",
+                    },
+                )
+                try:
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        res = json.loads(resp.read().decode("utf-8"))
+                        data_items = sorted(res.get("data", []), key=lambda x: x["index"])
+                        for item in data_items:
+                            all_vecs.append(item["embedding"])
+                except urllib.error.HTTPError as http_err:
+                    err_body = http_err.read().decode("utf-8", errors="ignore")
+                    raise RuntimeError(f"OpenAI API error ({http_err.code}): {err_body}")
+                except Exception as exc:
+                    raise RuntimeError(f"OpenAI request failed: {exc}")
+                time.sleep(0.02)
+
+            vecs = np.array(all_vecs, dtype=np.float32)
+            norms = np.linalg.norm(vecs, axis=1, keepdims=True)
+            norms[norms == 0] = 1.0
+            return vecs / norms
+
+        test_vec = embed_openai_batch(["test"], is_query=True)
+        dim = int(test_vec.shape[1])
+        print(f"✅ Connected to OpenAI Embeddings ({openai_model}, dim: {dim})")
+        return embed_openai_batch, dim, f"openai/{openai_model}"
+
+    if use_openai and not openai_key:
+        print("⚠️ OPENAI_API_KEY was not provided. Automatically switching to 'BAAI/bge-m3' (Runs 100% free on Colab GPU with no API key needed)!")
+        model_choice = "BAAI/bge-m3"
+
+    # -------------------------------------------------------------------------
+    # 2. GOOGLE GEMINI EMBEDDINGS
+    # -------------------------------------------------------------------------
     raw_key = gemini_api_key or os.environ.get("GEMINI_API_KEY", "")
     key = raw_key.strip("'\" \t\r\n")
     use_gemini = model_choice.lower() in ("google-gemini", "gemini", "text-embedding-004")
@@ -84,6 +153,9 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
         print("⚠️ GEMINI_API_KEY was not provided. Automatically switching to 'BAAI/bge-m3' (Runs 100% free on Colab GPU with no API key needed)!")
         model_choice = "BAAI/bge-m3"
 
+    # -------------------------------------------------------------------------
+    # 3. OPEN-SOURCE SENTENCE TRANSFORMERS (BAAI/bge-m3, e5-small, e5-large)
+    # -------------------------------------------------------------------------
     from sentence_transformers import SentenceTransformer
     print(f"🧠 Loading SentenceTransformer on GPU/CPU: {model_choice}...")
     model = SentenceTransformer(model_choice)
@@ -105,8 +177,9 @@ def get_embedding_function(model_choice: str, gemini_api_key: str = ""):
 def build_dual_stream_faiss_index(
     catalog_path: str = "storage/catalog/catalog.json",
     contexts_path: str = "storage/catalog/saudi_market_category_contexts.json",
-    model_choice: str = "storage/models/intfloat-multilingual-e5-small",
+    model_choice: str = "BAAI/bge-m3",
     gemini_api_key: str = "",
+    openai_api_key: str = "",
     output_dir: str = "storage/semantic",
 ) -> None:
     print("=" * 88)
@@ -122,7 +195,11 @@ def build_dual_stream_faiss_index(
 
     print(f"📖 Loaded {len(leaves)} leaf categories & {len(contexts)} market contexts.")
 
-    embed_fn, embedding_dim, model_tag = get_embedding_function(model_choice, gemini_api_key)
+    embed_fn, embedding_dim, model_tag = get_embedding_function(
+        model_choice,
+        gemini_api_key=gemini_api_key,
+        openai_api_key=openai_api_key,
+    )
 
     # -------------------------------------------------------------------------
     # STREAM 1: PURE CONCEPT VECTORS (Canonical Identity - Zero Ambient Noise)
@@ -135,11 +212,9 @@ def build_dual_stream_faiss_index(
         root = catalog.root(root_id)
         ctx = contexts.get(str(leaf_id), {})
 
-        # Precise concept text without wordy filler
         concept_ar = f"تصنيف بضائع {leaf.name_ar} التابع للمجموعة الرئيسية {root.name_ar}"
         concept_en = f"Goods Category {leaf.name_en or leaf.name_ar} under Root Category {root.name_en or root.name_ar}"
         
-        # Primary anchor synonyms (first 3 direct terms)
         primary_terms = ", ".join(ctx.get("trade_terms_ar", [])[:4])
         if primary_terms:
             concept_text = f"{concept_ar}. المنتجات الأساسية: {primary_terms}. {concept_en}."
@@ -175,7 +250,6 @@ def build_dual_stream_faiss_index(
         trade_terms_en = ctx.get("trade_terms_en", [])
         key_brands = ctx.get("key_brands", [])
 
-        # Individual trade terms
         for term in trade_terms_ar:
             if not term or len(term.strip()) < 2:
                 continue
@@ -198,7 +272,6 @@ def build_dual_stream_faiss_index(
                 "text": f"{term_en} - {leaf.name_en or leaf.name_ar} ({root.name_en or root.name_ar})",
             })
 
-        # Key brands & cultivars
         for brand in key_brands:
             if not brand or len(brand.strip()) < 2:
                 continue
@@ -221,7 +294,6 @@ def build_dual_stream_faiss_index(
     out_dir = Path(output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1. Concept FAISS Index (Stream 1)
     concept_index = faiss.IndexFlatIP(embedding_dim)
     concept_index.add(concept_embeddings)
     faiss.write_index(concept_index, str(out_dir / "catalog_concept_faiss.index"))
@@ -229,12 +301,9 @@ def build_dual_stream_faiss_index(
     with open(out_dir / "catalog_concept_metadata.json", "w", encoding="utf-8") as f:
         json.dump(concept_docs, f, ensure_ascii=False, indent=2)
 
-    # 2. Evidence FAISS Index (Stream 2)
     evidence_index = faiss.IndexFlatIP(embedding_dim)
     evidence_index.add(evidence_embeddings)
     faiss.write_index(evidence_index, str(out_dir / "catalog_evidence_faiss.index"))
-
-    # Also save standard catalog_faiss.index for backward-compatibility
     faiss.write_index(evidence_index, str(out_dir / "catalog_faiss.index"))
 
     with open(out_dir / "catalog_evidence_metadata.json", "w", encoding="utf-8") as f:
@@ -242,7 +311,6 @@ def build_dual_stream_faiss_index(
     with open(out_dir / "catalog_faiss_metadata.json", "w", encoding="utf-8") as f:
         json.dump(evidence_docs, f, ensure_ascii=False, indent=2)
 
-    # 3. Save combined NPZ artifact
     np.savez_compressed(
         out_dir / "catalog_dual_stream_vectors.npz",
         concept_embeddings=concept_embeddings,
@@ -255,6 +323,7 @@ def build_dual_stream_faiss_index(
 
     print("\n" + "=" * 88)
     print("🎉 DUAL-STREAM ARTIFACTS SUCCESSFULLY GENERATED!")
+    print(f"📦 Model Tag:       {model_tag} (dim: {embedding_dim})")
     print(f"📦 Concept Index:   {out_dir / 'catalog_concept_faiss.index'} ({len(concept_docs)} vectors)")
     print(f"📦 Evidence Index:  {out_dir / 'catalog_evidence_faiss.index'} ({len(evidence_docs):,} vectors)")
     print(f"📦 NPZ Bundle:      {out_dir / 'catalog_dual_stream_vectors.npz'}")
@@ -266,14 +335,20 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model",
         type=str,
-        default="storage/models/intfloat-multilingual-e5-small",
-        help="Model choice: 'BAAI/bge-m3', 'storage/models/intfloat-multilingual-e5-small', 'intfloat/multilingual-e5-large', or 'google-gemini'",
+        default="BAAI/bge-m3",
+        help="Model choice: 'openai/text-embedding-3-small', 'openai/text-embedding-3-large', 'BAAI/bge-m3', 'storage/models/intfloat-multilingual-e5-small', 'intfloat/multilingual-e5-large', or 'google-gemini'",
     )
     parser.add_argument(
         "--gemini-api-key",
         type=str,
         default="",
         help="Google Gemini API key (if --model is google-gemini)",
+    )
+    parser.add_argument(
+        "--openai-api-key",
+        type=str,
+        default="",
+        help="OpenAI API key (if --model is openai/...)",
     )
     parser.add_argument(
         "--output-dir",
@@ -286,5 +361,6 @@ if __name__ == "__main__":
     build_dual_stream_faiss_index(
         model_choice=args.model,
         gemini_api_key=args.gemini_api_key,
+        openai_api_key=args.openai_api_key,
         output_dir=args.output_dir,
     )
