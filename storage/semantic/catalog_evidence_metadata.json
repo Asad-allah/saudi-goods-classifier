@@ -12973,23 +12973,170 @@
   {
     "root_good_type_id": 133,
     "source_good_type_id": 145,
-    "source_type": "TRADE_TERM_EN",
-    "matched_term": "Used Furniture",
-    "text": "Used Furniture - Used Furniture (Furniture)"
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "عفش منزل مستعمل بالكامل",
+    "text": "عفش منزل مستعمل بالكامل - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اثاث مستخدم للبيع غرف نوم وكنب",
+    "text": "اثاث مستخدم للبيع غرف نوم وكنب - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "غرف نوم مستعملة وطني ومستورد",
+    "text": "غرف نوم مستعملة وطني ومستورد - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كنب ومجالس مستعملة حراج",
+    "text": "كنب ومجالس مستعملة حراج - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد وموكيت مستعمل نظيف",
+    "text": "سجاد وموكيت مستعمل نظيف - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "طاولات طعام وكراسي مستعملة",
+    "text": "طاولات طعام وكراسي مستعملة - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مطابخ المنيوم مستعملة فك وتركيب",
+    "text": "مطابخ المنيوم مستعملة فك وتركيب - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مكيفات مستعملة شباك وسبليت حراج",
+    "text": "مكيفات مستعملة شباك وسبليت حراج - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "ثلاجات وغسالات وافران مستعملة",
+    "text": "ثلاجات وغسالات وافران مستعملة - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "نقل عفش واثاث مع الفك والتركيب والتغليف",
+    "text": "نقل عفش واثاث مع الفك والتركيب والتغليف - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "دينا نقل عفش داخل وخارج الرياض وجدة",
+    "text": "دينا نقل عفش داخل وخارج الرياض وجدة - الأثاث المستعمل (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كراتين نقل عفش وتغليف اثاث مستخدم",
+    "text": "كراتين نقل عفش وتغليف اثاث مستخدم - الأثاث المستعمل (الأثاث)"
   },
   {
     "root_good_type_id": 133,
     "source_good_type_id": 145,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "Used Furniture supplies",
-    "text": "Used Furniture supplies - Used Furniture (Furniture)"
+    "matched_term": "used home furniture full house lot",
+    "text": "used home furniture full house lot - Used Furniture (Furniture)"
   },
   {
     "root_good_type_id": 133,
     "source_good_type_id": 145,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "genuine Used Furniture",
-    "text": "genuine Used Furniture - Used Furniture (Furniture)"
+    "matched_term": "second hand furniture for sale",
+    "text": "second hand furniture for sale - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used master bedroom sets",
+    "text": "used master bedroom sets - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used sofa sets and arabic majlis",
+    "text": "used sofa sets and arabic majlis - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used clean carpets and rugs",
+    "text": "used clean carpets and rugs - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used dining tables and chairs",
+    "text": "used dining tables and chairs - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used aluminum kitchen cabinets",
+    "text": "used aluminum kitchen cabinets - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used window and split air conditioners",
+    "text": "used window and split air conditioners - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "used refrigerators washing machines ovens",
+    "text": "used refrigerators washing machines ovens - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "furniture relocation house moving dismantling packing",
+    "text": "furniture relocation house moving dismantling packing - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "truck house moving service",
+    "text": "truck house moving service - Used Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 145,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "moving cardboard boxes bubble wrap",
+    "text": "moving cardboard boxes bubble wrap - Used Furniture (Furniture)"
   },
   {
     "root_good_type_id": 133,
@@ -13176,23 +13323,702 @@
   {
     "root_good_type_id": 133,
     "source_good_type_id": 146,
-    "source_type": "TRADE_TERM_EN",
-    "matched_term": "New Furniture",
-    "text": "New Furniture - New Furniture (Furniture)"
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد",
+    "text": "سجاد - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد تركي فاخر",
+    "text": "سجاد تركي فاخر - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد ايراني كاشان وقم",
+    "text": "سجاد ايراني كاشان وقم - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد ممرات طويل رنر",
+    "text": "سجاد ممرات طويل رنر - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد صوف كلاسيكي",
+    "text": "سجاد صوف كلاسيكي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد حرير بلجيكي",
+    "text": "سجاد حرير بلجيكي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد مودرن شاج ووبر عالي",
+    "text": "سجاد مودرن شاج ووبر عالي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد مساجد رولات محراب اخضر واحمر",
+    "text": "سجاد مساجد رولات محراب اخضر واحمر - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد صلاة اسفنجي وطبي",
+    "text": "سجاد صلاة اسفنجي وطبي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد صلاة فردي ومطرز",
+    "text": "سجاد صلاة فردي ومطرز - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "موكيت ارضيات امريكي وسعودي رولات",
+    "text": "موكيت ارضيات امريكي وسعودي رولات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "موكيت مكاتب وفنادق مربعات تايلز بلاطات",
+    "text": "موكيت مكاتب وفنادق مربعات تايلز بلاطات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "زل وزوالي كراتين ورولات",
+    "text": "زل وزوالي كراتين ورولات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "بساط ارضي تراثي ومجالس عربية",
+    "text": "بساط ارضي تراثي ومجالس عربية - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مدات ومفارش ارضية كشتات ورحلات",
+    "text": "مدات ومفارش ارضية كشتات ورحلات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "دعاسات ابواب ومداخل خشنة وناعمة",
+    "text": "دعاسات ابواب ومداخل خشنة وناعمة - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "لباد موكيت وسجاد عازل فوم سماكة 8 و 10 ملم",
+    "text": "لباد موكيت وسجاد عازل فوم سماكة 8 و 10 ملم - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد اطفال ورسومات كرتونية",
+    "text": "سجاد اطفال ورسومات كرتونية - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد حصير وخيزران وبامبو",
+    "text": "سجاد حصير وخيزران وبامبو - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سجاد دائري وبيضاوي",
+    "text": "سجاد دائري وبيضاوي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كنب مودرن زاوية حرف ال وحرف يو",
+    "text": "كنب مودرن زاوية حرف ال وحرف يو - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كنب كلاسيكي مذهب ومحفور",
+    "text": "كنب كلاسيكي مذهب ومحفور - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اطقم كنب صالات ومجالس رجال ونساء",
+    "text": "اطقم كنب صالات ومجالس رجال ونساء - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مجالس عربية ارضية ومساند ظهر ومرتكى وتكايا",
+    "text": "مجالس عربية ارضية ومساند ظهر ومرتكى وتكايا - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "جلسات مغربية وباطرمة سدادر",
+    "text": "جلسات مغربية وباطرمة سدادر - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كراسي ريلاكس واسترخاء ليزي بوي",
+    "text": "كراسي ريلاكس واسترخاء ليزي بوي - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "بفات وكراسي بوف مفردة",
+    "text": "بفات وكراسي بوف مفردة - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "طاولات شاي وخدمة طقم 5 قطع رخام وزجاج وخشب",
+    "text": "طاولات شاي وخدمة طقم 5 قطع رخام وزجاج وخشب - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "طاولات تلفزيون وشاشات وبوفيهات",
+    "text": "طاولات تلفزيون وشاشات وبوفيهات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مكتبات خشبية وديكورات جدارية وارفف",
+    "text": "مكتبات خشبية وديكورات جدارية وارفف - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "ستائر قماشية وتعتيم بلاك اوت وشيفون ودانتيل",
+    "text": "ستائر قماشية وتعتيم بلاك اوت وشيفون ودانتيل - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "غرف نوم رئيسية ماستر كينج سايز خشب",
+    "text": "غرف نوم رئيسية ماستر كينج سايز خشب - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "غرف نوم اطفال ومواليد وسراير دورين",
+    "text": "غرف نوم اطفال ومواليد وسراير دورين - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سراير نوم هيدبورد منجد مخمل وجلد",
+    "text": "سراير نوم هيدبورد منجد مخمل وجلد - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مراتب سرير طبية زنبركية بوكيت وسبرينج",
+    "text": "مراتب سرير طبية زنبركية بوكيت وسبرينج - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مراتب فوم ميموري فوم ولاتكس",
+    "text": "مراتب فوم ميموري فوم ولاتكس - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مفارش سرير ولحافات فندقية قطن كراتين",
+    "text": "مفارش سرير ولحافات فندقية قطن كراتين - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مخدات ووسائد طبية وميموري فوم وريش",
+    "text": "مخدات ووسائد طبية وميموري فوم وريش - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "واقي مرتبة ضد الماء حامي مراتب",
+    "text": "واقي مرتبة ضد الماء حامي مراتب - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "دواليب ملابس وخزائن دريسنج روم وتسريحات",
+    "text": "دواليب ملابس وخزائن دريسنج روم وتسريحات - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كمودينات وطاولات سرير جانبية",
+    "text": "كمودينات وطاولات سرير جانبية - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "طاولات طعام 6 و 8 و 12 كرسي رخام وخشب",
+    "text": "طاولات طعام 6 و 8 و 12 كرسي رخام وخشب - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كراسي سفرة وطعام منجدة",
+    "text": "كراسي سفرة وطعام منجدة - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كراسي بار وطاولات مطبخ",
+    "text": "كراسي بار وطاولات مطبخ - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اثاث مكتبي مكاتب مدير وموظفين وكراسي دوارة هيدروليك",
+    "text": "اثاث مكتبي مكاتب مدير وموظفين وكراسي دوارة هيدروليك - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "طاولات اجتماعات وكونترات استقبال",
+    "text": "طاولات اجتماعات وكونترات استقبال - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "دواليب ملفات خشبية وحديدية",
+    "text": "دواليب ملفات خشبية وحديدية - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "جلسات خارجية حدائق والمنيوم وخيزران راتان مقاوم للشمس والمطر",
+    "text": "جلسات خارجية حدائق والمنيوم وخيزران راتان مقاوم للشمس والمطر - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مظلات حدائق ومراجيح وجلسات مسابح",
+    "text": "مظلات حدائق ومراجيح وجلسات مسابح - الأثاث الجديد (الأثاث)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "جزمات وخزائن احذية ومرايات مداخل",
+    "text": "جزمات وخزائن احذية ومرايات مداخل - الأثاث الجديد (الأثاث)"
   },
   {
     "root_good_type_id": 133,
     "source_good_type_id": 146,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "New Furniture supplies",
-    "text": "New Furniture supplies - New Furniture (Furniture)"
+    "matched_term": "carpets",
+    "text": "carpets - New Furniture (Furniture)"
   },
   {
     "root_good_type_id": 133,
     "source_good_type_id": 146,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "genuine New Furniture",
-    "text": "genuine New Furniture - New Furniture (Furniture)"
+    "matched_term": "luxury turkish carpets",
+    "text": "luxury turkish carpets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "persian rugs",
+    "text": "persian rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "hallway runner rugs",
+    "text": "hallway runner rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "classic wool carpets",
+    "text": "classic wool carpets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "belgian silk carpets",
+    "text": "belgian silk carpets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "modern shaggy rugs",
+    "text": "modern shaggy rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "mosque prayer carpet rolls",
+    "text": "mosque prayer carpet rolls - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "padded orthopedic prayer rugs",
+    "text": "padded orthopedic prayer rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "individual embroidered prayer mats",
+    "text": "individual embroidered prayer mats - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "commercial and residential wall to wall moquette rolls",
+    "text": "commercial and residential wall to wall moquette rolls - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "office carpet tiles squares",
+    "text": "office carpet tiles squares - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "floor rugs and mats",
+    "text": "floor rugs and mats - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "traditional arabic majlis rugs",
+    "text": "traditional arabic majlis rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "picnic and camping floor mats",
+    "text": "picnic and camping floor mats - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "entryway welcome doormats",
+    "text": "entryway welcome doormats - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "carpet underlay foam padding 8mm 10mm",
+    "text": "carpet underlay foam padding 8mm 10mm - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "kids nursery play rugs",
+    "text": "kids nursery play rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "bamboo and jute woven mats",
+    "text": "bamboo and jute woven mats - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "round and oval area rugs",
+    "text": "round and oval area rugs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "modern l shaped sectional sofas",
+    "text": "modern l shaped sectional sofas - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "classic carved living room sofas",
+    "text": "classic carved living room sofas - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "upholstered sofa sets and couches",
+    "text": "upholstered sofa sets and couches - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "traditional floor majlis seating and armrests",
+    "text": "traditional floor majlis seating and armrests - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "moroccan salon seating benches",
+    "text": "moroccan salon seating benches - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "recliner armchairs lazy boy",
+    "text": "recliner armchairs lazy boy - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "ottomans and accent poufs",
+    "text": "ottomans and accent poufs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "nesting coffee tables set marble glass wood",
+    "text": "nesting coffee tables set marble glass wood - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "tv consoles media units and sideboards",
+    "text": "tv consoles media units and sideboards - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "bookshelves wall shelves and display units",
+    "text": "bookshelves wall shelves and display units - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "curtains draperies blackout and sheer fabrics",
+    "text": "curtains draperies blackout and sheer fabrics - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "master king size bedroom sets",
+    "text": "master king size bedroom sets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "kids bunk beds and nursery cribs",
+    "text": "kids bunk beds and nursery cribs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "upholstered bed frames headboards",
+    "text": "upholstered bed frames headboards - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "orthopedic pocket spring mattresses",
+    "text": "orthopedic pocket spring mattresses - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "memory foam and latex mattresses",
+    "text": "memory foam and latex mattresses - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "hotel quality duvet and comforter bedding sets",
+    "text": "hotel quality duvet and comforter bedding sets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "orthopedic sleeping pillows memory foam down",
+    "text": "orthopedic sleeping pillows memory foam down - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "waterproof mattress protectors pads",
+    "text": "waterproof mattress protectors pads - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "wardrobes closets and dressing vanities",
+    "text": "wardrobes closets and dressing vanities - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "nightstands and bedside tables",
+    "text": "nightstands and bedside tables - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "dining room tables 6 8 12 chairs marble wood",
+    "text": "dining room tables 6 8 12 chairs marble wood - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "upholstered dining chairs",
+    "text": "upholstered dining chairs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "kitchen bar stools",
+    "text": "kitchen bar stools - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "office executive desks ergonomic hydraulic mesh chairs",
+    "text": "office executive desks ergonomic hydraulic mesh chairs - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "conference meeting tables reception desks",
+    "text": "conference meeting tables reception desks - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "wood and metal filing cabinets",
+    "text": "wood and metal filing cabinets - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "outdoor garden patio rattan furniture weather resistant",
+    "text": "outdoor garden patio rattan furniture weather resistant - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "garden swings gazebos and pool loungers",
+    "text": "garden swings gazebos and pool loungers - New Furniture (Furniture)"
+  },
+  {
+    "root_good_type_id": 133,
+    "source_good_type_id": 146,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "shoe racks cabinets and entryway mirrors",
+    "text": "shoe racks cabinets and entryway mirrors - New Furniture (Furniture)"
   },
   {
     "root_good_type_id": 133,
@@ -15724,23 +16550,212 @@
   {
     "root_good_type_id": 160,
     "source_good_type_id": 160,
-    "source_type": "TRADE_TERM_EN",
-    "matched_term": "Textile and sewing materials",
-    "text": "Textile and sewing materials - Textile and sewing materials (Textile and sewing materials)"
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة ثياب رجالية صوف وخلايا وقطن ياباني وكوري كراتين وطاقات",
+    "text": "اقمشة ثياب رجالية صوف وخلايا وقطن ياباني وكوري كراتين وطاقات - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة نسائية حرير وشيفون وتول وجاكار ودانتيل",
+    "text": "اقمشة نسائية حرير وشيفون وتول وجاكار ودانتيل - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة عبايات وطرح كريب وانترنت وصالونا طاقات رولات",
+    "text": "اقمشة عبايات وطرح كريب وانترنت وصالونا طاقات رولات - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة تنجيد كنب ومجالس مخمل وجلد وجاكار وشانيل ومقاوم للسوائل",
+    "text": "اقمشة تنجيد كنب ومجالس مخمل وجلد وجاكار وشانيل ومقاوم للسوائل - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة ستائر بلاك اوت وشيفون وتطريز",
+    "text": "اقمشة ستائر بلاك اوت وشيفون وتطريز - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اقمشة قطن بوبلين ولينن وكتان",
+    "text": "اقمشة قطن بوبلين ولينن وكتان - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "بكرات خيوط خياطة بوليستر وقطن والوان مشكلة درازن",
+    "text": "بكرات خيوط خياطة بوليستر وقطن والوان مشكلة درازن - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "خيوط تطريز وتريكو وصوف كروشيه شلل",
+    "text": "خيوط تطريز وتريكو وصوف كروشيه شلل - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "سحابات وزمامات معدنية وبلاستيكية مقاسات رولات",
+    "text": "سحابات وزمامات معدنية وبلاستيكية مقاسات رولات - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "ازرار قمصان وثياب وبدلات كراتين",
+    "text": "ازرار قمصان وثياب وبدلات كراتين - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "كلف واشرطة وتطريزات ودانتيل وخردوات خياطة",
+    "text": "كلف واشرطة وتطريزات ودانتيل وخردوات خياطة - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "فازلين حشو وقماش تقوية ياقات واساور رولات",
+    "text": "فازلين حشو وقماش تقوية ياقات واساور رولات - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مكائن خياطة صناعية ومنزلية جوكي وسنجر وبراذر",
+    "text": "مكائن خياطة صناعية ومنزلية جوكي وسنجر وبراذر - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "مقصات قماش تفصيل واقلام تباشير خياطة ومتر قياس",
+    "text": "مقصات قماش تفصيل واقلام تباشير خياطة ومتر قياس - مواد النسيج والخياطة (مواد النسيج والخياطة)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "ابر خياطة يد ومكائن ودبابيس مشابك كراتين",
+    "text": "ابر خياطة يد ومكائن ودبابيس مشابك كراتين - مواد النسيج والخياطة (مواد النسيج والخياطة)"
   },
   {
     "root_good_type_id": 160,
     "source_good_type_id": 160,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "Textile and sewing materials supplies",
-    "text": "Textile and sewing materials supplies - Textile and sewing materials (Textile and sewing materials)"
+    "matched_term": "mens thobe suiting fabrics wool cotton japanese rolls",
+    "text": "mens thobe suiting fabrics wool cotton japanese rolls - Textile and sewing materials (Textile and sewing materials)"
   },
   {
     "root_good_type_id": 160,
     "source_good_type_id": 160,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "genuine Textile and sewing materials",
-    "text": "genuine Textile and sewing materials - Textile and sewing materials (Textile and sewing materials)"
+    "matched_term": "womens dress fabrics silk chiffon tulle lace jacquard",
+    "text": "womens dress fabrics silk chiffon tulle lace jacquard - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "abaya fabrics crepe salonah internet fabric bolts",
+    "text": "abaya fabrics crepe salonah internet fabric bolts - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "furniture upholstery fabrics velvet leather jacquard waterproof",
+    "text": "furniture upholstery fabrics velvet leather jacquard waterproof - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "curtain fabrics blackout sheer embroidery drapery",
+    "text": "curtain fabrics blackout sheer embroidery drapery - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "cotton poplin linen and canvas fabrics",
+    "text": "cotton poplin linen and canvas fabrics - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "sewing thread spools polyester cotton colors box",
+    "text": "sewing thread spools polyester cotton colors box - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "embroidery yarns and knitting crochet wool skeins",
+    "text": "embroidery yarns and knitting crochet wool skeins - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "metal and nylon zippers rolls bulk",
+    "text": "metal and nylon zippers rolls bulk - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "clothing shirt and suit buttons bulk",
+    "text": "clothing shirt and suit buttons bulk - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "sewing trims ribbons lace borders haberdashery",
+    "text": "sewing trims ribbons lace borders haberdashery - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "interfacing fusible fabric collars cuffs rolls",
+    "text": "interfacing fusible fabric collars cuffs rolls - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "industrial sewing machines juki singer brother",
+    "text": "industrial sewing machines juki singer brother - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "tailor fabric shears chalk markers measuring tapes",
+    "text": "tailor fabric shears chalk markers measuring tapes - Textile and sewing materials (Textile and sewing materials)"
+  },
+  {
+    "root_good_type_id": 160,
+    "source_good_type_id": 160,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "hand and machine sewing needles safety pins boxes",
+    "text": "hand and machine sewing needles safety pins boxes - Textile and sewing materials (Textile and sewing materials)"
   },
   {
     "root_good_type_id": 160,
@@ -17124,23 +18139,142 @@
   {
     "root_good_type_id": 169,
     "source_good_type_id": 169,
-    "source_type": "TRADE_TERM_EN",
-    "matched_term": "gypsum",
-    "text": "gypsum - gypsum (gypsum)"
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج ضغط عالي 40 و 50 و 60 كراتين وبلوكات",
+    "text": "اسفنج ضغط عالي 40 و 50 و 60 كراتين وبلوكات - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج تنجيد كنب ومجالس الواح ورولات",
+    "text": "اسفنج تنجيد كنب ومجالس الواح ورولات - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج مراتب مضغوط سوبر سوفت",
+    "text": "اسفنج مراتب مضغوط سوبر سوفت - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج ميموري فوم طبي لزج مرن",
+    "text": "اسفنج ميموري فوم طبي لزج مرن - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج عازل صوت اهرامات واستوديوهات فوم صوتي",
+    "text": "اسفنج عازل صوت اهرامات واستوديوهات فوم صوتي - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج فلتر وبوليريثان",
+    "text": "اسفنج فلتر وبوليريثان - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "رولات فوم اسفنج سماكات 1 سم و 2 سم و 5 سم و 10 سم",
+    "text": "رولات فوم اسفنج سماكات 1 سم و 2 سم و 5 سم و 10 سم - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج مساند وتكايا كتل مقطعة",
+    "text": "اسفنج مساند وتكايا كتل مقطعة - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج تنظيف وغسيل سيارات ومطابخ",
+    "text": "اسفنج تنظيف وغسيل سيارات ومطابخ - الأسفنج (الأسفنج)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_AR",
+    "matched_term": "اسفنج تغليف وحماية بضائع ضد الصدمات",
+    "text": "اسفنج تغليف وحماية بضائع ضد الصدمات - الأسفنج (الأسفنج)"
   },
   {
     "root_good_type_id": 169,
     "source_good_type_id": 169,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "gypsum supplies",
-    "text": "gypsum supplies - gypsum (gypsum)"
+    "matched_term": "high density foam blocks density 40 50 60",
+    "text": "high density foam blocks density 40 50 60 - gypsum (gypsum)"
   },
   {
     "root_good_type_id": 169,
     "source_good_type_id": 169,
     "source_type": "TRADE_TERM_EN",
-    "matched_term": "genuine gypsum",
-    "text": "genuine gypsum - gypsum (gypsum)"
+    "matched_term": "furniture upholstery foam sheets and rolls",
+    "text": "furniture upholstery foam sheets and rolls - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "compressed super soft mattress foam",
+    "text": "compressed super soft mattress foam - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "medical memory foam visco elastic",
+    "text": "medical memory foam visco elastic - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "acoustic soundproofing foam pyramid panels",
+    "text": "acoustic soundproofing foam pyramid panels - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "polyurethane and filter foam",
+    "text": "polyurethane and filter foam - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "foam sponge rolls thickness 1cm 2cm 5cm 10cm",
+    "text": "foam sponge rolls thickness 1cm 2cm 5cm 10cm - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "pre cut foam cushions and armrests",
+    "text": "pre cut foam cushions and armrests - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "cleaning sponges for cars and kitchens",
+    "text": "cleaning sponges for cars and kitchens - gypsum (gypsum)"
+  },
+  {
+    "root_good_type_id": 169,
+    "source_good_type_id": 169,
+    "source_type": "TRADE_TERM_EN",
+    "matched_term": "protective packaging foam cushioning",
+    "text": "protective packaging foam cushioning - gypsum (gypsum)"
   },
   {
     "root_good_type_id": 169,
